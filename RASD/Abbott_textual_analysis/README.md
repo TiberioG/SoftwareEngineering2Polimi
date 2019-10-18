@@ -19,7 +19,7 @@
 
 
 ---
-###advanced function 1
+### advanced function 1
 * municipality
 * accidents
 * interventions
@@ -32,7 +32,7 @@
 
 
 ---
-###advanced function 1
+### advanced function 1
 * unsafe
 
 ## verbs
@@ -45,7 +45,7 @@
 * offer visibility
 
 ---
-###advanced function 1
+### advanced function 1
 
 * cross information
 * suggest interventions
