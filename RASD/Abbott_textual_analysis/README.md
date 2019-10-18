@@ -1,29 +1,54 @@
-#Abbott textual analysis
+# Abbott textual analysis
 
-##Proper nouns
+## Proper nouns
 
 
-##Common nouns
+## Common nouns
 * end users
 * authorities
 * violations
 * metadata
 * name of the street
+* area
+* vehicles
+
 
 * date
 * time
 * position
 
-##Adjectives
+
+---
+###advanced function 1
+* municipality
+* accidents
+* interventions
 
 
-##verbs
+## Adjectives
+* frequency
+* visibility
+* roles
+
+
+---
+###advanced function 1
+* unsafe
+
+## verbs
 * send pictures
 * receive pictures
 * complete
 * read licence plate
-* mine
+* mine information
+* highlight streets/areas
+* offer visibility
+
+---
+###advanced function 1
+
+* cross information
+* suggest interventions
 
 
-
-##intransitive verbs
+## intransitive verbs
