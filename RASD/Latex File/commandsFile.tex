@@ -106,8 +106,11 @@
 
 %graphics
 \usepackage{graphicx}
+\graphicspath{ {./Images/} }
 \usepackage[dvipsnames, table]{xcolor}
-%If you upload images from PC, you need to insert code for the path here (different for Windows and Unix OS)
+
+%emp to embed MetaPost
+\usepackage{emp}
 
 %References
 %\usepackage{xpatch}
@@ -120,13 +123,11 @@
 \usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage[pdftex, colorlinks]{hyperref}
-\newcommand{\comment}[1]{{\color{Red}$\blacktriangleright$ Comment: #1 $\blacktriangleleft$}}
+
 
 
 % Some utilities\ldots
 \input{util/highlight}
 \input{util/abbrev}
-
-
 
 \date{}
