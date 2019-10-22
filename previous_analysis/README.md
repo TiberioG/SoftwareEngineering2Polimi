@@ -9,7 +9,7 @@
 
  * Weakness: no hardware interfaces stated, but there is need to specify the devices like smartphones/smartwatches etc.
  * strength: user Graphic interfaces are so realistic and well done 
- * Weakness :
+ * Weakness : According to the goals, a normal person shouldn't be allowed to access to other individuals information. But, in use case diagram there is a connection between user and Request data of an individual. 
 
 # Section 4
 
