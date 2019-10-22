@@ -14,6 +14,6 @@
  
 # Section 4
 
- *
- *
- *   
+ * Weakness: Since the third party should be allowed to access the normal user's information, there should be and element in signature "Customer" that allowed the third party customers the ability of access the end user's data.
+ * strength: According to the class diagram, all different elements such as sig, fact, assert, pred are well defined and properly coded. 
+ * Weakness: Unfortunately, The code is not very legible, and there are not enough comments for different parts or it could highlighted more about functions
