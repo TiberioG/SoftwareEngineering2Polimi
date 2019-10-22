@@ -3,6 +3,7 @@
 |      | first meeting | 1,5h  |
 |     | abbott analysis |   45 min |
 |     | second meeting |   2h |
+|     | class diagram | 1h |
 
 
 
