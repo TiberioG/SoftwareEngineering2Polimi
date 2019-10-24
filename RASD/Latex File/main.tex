@@ -2,62 +2,89 @@
 
 \begin{document}
 
+%TITLE PAGE
 
+\begin{titlepage} % Suppresses displaying the page number on the title page and the subsequent page counts as page 1
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
+	
+	\center % Centre everything on the page
+	
 
-\begin{titlepage}
+	%------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+	\begin{center} \includegraphics[scale=0.5]{Images/PolimiLogo1} \end{center}
+	\textsc{\LARGE Politecnico di Milano 1863}\\[1.5cm] 
+	
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	\textsc{\Large Software Engineering 2 Project }\\[0.5cm] 
+	
+	\textsc{\large Requirement Analysis and Specification Document (RASD)}\\[0.5cm] 
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.4cm]
+	
+	{\huge\bfseries SafeStreets}\\[0.4cm] 
+	\textbf{Version 1.0}\\
+	
+	\HRule\\[1.5cm]
+	
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+	
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+			\textit{Authors}\\
+			 \textsc{Tiberio Galbiati} \\
+			 \textsc{Saeid Rezaei} 
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+			\textit{Supervisor}\\
+			Dr. \textsc {Matteo Rossi} 
+		\end{flushright}
+	\end{minipage}
+	
+	%------------------------------------------------
+	%	Copy-right
+	%------------------------------------------------
 
+\vfill\vfil
+	\textbf{Copyright:} \textsc{ Copyright © 2019,  Tiberio Galbiati - Saeid Rezaei  – All rights reserved }\\[0.5cm] 
+	\textbf{Download page:} \textsc{ https://github.com/TiberioG/GalbiatiRezaei.git }\\[0.5cm] 
+	
+	%\textbf{Download page:} & https://github.com/TiberioG/GalbiatiRezaei.git\\[0.5cm] 
+	
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	
+	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+	
+	{\large\today} % Date, change the \today to a set date if you want to be precise
+	
 
-%LOGO
-
-{\begin{table}[t!]
-\centering
-\begin{tabu} to \textwidth { X[1.3,r,p] X[1.7,l,p] }
-\textcolor{Blue}
-{\textbf{\small{RASD +  Tiberio - Saeid Rezaei}}} & \includegraphics[scale=0.5]{Images/PolimiLogo1}
-%\begin{center}
-%{\textbf{Politecnico di Milano}} \\
-%\end{center}
-\end{tabu}
-\end{table}}~\\ [7cm]
-
-%
-%\begin{center} \includegraphics[scale=0.5]{Images/PolimiLogo1} \end{center}
-%\begin{center}
-%{\textbf{Politecnico di Milano}} \\
-%\end{center}
-%\begin{center}
-%{{\textbf}{Software Engineering 2 Project }}
-%\end{center}
-%TITLE
-
-%TITLE
-
-\begin{flushleft}
-
-%Replace the text string with your title
-{\textcolor{Blue}{\textbf{\Huge{RASD - Requirement Analysis and Specification
-        Document}}}} \\ [1cm]
-
-\end{flushleft}
-
+	
+	%\vfill\vfill
+	%\includegraphics[width=0.2\textwidth]{placeholder.jpg}\\[1cm] % Include a department/university logo - this will require the graphicx package
+	 
+	%----------------------------------------------------------------------------------------
+	
+	\vfill 
+	
 \end{titlepage}
 
-%Define deliverable specific info
-%Replace cell contents where needed
-\begin{table}[h!]
-\begin{tabu} to \textwidth { X[0.3,r,p] X[0.7,l,p] }
-\hline
 
-\textbf{Deliverable:} & RASD\\
-\textbf{Title:} & Requirement Analysis and Verification Document \\
-\textbf{Authors:} &  Tiberio - Saeid Rezaei \\
-\textbf{Version:} & 1.0 \\
-\textbf{Date:} & 18-October-2019 \\
-\textbf{Download page:} & https://github.com/TiberioG/GalbiatiRezaei.git \\
-\textbf{Copyright:} & Copyright © 2019,  Tiberio - Saeid Rezaei  – All rights reserved \\
-\hline
-\end{tabu}
-\end{table}
 
 
 
@@ -81,15 +108,11 @@
 \label{sect:introduction}
 \input{Files/introduction}
 
-
-
-
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Overall Description}}}
 \label{sect:overview}
 \input{Files/overview}
-
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
@@ -110,8 +133,7 @@
 \input{Files/effort}
 
 
-%----------------------------------------------------------------------------------------------------------------------------------------
---------
+%------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{plain}
@@ -119,7 +141,6 @@
 %------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-\includegraphics[]{firstclass.mps}
 
 
 \end{document}
