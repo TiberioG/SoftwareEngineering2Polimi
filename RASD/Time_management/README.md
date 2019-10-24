@@ -4,6 +4,7 @@
 |     | abbott analysis |   45 min |
 |     | second meeting |   2h |
 |     | class diagram | 1h |
+|     | requirements  | 1h |
 
 
 
