@@ -31,21 +31,21 @@
 \contentsline {subsubsection}{\numberline {3.1.4}Communication Interfaces}{7}{subsubsection.3.1.4}
 \contentsline {subsection}{\numberline {3.2}Functional Requirements}{7}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Use Cases}{7}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}User}{7}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Third party}{7}{subsubsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.4}Requirements}{7}{subsubsection.3.2.4}
-\contentsline {subsection}{\numberline {3.3}Performance Requirements}{7}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Design Constraints}{7}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Standards compliance}{7}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.2.2}User}{8}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Third party}{8}{subsubsection.3.2.3}
+\contentsline {subsubsection}{\numberline {3.2.4}Requirements}{8}{subsubsection.3.2.4}
+\contentsline {subsection}{\numberline {3.3}Performance Requirements}{8}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Design Constraints}{8}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Standards compliance}{8}{subsubsection.3.4.1}
 \contentsline {subsubsection}{\numberline {3.4.2}Hardware limitations}{8}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Any other constraint}{8}{subsubsection.3.4.3}
-\contentsline {subsection}{\numberline {3.5}Software System Attributes}{8}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Simple User Interface}{8}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Reliability}{8}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Availability}{8}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Security}{8}{subsubsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.5}Maintainability}{8}{subsubsection.3.5.5}
-\contentsline {subsubsection}{\numberline {3.5.6}Portability}{8}{subsubsection.3.5.6}
-\contentsline {section}{\numberline {4}Formal Analysis Using Alloy}{10}{section.4}
-\contentsline {section}{\numberline {5}Effort Spent}{11}{section.5}
-\contentsline {section}{References}{12}{section.5}
+\contentsline {subsubsection}{\numberline {3.4.3}Any other constraint}{9}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}Software System Attributes}{9}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Simple User Interface}{9}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Reliability}{9}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Availability}{9}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Security}{9}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Maintainability}{9}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.5.6}Portability}{10}{subsubsection.3.5.6}
+\contentsline {section}{\numberline {4}Formal Analysis Using Alloy}{11}{section.4}
+\contentsline {section}{\numberline {5}Effort Spent}{12}{section.5}
+\contentsline {section}{References}{13}{section.5}

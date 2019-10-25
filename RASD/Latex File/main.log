@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.14)  25 OCT 2019 13:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.14)  25 OCT 2019 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -877,7 +877,7 @@ LaTeX Info: Redefining \nameref on input line 3.
 \openout5 = `main.out'.
 
  ABD: EveryShipout initializing macros
-<Images/PolimiLogo1.png, id=202, 423.08063pt x 405.76593pt>
+<Images/PolimiLogo1.png, id=211, 423.08063pt x 405.76593pt>
 File: Images/PolimiLogo1.png Graphic file (type png)
 <use Images/PolimiLogo1.png>
 Package pdftex.def Info: Images/PolimiLogo1.png  used on input line 16.
@@ -934,8 +934,85 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 ]
 (./Files/overview.tex
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 46.
+./Files/overview.tex:38: Undefined control sequence.
+<recently read> \D 
+                   
+l.38  \D
+        {1} The device should acquire position with an accuracy of enouth me...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
+./Files/overview.tex:39: Undefined control sequence.
+l.39 \D
+       {1} The device should take pictures with enouth resolution to be able...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/overview.tex:40: Undefined control sequence.
+l.40 \D
+       {}  Device has internet connection
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/overview.tex:41: Undefined control sequence.
+l.41 \D
+       {2} Every veichle that can be reported shoud have a licence plate vis...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/overview.tex:42: Undefined control sequence.
+l.42 \D
+       {3} The number and kind of violations should be finite (defined by th...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/overview.tex:43: Undefined control sequence.
+l.43 \D
+       {4} Every authority account is verified and it's not possible to be c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/overview.tex:44: Undefined control sequence.
+l.44 \D
+       {5} The third part service which reads the licence plate has an accur...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./Files/overview.tex:46: LaTeX Error: Something's wrong--perhaps a missing \ite
+m.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \end{enumerate}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 48.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )) [6
@@ -944,7 +1021,7 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 (./Files/requirements.tex
 ./Files/requirements.tex:9: Undefined control sequence.
 l.9   \G
-        {1} Allow users to notify authorities about traffic violations.
+        {1} Allow users to notify authorities about traffic violations %%%%%...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -953,34 +1030,7 @@ and I'll forget about whatever was undefined.
 
 ./Files/requirements.tex:10: Undefined control sequence.
 l.10   \R
-         {1}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Files/requirements.tex:11: Undefined control sequence.
-l.11   \G
-         {2} Allow users to send pictures of violations.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Files/requirements.tex:12: Undefined control sequence.
-l.12   \R
-         {2} Images should be clear so that the license plate can be readen ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Files/requirements.tex:13: Undefined control sequence.
-l.13   \R
-         {3} The type of violation should be clear in the picture.
+         {1} User must be able to choose the kind of violation from a list
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -989,7 +1039,7 @@ and I'll forget about whatever was undefined.
 
 ./Files/requirements.tex:14: Undefined control sequence.
 l.14   \G
-         {3} Be sure every information uploaded is never altered
+         {2} Allow users to send pictures with metadata of violations %%%%%%...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -997,8 +1047,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./Files/requirements.tex:15: Undefined control sequence.
-l.15   \G
-         {4} Automatically add metadata to the reported pictures
+l.15   \R
+         {1} Application shoudl access the camera
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1006,8 +1056,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./Files/requirements.tex:16: Undefined control sequence.
-l.16   \G
-         {5} allow users to mine information recorded
+l.16   \R
+         {2} Date, time and position should be automatically added to the vi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1016,7 +1066,7 @@ and I'll forget about whatever was undefined.
 
 ./Files/requirements.tex:17: Undefined control sequence.
 l.17   \R
-         {} All individual users who have signed up for mining the information
+         {}  We shoud require the user to send again a picture in case the p...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1024,23 +1074,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./Files/requirements.tex:18: Undefined control sequence.
-l.18   \G
-         6} have at least two different  priviledge for mining data
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Files/requirements.tex:18: Too many }'s.
-l.18   \G6}
-            have at least two different  priviledge for mining data
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
-
-./Files/requirements.tex:19: Undefined control sequence.
-l.19   \G
-         {7} generate traffic tickets
+l.18   \R
+         {}  The user must be able to select the veichle to report in case t...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1048,7 +1083,76 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ./Files/requirements.tex:20: Undefined control sequence.
-l.20   \G
+l.20   \R
+         {3} The type of violation should be clear in the picture.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/requirements.tex:21: Undefined control sequence.
+l.21   \G
+         {3} Be sure every information uploaded is never altered
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/requirements.tex:22: Undefined control sequence.
+l.22   \G
+         {4} Automatically add metadata to the reported pictures
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/requirements.tex:23: Undefined control sequence.
+l.23   \G
+         {5} allow users to mine information recorded
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/requirements.tex:24: Undefined control sequence.
+l.24   \R
+         {} All individual users who have signed up for mining the information
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/requirements.tex:25: Undefined control sequence.
+l.25   \G
+         6} have at least two different  priviledge for mining data
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/requirements.tex:25: Too many }'s.
+l.25   \G6}
+            have at least two different  priviledge for mining data
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+./Files/requirements.tex:26: Undefined control sequence.
+l.26   \G
+         {7} generate traffic tickets
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Files/requirements.tex:27: Undefined control sequence.
+l.27   \G
          {8} Autorities can see the the licence plates of violators, regular...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1057,7 +1161,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./Files/requirements.tex:25: Package inputenc Error: Unicode character ﬂ (U+F
+./Files/requirements.tex:32: Package inputenc Error: Unicode character ﬂ (U+F
 B02)
 (inputenc)                not set up for use with LaTeX.
 
@@ -1065,14 +1169,30 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 ...as: involved actors, entry conditions, ﬂ
+l.32 ...as: involved actors, entry conditions, ﬂ
                                                   ow of events, exit conditi...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-./Files/requirements.tex:27: Undefined control sequence.
-l.27 \subsubsubsection
+
+./Files/requirements.tex:44: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 		\textbf
+              {ID}: \usecase{1} \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[7
+
+]
+./Files/requirements.tex:97: Undefined control sequence.
+l.97 \subsubsubsection
                       {User Page use cases}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1080,8 +1200,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./Files/requirements.tex:29: Undefined control sequence.
-l.29  \subsubsubsection
+./Files/requirements.tex:99: Undefined control sequence.
+l.99  \subsubsubsection
                        {Reporting Violation use cases}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1090,85 +1210,95 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--52
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
 
  []
 
-[7
+[8]
 
-]
-
-./Files/requirements.tex:73: Package inputenc Error: Unicode character ﬀ (U+F
-B00)
+./Files/requirements.tex:143: Package inputenc Error: Unicode character ﬀ (U+
+FB00)
 (inputenc)                not set up for use with LaTeX.
 
 See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 ...ies. Furthermore, the system will put eﬀ
+l.143 ...es. Furthermore, the system will put eﬀ
                                                   ort in keeping the live da...
 
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
-) [8] [9] (./Files/alloy.tex) [10
+) [9] [10] (./Files/alloy.tex) [11
 
-] (./Files/effort.tex) [11
+] (./Files/effort.tex) [12
 
 ] (./main.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [12
+) [13
 
 ]
+
+./main.tex:146: LaTeX Error: \begin{itemize} on input line 39 ended by \end{doc
+ument}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
- (./main.aux)
+(./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: E56E4BC8490B6712697DDD24264A9421;3540.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: AB810AD52C3A7F6A10D9F3A124FA342C;3390
-(rerunfilecheck)             After:  E56E4BC8490B6712697DDD24264A9421;3540.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 39 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 19935 strings out of 492649
- 370535 string characters out of 6129622
- 449577 words of memory out of 5000000
- 23322 multiletter control sequences out of 15000+600000
+ 19944 strings out of 492649
+ 370625 string characters out of 6129622
+ 449578 words of memory out of 5000000
+ 23325 multiletter control sequences out of 15000+600000
  20579 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,15n,65p,501b,396s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (12 pages, 382376 bytes).
+ 59i,16n,65p,501b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm
+-super-t1.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sf
+bx1095.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx
+1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx14
+40.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx2074
+.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1095.p
+fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1440.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on main.pdf (13 pages, 386304 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 71 named destinations out of 1000 (max. 500000)
- 410 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 415 PDF objects out of 1000 (max. 8388607)
+ 380 compressed objects within 4 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 426 words of extra memory for PDF output out of 10000 (max. 10000000)
 

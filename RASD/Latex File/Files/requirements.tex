@@ -6,10 +6,30 @@
 
 
 \subsection{Functional  Requirements}
-  \G{1} Allow users to notify authorities about traffic violations.
-  \R{1} 
-  \G{2} Allow users to send pictures of violations.
-  \R{2} Images should be clear so that the license plate can be readen easily.
+Evrey function shoud work olnly after succesful login.
+
+\begin{enumerate}
+  \goal{1} Allow users to notify authorities about traffic violations %%%%%%%%%%%%%%%%%%%%
+  \req{1} User must be able to choose the kind of violation from a list
+  %%%thinkkkkkkkk of more%%%%%%%%%%%%
+
+
+
+  \goal{2} Allow users to send pictures with metadata of violations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \req{1} Application should access the camera
+  \req{2} Date, time and position should be automatically added to the violation reported
+  \req{}  We shoud require the user to send again a picture in case the plate is not visible
+  \req{}  The user must be able to select the veichle to report in case there are other veichles in picture
+
+  \goal{3} Allow users to mine information recorded  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \req {1} Application must be able to count occurrency of violations
+  \req {2}  Application must be able to count violation for each veichle
+  \req {3} Application should show streets with highest frequency of violation
+  \req {}  Application should show the first $n$ (input by user) veichles with the highest number of violations
+
+
+
+
   \R{3} The type of violation should be clear in the picture.
   \G{3} Be sure every information uploaded is never altered
   \G{4} Automatically add metadata to the reported pictures
@@ -24,8 +44,71 @@ think about use cases @both
 \subsubsection{Use Cases}
 This section contains all the use cases initially described with the use cases UML model, then the most important Use Case have their own table which provide further details such as: involved actors, entry conditions, ﬂow of events, exit conditions and exceptional conditions.
 
+
+%%%%big pict here %%%%%%%%%%%%
+
+
+
+\begin{itemize}
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		% DATA4HELP USE CASE SPECIFICATION
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\item{  } \\
+		\textbf{ID}: \usecase{1} \\
+		\textbf{Name}: Sign-Up \\
+		\textbf{Actor}: Guest \\
+		\textbf{Entry conditions}:
+		\begin{enumerate}
+			\item{A citizen who wants to use the service}
+		\end{enumerate}
+		\textbf{Event flow}:
+		\begin{enumerate}
+			\item{}
+			\item{The system shows the page with a list of all pending request for the individual (\textbf{Show requests} \usecase{2})}
+			\item{The individual selects the desired action (accept or reject) and clicks the Submit button}
+			\item{The system \textbf{Accepts the request} (\usecase{3}) or \textbf{Rejects the request} (\usecase{4})}
+		\end{enumerate}
+		\textbf{Exit conditions}:
+		\begin{itemize}
+			\item{The request is set as accepted or rejected}
+		\end{itemize}
+		\textbf{Exceptions}: - \\
+		\rule{\linewidth}{0.4pt}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\textbf{ID}: \usecase{2} \\
+		\textbf{Name}: Show requests \\
+		\textbf{Actor}: Individual \\
+		\textbf{Entry conditions}:
+		\begin{enumerate}
+			\item{A logged in individual}
+			\item{A request to access the individual's health status and location}
+		\end{enumerate}
+		\textbf{Event flow}:
+		\begin{enumerate}
+			\item{The system gets all the pending requests}
+			\item{The system shows all the pending requests to the individual}
+		\end{enumerate}
+		\textbf{Exit conditions}: - \\
+		\textbf{Exceptions}:
+		\begin{enumerate}
+			\item{If there are no pending requests, the system should show a message to the user}
+		\end{enumerate}
+		\rule{\linewidth}{0.4pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsubsubsection{User Page use cases}
- 
+
  \subsubsubsection{Reporting Violation use cases}
 
 \subsubsection{User}
@@ -61,7 +144,7 @@ Application should be compliant to European GDPR and don't track users.
 
 \subsection{Software System Attributes} %%%%%%%%%%%%%@S.
 \subsubsection{Simple User Interface}
-The user interface has to be as simple and intuitive as possible, the application should allow an average user to set up an account and start using the application understanding its functionality in no more than a dozen minutes. In addition there should be a complete tutorial to makes it easy using the application. 
+The user interface has to be as simple and intuitive as possible, the application should allow an average user to set up an account and start using the application understanding its functionality in no more than a dozen minutes. In addition there should be a complete tutorial to makes it easy using the application.
 
 \subsubsection{Reliability}
 The application provides a reliable service in which individual users can easily log in and report the violations in the most optimal way. Furthermore it Warranties that the chain of custody of the information coming from the users is never broken, and the information is never altered. This would provide a secure and reliable system. In addition, if the license plate	is not readable from the picture the application should warn the user to send an other photo.
