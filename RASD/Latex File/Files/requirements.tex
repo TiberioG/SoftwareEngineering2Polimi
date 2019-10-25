@@ -6,9 +6,23 @@
 
 
 \subsection{Functional  Requirements}
-
+  \goal{1} Allow users to notify authorities about traffic violations
+  \goal{2} Allow users to send pictures of violations
+  \goal{3} Be sure every information uploaded is never altered
+  \goal{4} Automatically add metadata to the reported pictures
+  \goal{5} allow users to mine information recorded
+  \goal{6} have at least two different  priviledge for mining data
+  \goal{7} generate traffic tickets
+  \goal{8} authorities can see the the licence plates of violators, regular users cannot
 
 think about use cases @both
+
+\subsubsection{Use Cases}
+This section contains all the use cases initially described with the use cases UML model, then the most important Use Case have their own table which provide further details such as: involved actors, entry conditions, ﬂow of events, exit conditions and exceptional conditions.
+
+\subsubsubsection{User Page use cases}
+ 
+ \subsubsubsection{Reporting Violation use cases}
 
 \subsubsection{User}
 \subsubsection{Third party}
@@ -42,6 +56,9 @@ On smartphone side we have the network connectivity (3G/4G connection) and GPS l
 Application should be compliant to European GDPR and don't track users.
 
 \subsection{Software System Attributes} %%%%%%%%%%%%%@S.
+\subsubsection{Simple User Interface}
+The user interface has to be as simple and intuitive as possible, the application should allow an average user to set up an account and start using the application understanding its functionality in no more than a dozen minutes. In addition there should be a complete tutorial to makes it easy using the application. 
+
 \subsubsection{Reliability}
 The application provides a reliable service in which individual users can easily log in and report the violations in the most optimal way. Furthermore it Warranties that the chain of custody of the information coming from the users is never broken, and the information is never altered. This would provide a secure and reliable system. In addition, if the license plate	is not readable from the picture the application should warn the user to send an other photo.
 \subsubsection{Availability}
