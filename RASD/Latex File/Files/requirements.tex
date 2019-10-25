@@ -75,25 +75,61 @@ This section contains all the use cases initially described with the use cases U
 		\textbf{Exceptions}: - \\
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\textbf{ID}: \usecase{2} \\
-		\textbf{Name}: Show requests \\
-		\textbf{Actor}: Individual \\
+		\textbf{ID}: \usecase{3} \\
+		\textbf{Name}: Mine information - streets \\
+		\textbf{Actor}: User  \\
 		\textbf{Entry conditions}:
 		\begin{enumerate}
-			\item{A logged in individual}
-			\item{A request to access the individual's health status and location}
+			\item{User is logged in}
+			\item{User is in ex}
 		\end{enumerate}
 		\textbf{Event flow}:
 		\begin{enumerate}
-			\item{The system gets all the pending requests}
-			\item{The system shows all the pending requests to the individual}
+			\item{User enters the section "Explore data"}
+			\item{The system asks which kind of data the user wants to know}
+      \item{The user chooses to get the data about streets with highest frequency of violations}
+      \item{The system queries in descending order the table where for each streets is associated the count of violations }
+      \item{The system will report in a tabular way the name of streets and the count for the first record to fill the device screen }
+      \item{If the user scrolls down the system will offer the chance to load more rows}
+
+
 		\end{enumerate}
-		\textbf{Exit conditions}: - \\
+		\textbf{Exit conditions}:
+          \item{User wants to go back to "Explore data" area}
+		\textbf{Exceptions}:
+    \begin{enumerate}
+      \item{If there are no records the app will report no data available message}
+    \end{enumerate}
+		\rule{\linewidth}{0.4pt}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\textbf{ID}: \usecase{3a} \\
+		\textbf{Name}: Mine information - offenders \\
+		\textbf{Actor}: Users   \\
+		\textbf{Entry conditions}:
+		\begin{enumerate}
+			\item{User is logged in}
+			\item{ }
+		\end{enumerate}
+		\textbf{Event flow}:
+		\begin{enumerate}
+			\item{User enters the section "Explore data"}
+			\item{The system asks which kind of data the user wants to know}
+      \item{The EndUser chooses to get the data about veichles that committed the highest number of violations}
+      \item{The system queries the table where for each licence plate is associated the count of violations }
+      \item{The system will report in a tabular way an anomymized identifier of the veichle and the count of violations committed if the request comes from a regular User}
+      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed if the request comes from an authority User}
+      \item{If the user scrolls down the system will offer the chance to load more rows}
+		\end{enumerate}
+		\textbf{Exit conditions}:
+    \begin{enumerate}
+      \item{User wants to go back to "Explore data" area}
+    \end{enumerate}
 		\textbf{Exceptions}:
 		\begin{enumerate}
-			\item{If there are no pending requests, the system should show a message to the user}
+			\item{If there are no records the app will report no data available message}
 		\end{enumerate}
 		\rule{\linewidth}{0.4pt}
+
 
 
 

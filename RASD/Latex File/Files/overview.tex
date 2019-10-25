@@ -27,6 +27,16 @@ add here class diagram + verbal description
 \subsubsection{login }
 \subsubsection{sending pics}
 \subsubsection{mining info }
+The app will offer the possibility to the users to visualize the data collected.
+Two kind of visualizations are offered:
+\begin{enumerate}
+  \item Streets with the highest frequency of violations
+  \item Veichles that commit the most violations
+\end{enumerate}
+In order to get those data the system will periodically query the database of violations in order to create a table where the count of violation is stored, both for streets and veichles.
+There will be a section in the app called "Explore Data" where will be able to choose which kind of data to visualize.
+
+
 \subsubsection{issue a ticket }
 \subsubsection{generate statistics}
 
@@ -41,7 +51,7 @@ add here class diagram + verbal description
 \dom{2} Every veichle that can be reported shoud have a licence plate visible
 \dom{3} The number and kind of violations should be finite (defined by the law)
 \dom{4} Every authority account is verified and it's not possible to be created using the frontend
-\dom{5} The third part service which reads the licence plate has an accuracy of more than 90\% 
+\dom{5} The third part service which reads the licence plate has an accuracy of more than 90\%
 
 \end{enumerate}
 
