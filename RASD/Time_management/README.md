@@ -15,5 +15,7 @@
 | ------------- |:-------------:| -----:|
 |      | first meeting| 1,5h  |
 |      | study previous works| 2h  |
-|     | second meeting |   2h |
-|     | third meeting | 1h 30 min |
+|      | second meeting |   2h |
+|      | Software System Attributes  | 1.30h |
+|      | State diagram | 1h |
+|      | third meeting | 1h 30 min |
