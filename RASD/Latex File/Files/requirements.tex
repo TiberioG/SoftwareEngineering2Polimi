@@ -54,7 +54,7 @@ This section contains all the use cases initially described with the use cases U
 		% DATA4HELP USE CASE SPECIFICATION
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\item{  } \\
-		\textbf{ID}: \usecase{1} \\
+		\textbf{ID}: \Sign up Use Case  \\
 		\textbf{Name}: Sign-Up \\
 		\textbf{Actor}: Guest \\
 		\textbf{Entry conditions}:
@@ -75,6 +75,60 @@ This section contains all the use cases initially described with the use cases U
 		\textbf{Exceptions}:
 		\begin{enumerate}
       		\item{The guest left an empty ﬁeld or typed something wrong an error message is displayed and the user is asked to ﬁll the form again.}
+ 		   \end{enumerate}
+		\rule{\linewidth}{0.4pt}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    		\item{  } \\
+		\textbf{ID}: \Login Use Case  \\
+		\textbf{Name}: Login \\
+		\textbf{Actor}: User \\
+		\textbf{Entry conditions}:
+		\begin{enumerate}
+			\item{The user has already registered.}
+		\end{enumerate}
+		\textbf{Event flow}:
+		\begin{enumerate}
+			\item{The user reaches the login page containing the relative form}
+			\item{The user types the username and password in the login form and click on ”Login” button.}
+			\item{The system redirects the user to the application homepage.}
+			
+		\end{enumerate}
+		\textbf{Exit conditions}:
+		\begin{itemize}
+			\item{The user has access to the application functionalities}
+		\end{itemize}
+		\textbf{Exceptions}:
+		\begin{enumerate}
+      		\item{Username and password didn’t correspond or the username didn’t exist, an error message is displayed and the user is asked to ﬁll the login form again.}
+ 		   \end{enumerate}
+		\rule{\linewidth}{0.4pt}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item{  } \\
+		\textbf{ID}: \Recover Password  \\
+		\textbf{Name}: Login \\
+		\textbf{Actor}: User \\
+		\textbf{Entry conditions}:
+		\begin{enumerate}
+			\item{The user has already registered.}
+		\end{enumerate}
+		\textbf{Event flow}:
+		\begin{enumerate}
+			\item{The user reaches the login page containing the relative form}
+			\item{The user clicks on ”Password recovery” button and is redirected to the password recovery page.}
+			\item{The user inserts his email and clicks on ”reset password”.}
+			\item{The system sends an email to the user with a link and instruction to reset the password.}
+			\item{The user chooses and types a new password and conﬁrms.}
+			\item{The application check whether the entered password is strong enough or not.}
+			\item{The system redirects the user to the login page.}
+			
+		\end{enumerate}
+		\textbf{Exit conditions}:
+		\begin{itemize}
+			\item{The user has changed his password}
+		\end{itemize}
+		\textbf{Exceptions}:
+		\begin{enumerate}
+      		\item{The inserted email doesn't match any user in the database, it is displayed an error message and the user is asked to retype a valid email.}
  		   \end{enumerate}
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
