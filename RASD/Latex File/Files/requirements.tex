@@ -63,16 +63,19 @@ This section contains all the use cases initially described with the use cases U
 		\end{enumerate}
 		\textbf{Event flow}:
 		\begin{enumerate}
-			\item{}
-			\item{The system shows the page with a list of all pending request for the individual (\textbf{Show requests} \usecase{2})}
-			\item{The individual selects the desired action (accept or reject) and clicks the Submit button}
-			\item{The system \textbf{Accepts the request} (\usecase{3}) or \textbf{Rejects the request} (\usecase{4})}
+			\item{The guest reaches the registration page containing the relative form}
+			\item{The guest ﬁlls up the form and clicks on ”Sign up” to complete the process}
+			\item{The system redirects the user to his proﬁle page and sends a conﬁrmation email}
+			
 		\end{enumerate}
 		\textbf{Exit conditions}:
 		\begin{itemize}
-			\item{The request is set as accepted or rejected}
+			\item{The guest has successfully registered in the system.}
 		\end{itemize}
-		\textbf{Exceptions}: - \\
+		\textbf{Exceptions}:
+		\begin{enumerate}
+      		\item{The guest left an empty ﬁeld or typed something wrong an error message is displayed and the user is asked to ﬁll the form again.}
+ 		   \end{enumerate}
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\textbf{ID}: \usecase{3} \\
