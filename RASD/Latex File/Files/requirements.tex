@@ -81,7 +81,6 @@ This section contains all the use cases initially described with the use cases U
 		\textbf{Entry conditions}:
 		\begin{enumerate}
 			\item{User is logged in}
-			\item{User is in ex}
 		\end{enumerate}
 		\textbf{Event flow}:
 		\begin{enumerate}
@@ -89,10 +88,8 @@ This section contains all the use cases initially described with the use cases U
 			\item{The system asks which kind of data the user wants to know}
       \item{The user chooses to get the data about streets with highest frequency of violations}
       \item{The system queries in descending order the table where for each streets is associated the count of violations }
-      \item{The system will report in a tabular way the name of streets and the count for the first record to fill the device screen }
+      \item{The system will report in a tabular way the name of streets and the count of occurred violations}
       \item{If the user scrolls down the system will offer the chance to load more rows}
-
-
 		\end{enumerate}
 		\textbf{Exit conditions}:
           \item{User wants to go back to "Explore data" area}
@@ -108,17 +105,16 @@ This section contains all the use cases initially described with the use cases U
 		\textbf{Entry conditions}:
 		\begin{enumerate}
 			\item{User is logged in}
-			\item{ }
 		\end{enumerate}
 		\textbf{Event flow}:
 		\begin{enumerate}
 			\item{User enters the section "Explore data"}
 			\item{The system asks which kind of data the user wants to know}
-      \item{The EndUser chooses to get the data about veichles that committed the highest number of violations}
+      \item{The User chooses to get the data about veichles that committed the highest number of violations}
       \item{The system queries the table where for each licence plate is associated the count of violations }
-      \item{The system will report in a tabular way an anomymized identifier of the veichle and the count of violations committed if the request comes from a regular User}
-      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed if the request comes from an authority User}
-      \item{If the user scrolls down the system will offer the chance to load more rows}
+      \item{The system will report in a tabular way an anomymized identifier of the veichle and the count of violations committed if the request comes from a Regular User}
+      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed if the request comes from an Authority User}
+      \item{If the User scrolls down the system will offer the chance to load more rows}
 		\end{enumerate}
 		\textbf{Exit conditions}:
     \begin{enumerate}
@@ -129,17 +125,6 @@ This section contains all the use cases initially described with the use cases U
 			\item{If there are no records the app will report no data available message}
 		\end{enumerate}
 		\rule{\linewidth}{0.4pt}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
