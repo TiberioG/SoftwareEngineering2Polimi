@@ -65,13 +65,16 @@ Now we have all the data to print the ticket and send it via regular mail. There
 
 \subsection{Assumptions, dependencies and constraints}
 \begin{enumerate}
-\dom{1} The device should acquire position with an accuracy of enouth meters in order to univocally determine the road (e.g. 5 meters)
-\dom{1} The device should take pictures with enouth resolution to be able to read the licence plate using the external software
 \dom{}  Device has internet connection
+\dom{1} The device should acquire position with an accuracy of enouth meters in order to univocally determine the road (e.g. 5 meters)
+\dom{} We have access to an ALPR service which is able to read every licence plate in a picture and return the string
+\dom{1} The device should take pictures with enouth resolution to be able to read by the ALPR service
+\dom{5} ALPR service has an accuracy of more than 90\%
 \dom{2} Every veichle that can be reported shoud have a licence plate visible
 \dom{3} The number and kind of violations should be finite (defined by the law)
 \dom{4} Every authority account is verified and it's not possible to be created using the frontend
-\dom{5} The third part service which reads the licence plate has an accuracy of more than 90\%
+\dom{6} We have access to the vehicle registration database where are stored licence plates, names and the addresses of the owners of every veichle registered
+\dom{7} We have access to a database where are stored all the codes of violations and the amount of fine for the violation
 
 \end{enumerate}
 
