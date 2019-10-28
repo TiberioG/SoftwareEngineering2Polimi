@@ -26,18 +26,38 @@ add here class diagram + verbal description
 
 \subsubsection{login }
 \subsubsection{sending pics}
-\subsubsection{mining info }
+\subsubsection{Explore Data}
 The app will offer the possibility to the users to visualize the data collected.
 Two kind of visualizations are offered:
 \begin{enumerate}
   \item Streets with the highest frequency of violations
-  \item Veichles that commit the most violations
+  \item Veichles that committed the most violations
 \end{enumerate}
 In order to get those data the system will periodically query the database of violations in order to create a table where the count of violation is stored, both for streets and veichles.
 There will be a section in the app called "Explore Data" where will be able to choose which kind of data to visualize.
 
 
-\subsubsection{issue a ticket }
+
+\subsubsection{Issue a ticket }
+Every time a new violation is inserted in the database, the System will use the new data available to generate a proposal of ticket, combining the data from violations with data coming from Municipality databases.
+
+A ticket has the following structure:
+\begin{enumerate}
+  \item Place where violation occurred
+  \item Date when violation occurred
+  \item Plate of veichle
+  \item Article and code of violation
+  \item Amount to be paid
+  \item Date when the payment is due
+\end{enumerate}
+
+The ticket will be in a pending-approval status because we want always an human check before sending it to the offender.
+Authority users (e.g. policemans) will check the pending-approval tickets and they can approve them or not.
+If ticket is not approved it will go in approval-denied status
+If ticket has been approved it will have to be sent to the offender.
+The system will connect to the external vehicle registration database in order to retreive the name, surname, address of the offender knowing the licence plate of his/her veichle.
+Now we have all the data to print the ticket and send it via regular mail. There will be an office of policestation which will do the job.
+
 \subsubsection{generate statistics}
 
 \subsection{User characteristics }
