@@ -54,8 +54,7 @@ This section contains all the use cases initially described with the use cases U
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		% DATA4HELP USE CASE SPECIFICATION
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\item{  } \\
-		\textbf{ID}: \Sign up Use Case  \\
+		\textbf{ID}: \ucas{1} \\
 		\textbf{Name}: Sign-Up \\
 		\textbf{Actor}: Guest \\
 		\textbf{Entry conditions}:
@@ -79,8 +78,8 @@ This section contains all the use cases initially described with the use cases U
  		   \end{enumerate}
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    		\item{  } \\
-		\textbf{ID}: \Login Use Case  \\
+
+		\textbf{ID}: \\
 		\textbf{Name}: Login \\
 		\textbf{Actor}: User \\
 		\textbf{Entry conditions}:
@@ -149,7 +148,7 @@ This section contains all the use cases initially described with the use cases U
       \item{The system will report in a tabular way the name of streets and the count of occurred violations}
       \item{If the user scrolls down the system will offer the chance to load more rows}
 		\end{enumerate}
-		
+
 		\textbf{Exit conditions}:
           \item{User wants to go back to "Explore data" area}
 		\textbf{Exceptions}:
@@ -159,25 +158,24 @@ This section contains all the use cases initially described with the use cases U
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\textbf{ID}: \usecase{3a} \\
-		\textbf{Name}: Mine information - offenders \\
-		\textbf{Actor}: Users   \\
+		\textbf{Name}: Mine information by Authority - offenders \\
+		\textbf{Actor}: AuthorityUser   \\
 		\textbf{Entry conditions}:
 		\begin{enumerate}
-			\item{User is logged in}
+			\item{AuthorityUser is logged in}
 		\end{enumerate}
 		\textbf{Event flow}:
 		\begin{enumerate}
-			\item{User enters the section "Explore data"}
-			\item{The system asks which kind of data the user wants to know}
-      \item{The User chooses to get the data about veichles that committed the highest number of violations}
+			\item{AuthorityUser enters the section "Explore data"}
+			\item{The system asks which kind of data the AuthorityUser wants to know}
+      \item{The AuthorityUser chooses to get the data about veichles that committed the highest number of violations}
       \item{The system queries the table where for each licence plate is associated the count of violations }
-      \item{The system will report in a tabular way an anomymized identifier of the veichle and the count of violations committed if the request comes from a Regular User}
-      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed if the request comes from an Authority User}
-      \item{If the User scrolls down the system will offer the chance to load more rows}
+      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed}
+      \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
 		\end{enumerate}
 		\textbf{Exit conditions}:
     \begin{enumerate}
-      \item{User wants to go back to "Explore data" area}
+      \item{AuthorityUser wants to go back to "Explore data" area}
     \end{enumerate}
 		\textbf{Exceptions}:
 		\begin{enumerate}
@@ -186,6 +184,36 @@ This section contains all the use cases initially described with the use cases U
 		\rule{\linewidth}{0.4pt}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \textbf{ID}: \usecase{3a} \\
+    \textbf{Name}: Mine information by EndUser - offenders \\
+    \textbf{Actor}: EndUsers   \\
+    \textbf{Entry conditions}:
+    \begin{enumerate}
+      \item{User is logged in}
+    \end{enumerate}
+    \textbf{Event flow}:
+    \begin{enumerate}
+      \item{User enters the section "Explore data"}
+      \item{The system asks which kind of data the user wants to know}
+      \item{The User chooses to get the data about veichles that committed the highest number of violations}
+      \item{The system queries the table where for each licence plate is associated the count of violations }
+      \item{The system will report in a tabular way an anomymized identifier of the veichle and the count of violations committed if the request comes from a Regular User}
+      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed if the request comes from an Authority User}
+      \item{If the User scrolls down the system will offer the chance to load more rows}
+    \end{enumerate}
+    \textbf{Exit conditions}:
+    \begin{enumerate}
+      \item{User wants to go back to "Explore data" area}
+    \end{enumerate}
+    \textbf{Exceptions}:
+    \begin{enumerate}
+      \item{If there are no records the app will report no data available message}
+    \end{enumerate}
+    \rule{\linewidth}{0.4pt}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 		\textbf{ID}: \usecase{4} \\
 		\textbf{Name}: Ticket approval  \\
 		\textbf{Actor}: AuthorityUser   \\
