@@ -6,6 +6,7 @@
 |     | class diagram | 1h |
 |     | requirements  | 1h |
 |     | third meeting | 1h 30 min |
+|     | use cases and class diag improvem    | 2h 30 min |
 
 
 
