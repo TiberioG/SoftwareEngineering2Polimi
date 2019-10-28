@@ -18,8 +18,8 @@
 \BOOKMARK [2][-]{subsection.2.2}{Product functions}{section.2}% 18
 \BOOKMARK [3][-]{subsubsection.2.2.1}{login }{subsection.2.2}% 19
 \BOOKMARK [3][-]{subsubsection.2.2.2}{sending pics}{subsection.2.2}% 20
-\BOOKMARK [3][-]{subsubsection.2.2.3}{mining info }{subsection.2.2}% 21
-\BOOKMARK [3][-]{subsubsection.2.2.4}{issue a ticket }{subsection.2.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.2.3}{Explore Data}{subsection.2.2}% 21
+\BOOKMARK [3][-]{subsubsection.2.2.4}{Issue a ticket }{subsection.2.2}% 22
 \BOOKMARK [3][-]{subsubsection.2.2.5}{generate statistics}{subsection.2.2}% 23
 \BOOKMARK [2][-]{subsection.2.3}{User characteristics }{section.2}% 24
 \BOOKMARK [2][-]{subsection.2.4}{Assumptions, dependencies and constraints}{section.2}% 25
@@ -30,7 +30,7 @@
 \BOOKMARK [3][-]{subsubsection.3.1.3}{Software Interfaces}{subsection.3.1}% 30
 \BOOKMARK [3][-]{subsubsection.3.1.4}{Communication Interfaces}{subsection.3.1}% 31
 \BOOKMARK [2][-]{subsection.3.2}{Functional Requirements}{section.3}% 32
-\BOOKMARK [3][-]{Item.5}{Use Cases}{subsection.3.2}% 33
+\BOOKMARK [3][-]{Item.11}{Use Cases}{subsection.3.2}% 33
 \BOOKMARK [3][-]{subsubsection.3.2.2}{User}{subsection.3.2}% 34
 \BOOKMARK [3][-]{subsubsection.3.2.3}{Third party}{subsection.3.2}% 35
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Requirements}{subsection.3.2}% 36
