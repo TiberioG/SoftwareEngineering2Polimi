@@ -54,6 +54,7 @@ This section contains all the use cases initially described with the use cases U
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		% DATA4HELP USE CASE SPECIFICATION
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item{Basic functions}
 		\textbf{ID}: \ucas{1} \\
 		\textbf{Name}: Sign-Up \\
 		\textbf{Actor}: Guest \\
@@ -66,11 +67,10 @@ This section contains all the use cases initially described with the use cases U
 			\item{The guest reaches the registration page containing the relative form}
 			\item{The guest ﬁlls up the form and clicks on ”Sign up” to complete the process}
 			\item{The system redirects the user to his proﬁle page and sends a conﬁrmation email}
-
 		\end{enumerate}
 		\textbf{Exit conditions}:
 		\begin{itemize}
-			\item{The guest has successfully registered in the system.}
+			\item{The guest has successfully registered in the system}
 		\end{itemize}
 		\textbf{Exceptions}:
 		\begin{enumerate}
@@ -78,20 +78,18 @@ This section contains all the use cases initially described with the use cases U
  		   \end{enumerate}
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-		\textbf{ID}: \\
+		\textbf{ID}: \ucas{2} \\
 		\textbf{Name}: Login \\
 		\textbf{Actor}: User \\
 		\textbf{Entry conditions}:
 		\begin{enumerate}
-			\item{The user has already registered.}
+			\item{The user has already registered}
 		\end{enumerate}
 		\textbf{Event flow}:
 		\begin{enumerate}
 			\item{The user reaches the login page containing the relative form}
-			\item{The user types the username and password in the login form and click on ”Login” button.}
-			\item{The system redirects the user to the application homepage.}
-
+			\item{The user types the username and password in the login form and click on ”Login” button}
+			\item{The system redirects the user to the application homepage}
 		\end{enumerate}
 		\textbf{Exit conditions}:
 		\begin{itemize}
@@ -99,28 +97,27 @@ This section contains all the use cases initially described with the use cases U
 		\end{itemize}
 		\textbf{Exceptions}:
 		\begin{enumerate}
-      		\item{Username and password didn’t correspond or the username didn’t exist, an error message is displayed and the user is asked to ﬁll the login form again.}
+      		\item{Username and password didn’t correspond or the username didn’t exist, an error message is displayed and the user is asked to ﬁll the login form again}
  		   \end{enumerate}
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \item{  } \\
-		\textbf{ID}: \Recover Password  \\
-		\textbf{Name}: Login \\
+
+		\textbf{ID}: \ucas{3}  \\
+		\textbf{Name}: Recover Password \\
 		\textbf{Actor}: User \\
 		\textbf{Entry conditions}:
 		\begin{enumerate}
-			\item{The user has already registered.}
+			\item{The user has already registered}
 		\end{enumerate}
 		\textbf{Event flow}:
 		\begin{enumerate}
 			\item{The user reaches the login page containing the relative form}
 			\item{The user clicks on ”Password recovery” button and is redirected to the password recovery page.}
-			\item{The user inserts his email and clicks on ”reset password”.}
-			\item{The system sends an email to the user with a link and instruction to reset the password.}
-			\item{The user chooses and types a new password and conﬁrms.}
-			\item{The application check whether the entered password is strong enough or not.}
-			\item{The system redirects the user to the login page.}
-
+			\item{The user inserts his email and clicks on ”reset password”}
+			\item{The system sends an email to the user with a link and instruction to reset the password}
+			\item{The user chooses and types a new password and conﬁrms}
+			\item{The application check whether the entered password is strong enough or not}
+			\item{The system redirects the user to the login page}
 		\end{enumerate}
 		\textbf{Exit conditions}:
 		\begin{itemize}
@@ -132,7 +129,38 @@ This section contains all the use cases initially described with the use cases U
  		   \end{enumerate}
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-		\textbf{ID}: \usecase{3} \\
+    \textbf{ID}: \usecase{4} \\
+    \textbf{Name}: Report a violation
+    \textbf{Actor}: User   \\
+    \textbf{Entry conditions}:
+    \begin{enumerate}
+      \item{User is logged in}
+    \end{enumerate}
+    \textbf{Event flow}:
+    \begin{enumerate}
+      \item{User enters the section "Report a violation"}
+      \item{System opens the camera of smartphone and ask user to take a picture of the violation}
+      \item{The user takes the picture }
+      \item{The system shows the picture just taken }
+      \item{The system reminds the user that violation must be visible and licence plate of the veichle which is in violation}
+      \item{The system asks the user, if there are other plates visible in the picture, which are not the one of the veichle to be reported, to use the finger to }
+      \item{The system sends the picture to the ALPR service which returns }
+      \item{The system queries the table where for each licence plate is associated the count of violations }
+      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed}
+      \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
+    \end{enumerate}
+    \textbf{Exit conditions}:
+    \begin{enumerate}
+      \item{AuthorityUser wants to go back to "Explore data" area}
+    \end{enumerate}
+    \textbf{Exceptions}:
+    \begin{enumerate}
+      \item{If there are no records the app will report no data available message}
+    \end{enumerate}
+    \rule{\linewidth}{0.4pt}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\textbf{ID}: \ucas{3} \\
 		\textbf{Name}: Mine information - streets \\
 		\textbf{Actor}: User  \\
 		\textbf{Entry conditions}:
@@ -213,7 +241,7 @@ This section contains all the use cases initially described with the use cases U
     \rule{\linewidth}{0.4pt}
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\item{Advanced function}
 		\textbf{ID}: \usecase{4} \\
 		\textbf{Name}: Ticket approval  \\
 		\textbf{Actor}: AuthorityUser   \\
