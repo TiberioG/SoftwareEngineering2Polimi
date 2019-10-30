@@ -32,9 +32,9 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\color{Gray}{\small{RASD +  Tiberio - Saeid Rezaei}}}
-\lfoot{\textcolor{Gray}{\small{Copyright © 2019, RASD +  Tiberio - Saeid RezaeiS – All rights reserved}}}
-\rfoot{\textcolor{Gray}{\thepage}}
+\lhead{\color{poliblue}{\small{RASD +  Tiberio - Saeid Rezaei}}}
+\lfoot{\textcolor{poliblue}{\small{Copyright © 2019, RASD +  Tiberio - Saeid RezaeiS – All rights reserved}}}
+\rfoot{\textcolor{poliblue}{\thepage}}
 \renewcommand{\headrulewidth}{0pt}
 
 %PACKAGES
@@ -51,6 +51,11 @@
 %\usepackage{times}
 %Change monospaced font
 %\renewcommand{\ttdefault}{lmtt}
+
+%Font : Futura
+\usepackage{amsfonts}
+\usepackage{fontspec}
+\setmainfont{Futura Book}[ItalicFont={Futura Light Italic}]
 
 %tables
 \usepackage{tabu}
@@ -117,8 +122,9 @@
 \graphicspath{ {./Images/} }
 \usepackage[dvipsnames, table]{xcolor}
 
-%emp to embed MetaPost
-\usepackage{emp}
+%color definitions
+\definecolor{poliblue}{RGB}{114, 143, 165}
+\definecolor{polidark}{RGB}{109, 134, 158}
 
 %References
 %\usepackage{xpatch}
@@ -131,9 +137,16 @@
 \usepackage{enumitem}
 \usepackage{amssymb}
 \usepackage[pdftex, colorlinks]{hyperref}
+\hypersetup{
+     colorlinks=true,
+     linkcolor=black,
+     filecolor=black,
+     citecolor = black,
+     urlcolor=polidark,
+     }
 
 
-
+\urlstyle{same}
 % Some utilities\ldots
 \input{util/highlight}
 \input{util/abbrev}

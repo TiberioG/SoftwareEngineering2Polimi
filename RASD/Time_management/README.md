@@ -8,7 +8,7 @@
 |     | third meeting | 1h 30 min |
 |     | use cases and class diag improvem    | 2h 30 min |
 |     | meeting   | 30 min|
-
+|     | use cases | 2h 30 min |
 
 
 
@@ -21,4 +21,4 @@
 |      | Software System Attributes  | 1.30h |
 |      | State diagram | 1h |
 |      | third meeting | 1h 30 min |
-|      | meeting | 30 min| 
+|      | meeting | 30 min|
