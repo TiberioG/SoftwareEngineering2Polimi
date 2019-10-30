@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  30 OCT 2019 10:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  30 OCT 2019 14:22
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -815,7 +816,8 @@ File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 
-! Package hyperref Error: Wrong driver option `pdftex',
+/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty:4383: Packag
+e hyperref Error: Wrong driver option `pdftex',
 (hyperref)                because pdfTeX in PDF mode is not detected.
 
 See the hyperref package documentation for explanation.
@@ -1402,46 +1404,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
 ] [9] [10]
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+./Files/requirements.tex:174: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.203     \end{enumerate}
-                         
+l.174   \end{enumerate}
+                       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[11] [12]
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+./Files/requirements.tex:195: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.338     \end{enumerate}
-                         
+l.195   \end{enumerate}
+                       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[11]
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+./Files/requirements.tex:215: LaTeX Error: Lonely \item--perhaps a missing list
+ environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.342     \end{enumerate}
+l.215         \item{
+                    User wants to go back to "Explore data" area}
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 215
+[][]
+ []
+
+[12]
+
+./Files/requirements.tex:275: LaTeX Error: Lonely \item--perhaps a missing list
+ environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.275 \item{
+            Advanced function}\\
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) detected at line 275
+[][]
+ []
+
+[13]
+
+./Files/requirements.tex:320: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.320     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-! Undefined control sequence.
+
+./Files/requirements.tex:324: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.324     \end{enumerate}
+                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Files/requirements.tex:335: Undefined control sequence.
 <recently read> \requirement 
                              
-l.357   \requirement
+l.335   \requirement
                     {1} test
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1450,61 +1506,47 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+./Files/requirements.tex:336: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.358 \end{enumerate}
+l.336 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--371
+Underfull \hbox (badness 10000) in paragraph at lines 346--349
 
  []
 
-[13] [14]
+[14]
 Missing character: There is no ﬀ in font Futura Book/OT:mapping=tex-text;!
-) [15] (./Files/alloy.tex) [16
+) [15] [16] (./Files/alloy.tex) [17
 
-] (./Files/effort.tex) [17
+] (./Files/effort.tex) [18
 
 ]
 No file main.bbl.
-
-! LaTeX Error: \begin{itemize} on input line 54 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
 (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 57FF4260CCC4397032DE5FE80CEFA32C.
+(rerunfilecheck)             Checksum: C3D6958705E724153C58C04CEB034D61.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
- )
-(\end occurred inside a group at level 2)
 
-### semi simple group (level 2) entered at line 54 (\begingroup)
-### semi simple group (level 1) entered at line 11 (\begingroup)
-### bottom level 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
+ ) 
 Here is how much of TeX's memory you used:
  32515 strings out of 492970
  642571 string characters out of 6133938
@@ -1512,6 +1554,6 @@ Here is how much of TeX's memory you used:
  36046 multiletter control sequences out of 15000+600000
  540082 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 59i,12n,65p,10467b,673s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,12n,65p,10467b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (17 pages).
+Output written on main.pdf (18 pages).
