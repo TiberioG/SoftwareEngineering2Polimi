@@ -22,5 +22,5 @@
 |      | State diagram | 1h |
 |      | third meeting | 1h 30 min |
 |      | meeting | 30 min|
-|      | Verify Requirements | 30 min|
+|      | Verify Requirements | 1h |
 |      | Use Cases diagrams | 1h 30 min|
