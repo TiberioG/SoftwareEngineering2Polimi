@@ -9,7 +9,7 @@
 |     | use cases and class diag improvem    | 2h 30 min |
 |     | meeting   | 30 min|
 |     | use cases | 2h 30 min |
-
+|     | GUI, requirements, class description | 4h |
 
 
 

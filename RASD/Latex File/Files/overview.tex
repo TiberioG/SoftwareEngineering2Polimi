@@ -17,36 +17,35 @@
 \subsubsection{Class Diagram}
 The following class diagram is a high-level class diaram which should be intended as a model of the application structure. During the implementation part more classes and attributes can be created and used.
 
+%Sideway figure
+%\begin{sidewaysfigure}
+%\centering
+%\includegraphics[width=\textwidth]{Images/Class.png}
+%\caption{\label{fig:classdiagram}High-level Class Diagram}
+%\end{sidewaysfigure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Images/Class.png}
+\caption{\label{fig:classdiagram}High-level Class Diagram}
+\end{figure}
+
+
+
 \paragraph{User}
-
-The class \textbf{user} is the father of the two possiblekind of user: \textbf{EndUser} and \textbf{Authority} which are needed because our application is intended to be multi- user and with at least two priviledges for data that can be viewed and possible functions accessible.
-
+This class the father of the two possible kind of users: \textbf{EndUser} and \textbf{Authority} which are needed because our application is intended to be multi- user and with at least two priviledges for data that can be viewed and possible functions accessible.
 \paragraph{Location}
 Every user is in a \textbf{Location} class used to represent location as latitude and longitude coming from the SO of the smartphone.
-
 \paragraph{Reverse Geocoding}
-The interface \textbf{Reverse Geocoding} is used to communicate with the external serveice to get a readable address from the coordinates as explained in section \ref{Dependencies}.
-
+This interface is used to communicate with the external serveice to get a readable address from the coordinates as explained in section \ref{Dependencies}.
 \paragraph{Violation}
-The class \textbf{Violation} is used to store all the data relative of the reported violation. The \textit{kind} attribute is selected by the user in the fill form \ref{fillform} from a list of possible kind of violations.
+This class is used to store all the data relative of the reported violation. The \textit{kind} attribute is selected by the user in the fill form \ref{fillform} from a list of possible kind of violations.
 The photo is here reported an attribute but can also be implemented as a separate class. It's mandatory that one picture is associated to every violation. In the \textbf{Violation} class are also stored the raw latitude and longitude in case there will be need of those data later, as an example if it's imposssible get precise location using reverse geocoding.
-
-\paragraph{Automated License Plate Recognition}
-
-Ihe interface \textbf{Automated License Plate Recognition} is needed to interact with the external ALPR service which receives a picture and returns a string containing every licence plate present in the picture. This interface is used to complete the attribute \textit{licence plate} of every violation.
-
+\paragraph{ALPR}
+This interface is needed to interact with the external ALPR service which receives a picture and returns a string containing every licence plate present in the picture. This interface is used to complete the attribute \textit{licence plate} of every violation.
 \paragraph{MinedInfo}
-
 Classes \textbf{MinedSteets} and \textbf{MinedOffenders} are used to represent the data coming from the database of all violation and processed to offer different kind of visualization.
-
-
-
-
-
-
-end
-add here class diagram + verbal description
-
+\paragraph{}
 
 
 %add a state diagram for each subsect
@@ -55,8 +54,6 @@ add here class diagram + verbal description
 \subsection{Product functions}
 
 \subsubsection{Report violation}
-
-
 
 \subsubsection{Explore Data}
 The app will offer the possibility to the users to visualize the data collected.
@@ -67,8 +64,6 @@ Two kind of visualizations are offered:
 \end{enumerate}
 In order to get those data the system will periodically query the database of violations in order to create a table where the count of violation is stored, both for streets and vehicles.
 There will be a section in the app called "Explore Data" where will be able to choose which kind of data to visualize.
-
-
 
 \subsubsection{Issue a ticket}
 Every time a new violation is inserted in the database, the System will use the new data available to generate a proposal of ticket, combining the data from violations with data coming from Municipality databases.
@@ -94,7 +89,6 @@ Now we have all the data to print the ticket and send it via regular mail. There
 
 \subsection{User characteristics }
 
-
 \subsection{Assumptions, dependencies and constraints}
 \begin{enumerate}
 \dom{1}  Device has internet connection
@@ -111,7 +105,6 @@ Now we have all the data to print the ticket and send it via regular mail. There
 \end{enumerate}
 
 \subsubsection{Dependencies} \label{Dependencies}
-
 
 The app will be dependent on a third-party service to read the licence plate of the cars. (For example \url{http://www.openalpr.com} )
 
