@@ -1,5 +1,18 @@
 \subsection{External Interface Requirements}
+This section provides a detailed description of all inputs and outputs from the system. It also gives a description of the hardware, software and communication interfaces and provides basic prototypes of the user interface.
+
 \subsubsection{User Interfaces}
+In this section we present the mockups of the GUI,
+
+
+\begin{figure}[htpb]
+		\centering%
+      \includegraphics{GUI/login.png}
+      \caption{Login screen}   \label{fig:login}
+    \end{figure}
+
+
+
 \subsubsection{Hardware Interfaces}
 \subsubsection{Software Interfaces}
 \subsubsection{Communication Interfaces}
@@ -18,19 +31,30 @@ Evrey function shoud work olnly after succesful login.
 \item \textbf{[G2] Allow users to send pictures with metadata of violations } %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \req{1} Application should access the camera
   \req{2} Date, time and position should be automatically added to the violation reported
-  \req{3} We shoud require the user to send again a picture in case the plate is not visible
+  \req{3} We should require the user to send again a picture in case the plate is not visible
   \req{4} The user must be able to select the veichle to report in case there are other veichles in picture
 
 \item \textbf{[G3] Allow users to mine information recorded}  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \req {1} Application must be able to count occurrency of violations
-  \req {2}  Application must be able to count violation for each veichle
-  \req {3} Application should show streets with highest frequency of violation
-  \req {}  Application should show the first $n$ (input by user) veichles with the highest number of violations
+  \req {2} Application must be able to count violation for each veichle
+  \req {4} Application should show the first $n$ (input by user) veichles with the highest number of violations
+  \req {5} Application should visualize the areas where violation occurred
+  \req {6} Application must use a gradient of color to show the occurrencies ov iolation as an overlay of a interactive map
+
 \item \textbf{[G4] Have at least two different priviledge for mining data} %%%%%%%%%%%%%%%%%%%%%
+  \req {1} Regular end users can see the list of veichles with the highest number of violations but they cannot see the licence plate, but just a random identifier
+  \req{2} Authority users can know the exact licence plate when mining data about offenders
 
 \item \textbf{[G5] Generate traffic tickets}
+  \req {} Application must be able to read every violation stored and automatically generate a ticket
+  \req {}
 \item \textbf{[G6] Generate statistics about issued tickets}
+  \req{}
+
 \item \textbf{[G7] Be sure every information uploaded is never altered}
+ \req{} The application must be able to know if a picture has been altered
+
+
 
 
 \end{itemize}
@@ -38,11 +62,18 @@ Evrey function shoud work olnly after succesful login.
 
 
 
-\subsubsection{Use Cases}
-This section contains all the use cases initially described with the use cases UML model, then the most important Use Case have their own table which provide further details such as:  involved actors, entry conditions,  ﬂow of events, exit conditions and exceptional conditions.
+\subsubsection{Use Cases diagrams}
+Here are presented the use case diagrams for each main function. In the next section each use case will be verbally presented.
 
 
 %%%%big pict here %%%%%%%%%%%%
+
+
+
+\subsubsection{Use Cases Description}
+In the following section a description of each use case is provided. For every use case is reported: an ID defining each case, the entry conditions, the steps to accomplish the exit condition and any exception that may occur. \\
+
+
 %%%%%%%USE CASES HERE ***********************************************************************
 
 	\textbf{ID}: \ucas{1} \\
@@ -119,7 +150,7 @@ This section contains all the use cases initially described with the use cases U
 	\rule{\linewidth}{0.4pt}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \textbf{ID}: \ucas{4a} \\
-  \textbf{Name}: Report a violation - taking picture
+  \textbf{Name}: Report a violation - taking picture \\
   \textbf{Actor}: User   \\
   \textbf{Entry conditions}:
   \begin{enumerate}
@@ -196,7 +227,7 @@ This section contains all the use cases initially described with the use cases U
   \rule{\linewidth}{0.4pt}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\textbf{ID}: \ucas{5a} \\
-	\textbf{Name}: Mine information - streets \\
+	\textbf{Name}: Mine information - street heatmap \\
 	\textbf{Actor}: User  \\
 	\textbf{Entry conditions}:
 	\begin{enumerate}
@@ -205,11 +236,9 @@ This section contains all the use cases initially described with the use cases U
 	\textbf{Event flow}:
 	\begin{enumerate}
 		\item{User enters the section "Explore data"}
-		\item{The system asks which kind of data the user wants to know}
-    \item{The user chooses to get the data about streets with highest frequency of violations}
-    \item{The system queries in descending order the table where for each streets is associated the count ofviolations }
-    \item{The system will report in a tabular way the name of streets and the count of occurred violations}
-    \item{If the user scrolls down the system will offer the chance to load more rows}
+    \item{The user chooses to get the map about streets with highest frequency of violations}
+    \item{The system queries in descending order the table where for each streets is associated the count of violations}
+    \item{The app shows a map with an overlay which higlights the areas with a gradient color according to the number of vioations occurred}
 	\end{enumerate}
 	\textbf{Exit conditions}:
         \item{User wants to go back to "Explore data" area}
@@ -371,8 +400,6 @@ This section contains all the use cases initially described with the use cases U
     \rule{\linewidth}{0.4pt}
 
 
-\subsubsection{User}
-\subsubsection{Third party}
 
 \subsubsection{Requirements}
 Requirements in order to satisfy the goals
