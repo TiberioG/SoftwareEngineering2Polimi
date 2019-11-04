@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  30 OCT 2019 14:22
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  4 NOV 2019 16:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1390,114 +1390,198 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [4] (./Files/introduction.tex
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-[]\TU/FuturaBook(0)/m/sc/10.95 GOOGLE inc. Google Maps Platform [][]$[][][][][]
- [] [] [] [][][][][][][][][][] [] [][][][][][] [] [][][] [] [][][][] []
+ [4] (./Files/introduction.tex) [5
+
+]
+(./Files/overview.tex [6
+
+]) [7] (./Files/requirements.tex
+File: GUI/login.png Graphic file (type bmp)
+<GUI/login.png>
+File: GUI/takepic.png Graphic file (type bmp)
+<GUI/takepic.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8
+
+]
+File: GUI/fillform.png Graphic file (type bmp)
+<GUI/fillform.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+File: GUI/picturetaken.png Graphic file (type bmp)
+<GUI/picturetaken.png>
+File: GUI/offenders.png Graphic file (type bmp)
+<GUI/offenders.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+File: GUI/heatmap.png Graphic file (type bmp)
+<GUI/heatmap.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
  []
 
-) [5
+[14] [15] [16]
 
-] (./Files/overview.tex [6
-
-]) [7] (./Files/requirements.tex [8
-
-] [9] [10]
-
-./Files/requirements.tex:174: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:234: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.174   \end{enumerate}
+l.234   \end{enumerate}
                        
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Files/requirements.tex:195: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:255: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195   \end{enumerate}
+l.255   \end{enumerate}
                        
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[11]
+[17]
 
-./Files/requirements.tex:215: LaTeX Error: Lonely \item--perhaps a missing list
+./Files/requirements.tex:273: LaTeX Error: Lonely \item--perhaps a missing list
  environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.215         \item{
+l.273         \item{
                     User wants to go back to "Explore data" area}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 215
+Underfull \hbox (badness 10000) detected at line 273
 [][]
  []
 
-[12]
+[18]
 
-./Files/requirements.tex:275: LaTeX Error: Lonely \item--perhaps a missing list
+./Files/requirements.tex:333: LaTeX Error: Lonely \item--perhaps a missing list
  environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.275 \item{
+l.333 \item{
             Advanced function}\\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 275
+Underfull \hbox (badness 10000) detected at line 333
 [][]
  []
 
-[13]
+[19]
 
-./Files/requirements.tex:320: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:378: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.320     \end{enumerate}
+l.378     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Files/requirements.tex:324: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:382: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.324     \end{enumerate}
+l.382     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Files/requirements.tex:335: Undefined control sequence.
+
+./Files/requirements.tex:401: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.401     \end{enumerate}
+                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Files/requirements.tex:405: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.405     \end{enumerate}
+                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Files/requirements.tex:424: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424     \end{enumerate}
+                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./Files/requirements.tex:428: LaTeX Error: Something's wrong--perhaps a missing
+ \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.428     \end{enumerate}
+                         
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+./Files/requirements.tex:436: Undefined control sequence.
 <recently read> \requirement 
                              
-l.335   \requirement
+l.436   \requirement
                     {1} test
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1506,28 +1590,28 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-./Files/requirements.tex:336: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:437: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.336 \end{enumerate}
+l.437 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--349
+Underfull \hbox (badness 10000) in paragraph at lines 447--450
 
  []
 
-[14]
+[20] [21]
 Missing character: There is no ﬀ in font Futura Book/OT:mapping=tex-text;!
-) [15] [16] (./Files/alloy.tex) [17
+) [22] (./Files/alloy.tex) [23
 
-] (./Files/effort.tex) [18
+] (./Files/effort.tex) [24
 
 ]
 No file main.bbl.
@@ -1537,7 +1621,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C3D6958705E724153C58C04CEB034D61.
+(rerunfilecheck)             Checksum: ECCCE40C2DBF1A3476DF0397BB29E90B.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1548,12 +1632,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 32515 strings out of 492970
- 642571 string characters out of 6133938
- 723652 words of memory out of 5000000
- 36046 multiletter control sequences out of 15000+600000
+ 32554 strings out of 492970
+ 643195 string characters out of 6133938
+ 723931 words of memory out of 5000000
+ 36077 multiletter control sequences out of 15000+600000
  540082 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,12n,65p,10467b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (18 pages).
+Output written on main.pdf (24 pages).
