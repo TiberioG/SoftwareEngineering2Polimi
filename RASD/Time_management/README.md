@@ -10,7 +10,7 @@
 |     | meeting   | 30 min|
 |     | use cases | 2h 30 min |
 |     | GUI, requirements, class description | 4h |
-
+|     | GUI, functions, statecharts | 4h |
 
 
 | Saeid       | task          | Time  |

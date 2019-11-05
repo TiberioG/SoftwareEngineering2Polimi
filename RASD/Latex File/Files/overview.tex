@@ -10,11 +10,11 @@ The following class diagram is a high-level class diaram which should be intende
 %\caption{\label{fig:classdiagram}High-level Class Diagram}
 %\end{sidewaysfigure}
 
-\begin{figure}
+\begin{sidewaysfigure}
 \centering
 \includegraphics[width=\textwidth]{Images/Class.png}
 \caption{\label{fig:classdiagram}High-level Class Diagram}
-\end{figure}
+\end{sidewaysfigure}
 
 \paragraph{User}
 This class is the father of the two possible kind of users: \textbf{EndUser} and \textbf{Authority} which are needed because our application is intended to be multi-user and with at least two privileges for data that can be viewed and possible functions accessible.
@@ -44,21 +44,18 @@ The attributes \textit{kind violation}, \textit{violation street}, \textit{viola
 The attributes \textit{amount} and \textit{date payment due} are filled by the connection with the external authority database containing the amount of money to be paid for every fine and the standard deadline for payment.
 The attribute \textit{Offender name} and \textit{Offender surname} are used to store the identity of the owner of the veichle, these should be filled knowing the plate and quering the external licence plate registration database.
 
+\paragraph{Statistics}
+The classes \textbf{StatsOffenders} and \textbf{StatsTrends} are used to represent the data about the issued ticket and used for visualizations.
 
-
-
-
-
-
-
-
-%add a state diagram for each subsect
+\paragraph{CheckValidity}
+Is a class used to check 
 
 
 \subsection{Product functions}
 
 \subsubsection{Report violation}
-The main function of SafeStreets is allowing users to report violation of parking areas. User will be required to take a picture of the veichle responsible of the violation ad select the kind of violation.
+The main function of SafeStreets is allowing users to report traffic violations, in particula when parking violations occour.
+ User will be required to take a picture of the veichle responsible of the violation ad select the kind of violation.
 
 Once opened the app the will show on display the camera recording mode in order to start reporting the violation by taking the picture. Some alerts will appear reminding the user he has to include the plate of the veichle and violation must be visible.
 
