@@ -1,17 +1,3 @@
-
-
-%\begin{sidewaysfigure}
-%\centering
-%\includegraphics[width=\textwidth]{Images/11.png}
-%\caption{\label{fig:metamodel}DICE DPIM metamodel.}
-%\end{sidewaysfigure}
-
-%\begin{figure}
-%\centering
-%\includegraphics[width=\textwidth]{Images/11.png}
-%\caption{\label{fig:metamodel2}DICE DPIM metamodel in portrait form.}
-%\end{figure}
-
 \subsection{Product perspective }
 
 \subsubsection{Class Diagram}
@@ -30,25 +16,36 @@ The following class diagram is a high-level class diaram which should be intende
 \caption{\label{fig:classdiagram}High-level Class Diagram}
 \end{figure}
 
-
-
 \paragraph{User}
-This class is the father of the two possible kind of users: \textbf{EndUser} and \textbf{Authority} which are needed because our application is intended to be multi-user and with at least two priviledges for data that can be viewed and possible functions accessible.
+This class is the father of the two possible kind of users: \textbf{EndUser} and \textbf{Authority} which are needed because our application is intended to be multi-user and with at least two privileges for data that can be viewed and possible functions accessible.
+
 \paragraph{Location}
-Every user is in a \textbf{Location} class used to represent the location as latitude and longitude coming from the SO of the smartphone.
+Every user is in a \textbf{Location} class used to represent the location as latitude and longitude coming from the OS of the smartphone.
+
 \paragraph{Reverse Geocoding}
 This interface is used to communicate with the external serveice to get a readable address from the coordinates as explained in section \ref{Dependencies}.
+
 \paragraph{Violation}
-This class is used to store all the data relative of the reported violation. The \textit{kind} attribute is selected by the user in the fill form from a list of possible kind of violations, see use case \ucas{}.
-The photo is here reported an attribute but can also be implemented as a separate class. It's mandatory that one picture is associated to every violation. In the \textbf{Violation} class there are also stored the raw latitude and longitude in case there will be need of those data later, as an example if it's imposssible get precise location using reverse geocoding.
+This class is used to store all the data related to the reported violation. The \textit{kind} attribute is selected by the user in the fill form from a list of possible kind of violations, see use case \ucas{}. The photo is here reported an attribute but can also be implemented as a separate class. It's mandatory that one picture is associated to every violation. In the \textbf{Violation} class there are also stored the raw latitude and longitude in case there will be need of those data later, as an example if it's imposssible get precise location using reverse geocoding.
+
 \paragraph{ALPR}
 This interface is needed to interact with the external ALPR service which receives a picture and returns a string containing every licence plate found in the picture. This interface is used to complete the attribute \textit{licence plate} of every violation.
+
 \paragraph{MinedInfo}
 Classes \textbf{MinedSteets} and \textbf{MinedOffenders} are used to represent the data coming from the database of all violation and processed to offer different kind of visualization.
+
 \paragraph{Heat Map visualizer}
 This interface is used to communicate with the external service providing a map of streets with an overlay highliting the spots where violation occurred.
+
 \paragraph{Ticket}
-this class is used to represent the ticket with the fine for the owners of violationg veichles. every instance will be automatically creadted by the system, using data coming from the instances of the \textbf{Violation} class.
+This class is used to represent the ticket with the fine for the owners of violationg veichles. Every instance will be automatically creadted by the system, using data coming from the instances of the \textbf{Violation} class. This data has to be combined with data from some authority database eg. the database of all registered veichels plates, the database of violation sof the traffic law .
+The attribute \textit{valid} is a boolean value, set by the class \textbf{CheckValidity} TRUE if the picture associated to the correspinding violation has't been altered. Otherwise the ticket is considered not valid, and the attribute is set to FALSE.
+The attributes \textit{kind violation}, \textit{violation street}, \textit{violation street numb} \textit{licence plate}, \textit{dateviolation} are copied from the instnces of \textbf{Violation}.
+The attributes \textit{amount} and \textit{date payment due} are filled by the connection with the external authority database containing the amount of money to be paid for every fine and the standard deadline for payment.
+The attribute \textit{Offender name} and \textit{Offender surname} are used to store the identity of the owner of the veichle, these should be filled knowing the plate and quering the external licence plate registration database.
+
+
+
 
 
 
@@ -67,12 +64,10 @@ The app will offer the possibility to the users to visualize the data collected.
 Two kind of visualizations are offered:
 \begin{enumerate}
   \item Heatmap of streets where most violations occurred
-  \item Vehicles that committed the most violations
+  \item Vehicles that committed the most violations \label{blacklistplates}
 \end{enumerate}
 In order to get those data the system will periodically query the database of violations in order to create a table where the count of violation is stored, both for streets and vehicles.
 There will be a section in the app called "Explore Data" where will be able to choose which kind of data to visualize.
-
-\subsubsection{subsubsection name}
 
 
 \subsubsection{Issue a ticket}
@@ -108,7 +103,22 @@ If ticket has been approved it will have to be sent to the offender.
 The system will connect to the external vehicle registration database in order to retrieve the name, surname, address of the offender knowing the licence plate of his/her vehicle.
 Now we have all the data to print the ticket and send it via regular mail. There will be an office of police-station which will do the job.
 
-\subsubsection{Generate statistics}
+\subsubsection{Ticket statistics}
+
+This function has the purpose to show
+
+Two kind of visualizations are offered:
+\begin{enumerate}
+  \item List of offenders with highest number of tickets emitted
+  \item Trends of emitted tickets
+\end{enumerate}
+
+The first visulaization will be available only to authorities. In a section of the app it will be possible to see for each citizen who has ever received a ticket, the count of those ticket received, in descending order.  Note that this is different compared to the other visulization "veichels that committed the highest number of vioations" explained in section \ref{blacklistplates}.
+In this ticket statistic view we are considering only emitted tickets and we are aggregating all tickets of a specific citizen. Actually in case a citizen he has multiple veichles, here we are countin all the tickets emitted for all of his veichles.
+
+
+
+
 
 \subsection{User characteristics }
 

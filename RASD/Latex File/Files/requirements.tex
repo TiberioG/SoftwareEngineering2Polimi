@@ -269,8 +269,9 @@ In the following section a description of each use case is provided. For every u
 	\begin{enumerate}
 		\item{User enters the section "Explore data"}
     \item{The user chooses to get the map about streets with highest frequency of violations}
-    \item{The system queries in descending order the table where for each streets is associated the count of violations}
-    \item{The app shows a map with an overlay which higlights the areas with a gradient color according to the number of vioations occurred}
+    \item{The system retrieves data from the database of violations, counting for each street the number of occurrencies}
+    \item{The system sends to the external maps API the count of violation and the road name}
+    \item{The app shows the map with an overlay which higlights the areas with a gradient color according to the number of vioations occurred}
 	\end{enumerate}
 	\textbf{Exit conditions}:
         \item{User wants to go back to "Explore data" area}
@@ -291,9 +292,9 @@ In the following section a description of each use case is provided. For every u
 	\begin{enumerate}
 		\item{AuthorityUser enters the section "Explore data"}
 		\item{The system asks which kind of data the AuthorityUser wants to know}
-    \item{The AuthorityUser chooses to get the data about veichles that committed the highest number ofviolations}
+    \item{The AuthorityUser chooses to get the data about veichles that committed the highest number of violations}
     \item{The system queries the table where for each licence plate is associated the count of violations }
-    \item{The system will report in a tabular way the plate of the veichle and the count of violationscommitted}
+    \item{The system will report in a tabular way the plate of the veichle and the count of violations committed}
     \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
 	\end{enumerate}
 	\textbf{Exit conditions}:
@@ -319,8 +320,8 @@ In the following section a description of each use case is provided. For every u
     \item{The system asks which kind of data the user wants to know}
     \item{The User chooses to get the data about veichles that committed the highest number of violations}
     \item{The system queries the table where for each licence plate is associated the count of violations }
-    \item{The system will report in a tabular way an anomymized identifier of the veichle and the count ofviolations committed if the request comes from a Regular User}
-    \item{The system will report in a tabular way the plate of the veichle and the count of violationscommitted if the request comes from an Authority User}
+    \item{the System associates an anonymized sequential identifier to each plate}
+    \item{The system will report in a tabular way the identifier of the veichle and the count of violations}
     \item{If the User scrolls down the system will offer the chance to load more rows}
   \end{enumerate}
   \textbf{Exit conditions}:
@@ -373,18 +374,16 @@ In the following section a description of each use case is provided. For every u
     \textbf{Event flow}:
     \begin{enumerate}
       \item {AuthorityUser enters the section "ticket statistics"}
-      \item
+      \item {The system will show the available ticket statisics options available to show}
     \end{enumerate}
     \textbf{Exit conditions}:
     \begin{enumerate}
-
+      \item{the AuthorityUser chooses the kind of statistics he wants to see}
     \end{enumerate}
     \textbf{Exceptions}:
     \begin{enumerate}
-
     \end{enumerate}
     \rule{\linewidth}{0.4pt}
-
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \textbf{ID}: \ucas{5} \\
     \textbf{Name}: Statistics - offenders \\
@@ -392,11 +391,13 @@ In the following section a description of each use case is provided. For every u
     \textbf{Entry conditions}:
     \begin{enumerate}
       \item{AuthorityUser logged in}
+      \item{AuthorityUser has selected to see the statistics about offenders }
     \end{enumerate}
     \textbf{Event flow}:
     \begin{enumerate}
-      \item {AuthorityUser enters the section "ticket statistics"}
-      \item
+      \item{The system queries the table about all tickets, getting the count of tickets associated to every citizen present in the database of ticket created}
+      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed}
+      \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
     \end{enumerate}
     \textbf{Exit conditions}:
     \begin{enumerate}
@@ -415,10 +416,11 @@ In the following section a description of each use case is provided. For every u
     \textbf{Entry conditions}:
     \begin{enumerate}
       \item{AuthorityUser logged in}
+      \item{AuthorityUser has chosen to see the Statistics - trend option}
     \end{enumerate}
     \textbf{Event flow}:
     \begin{enumerate}
-      \item {AuthorityUser enters the section "ticket statistics"}
+      \item {
       \item
     \end{enumerate}
     \textbf{Exit conditions}:
@@ -427,7 +429,6 @@ In the following section a description of each use case is provided. For every u
     \end{enumerate}
     \textbf{Exceptions}:
     \begin{enumerate}
-
     \end{enumerate}
     \rule{\linewidth}{0.4pt}
 
@@ -440,16 +441,13 @@ Requirements in order to satisfy the goals
 \end{enumerate}
 
 
-
-%remember to chech if the licence plate exists or not!!!!
 \subsection{Performance Requirements}
 
 \subsection{Design Constraints}%%%%%%%%%%%%%%%%%%%T.
 
 \subsubsection{Standards compliance}
 The app shoudld be available for the two main operating systems of smartphones: Android Os and Apple iOS.\\
-The traffic violations which can be reported should be compliant to the local traffic code where the app will be used.\\
-For an use in Italy the app should be compliant to the "Codice della Strada", in particular parking violations are reported in Art. 157.\\
+
 
 
 \subsubsection{Hardware limitations}
@@ -458,9 +456,11 @@ On server side limitations can be the size of available storage and the bandwidt
 On smartphone side we have the network connectivity (3G/4G connection) and GPS limitations in some areas.
 
 \subsubsection{Any other constraint}
-Application should be compliant to European GDPR and don't track users.
+Application should be compliant to European GDPR.\\
+The traffic violations which can be reported should be compliant to the local traffic code where the app will be used.\\
+For an use in Italy the app should be compliant to the "Codice della Strada", in particular parking violations are reported in Art. 157.\\
 
-\subsection{Software System Attributes} %%%%%%%%%%%%%@S.
+\subsection{Software System Attributes}
 \subsubsection{Simple User Interface}
 The user interface has to be as simple and intuitive as possible, the application should allow an average user to set up an account and start using the application understanding its functionality in no more than a dozen minutes. In addition there should be a complete tutorial to makes it easy using the application.
 
