@@ -48,7 +48,7 @@ The attribute \textit{Offender name} and \textit{Offender surname} are used to s
 The classes \textbf{StatsOffenders} and \textbf{StatsTrends} are used to represent the data about the issued ticket and used for visualizations.
 
 \paragraph{CheckValidity}
-Is a class used to check 
+Is a class used to check
 
 
 \subsection{Product functions}
@@ -135,16 +135,18 @@ In this ticket statistic view we are considering only emitted tickets and we are
 \subsubsection{Domain assumptions}
 
 \begin{enumerate}
-\dom{1}  Device has internet connection
-\dom{1} The device should acquire position with an accuracy of enouth meters in order to univocally determine the road (e.g. 5 meters)
-\dom{} We have access to an ALPR service which is able to read every licence plate in a picture and return the string
-\dom{1} The device should take pictures with enough resolution to be able to read by the ALPR service
-\dom{5} ALPR service has an accuracy of more than 90\%
-\dom{2} Every vehicle that can be reported should have a licence plate visible
-\dom{3} The number and kind of violations should be finite (defined by the law)
-\dom{4} Every authority account is verified and it's not possible to be created using the front end
-\dom{6} We have access to the vehicle registration database where are stored licence plates, names and the addresses of the owners of every vehicle registered
-\dom{7} We have access to a database where are stored all the codes of violations and the amount of fine for the violation
+\dom{1} Device has a working internet connection
+\dom{2} Device has a camera accessible via software
+\dom{3} The device should acquire position with an accuracy of enouth meters in order to univocally determine the road (e.g. 5 meters)
+\dom{4} We have access to an ALPR service which is able to read every licence plate in a picture and return each of them as a string
+\dom{5} ALPR service has an accuracy of more than 95\%
+\dom{6} The device should take pictures with enough resolution to be able to read by the ALPR service
+\dom{7} Every vehicle that can be reported should have a licence plate visible
+\dom{8} The number and kind of violations should be finite (defined by the law)
+\dom{9} Every authority account is verified and it's not possible to be created using the front end
+\dom{10} We have access to the vehicle registration database where are stored licence plates, names and the addresses of the owners of every vehicle registered
+\dom{11} We have access to a database where are stored all the codes of violations and the amount of fine for the violation
+\dom{12} The only way to upload pictures of violation is thuough the application
 
 \end{enumerate}
 
