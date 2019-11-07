@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  6 NOV 2019 11:55
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1390,15 +1390,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [4] (./Files/introduction.tex
-Overfull \hbox (8.73103pt too wide) in paragraph at lines 30--31
+ [4] (./Files/introduction.tex [5
+
+]
+Overfull \hbox (8.73103pt too wide) in paragraph at lines 47--48
 []\TU/FuturaBook(0)/m/sc/10.95 Reverse geocoding: the process of converting geo
 graphic coordinates into a human-readable
  []
 
-[5
-
-]) [6] (./Files/overview.tex
+) [6] (./Files/overview.tex
 File: Images/Class.png Graphic file (type bmp)
 <Images/Class.png>
  [7
@@ -1408,8 +1408,22 @@ File: Images/violationstate.png Graphic file (type bmp)
 <Images/violationstate.png>
 File: Images/ticketstate.png Graphic file (type bmp)
 <Images/ticketstate.png>
- [9] [10] [11] [12]) [13]
-(./Files/requirements.tex
+ [9] [10] [11] [12]
+
+./Files/overview.tex:159: LaTeX Error: \begin{itemize} on input line 153 ended 
+by \end{enumerate}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.159 \end{enumerate}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+) [13] (./Files/requirements.tex
 File: GUI/login.png Graphic file (type bmp)
 <GUI/login.png>
 File: GUI/takepic.png Graphic file (type bmp)
@@ -1454,121 +1468,112 @@ l.130 \end{itemize}}
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
+File: Images/BasicServiceUseCase.jpg Graphic file (type bmp)
+<Images/BasicServiceUseCase.jpg>
+File: Images/AdvancedFUnUseCase.jpg Graphic file (type bmp)
+<Images/AdvancedFUnUseCase.jpg>
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-[22] [23]
+[22] [23] [24]
 
-./Files/requirements.tex:273: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:284: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.273   \end{enumerate}
+l.284   \end{enumerate}
                        
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[24]
 
-./Files/requirements.tex:294: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:305: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.294   \end{enumerate}
+l.305   \end{enumerate}
                        
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[25]
 
-./Files/requirements.tex:313: LaTeX Error: Lonely \item--perhaps a missing list
+./Files/requirements.tex:327: LaTeX Error: Lonely \item--perhaps a missing list
  environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.313         \item{
+l.327         \item{
                     User wants to go back to "Explore data" area}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 313
+Underfull \hbox (badness 10000) detected at line 327
 [][]
  []
 
-[25]
+[26]
 
-./Files/requirements.tex:373: LaTeX Error: Lonely \item--perhaps a missing list
+./Files/requirements.tex:387: LaTeX Error: Lonely \item--perhaps a missing list
  environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.373 \item{
+l.387 \item{
             Advanced function}\\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) detected at line 373
+Underfull \hbox (badness 10000) detected at line 387
 [][]
  []
 
-[26]
-
-./Files/requirements.tex:421: LaTeX Error: Something's wrong--perhaps a missing
- \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.421     \end{enumerate}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [27]
 
-./Files/requirements.tex:441: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:435: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.441     \end{enumerate}
+l.435     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Files/requirements.tex:445: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:458: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.445     \end{enumerate}
+l.458     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-./Files/requirements.tex:461: Missing } inserted.
+[28]
+./Files/requirements.tex:474: Missing } inserted.
 <inserted text> 
                 }
-l.461     \end{enumerate}
+l.474     \end{enumerate}
                          
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1577,27 +1582,27 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-./Files/requirements.tex:465: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:478: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.465     \end{enumerate}
+l.478     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./Files/requirements.tex:468: LaTeX Error: Something's wrong--perhaps a missing
+./Files/requirements.tex:481: LaTeX Error: Something's wrong--perhaps a missing
  \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.468     \end{enumerate}
+l.481     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1608,20 +1613,19 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 1.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 483--484
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 493--496
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 506--509
 
  []
 
-[28] [29]
 Missing character: There is no ﬀ in font Futura Book/OT:mapping=tex-text;!
-) [30] (./Files/alloy.tex) [31
+) [30] [31] (./Files/alloy.tex) [32
 
-] (./Files/effort.tex) [32
+] (./Files/effort.tex) [33
 
 ]
 No file main.bbl.
@@ -1630,9 +1634,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
 (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E04B11E685655373627875E46746EBD9.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 9EE20E97DBAE2E4BF15FC61501590164
+(rerunfilecheck)             After:  221307170749DEB3C00C418B560D4B1B.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1642,12 +1652,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 32605 strings out of 492970
- 643917 string characters out of 6133938
- 725520 words of memory out of 5000000
- 36120 multiletter control sequences out of 15000+600000
+ 32616 strings out of 492970
+ 644209 string characters out of 6133938
+ 725664 words of memory out of 5000000
+ 36128 multiletter control sequences out of 15000+600000
  540090 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,12n,65p,10467b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (33 pages).

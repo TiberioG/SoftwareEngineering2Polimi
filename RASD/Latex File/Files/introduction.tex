@@ -1,8 +1,20 @@
 \subsection{Purpose}
 
-\subsection{Scope}
-
 \subsubsection{Description of the given problem}
+SafeStreets is a crowd-sourced application that intends to provide users with the possibility to notify authorities when traffic violations occur, and in particular parking violations. The application allows users to send pictures of violations, including their date, time, and position, to authorities. Examples of violations are vehicles parked in the middle of bike lanes or in places reserved for people with disabilities, double parking etc.
+
+SafeStreets stores the information provided by users, completing it with suitable meta-data every time it recieves a picture.
+In paricular it uses an external service which reads the license plate and stores the decoded string of the plate.
+Also it stores the type of the violation which is input by the user from a provided list.
+Lastly it stores the name of the street where the violation occurred which is retrieved from the geographical position where the user took the picture.
+In addition, the application allows both end users and authorities to mine the information that has been received.
+Two visualizations are offfered: the first is an interactive map where are highlighted with a gradient color the streets  with the highest frequency of violations.
+The second is a list of the vehicles that committed the most violations.
+
+In addition the app offers a service that creates automatically traffic tickets which can be approved and sent to citizens by the local police.  This is done usind the data crowd-soucred by the users.
+The application guarantees that every picture used to generate a ticket has't been altered.
+In addition, the information about issued tickets is used to build statistics.
+Two kind of statistics are offered: a list of people who received the highest number of tickets and some trends of the issued tickets over time and the ratio of approved tickets over the violations reported.
 
 
 \subsubsection{Goals}
@@ -17,20 +29,24 @@
 \end{enumerate}
 
 
+\subsection{Scope}
+
+\subsection{World and shared phenomena}
+
+
+
 
 \subsection{Definitions,  acronyms,  abbreviations}
 
 \subsubsection{Definitions}
 \begin{itemize}
-  \item Heatmap : A heatmap is a graphical representation of data that uses a system of color-coding to represent different values
+  \item{Heatmap} : A heatmap is a graphical representation of data that uses a system of color-coding to represent different values
   \item Enduser : a regular citizen whic will use the app
   \item Authority user : someone who's working for an authority like (police, municipality etc.) recognized
   \item Geocoding : the process of converting addresses (like a street address) into geographic coordinates (latitude and longitude)
   \item Reverse geocoding:  the process of converting geographic coordinates into a human-readable address
 
 \end{itemize}
-
-
 
 \subsubsection{Acronyms}
 \begin{itemize}
@@ -40,11 +56,11 @@
   \item API : Application Programming Interface
 \end{itemize}
 
-\subsubsection{abbreviations}
+\subsubsection{Abbreviations}
 
 
 \subsection{Revision history}
-
+This is the first released version 10/11/2019.
 
 \subsection{Reference Documents}
 \begin{thebibliography}{00}
@@ -64,6 +80,5 @@ DECRETO LEGISLATIVO 30 aprile 1992, n. 285 Nuovo codice della strada,
  \url{https://developers.google.com/maps/documentation/javascript/heatmaplayer}
 
 \end{thebibliography}
-
 
 \subsection{Document Structure}
