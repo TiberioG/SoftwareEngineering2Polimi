@@ -1,62 +1,62 @@
 \contentsline {section}{Table of Contents}{2}{Doc-Start}
-\contentsline {section}{List of Figures}{3}{section*.1}
-\contentsline {section}{List of Tables}{3}{section*.2}
-\contentsline {section}{\numberline {1}Introduction}{4}{section.1}
-\contentsline {subsection}{\numberline {1.1}Purpose}{4}{subsection.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1}Description of the given problem}{4}{subsubsection.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.2}Goals}{4}{subsubsection.1.1.2}
-\contentsline {subsection}{\numberline {1.2}Scope}{4}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}World and shared phenomena}{4}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Definitions, acronyms, abbreviations}{4}{subsection.1.4}
-\contentsline {subsubsection}{\numberline {1.4.1}Definitions}{4}{subsubsection.1.4.1}
-\contentsline {subsubsection}{\numberline {1.4.2}Acronyms}{5}{subsubsection.1.4.2}
-\contentsline {subsubsection}{\numberline {1.4.3}Abbreviations}{5}{subsubsection.1.4.3}
-\contentsline {subsection}{\numberline {1.5}Revision history}{5}{subsection.1.5}
-\contentsline {subsection}{\numberline {1.6}Reference Documents}{5}{subsection.1.6}
-\contentsline {subsection}{\numberline {1.7}Document Structure}{5}{subsection.1.7}
-\contentsline {section}{\numberline {2}Overall Description}{6}{section.2}
-\contentsline {subsection}{\numberline {2.1}Product perspective}{6}{subsection.2.1}
-\contentsline {subsubsection}{\numberline {2.1.1}Class Diagram}{6}{subsubsection.2.1.1}
-\contentsline {paragraph}{User}{6}{section*.7}
-\contentsline {paragraph}{Location}{6}{section*.8}
-\contentsline {paragraph}{Reverse Geocoding}{6}{section*.9}
-\contentsline {paragraph}{Violation}{6}{section*.10}
-\contentsline {paragraph}{ALPR}{6}{section*.11}
-\contentsline {paragraph}{MinedInfo}{6}{section*.12}
-\contentsline {paragraph}{Heat Map visualizer}{6}{section*.13}
-\contentsline {paragraph}{Ticket}{6}{section*.14}
-\contentsline {paragraph}{Statistics}{8}{section*.15}
-\contentsline {paragraph}{CheckValidity}{8}{section*.16}
-\contentsline {subsection}{\numberline {2.2}Product functions}{8}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}Report violation}{8}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Explore Data}{8}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}Issue a ticket}{8}{subsubsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.4}Ticket statistics}{11}{subsubsection.2.2.4}
-\contentsline {subsection}{\numberline {2.3}User characteristics}{11}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Assumptions, dependencies and constraints}{11}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Domain assumptions}{11}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Dependencies}{12}{subsubsection.2.4.2}
-\contentsline {section}{\numberline {3}Specific Requirements}{13}{section.3}
-\contentsline {subsection}{\numberline {3.1}External Interface Requirements}{13}{subsection.3.1}
-\contentsline {subsubsection}{\numberline {3.1.1}User Interfaces}{13}{subsubsection.3.1.1}
-\contentsline {subsubsection}{\numberline {3.1.2}Hardware Interfaces}{19}{subsubsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.3}Software Interfaces}{19}{subsubsection.3.1.3}
-\contentsline {subsubsection}{\numberline {3.1.4}Communication Interfaces}{19}{subsubsection.3.1.4}
-\contentsline {subsection}{\numberline {3.2}Functional Requirements}{19}{subsection.3.2}
-\contentsline {subsubsection}{\numberline {3.2.1}Use Cases diagrams}{21}{subsubsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2}Use Cases Description}{22}{subsubsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.3}Requirements traceability matrix}{28}{subsubsection.3.2.3}
-\contentsline {subsection}{\numberline {3.3}Performance Requirements}{28}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Design Constraints}{28}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}Standards compliance}{28}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}Hardware limitations}{28}{subsubsection.3.4.2}
-\contentsline {subsubsection}{\numberline {3.4.3}Any other constraint}{29}{subsubsection.3.4.3}
-\contentsline {subsection}{\numberline {3.5}Software System Attributes}{29}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}Simple User Interface}{29}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}Reliability}{29}{subsubsection.3.5.2}
-\contentsline {subsubsection}{\numberline {3.5.3}Availability}{30}{subsubsection.3.5.3}
-\contentsline {subsubsection}{\numberline {3.5.4}Security}{30}{subsubsection.3.5.4}
-\contentsline {subsubsection}{\numberline {3.5.5}Maintainability}{30}{subsubsection.3.5.5}
-\contentsline {subsubsection}{\numberline {3.5.6}Portability}{30}{subsubsection.3.5.6}
-\contentsline {section}{\numberline {4}Formal Analysis Using Alloy}{31}{section.4}
-\contentsline {section}{\numberline {5}Effort Spent}{32}{section.5}
+\contentsline {section}{List of Figures}{4}{section*.1}
+\contentsline {section}{List of Tables}{4}{section*.2}
+\contentsline {section}{\numberline {1}Introduction}{5}{section.1}
+\contentsline {subsection}{\numberline {1.1}Purpose}{5}{subsection.1.1}
+\contentsline {subsubsection}{\numberline {1.1.1}Description of the given problem}{5}{subsubsection.1.1.1}
+\contentsline {subsubsection}{\numberline {1.1.2}Goals}{5}{subsubsection.1.1.2}
+\contentsline {subsection}{\numberline {1.2}Scope}{5}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}World and shared phenomena}{5}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Definitions, acronyms, abbreviations}{6}{subsection.1.4}
+\contentsline {subsubsection}{\numberline {1.4.1}Definitions}{6}{subsubsection.1.4.1}
+\contentsline {subsubsection}{\numberline {1.4.2}Acronyms}{6}{subsubsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.3}Abbreviations}{6}{subsubsection.1.4.3}
+\contentsline {subsection}{\numberline {1.5}Revision history}{6}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Reference Documents}{7}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Document Structure}{7}{subsection.1.7}
+\contentsline {section}{\numberline {2}Overall Description}{8}{section.2}
+\contentsline {subsection}{\numberline {2.1}Product perspective}{8}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Class Diagram}{8}{subsubsection.2.1.1}
+\contentsline {paragraph}{User}{8}{section*.7}
+\contentsline {paragraph}{Location}{8}{section*.8}
+\contentsline {paragraph}{Reverse Geocoding}{8}{section*.9}
+\contentsline {paragraph}{Violation}{8}{section*.10}
+\contentsline {paragraph}{ALPR}{8}{section*.11}
+\contentsline {paragraph}{MinedInfo}{8}{section*.12}
+\contentsline {paragraph}{Heat Map visualizer}{8}{section*.13}
+\contentsline {paragraph}{Ticket}{8}{section*.14}
+\contentsline {paragraph}{Statistics}{10}{section*.15}
+\contentsline {paragraph}{CheckValidity}{10}{section*.16}
+\contentsline {subsection}{\numberline {2.2}Product functions}{10}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Report violation}{10}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Explore Data}{10}{subsubsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.3}Issue a ticket}{10}{subsubsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.4}Ticket statistics}{13}{subsubsection.2.2.4}
+\contentsline {subsection}{\numberline {2.3}User characteristics}{13}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Assumptions, dependencies and constraints}{13}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Domain assumptions}{13}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Dependencies}{14}{subsubsection.2.4.2}
+\contentsline {section}{\numberline {3}Specific Requirements}{15}{section.3}
+\contentsline {subsection}{\numberline {3.1}External Interface Requirements}{15}{subsection.3.1}
+\contentsline {subsubsection}{\numberline {3.1.1}User Interfaces}{15}{subsubsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.2}Hardware Interfaces}{21}{subsubsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.3}Software Interfaces}{21}{subsubsection.3.1.3}
+\contentsline {subsubsection}{\numberline {3.1.4}Communication Interfaces}{21}{subsubsection.3.1.4}
+\contentsline {subsection}{\numberline {3.2}Functional Requirements}{21}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Use Cases diagrams}{23}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Use Cases Description}{24}{subsubsection.3.2.2}
+\contentsline {subsubsection}{\numberline {3.2.3}Requirements traceability matrix}{31}{subsubsection.3.2.3}
+\contentsline {subsection}{\numberline {3.3}Performance Requirements}{31}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Design Constraints}{31}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Standards compliance}{31}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Hardware limitations}{31}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {3.4.3}Any other constraint}{31}{subsubsection.3.4.3}
+\contentsline {subsection}{\numberline {3.5}Software System Attributes}{32}{subsection.3.5}
+\contentsline {subsubsection}{\numberline {3.5.1}Simple User Interface}{32}{subsubsection.3.5.1}
+\contentsline {subsubsection}{\numberline {3.5.2}Reliability}{32}{subsubsection.3.5.2}
+\contentsline {subsubsection}{\numberline {3.5.3}Availability}{32}{subsubsection.3.5.3}
+\contentsline {subsubsection}{\numberline {3.5.4}Security}{32}{subsubsection.3.5.4}
+\contentsline {subsubsection}{\numberline {3.5.5}Maintainability}{32}{subsubsection.3.5.5}
+\contentsline {subsubsection}{\numberline {3.5.6}Portability}{32}{subsubsection.3.5.6}
+\contentsline {section}{\numberline {4}Formal Analysis Using Alloy}{33}{section.4}
+\contentsline {section}{\numberline {5}Effort Spent}{34}{section.5}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 15:03
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 15:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1371,18 +1371,18 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 )
 [1
 
-] (./main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
-
-
+] (./main.toc
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2] (./main.lof)
+[2])
+\tf@toc=\write5
+\openout5 = `main.toc'.
+
+ [3] (./main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
@@ -1390,73 +1390,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [3] (./Files/introduction.tex
-(./Files/worldmachine.tex
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1.
-
-./Files/worldmachine.tex:20: Misplaced \noalign.
-\hline ->\noalign 
-                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
-l.20  \hline
-            
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./Files/worldmachine.tex:20: You can't use `\hrule' here except with leaders.
-\vline ->\vrule 
-                \@width \arrayrulewidth 
-l.20  \hline
-            
-To put a horizontal rule in an hbox or an alignment,
-you should use \leaders or \hrulefill (see The TeXbook).
-
-./Files/worldmachine.tex:20: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.20  \hline
-            
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Files/worldmachine.tex:20: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.20  \hline
-            
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-Overfull \hbox (1308.07579pt too wide) in paragraph at lines 2--22
-[][] 
- []
-
-) [4
+ [4] (./Files/introduction.tex
+(./Files/worldmachine.tex) [5
 
 ]
-Overfull \hbox (8.73103pt too wide) in paragraph at lines 47--48
+Overfull \hbox (8.73103pt too wide) in paragraph at lines 50--51
 []\TU/FuturaBook(0)/m/sc/10.95 Reverse geocoding: the process of converting geo
 graphic coordinates into a human-readable
  []
 
-) [5] (./Files/overview.tex
+[6]) [7] (./Files/overview.tex
 File: Images/Class.png Graphic file (type bmp)
 <Images/Class.png>
- [6
+ [8
 
-] [7]
+] [9]
 File: Images/violationstate.png Graphic file (type bmp)
 <Images/violationstate.png>
 File: Images/ticketstate.png Graphic file (type bmp)
 <Images/ticketstate.png>
- [8] [9] [10] [11]
+ [10] [11] [12] [13]
 
 ./Files/overview.tex:159: LaTeX Error: \begin{itemize} on input line 153 ended 
 by \end{enumerate}.
@@ -1471,12 +1424,12 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-) [12] (./Files/requirements.tex
+) [14] (./Files/requirements.tex
 File: GUI/login.png Graphic file (type bmp)
 <GUI/login.png>
 File: GUI/takepic.png Graphic file (type bmp)
 <GUI/takepic.png>
- [13
+ [15
 
 ]
 File: GUI/picturetaken.png Graphic file (type bmp)
@@ -1484,32 +1437,32 @@ File: GUI/picturetaken.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [16]
 File: GUI/fillform.png Graphic file (type bmp)
 <GUI/fillform.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+ [17]
 File: GUI/offenders.png Graphic file (type bmp)
 <GUI/offenders.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
+ [18]
 File: GUI/heatmap.png Graphic file (type bmp)
 <GUI/heatmap.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [19]
 File: GUI/ticketapp.png Graphic file (type bmp)
 <GUI/ticketapp.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19] [20]
+ [20]
+[21] [22]
 ./Files/requirements.tex:130: Too many }'s.
 l.130 \end{itemize}}
                     
@@ -1523,12 +1476,12 @@ File: Images/AdvancedFUnUseCase.jpg Graphic file (type bmp)
 
 Underfull \vbox (badness 7869) has occurred while \output is active []
 
- [21]
+ [23]
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-(./Files/ucases/listcases.tex [22] [23]
+(./Files/ucases/listcases.tex [24] [25]
 
 ./Files/ucases/listcases.tex:128: LaTeX Error: Something's wrong--perhaps a mis
 sing \item.
@@ -1542,7 +1495,7 @@ l.128   \end{enumerate}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[24]
+[26]
 
 ./Files/ucases/listcases.tex:149: LaTeX Error: Something's wrong--perhaps a mis
 sing \item.
@@ -1574,7 +1527,7 @@ Underfull \hbox (badness 10000) detected at line 171
 [][]
  []
 
-[25]
+[27]
 
 ./Files/ucases/listcases.tex:231: LaTeX Error: Lonely \item--perhaps a missing 
 list environment.
@@ -1593,7 +1546,7 @@ Underfull \hbox (badness 10000) detected at line 231
 [][]
  []
 
-[26]
+[28]
 
 ./Files/ucases/listcases.tex:279: LaTeX Error: Something's wrong--perhaps a mis
 sing \item.
@@ -1607,7 +1560,7 @@ l.279     \end{enumerate}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[27]
+[29]
 
 ./Files/ucases/listcases.tex:302: LaTeX Error: Something's wrong--perhaps a mis
 sing \item.
@@ -1663,12 +1616,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 326--158
 
  []
 
-(./Files/tracematrix.tex
+(./Files/tracematrix.tex)
+Underfull \vbox (badness 6332) has occurred while \output is active []
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1.
-
-)
+ [30]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
@@ -1678,15 +1629,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 179--182
 
  []
 
-[28]
-Underfull \vbox (badness 1783) has occurred while \output is active []
-
- [29]
+[31]
 Missing character: There is no ﬀ in font Futura Book/OT:mapping=tex-text;!
-)
-[30] (./Files/alloy.tex) [31
+) [32] (./Files/alloy.tex) [33
 
-] (./Files/effort.tex) [32
+] (./Files/effort.tex) [34
 
 ]
 No file main.bbl.
@@ -1695,30 +1642,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
 (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 221307170749DEB3C00C418B560D4B1B.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 248628010A5B3162745ED67285E129C8
-(rerunfilecheck)             After:  221307170749DEB3C00C418B560D4B1B.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 32621 strings out of 492970
- 644311 string characters out of 6133938
- 725512 words of memory out of 5000000
- 36126 multiletter control sequences out of 15000+600000
+ 32627 strings out of 492970
+ 644403 string characters out of 6133938
+ 726769 words of memory out of 5000000
+ 36132 multiletter control sequences out of 15000+600000
  540090 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,12n,65p,10467b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (34 pages).

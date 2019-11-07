@@ -1,22 +1,23 @@
-\begin{table}[]
+
+\begin{table}[H]
 \begin{tabular}{|l|l|l|}
- \hline
-\textbf{Phenomenon} & \textbf{Shared} & \textbf{Who controls it} \\ \\ \hline
-There's a veichle which is committing a parking violation & N & W \\ \\ \hline
-User wants to report a violation & N & W \\ \hline
-User takes a picture & Y & W \\ \hline
-The machine decodes the plate from the picture & S & M \\ \hline
-The user knows the reason why the veichle is in violation
-The machine asks the user for the kind of violation
-The machine stores the violation reported
-The user
-
-
-The machine creates a ticket in the system
-The machine checks any alteration of the picture
-The authority user approves the ticket
-The policeman don't approve the ticket
-
- \hline
+\hline
+\textbf{Phenomenon}        & \textbf{Shared} & \textbf{Who controls it} \\ \hline
+User wants to report a violation  & N & W                                     \\ \hline
+User takes a picture              & Y & M                                   \\ \hline
+The machine decodes the plate from the picture   &  Y &   M         \\ \hline
+The user knows the reason why the veichle is in violation & N &  W          \\ \hline
+The machine asks the user for the kind of violation &Y & M              \\ \hline
+The machine stores the violation reported        &  N   &    M           \\ \hline
+The user wants to see data visualization  &  N   &    W           \\ \hline
+The machine shows the data visualization  &  Y   &    M           \\ \hline
+The machine creates a ticket in the system        &  N   &    M           \\ \hline
+The machine checks any alteration of the picture       &  N   &    M           \\ \hline
+The authority user approves the ticket       &  Y   &    W           \\ \hline
+The authority user doesn't approve the ticket       &  Y   &    W         \\ \hline
+the authority sends the ticket to the offender & N & W \\ \hline
 \end{tabular}
+
+\caption{World and Machine Table}
+		\label{WorldMachinetable}
 \end{table}

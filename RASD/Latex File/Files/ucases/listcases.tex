@@ -243,7 +243,7 @@
 			\item{AuthorityUser enters the section "Tickets"}
 			\item{AuthorityUser enters the section "Approve Tickets"}
       \item{The System will show the list of tickets available for approval }
-      \item{AuthorityUser selects one tiket and system will show the related details}
+      \item{AuthorityUser selects one ticket and system will show the related details}
       \item{System will ask the AuthorityUser if he wants to approve or not the ticket}
   		\end{enumerate}
 		\textbf{Exit conditions}:
@@ -257,38 +257,19 @@
 			\item{If there are no tickets pending, the app will report no data available message}
 		\end{enumerate}
 		\rule{\linewidth}{0.4pt}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \textbf{ID}: \ucas{5} \\
-    \textbf{Name}: Ticket statistics selection \\
-    \textbf{Actor}: AuthorityUser   \\
-    \textbf{Entry conditions}:
-    \begin{enumerate}
-      \item{AuthorityUser logged in}
-    \end{enumerate}
-    \textbf{Event flow}:
-    \begin{enumerate}
-      \item {AuthorityUser enters the section "ticket statistics"}
-      \item {The system will show the available ticket statisics options available to show}
-    \end{enumerate}
-    \textbf{Exit conditions}:
-    \begin{enumerate}
-      \item{the AuthorityUser chooses the kind of statistics he wants to see}
-    \end{enumerate}
-    \textbf{Exceptions}:
-    \begin{enumerate}
-    \end{enumerate}
-    \rule{\linewidth}{0.4pt}
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \textbf{ID}: \ucas{5} \\
     \textbf{Name}: Statistics - offenders \\
     \textbf{Actor}: AuthorityUser   \\
     \textbf{Entry conditions}:
     \begin{enumerate}
       \item{AuthorityUser logged in}
-      \item{AuthorityUser has selected to see the statistics about offenders }
     \end{enumerate}
     \textbf{Event flow}:
     \begin{enumerate}
+			\item {AuthorityUser enters the section "ticket statistics"}
+			\item {The system will show the available ticket statisics options available to show}
+			\item{AuthorityUser selects to see the statistics about offenders }
       \item{The system queries the table about all tickets, getting the count of tickets associated to every citizen present in the database of ticket created}
       \item{The system will report in a tabular way the name of the citizen and the count of approved tickets he has received}
       \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
@@ -306,19 +287,19 @@
     \textbf{ID}: \ucas{5} \\
     \textbf{Name}: Statistics - trends \\
     \textbf{Actor}: AuthorityUser   \\
-    \textbf{Entry conditions}:
+		\textbf{Entry conditions}:
     \begin{enumerate}
       \item{AuthorityUser logged in}
-      \item{AuthorityUser has chosen to see the Statistics - trend option}
     \end{enumerate}
     \textbf{Event flow}:
     \begin{enumerate}
-      \item {
-      \item
+			\item {AuthorityUser enters the section "ticket statistics"}
+			\item {The system will show the available ticket statisics options available to show}
+      \item{AuthorityUser has chosen to see the Statistics - trend option}
     \end{enumerate}
     \textbf{Exit conditions}:
     \begin{enumerate}
-
+			\item{the AuthorityUser wants to go back to other sections}
     \end{enumerate}
     \textbf{Exceptions}:
     \begin{enumerate}
