@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 15:31
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1548,83 +1548,43 @@ Underfull \hbox (badness 10000) detected at line 231
 
 [28]
 
-./Files/ucases/listcases.tex:279: LaTeX Error: Something's wrong--perhaps a mis
+./Files/ucases/listcases.tex:283: LaTeX Error: Something's wrong--perhaps a mis
 sing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.279     \end{enumerate}
+l.283     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 [29]
 
-./Files/ucases/listcases.tex:302: LaTeX Error: Something's wrong--perhaps a mis
+./Files/ucases/listcases.tex:306: LaTeX Error: Something's wrong--perhaps a mis
 sing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.302     \end{enumerate}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./Files/ucases/listcases.tex:318: Missing } inserted.
-<inserted text> 
-                }
-l.318     \end{enumerate}
-                         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-./Files/ucases/listcases.tex:322: LaTeX Error: Something's wrong--perhaps a mis
-sing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.322     \end{enumerate}
-                         
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./Files/ucases/listcases.tex:325: LaTeX Error: Something's wrong--perhaps a mis
-sing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.325     \end{enumerate}
+l.306     \end{enumerate}
                          
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 326--158
+Underfull \hbox (badness 10000) in paragraph at lines 307--158
 
  []
 
 (./Files/tracematrix.tex)
-Underfull \vbox (badness 6332) has occurred while \output is active []
-
- [30]
 Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 179--182
 
  []
@@ -1653,7 +1613,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
 Here is how much of TeX's memory you used:
  32627 strings out of 492970
  644403 string characters out of 6133938
- 726769 words of memory out of 5000000
+ 726757 words of memory out of 5000000
  36132 multiletter control sequences out of 15000+600000
  540090 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
