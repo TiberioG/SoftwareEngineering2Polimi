@@ -1,0 +1,326 @@
+%%%%Basic service use case definition
+	\textbf{ID}: \ucas{1} \\
+	\textbf{Name}: Sign-Up \\
+	\textbf{Actor}: Guest \\
+	\textbf{Entry conditions}:
+	\begin{enumerate}
+		\item{A citizen who wants to use the service}
+	\end{enumerate}
+	\textbf{Event flow}:
+	\begin{enumerate}
+		\item{The guest reaches the registration page containing the relative form}
+		\item{The guest ﬁlls up the form and clicks on "Sign up" to complete the process}
+		\item{The system redirects the user to his proﬁle page and sends a conﬁrmation email}
+	\end{enumerate}
+	\textbf{Exit conditions}:
+	\begin{itemize}
+		\item{The guest has successfully registered in the system}
+	\end{itemize}
+	\textbf{Exceptions}:
+	\begin{enumerate}
+    		\item{The guest left an empty ﬁeld or typed something wrong an error message is displayed and theuser is asked to ﬁll the form again.}
+ 	   \end{enumerate}
+	\rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\textbf{ID}: \ucas{2} \\
+	\textbf{Name}: Login \\
+	\textbf{Actor}: User \\
+	\textbf{Entry conditions}:
+	\begin{enumerate}
+		\item{The user has already registered}
+	\end{enumerate}
+	\textbf{Event flow}:
+	\begin{enumerate}
+		\item{The user reaches the login page containing the relative form}
+		\item{The user types the username and password in the login form and click on ”Login” button}
+		\item{The system redirects the user to the application homepage}
+	\end{enumerate}
+	\textbf{Exit conditions}:
+	\begin{itemize}
+		\item{The user has access to the application functionalities}
+	\end{itemize}
+	\textbf{Exceptions}:
+	\begin{enumerate}
+    		\item{Username and password didn’t correspond or the username didn’t exist, an error message isdisplayed and the user is asked to ﬁll the login form again}
+ 	   \end{enumerate}
+	\rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\textbf{ID}: \ucas{3}  \\
+	\textbf{Name}: Recover Password \\
+	\textbf{Actor}: User \\
+	\textbf{Entry conditions}:
+	\begin{enumerate}
+		\item{The user has already registered}
+	\end{enumerate}
+	\textbf{Event flow}:
+	\begin{enumerate}
+		\item{The user reaches the login page containing the relative form}
+		\item{The user clicks on ”Password recovery” button and is redirected to the password recovery page.}
+		\item{The user inserts his email and clicks on ”reset password”}
+		\item{The system sends an email to the user with a link and instruction to reset the password}
+		\item{The user chooses and types a new password and conﬁrms}
+		\item{The application check whether the entered password is strong enough or not}
+		\item{The system redirects the user to the login page}
+	\end{enumerate}
+	\textbf{Exit conditions}:
+	\begin{itemize}
+		\item{The user has changed his password}
+	\end{itemize}
+	\textbf{Exceptions}:
+	\begin{enumerate}
+    		\item{The inserted email doesn't match any user in the database, it is displayed an error messageand the user is asked to retype a valid email.}
+ 	   \end{enumerate}
+	\rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \textbf{ID}: \ucas{4a} \\
+  \textbf{Name}: Report a violation - taking picture \\
+  \textbf{Actor}: User   \\
+  \textbf{Entry conditions}:
+  \begin{enumerate}
+    \item{User is logged in}
+  \end{enumerate}
+  \textbf{Event flow}:
+  \begin{enumerate}
+    \item{User enters the section "Report a violation"}
+    \item{System opens the camera of smartphone and ask user to take a picture of the violation}
+    \item{The system reminds the user that violation and the licence plate of the veichle which is inviolation must be visible }
+    \item{The user takes the picture }
+    \item{The system shows the picture just taken }
+    \item{The system asks the user: if there are other plates visible in the picture, which are not the oneof the veichle to be reported, use the finger to delete them }
+    \item{The system enters in "brush tool mode" and the user covers the other licence plates}
+    \item{When done, user press continue button}
+    \item{The system sends the picture to the ALPR service which returns the string containing the platedecoded}
+    \item{The system shows now on the screen the "report vioaltion form"}
+  \end{enumerate}
+  \textbf{Exit conditions}:
+  \begin{enumerate}
+    \item{User must continue to next \ucas{4b}}
+  \end{enumerate}
+  \textbf{Exceptions}:
+  \begin{enumerate}
+    \item{If no plate is found, the user has to repeat this use case, starting from taking the picture again}
+    \item{If the ALPR service returns more than one plate, the user is informed that must delete the notrequired plates and the system goes agin to the "brush tool mode"}
+    \item{If user doesn't continue to the next use case: e.g. presses exit button, or closes the app formore than 10 minutes, the picture taken is discarded}
+  \end{enumerate}
+  \rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \textbf{ID}: \ucas{4b} \\
+  \textbf{Name}: Report a violation - fill the form \\
+  \textbf{Actor}: User   \\
+  \textbf{Entry conditions}:
+  \begin{enumerate}
+    \item{User has successfully completed the precedent \ucas{4a}}
+    \item{User is in the fill-form section of the app}
+  \end{enumerate}
+  \textbf{Event flow}:
+  \begin{enumerate}
+    \item{The system sends GPS location to the external service to get the complete address of the user}
+    \item{the form is pre-filled with the address that is given by the external service  }
+    \item{The user must choose from a list of violations the one referred to the picture taken which wantsto report. In the UI every row contains the name of the violation and a "info" button}
+    \item{the user can choose to send the form or exit}
+  \end{enumerate}
+  \textbf{Exit conditions}:
+  \begin{enumerate}
+    \item{The violation is correctly inserted and stored}
+  \end{enumerate}
+  \textbf{Exceptions}:
+  \begin{enumerate}
+  \end{enumerate}
+  \rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \textbf{ID}: \ucas{4b1} \\
+  \textbf{Name}: Report a violation - fill the form - violation infopage \\
+  \textbf{Actor}: User   \\
+  \textbf{Entry conditions}:
+  \begin{enumerate}
+    \item{User is in Use case \ucas{4b} }
+    \item{User has pressed the "info" button of a violation from the list }
+  \end{enumerate}
+  \textbf{Event flow}:
+  \begin{enumerate}
+    \item{System shows a brief decriprion of the selected violation}
+  \end{enumerate}
+  \textbf{Exit conditions}:
+  \begin{enumerate}
+    \item{User goes back to Use case \ucas{4b}}
+  \end{enumerate}
+  \textbf{Exceptions}:
+  \begin{enumerate}
+  \end{enumerate}
+  \rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+	\textbf{ID}: \ucas{5a} \\
+	\textbf{Name}: Mine information - street heatmap \\
+	\textbf{Actor}: User  \\
+	\textbf{Entry conditions}:
+	\begin{enumerate}
+		\item{User is logged in}
+	\end{enumerate}
+	\textbf{Event flow}:
+	\begin{enumerate}
+		\item{User enters the section "Explore data"}
+    \item{The user chooses to get the map about streets with highest frequency of violations}
+    \item{The system retrieves data from the database of violations, counting for each street the number of occurrencies}
+    \item{The system sends to the external maps API the count of violation and the road name}
+    \item{The app shows the map with an overlay which higlights the areas with a gradient color according to the number of vioations occurred}
+	\end{enumerate}
+	\textbf{Exit conditions}:
+        \item{User wants to go back to "Explore data" area}
+	\textbf{Exceptions}:
+  \begin{enumerate}
+    \item{If there are no records the app will report no data available message}
+  \end{enumerate}
+	\rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\textbf{ID}: \ucas{5b} \\
+	\textbf{Name}: Mine information by Authority - offenders \\
+	\textbf{Actor}: AuthorityUser   \\
+	\textbf{Entry conditions}:
+	\begin{enumerate}
+		\item{AuthorityUser is logged in}
+	\end{enumerate}
+	\textbf{Event flow}:
+	\begin{enumerate}
+		\item{AuthorityUser enters the section "Explore data"}
+		\item{The system asks which kind of data the AuthorityUser wants to know}
+    \item{The AuthorityUser chooses to get the data about veichles that committed the highest number of violations}
+    \item{The system queries the table where for each licence plate is associated the count of violations }
+    \item{The system will report in a tabular way the plate of the veichle and the count of violations committed}
+    \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
+	\end{enumerate}
+	\textbf{Exit conditions}:
+  \begin{enumerate}
+    \item{AuthorityUser wants to go back to "Explore data" area}
+  \end{enumerate}
+	\textbf{Exceptions}:
+	\begin{enumerate}
+		\item{If there are no records the app will report no data available message}
+	\end{enumerate}
+	\rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \textbf{ID}: \ucas{5c} \\
+  \textbf{Name}: Mine information by EndUser - offenders \\
+  \textbf{Actor}: EndUsers   \\
+  \textbf{Entry conditions}:
+  \begin{enumerate}
+    \item{User is logged in}
+  \end{enumerate}
+  \textbf{Event flow}:
+  \begin{enumerate}
+    \item{User enters the section "Explore data"}
+    \item{The system asks which kind of data the user wants to know}
+    \item{The User chooses to get the data about veichles that committed the highest number of violations}
+    \item{The system queries the table where for each licence plate is associated the count of violations }
+    \item{the System associates an anonymized sequential identifier to each plate}
+    \item{The system will report in a tabular way the identifier of the veichle and the count of violations}
+    \item{If the User scrolls down the system will offer the chance to load more rows}
+  \end{enumerate}
+  \textbf{Exit conditions}:
+  \begin{enumerate}
+    \item{User wants to go back to "Explore data" area}
+  \end{enumerate}
+  \textbf{Exceptions}:
+  \begin{enumerate}
+    \item{If there are no records the app will report no data available message}
+  \end{enumerate}
+  \rule{\linewidth}{0.4pt}
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item{Advanced function}\\
+		\textbf{ID}: \ucas{6} \\
+		\textbf{Name}: Ticket approval  \\
+		\textbf{Actor}: AuthorityUser   \\
+		\textbf{Entry conditions}:
+		\begin{enumerate}
+			\item{A new violation is inserted in database}
+      \item{AuthorityUser logged in}
+		\end{enumerate}
+		\textbf{Event flow}:
+		\begin{enumerate}
+      \item{Every time a new violation is created by a EndUser the system will create automatically a ticket to be approved}
+			\item{AuthorityUser enters the section "Tickets"}
+			\item{AuthorityUser enters the section "Approve Tickets"}
+      \item{The System will show the list of tickets available for approval }
+      \item{AuthorityUser selects one tiket and system will show the related details}
+      \item{System will ask the AuthorityUser if he wants to approve or not the ticket}
+  		\end{enumerate}
+		\textbf{Exit conditions}:
+    \begin{enumerate}
+      \item{User wants to go back to "Ticket" area}
+      \item{AuthorityUser approves the ticket}
+      \item{AuthorityUser doesn't approve the ticket}
+    \end{enumerate}
+		\textbf{Exceptions}:
+		\begin{enumerate}
+			\item{If there are no tickets pending, the app will report no data available message}
+		\end{enumerate}
+		\rule{\linewidth}{0.4pt}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \textbf{ID}: \ucas{5} \\
+    \textbf{Name}: Ticket statistics selection \\
+    \textbf{Actor}: AuthorityUser   \\
+    \textbf{Entry conditions}:
+    \begin{enumerate}
+      \item{AuthorityUser logged in}
+    \end{enumerate}
+    \textbf{Event flow}:
+    \begin{enumerate}
+      \item {AuthorityUser enters the section "ticket statistics"}
+      \item {The system will show the available ticket statisics options available to show}
+    \end{enumerate}
+    \textbf{Exit conditions}:
+    \begin{enumerate}
+      \item{the AuthorityUser chooses the kind of statistics he wants to see}
+    \end{enumerate}
+    \textbf{Exceptions}:
+    \begin{enumerate}
+    \end{enumerate}
+    \rule{\linewidth}{0.4pt}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \textbf{ID}: \ucas{5} \\
+    \textbf{Name}: Statistics - offenders \\
+    \textbf{Actor}: AuthorityUser   \\
+    \textbf{Entry conditions}:
+    \begin{enumerate}
+      \item{AuthorityUser logged in}
+      \item{AuthorityUser has selected to see the statistics about offenders }
+    \end{enumerate}
+    \textbf{Event flow}:
+    \begin{enumerate}
+      \item{The system queries the table about all tickets, getting the count of tickets associated to every citizen present in the database of ticket created}
+      \item{The system will report in a tabular way the name of the citizen and the count of approved tickets he has received}
+      \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
+    \end{enumerate}
+    \textbf{Exit conditions}:
+    \begin{enumerate}
+      \item{the AuthorityUser wants to go back to other sections}
+    \end{enumerate}
+    \textbf{Exceptions}:
+    \begin{enumerate}
+    \end{enumerate}
+    \rule{\linewidth}{0.4pt}
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \textbf{ID}: \ucas{5} \\
+    \textbf{Name}: Statistics - trends \\
+    \textbf{Actor}: AuthorityUser   \\
+    \textbf{Entry conditions}:
+    \begin{enumerate}
+      \item{AuthorityUser logged in}
+      \item{AuthorityUser has chosen to see the Statistics - trend option}
+    \end{enumerate}
+    \textbf{Event flow}:
+    \begin{enumerate}
+      \item {
+      \item
+    \end{enumerate}
+    \textbf{Exit conditions}:
+    \begin{enumerate}
+
+    \end{enumerate}
+    \textbf{Exceptions}:
+    \begin{enumerate}
+    \end{enumerate}
+    \rule{\linewidth}{0.4pt}

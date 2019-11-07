@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 14:36
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1390,7 +1390,50 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [4] (./Files/introduction.tex [5
+ [4] (./Files/introduction.tex
+(./Files/worldmachine.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 1.
+
+./Files/worldmachine.tex:5: Misplaced \noalign.
+\hline ->\noalign 
+                  {\ifnum 0=`}\fi \let \hskip \vskip \let \vrule \hrule \let...
+l.5 ...mmitting a parking violation & N & W \hline
+                                                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./Files/worldmachine.tex:5: You can't use `\hrule' here except with leaders.
+\vline ->\vrule 
+                \@width \arrayrulewidth 
+l.5 ...mmitting a parking violation & N & W \hline
+                                                  
+To put a horizontal rule in an hbox or an alignment,
+you should use \leaders or \hrulefill (see The TeXbook).
+
+./Files/worldmachine.tex:5: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.5 ...mmitting a parking violation & N & W \hline
+                                                  
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Files/worldmachine.tex:5: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.5 ...mmitting a parking violation & N & W \hline
+                                                  
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+) [5
 
 ]
 Overfull \hbox (8.73103pt too wide) in paragraph at lines 47--48
@@ -1634,26 +1677,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
 (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 221307170749DEB3C00C418B560D4B1B.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 9EE20E97DBAE2E4BF15FC61501590164
-(rerunfilecheck)             After:  221307170749DEB3C00C418B560D4B1B.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 32616 strings out of 492970
- 644209 string characters out of 6133938
+ 32619 strings out of 492970
+ 644267 string characters out of 6133938
  725664 words of memory out of 5000000
  36128 multiletter control sequences out of 15000+600000
  540090 words of font info for 70 fonts, out of 8000000 for 9000
