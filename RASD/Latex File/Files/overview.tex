@@ -1,6 +1,6 @@
 \subsection{Product perspective }
 
-\subsubsection{Class Diagram}
+\subsubsection{Class Diagram} %%done !!!!!!!!!!!!!!!!!!
 The following class diagram is a high-level class diaram which should be intended as a model of the application structure. During the implementation part more classes and attributes can be created and used.
 
 %Sideway figure
@@ -23,16 +23,16 @@ This class is the father of the two possible kind of users: \textbf{EndUser} and
 Every user is in a \textbf{Location} class used to represent the location as latitude and longitude coming from the OS of the smartphone.
 
 \paragraph{Reverse Geocoding}
-This interface is used to communicate with the external serveice to get a readable address from the coordinates as explained in section \ref{Dependencies}.
+This interface is used to communicate with the external Geocoding service to get a readable address from the coordinates as explained in section \ref{Dependencies}.
 
 \paragraph{Violation}
-This class is used to store all the data related to the reported violation. The \textit{kind} attribute is selected by the user in the fill form from a list of possible kind of violations, see use case \ucas{}. The photo is here reported an attribute but can also be implemented as a separate class. It's mandatory that one picture is associated to every violation. In the \textbf{Violation} class there are also stored the raw latitude and longitude in case there will be need of those data later, as an example if it's imposssible get precise location using reverse geocoding.
+This class is used to store all the data related to the reported violation. The \textit{kind} attribute is selected by the user from a list of possible kind of violations in the form section as explained in \ucas{4b}. The photo is here reported as an attribute but can also be implemented as a separate class. It's mandatory that one and only one picture is associated to every violation. In the \textbf{Violation} class we store also the raw latitude and longitude in case there will be need of those data later, as an example if it's imposssible get precise location using reverse geocoding.
 
 \paragraph{ALPR}
 This interface is needed to interact with the external ALPR service which receives a picture and returns a string containing every licence plate found in the picture. This interface is used to complete the attribute \textit{licence plate} of every violation.
 
 \paragraph{MinedInfo}
-Classes \textbf{MinedSteets} and \textbf{MinedOffenders} are used to represent the data coming from the database of all violation and processed to offer different kind of visualization.
+Classes \textbf{MinedSteets} and \textbf{MinedOffenders} are used to represent the data coming from the database of all violation and processed to offer different kind of visualizations.
 
 \paragraph{Heat Map visualizer}
 This interface is used to communicate with the external service providing a map of streets with an overlay highliting the spots where violation occurred.
@@ -48,19 +48,16 @@ The attribute \textit{Offender name} and \textit{Offender surname} are used to s
 The classes \textbf{StatsOffenders} and \textbf{StatsTrends} are used to represent the data about the issued ticket and used for visualizations.
 
 \paragraph{CheckValidity}
-Is a class used to check
+Is a class used to check if the picture taken has been altered or not. I's either possible to directly implement this functionality or use an external service.
 
 
 \subsection{Product functions}
 
 \subsubsection{Report violation}
-The main function of SafeStreets is allowing users to report traffic violations, in particula when parking violations occour.
- User will be required to take a picture of the veichle responsible of the violation ad select the kind of violation.
+The main function of SafeStreets is allowing users to report traffic violations, in particular when parking violations occour.
+User will be required to take a picture of the veichle responsible of the violation ad select the kind of violation.
 
-Once opened the app the will show on display the camera recording mode in order to start reporting the violation by taking the picture. Some alerts will appear reminding the user he has to include the plate of the veichle and violation must be visible.
-
-
-
+Once opened, the app the will show on display the camera recording mode in order to start reporting the violation by taking the picture. Some alerts will appear reminding the user he has to include the plate of the veichle and the violation must be visible.
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{Images/violationstate.png}
@@ -76,7 +73,6 @@ Two kind of visualizations are offered:
 \end{enumerate}
 In order to get those data the system will periodically query the database of violations in order to create a table where the count of violation is stored, both for streets and vehicles.
 There will be a section in the app called "Explore Data" where will be able to choose which kind of data to visualize.
-
 
 \subsubsection{Issue a ticket}
 
@@ -113,7 +109,6 @@ The system will connect to the external vehicle registration database in order t
 Now we have all the data to print the ticket and send it via regular mail. There will be an office of police-station which will do the job.
 
 \subsubsection{Ticket statistics}
-
 This function has the purpose to show
 
 Two kind of visualizations are offered:
@@ -125,11 +120,7 @@ Two kind of visualizations are offered:
 The first visulaization will be available only to authorities. In a section of the app it will be possible to see for each citizen who has ever received a ticket, the count of those ticket received, in descending order.  Note that this is different compared to the other visulization "veichels that committed the highest number of vioations" explained in section \ref{blacklistplates}.
 In this ticket statistic view we are considering only emitted tickets and we are aggregating all tickets of a specific citizen. Actually in case a citizen he has multiple veichles, here we are countin all the tickets emitted for all of his veichles.
 
-
-
-
-
-\subsection{User characteristics }
+\subsection{User characteristics}
 
 \subsection{Assumptions, dependencies and constraints}
 \subsubsection{Domain assumptions}
@@ -151,18 +142,18 @@ In this ticket statistic view we are considering only emitted tickets and we are
 \end{enumerate}
 
 \subsubsection{Dependencies} \label{Dependencies}
-
-The app will be dependent on a third-party service to read the licence plate of the cars
-
-the app will be dependent on some Maps API to get the full address, knowing the coordinates of location coming fromm the GPS of the device.
-
-The app will be dependent to some Maps API used to show the map and an overlay.
-
-
-
-The app will be dependent on a smartphone, which has to provide the following features:
+Since we're creating a mobile app, the main dependency is to have a smartphone, which has to provide the following features:
 \begin{enumerate}
   \item Internet connection, possibly using 2G/3G/4G in order to be available where there is no WiFi, considering the use case "on the road"
   \item A camera with good resolution
   \item GPS sensor
+\end{enumerate}
+
+Also there is need to use some external software or APIs :
+\begin{itemize}
+  \item ALPR service :  the app will be dependent on a third-party service to read the licence plate of the cars like the open source OpenALPR \cite{openalprdoc}
+
+  \item Reverse Geocoding: the app will be dependent on some maps API to get the full address, knowing the coordinates of location coming fromm the GPS of the device. An example of this service is Google Maps API \cite{GMapGeocode}
+
+  \item Map and Heatmap : The app will be dependent to some Maps API used to show the map and an overlay. An example of this service is Google Maps API \cite{GMapsHeat}
 \end{enumerate}

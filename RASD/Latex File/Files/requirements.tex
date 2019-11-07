@@ -306,8 +306,8 @@ In the following section a description of each use case is provided. For every u
   \rule{\linewidth}{0.4pt}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-  
-  
+
+
 	\textbf{ID}: \ucas{5a} \\
 	\textbf{Name}: Mine information - street heatmap \\
 	\textbf{Actor}: User  \\
@@ -446,16 +446,15 @@ In the following section a description of each use case is provided. For every u
     \textbf{Event flow}:
     \begin{enumerate}
       \item{The system queries the table about all tickets, getting the count of tickets associated to every citizen present in the database of ticket created}
-      \item{The system will report in a tabular way the plate of the veichle and the count of violations committed}
+      \item{The system will report in a tabular way the name of the citizen and the count of approved tickets he has received}
       \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
     \end{enumerate}
     \textbf{Exit conditions}:
     \begin{enumerate}
-
+      \item{the AuthorityUser wants to go back to other sections}
     \end{enumerate}
     \textbf{Exceptions}:
     \begin{enumerate}
-
     \end{enumerate}
     \rule{\linewidth}{0.4pt}
 
@@ -519,6 +518,6 @@ The application must offer the maximum availability, granting its service every 
 \subsubsection{Security}
 The application need to be safe and it does not have particular security concerns except the ones related to unauthorized login. The login of Users and especially of authorities must be very safe to avoid reporting. Moreover, the means of communication must be encrypted to save the confidentiality of information sent to SafeStreets.
 \subsubsection{Maintainability}
-The application will be maintained and designed in such a way it makes it easier to maintain and it shoul be understandable for both the users and the authorities. Furthermore, the system will put eﬀort in keeping the live data services (such as highlighting the streets with the highest frequency of violations or the vehicles that commit the most violation) always online.
+The application will be maintained and designed in such a way it makes it easier to maintain and it should be understandable for both the users and the authorities. Furthermore, the system will put eﬀort in keeping the live data services (such as highlighting the streets with the highest frequency of violations or the vehicles that commit the most violation) always online.
 \subsubsection{Portability}
-Portability of user data from a device to another is possible by entering personal login data. Also the application will be able to run for devices with different operating systems. Trackme wants to focus on the both Android iOS market and Apple iOS, because Android is the largest OS in the world and it is expected that the market share of Apple iOS will increase in the coming years.
+Portability of user data from a device to another is possible by entering personal login data. Also the application will be able to run for devices with different operating systems.  
