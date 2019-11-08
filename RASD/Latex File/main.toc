@@ -21,12 +21,13 @@
 \contentsline {paragraph}{Location}{8}{section*.8}
 \contentsline {paragraph}{Reverse Geocoding}{8}{section*.9}
 \contentsline {paragraph}{Violation}{8}{section*.10}
-\contentsline {paragraph}{ALPR}{8}{section*.11}
-\contentsline {paragraph}{MinedInfo}{8}{section*.12}
-\contentsline {paragraph}{Heat Map visualizer}{8}{section*.13}
-\contentsline {paragraph}{Ticket}{8}{section*.14}
-\contentsline {paragraph}{Statistics}{10}{section*.15}
-\contentsline {paragraph}{CheckValidity}{10}{section*.16}
+\contentsline {paragraph}{Photo}{8}{section*.11}
+\contentsline {paragraph}{ALPR}{8}{section*.12}
+\contentsline {paragraph}{MinedInfo}{8}{section*.13}
+\contentsline {paragraph}{Heat Map visualizer}{8}{section*.14}
+\contentsline {paragraph}{Ticket}{8}{section*.15}
+\contentsline {paragraph}{Statistics}{10}{section*.16}
+\contentsline {paragraph}{CheckValidity}{10}{section*.17}
 \contentsline {subsection}{\numberline {2.2}Product functions}{10}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Report violation}{10}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}Explore Data}{10}{subsubsection.2.2.2}

@@ -26,7 +26,10 @@ Every user is in a \textbf{Location} class used to represent the location as lat
 This interface is used to communicate with the external Geocoding service to get a readable address from the coordinates as explained in section \ref{Dependencies}.
 
 \paragraph{Violation}
-This class is used to store all the data related to the reported violation. The \textit{kind} attribute is selected by the user from a list of possible kind of violations in the form section as explained in \ucas{4b}. The photo is here reported as an attribute but can also be implemented as a separate class. It's mandatory that one and only one picture is associated to every violation. In the \textbf{Violation} class we store also the raw latitude and longitude in case there will be need of those data later, as an example if it's imposssible get precise location using reverse geocoding.
+This class is used to store all the data related to the reported violation. The \textit{kind} attribute is selected by the user from a list of possible kind of violations in the form section as explained in \ucas{4b}.  In the \textbf{Violation} class we store also the raw latitude and longitude in case there will be need of those data later, as an example if it's imposssible get precise location using reverse geocoding.
+
+\paragraph{Photo}
+This class is needed to represent the photo of the violation. It's mandatory that one and only one picture is associated to every violation.
 
 \paragraph{ALPR}
 This interface is needed to interact with the external ALPR service which receives a picture and returns a string containing every licence plate found in the picture. This interface is used to complete the attribute \textit{licence plate} of every violation.
