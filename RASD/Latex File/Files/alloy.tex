@@ -4,8 +4,12 @@ Asserts and Predicates.
 
 \subsection{Abstract Entity and Signature}
 
+\begin{lstlisting}
 open util/boolean
 sig string {}
+
+
+
 
 
 abstract sig User {
@@ -15,13 +19,14 @@ abstract sig User {
   address: one string,
   email: one string,
   password: one string,
-  userLocation: one Location 
+  userLocation: one Location,
+  accessLevel: one Bool,
 
 }
 
 sig EndUser extends User{
 
-  suspended: one Bool
+
 
 }
 
@@ -34,15 +39,14 @@ sig Location {
 
   }{
 
-  latitude > 0 and longitude > 0
 
 }
 
 sig Photo {}
 
 sig Violation {
-  
-  
+
+
   reporter: one EndUser,
   type: one string,
   photo: some Photo,
@@ -57,7 +61,7 @@ sig ReverseGioCoding {
 
 }
 
-sig ALPR {
+sig ALPR {  //remember to add somethin to tell it's only one
 
   picture: one Photo,
   licenseP: one string
@@ -67,7 +71,7 @@ sig ALPR {
 abstract sig MinedInfo {
 
   userRequest: one User,
-  accessLevel: one Int  
+
 
 }
 
@@ -75,13 +79,13 @@ sig MinedStreet extends MinedInfo{
 
   name: some string,
   frequency: some Int,
-  violations: some Violation
+  location : one Location,
 
 }
 
 
 sig MinedOffender extends MinedInfo{
-  
+
   n_Violations: one Int,
   licensePlate: one Int,
   uuid: one Int
@@ -90,3 +94,4 @@ sig MinedOffender extends MinedInfo{
 
 pred show {}
 run show
+\end{lstlisting}
