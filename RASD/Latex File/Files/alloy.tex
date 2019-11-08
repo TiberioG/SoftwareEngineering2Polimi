@@ -1,0 +1,92 @@
+Here’s the complete code for our Alloy model. The .als file can be found in our
+GitHub repository. For clarity we separate the code in Signatures, Facts and
+Asserts and Predicates.
+
+\subsection{Abstract Entity and Signature}
+
+open util/boolean
+sig string {}
+
+
+abstract sig User {
+
+  name: one string,
+  surname:  one string,
+  address: one string,
+  email: one string,
+  password: one string,
+  userLocation: one Location 
+
+}
+
+sig EndUser extends User{
+
+  suspended: one Bool
+
+}
+
+sig Authority extends User{}
+
+sig Location {
+
+  latitude: Int ,
+  longitude: Int
+
+  }{
+
+  latitude > 0 and longitude > 0
+
+}
+
+sig Photo {}
+
+sig Violation {
+  
+  
+  reporter: one EndUser,
+  type: one string,
+  photo: some Photo,
+  alpr: one ALPR
+
+}
+
+sig ReverseGioCoding {
+
+  loc: Location,
+  addr: one string
+
+}
+
+sig ALPR {
+
+  picture: one Photo,
+  licenseP: one string
+
+}
+
+abstract sig MinedInfo {
+
+  userRequest: one User,
+  accessLevel: one Int  
+
+}
+
+sig MinedStreet extends MinedInfo{
+
+  name: some string,
+  frequency: some Int,
+  violations: some Violation
+
+}
+
+
+sig MinedOffender extends MinedInfo{
+  
+  n_Violations: one Int,
+  licensePlate: one Int,
+  uuid: one Int
+
+}
+
+pred show {}
+run show
