@@ -27,3 +27,6 @@
 |      | meeting | 30 min|
 |      | Verify Requirements | 1h |
 |      | Use Cases diagrams | 1h 30 min|
+|      | Use Cases diagrams Improvment| 30 min|
+|      | Learning Alloy | 6 min|
+|      | Analysis and Implementing Alloy | 3 min|
