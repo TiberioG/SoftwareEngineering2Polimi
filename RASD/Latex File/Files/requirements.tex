@@ -152,12 +152,31 @@ Here are presented the use case diagrams for each main function. In the next sec
 \subsubsection{Use Cases Description}
 In the following section a description of each use case is provided. For every use case is reported: an ID defining each case, the entry conditions, the steps to accomplish the exit condition and any exception that may occur. \\
 
-
 %%%%%%%USE CASES HERE ***********************************************************************
 \input{Files/ucases/listcases.tex}
 
-\subsubsection{Requirements traceability matrix}
 
+
+\subsubsection{Sequence diagrams}
+In ths subsection are shown the sequence diagrams which shows the interections between the user, our software and the external APIs.
+
+\begin{figure}[H]
+   \centering
+     \includegraphics[width=0.8\textwidth]{Images/SequenceViolation.png}
+     \caption{Sequence Diagram for Violation Reporting}   \label{fig:sequenceViolation}
+\end{figure}
+
+\begin{figure}[H]
+   \centering
+     \includegraphics[width=0.8\textwidth]{Images/SequenceHeatmap.png}
+     \caption{Sequence Diagram for HeatMap visualization}   \label{fig:sequenceHeatmap}
+\end{figure}
+
+
+\subsubsection{Requirements traceability matrix}
+In the following table we have listed for each requirement all the use cases related.
+
+%%%%%%%matrix is here ***********************************************************************
 \input{Files/tracematrix.tex}
 
 

@@ -13,6 +13,7 @@
 |     | GUI, functions, statecharts | 4h |
 |     | ucases traciability matrix | 2h |
 |     | introduction, world and machine | 2h 30 min |
+|     | sequence diagrams | 2h |
 
 
 

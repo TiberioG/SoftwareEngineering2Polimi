@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 NOV 2019 16:10
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  8 NOV 2019 11:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1575,25 +1575,57 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 307--158
+Underfull \hbox (badness 10000) in paragraph at lines 307--157
 
  []
 
+File: Images/SequenceViolation.png Graphic file (type bmp)
+<Images/SequenceViolation.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+File: Images/SequenceHeatmap.png Graphic file (type bmp)
+<Images/SequenceHeatmap.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31]
 (./Files/tracematrix.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 179--182
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--201
 
  []
 
-[31]
+[33]
 Missing character: There is no ﬀ in font Futura Book/OT:mapping=tex-text;!
-) [32] (./Files/alloy.tex) [33
+) [34] (./Files/alloy.tex
+./Files/alloy.tex:85: Missing $ inserted.
+<inserted text> 
+                $
+l.85   n_
+         Violations: one Int,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-] (./Files/effort.tex) [34
+./Files/alloy.tex:88: Missing $ inserted.
+<inserted text> 
+                $
+l.88 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+) [35
+
+] (./Files/effort.tex) [36
 
 ]
 No file main.bbl.
@@ -1603,20 +1635,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 146.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 221307170749DEB3C00C418B560D4B1B.
+(rerunfilecheck)             Checksum: 7DF615CF758365EFC36A4A640E106153.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
  ) 
 Here is how much of TeX's memory you used:
- 32627 strings out of 492970
- 644403 string characters out of 6133938
- 726757 words of memory out of 5000000
- 36132 multiletter control sequences out of 15000+600000
+ 32638 strings out of 492970
+ 644686 string characters out of 6133938
+ 726847 words of memory out of 5000000
+ 36141 multiletter control sequences out of 15000+600000
  540090 words of font info for 70 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,12n,65p,10467b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (34 pages).
+Output written on main.pdf (36 pages).
