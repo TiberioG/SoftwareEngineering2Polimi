@@ -14,6 +14,7 @@
 |     | ucases traciability matrix | 2h |
 |     | introduction, world and machine | 2h 30 min |
 |     | sequence diagrams | 2h |
+|     | meeting alloy | 1h 30 min |
 
 
 
@@ -31,3 +32,4 @@
 |      | Use Cases diagrams Improvment| 30 min|
 |      | Learning Alloy | 6 min|
 |      | Analysis and Implementing Alloy | 3 min|
+|     | meeting alloy | 1h 30 min |
