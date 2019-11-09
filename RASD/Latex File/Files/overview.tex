@@ -55,12 +55,16 @@ Is a class used to check if the picture taken has been altered or not. I's eithe
 
 
 \subsection{Product functions}
+In this section are listed and explained the main functionalities of our application.
 
 \subsubsection{Report violation}
-The main function of SafeStreets is allowing users to report traffic violations, in particular when parking violations occour.
-User will be required to take a picture of the veichle responsible of the violation ad select the kind of violation.
-
+The main function of SafeStreets is allowing users to report traffic violations, in particular when parking violations occour. User will be required to take a picture of the veichle responsible of the violation ad select the kind of violation.
 Once opened, the app the will show on display the camera recording mode in order to start reporting the violation by taking the picture. Some alerts will appear reminding the user he has to include the plate of the veichle and the violation must be visible.
+After the picture has been taken it can be possible there are other plates visible in the picture, not related to the veichle the user is reporting. So the app will give the user a tool to cover using his finger this plates.
+In case no plates are found the system will the user to take again the picture.
+After the picture has succesfully recorded, the system will automatically decode the licence plate and the name of the street where the user is.
+The user will be required to fill in a form where are listed the possible descriptions of violations.
+
 \begin{figure}
 \centering
 \includegraphics[width=0.7\textwidth]{Images/violationstate.png}
@@ -76,6 +80,7 @@ Two kind of visualizations are offered:
 \end{enumerate}
 In order to get those data the system will periodically query the database of violations in order to create a table where the count of violation is stored, both for streets and vehicles.
 There will be a section in the app called "Explore Data" where will be able to choose which kind of data to visualize.
+Only A
 
 \subsubsection{Issue a ticket}
 

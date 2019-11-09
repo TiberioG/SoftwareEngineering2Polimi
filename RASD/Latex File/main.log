@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 NOV 2019 11:08
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 NOV 2019 11:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1672,15 +1672,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
  33978 strings out of 492970
  663822 string characters out of 6133938
- 790574 words of memory out of 5000000
+ 790657 words of memory out of 5000000
  37456 multiletter control sequences out of 15000+600000
  540114 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
