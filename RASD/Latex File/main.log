@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  8 NOV 2019 21:36
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 NOV 2019 11:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1620,22 +1620,28 @@ File: Images/SequenceHeatmap.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
-(./Files/tracematrix.tex)
+File: Images/SequenceTicket.png Graphic file (type bmp)
+<Images/SequenceTicket.png>
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [31]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+(./Files/tracematrix.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--199
+Underfull \hbox (badness 10000) in paragraph at lines 201--204
 
  []
 
-[32]
+[33]
 Missing character: There is no ﬀ in font Futura Book/OT:mapping=tex-text;!
-) [33] (./Files/alloy.tex
+) [34] (./Files/alloy.tex
 ./Files/alloy.tex:8: Undefined control sequence.
 \lst@basicstyle ->\normalstyle 
                                \ttfamily 
@@ -1650,9 +1656,9 @@ and I'll forget about whatever was undefined.
 (./Alloy/model.als
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1.
- [34
+ [35
 
-])) [35] (./Files/effort.tex) [36
+])) [36] (./Files/effort.tex) [37
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
@@ -1672,12 +1678,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 33973 strings out of 492970
- 663696 string characters out of 6133938
- 790573 words of memory out of 5000000
- 37452 multiletter control sequences out of 15000+600000
+ 33978 strings out of 492970
+ 663822 string characters out of 6133938
+ 790574 words of memory out of 5000000
+ 37456 multiletter control sequences out of 15000+600000
  540114 words of font info for 73 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  59i,12n,65p,10467b,1819s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (36 pages).
+Output written on main.pdf (37 pages).
