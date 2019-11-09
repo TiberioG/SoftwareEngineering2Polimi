@@ -16,6 +16,7 @@
 |     | sequence diagrams | 2h |
 |     | meeting alloy | 1h 30 min |
 |     | sequence and fixes | 1h 30 min |
+|     | check and fix everithing | 3h |
 
 
 
