@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 NOV 2019 16:03
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 NOV 2019 16:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1180,14 +1180,11 @@ l.130 \end{itemize}}
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-File: Images/BasicServiceUseCase.jpg Graphic file (type bmp)
-<Images/BasicServiceUseCase.jpg>
-File: Images/AdvancedFUnUseCase.jpg Graphic file (type bmp)
-<Images/AdvancedFUnUseCase.jpg>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
+File: Images/BasicServiceUseCase.png Graphic file (type bmp)
+<Images/BasicServiceUseCase.png>
+File: Images/AdvancedFUnUseCase.png Graphic file (type bmp)
+<Images/AdvancedFUnUseCase.png>
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
@@ -1345,8 +1342,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 23855 strings out of 492970
- 438072 string characters out of 6133938
+ 23854 strings out of 492970
+ 438068 string characters out of 6133938
  624670 words of memory out of 5000000
  27566 multiletter control sequences out of 15000+600000
  539801 words of font info for 72 fonts, out of 8000000 for 9000
