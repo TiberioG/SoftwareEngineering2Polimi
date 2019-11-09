@@ -101,7 +101,7 @@ Evrey function shoud work olnly after succesful login.
 \item \textbf{[G4] Have at least two different priviledge for mining data} %%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
   \dom{9} Every authority account is verified and it's not possible to be created using the front end
-  \req {12} Regular endusers can see the list of veichles with the highest number of violations but they cannot see the actual licence plate, instead of that a generic identifier is shown
+  \req{12} Regular users cannot mine data about plates of the offenders
   \req{13} Authority users can know the exact licence plate when mining data about offenders
   \req{14} Only authority users can access the ticket approval section
 \end{itemize}
@@ -155,26 +155,24 @@ In the following section a description of each use case is provided. For every u
 %%%%%%%USE CASES HERE ***********************************************************************
 \input{Files/ucases/listcases.tex}
 
-
-
 \subsubsection{Sequence diagrams}
 In ths subsection are shown the sequence diagrams which shows the interections between the user, our software and the external APIs.
 
 \begin{figure}[H]
    \centering
-     \includegraphics[width=0.8\textwidth]{Images/SequenceViolation.png}
+     \includegraphics[width=\textwidth]{Images/SequenceViolation.png}
      \caption{Sequence Diagram for Violation Reporting}   \label{fig:sequenceViolation}
 \end{figure}
 
 \begin{figure}[H]
    \centering
-     \includegraphics[width=0.8\textwidth]{Images/SequenceHeatmap.png}
+     \includegraphics[width=\textwidth]{Images/SequenceHeatmap.png}
      \caption{Sequence Diagram for HeatMap visualization}   \label{fig:sequenceHeatmap}
 \end{figure}
 
 \begin{figure}[H]
    \centering
-     \includegraphics[width=0.8\textwidth]{Images/SequenceTicket.png}
+     \includegraphics[width=\textwidth]{Images/SequenceTicket.png}
      \caption{Sequence Diagram for ticket Creation and approval}   \label{fig:sequenceTicket}
 \end{figure}
 
@@ -186,11 +184,12 @@ In the following table we have listed for each requirement all the use cases rel
 
 
 \subsection{Performance Requirements}
+The system must be able to work with simultaneous requests, we can estimate in the worst case more than 10 reported violation at time if we consider a city of more than half a million of inhabitants.
 
 \subsection{Design Constraints}
-
 \subsubsection{Standards compliance}
 The app shoudld be available for the two main operating systems of smartphones: Android Os and Apple iOS.\\
+
 
 \subsubsection{Hardware limitations}
 The app will have a server side and a client side (smartphone).
@@ -198,21 +197,28 @@ On server side limitations can be the size of available storage and the bandwidt
 On smartphone side we have the network connectivity (3G/4G connection) and GPS limitations in some areas (very rare case since we will use the app in urban environment).
 
 \subsubsection{Any other constraint}
-Application should be compliant to European GDPR.\\
-The traffic violations which can be reported should be compliant to the local traffic code where the app will be used.\\
-For an use in Italy the app should be compliant to the "Codice della Strada", in particular parking violations are reported in Art. 157.\\
+\begin{itemize}
+\item Application should be compliant to European GDPR for the EndUsers
+\item The traffic violations which can be reported should be compliant to the local traffic code where the app will be used
+\item For an use in Italy the app should be compliant to the "Codice della Strada" \cite{codicestrada}, in particular parking violations are reported in Art. 157. The tickets created shoud have the same structure as required by the law \\
+\end{itemize}
 
 \subsection{Software System Attributes}
 \subsubsection{Simple User Interface}
 The user interface has to be as simple and intuitive as possible, the application should allow an average user to set up an account and start using the application understanding its functionality in no more than a dozen minutes. In addition there should be a complete tutorial to makes it easy using the application.
 
 \subsubsection{Reliability}
-The application provides a reliable service in which individual users can easily log in and report the violations in the most optimal way. Furthermore it warranties that the chain of custody of the information coming from the users is never broken, and the information is never altered. This would provide a secure and reliable system. In addition, if the license plate not readable from the first picture picture the application should make the user to send again the photo.
+The application provides a reliable service in which individual users can easily log in and report the violations in the most optimal way. Furthermore it warranties that the chain of custody of the information coming from the users is never broken, and the information is never altered. This would provide a secure and reliable system.
+
 \subsubsection{Availability}
-The application must offer the maximum availability, granting its service every day at any time (24/7). The lack of service must be minimal. Reporting violation and taking the information about the violation coming from SafeStreets must be active every day at any time. The lack of service is acceptable only if it is due to maintenance. In this case, users must receive a warning 48 hours before.
+The application must offer availability in the order of 99.99\% granting its service every day at any time (24/7). The lack of service must be minimal. Reporting violation and taking the information about the violation coming from SafeStreets must be active every day at any time. The lack of service is acceptable only if it is due to maintenance. In this case, users must receive a warning 48 hours before.
 \subsubsection{Security}
-The application need to be safe and it does not have particular security concerns except the ones related to unauthorized login. The login of Users and especially of authorities must be very safe to avoid spam reporting. Moreover, the means of communication must be encrypted to save the confidentiality of information sent to SafeStreets.
+It's important that the Authority Users cannot be created using a public sign-up form. Those special accounts must be created with the backend on the application.
+There should be no breaks that would make possible to add pictures and violations not using the built-in camera via the app, for example pictures taken with a different device or already stored in the mobile phone should't be accepted. Moreover, the means of communication must be encrypted to save the confidentiality of information sent and generated, especially the one related to the issue of tickets.
+
 \subsubsection{Maintainability}
-The application will be maintained and designed in such a way it makes it easier to maintain and it should be understandable for both the users and the authorities. Furthermore, the system will put eﬀort in keeping the live data services (such as highlighting the streets with the highest frequency of violations or the vehicles that commit the most violation) always online.
+The application must keep a service log in order to fix bugs more easily.
+The app should be developed using a modular approach, so adding new functions shouldn't require to change the prevous code, bust just add the new module. An example could be adding more statistic functions in the Trend section of issued tickets or violations.
+
 \subsubsection{Portability}
 Portability of user data from a device to another is possible by entering personal login data. Also the application will be able to run for devices with different operating systems.

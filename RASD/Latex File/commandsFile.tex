@@ -2,11 +2,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+%package for alloy code, see the style file included
 \usepackage{listings}
 \usepackage{alloy-style}
 
 
-\newcommand\req[1]{\item[{[R#1]}] \label{R#1}}
+\newcommand\req[1]{\item[{[R#1]}] }
 \newcommand\goal[1]{\item[{[G#1]}] }
 \newcommand\dom[1]{\item[{[D#1]}] }
 \newcommand\ucas[1]{ [UC#1] }
@@ -124,33 +125,25 @@
 \graphicspath{ {./Images/} }
 \usepackage[dvipsnames, table]{xcolor}
 
-%color definitions
+%color definitions, the original colors of politecnico di milano
 \definecolor{poliblue}{RGB}{114, 143, 165}
 \definecolor{polidark}{RGB}{109, 134, 158}
 
-%References
-%\usepackage{xpatch}
-%\usepackage[backend=biber, style=numeric, citestyle=numeric, sorting=none]{biblatex}
-%\addbibresource{main.bib}
 
 %Other
 \usepackage{ifthen}
 \usepackage{xspace}
 \usepackage{enumitem}
 \usepackage{amssymb}
+%this is used for hyperlinks with fancy politecnico color
 \usepackage[pdftex, colorlinks]{hyperref}
 \hypersetup{
      colorlinks=true,
      linkcolor=black,
      filecolor=black,
      citecolor = black,
-     urlcolor=polidark,
+     urlcolor=polidark, %% url color polimi darkgreybluish
      }
-
-
 \urlstyle{same}
-% Some utilities\ldots
-\input{util/highlight}
-\input{util/abbrev}
 
 \date{}
