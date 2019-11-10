@@ -35,3 +35,5 @@
 |      | Learning Alloy | 6 min|
 |      | Analysis and Implementing Alloy | 3 min|
 |     | meeting alloy | 1h 30 min |
+|     | alloy improvement Facts | 3 h |
+
