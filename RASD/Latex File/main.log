@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  10 NOV 2019 21:47
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  10 NOV 2019 23:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1232,10 +1232,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--220
  []
 
 [35]) [36] (./Files/alloy.tex
-./Files/alloy.tex:8: Undefined control sequence.
+./Files/alloy.tex:7: Undefined control sequence.
 \lst@basicstyle ->\normalstyle 
                                \ttfamily 
-l.8 ...utlisting[language=alloy]{Alloy/Model2.als}
+l.7 ...utlisting[language=alloy]{Alloy/Model3.als}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1243,7 +1243,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-(./Alloy/Model2.als
+(./Alloy/Model3.als
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1.
  [37
@@ -1252,41 +1252,52 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38]
-Missing character: There is no ﬀ in font [lmmono10-regular]:!
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [39]
 Missing character: There is no ﬀ in font [lmmono10-regular]:!
 Missing character: There is no ﬀ in font [lmmono10-regular]:!
+Missing character: There is no ﬀ in font [lmmono10-regular]:!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]))
-[41] (./Files/effort.tex)
+ [40])
+[41]
+File: Images/alloy.PNG Graphic file (type bmp)
+<Images/alloy.PNG>
+) [42] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
- [42
+ [43
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 135.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E786C40408DD502F601481A525B7A163.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: BB38BC4F7FF3858C60E42E1A9CDF6CD9
+(rerunfilecheck)             After:  DD5ED0850C8021F4CC32EB40EF02D4BD.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 23869 strings out of 492970
- 438475 string characters out of 6133938
- 650517 words of memory out of 5000000
- 27580 multiletter control sequences out of 15000+600000
+ 23883 strings out of 492970
+ 438738 string characters out of 6133938
+ 666479 words of memory out of 5000000
+ 27593 multiletter control sequences out of 15000+600000
  539801 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,12n,65p,10467b,1827s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,65p,10467b,1825s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (42 pages).
+Output written on main.pdf (43 pages).
