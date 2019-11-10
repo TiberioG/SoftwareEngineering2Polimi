@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  10 NOV 2019 17:47
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  10 NOV 2019 21:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1122,14 +1122,14 @@ File: Images/minestate.png Graphic file (type bmp)
 <Images/minestate.png>
 File: Images/ticketstate.png Graphic file (type bmp)
 <Images/ticketstate.png>
- [10] [11] [12] [13] [14]) [15]
+ [10] [11] [12] [13] [14] [15]) [16]
 (./Files/requirements.tex
 File: GUI/login.png Graphic file (type bmp)
 <GUI/login.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16
+ [17
 
 ]
 File: GUI/takepic.png Graphic file (type bmp)
@@ -1137,44 +1137,44 @@ File: GUI/takepic.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
+ [18]
 File: GUI/picturetaken.png Graphic file (type bmp)
 <GUI/picturetaken.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
+ [19]
 File: GUI/fillform.png Graphic file (type bmp)
 <GUI/fillform.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [20]
 File: GUI/offenders.png Graphic file (type bmp)
 <GUI/offenders.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [21]
 File: GUI/heatmap.png Graphic file (type bmp)
 <GUI/heatmap.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [22]
 File: GUI/ticketapp.png Graphic file (type bmp)
 <GUI/ticketapp.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
-[23] [24]
+ [23]
+[24] [25]
 File: Images/BasicServiceUseCase.png Graphic file (type bmp)
 <Images/BasicServiceUseCase.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [26]
 File: Images/AdvancedFUnUseCase.png Graphic file (type bmp)
 <Images/AdvancedFUnUseCase.png>
 
@@ -1182,12 +1182,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
-[26] (./Files/ucases/listcases.tex [27] [28]
+[27] (./Files/ucases/listcases.tex [28] [29]
 Overfull \hbox (17.0pt too wide) in paragraph at lines 150--157
 [][]
  []
 
-[29])
+[30])
 Runaway argument?
 {\begin {enumerate} \item {User wants to go back to "Explore data" ar\ETC.
 ./Files/requirements.tex:173: File ended while scanning use of \begin.
@@ -1205,23 +1205,23 @@ File: Images/SequenceViolation.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
+ [31]
 File: Images/SequenceHeatmap.png Graphic file (type bmp)
 <Images/SequenceHeatmap.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
+ [32]
 File: Images/SequenceTicket.png Graphic file (type bmp)
 <Images/SequenceTicket.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32]
+ [33]
 (./Files/tracematrix.tex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33]
+ [34]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
@@ -1231,7 +1231,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-[34]) [35] (./Files/alloy.tex
+[35]) [36] (./Files/alloy.tex
 ./Files/alloy.tex:8: Undefined control sequence.
 \lst@basicstyle ->\normalstyle 
                                \ttfamily 
@@ -1246,24 +1246,24 @@ and I'll forget about whatever was undefined.
 (./Alloy/Model2.als
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1.
- [36
+ [37
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
-Missing character: There is no ﬀ in font [lmmono10-regular]:!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [38]
 Missing character: There is no ﬀ in font [lmmono10-regular]:!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+Missing character: There is no ﬀ in font [lmmono10-regular]:!
 Missing character: There is no ﬀ in font [lmmono10-regular]:!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [39]))
-[40] (./Files/effort.tex
+ [40]))
+[41] (./Files/effort.tex
 ./Files/effort.tex:50: Misplaced \crcr.
 \endarray ->\crcr 
                   \egroup \egroup \gdef \@preamble {}\CT@end 
@@ -1372,7 +1372,7 @@ Things are pretty mixed up, but I think the worst is over.
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
- [41
+ [42
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
@@ -1385,6 +1385,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
@@ -1396,4 +1399,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  43i,12n,65p,10467b,1827s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (41 pages).
+Output written on main.pdf (42 pages).
