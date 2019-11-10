@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 NOV 2019 18:13
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  10 NOV 2019 14:11
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -842,7 +843,8 @@ File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 
-! Package hyperref Error: Wrong driver option `pdftex',
+/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty:4383: Packag
+e hyperref Error: Wrong driver option `pdftex',
 (hyperref)                because pdfTeX in PDF mode is not detected.
 
 See the hyperref package documentation for explanation.
@@ -1173,7 +1175,8 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 150--157
  []
 
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
+./Files/ucases/listcases.tex:168: LaTeX Error: Lonely \item--perhaps a missing 
+list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1191,7 +1194,8 @@ Underfull \hbox (badness 10000) detected at line 168
 
 [27]
 
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
+./Files/ucases/listcases.tex:201: LaTeX Error: Lonely \item--perhaps a missing 
+list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1209,7 +1213,8 @@ Underfull \hbox (badness 10000) detected at line 201
 
 [28]
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+./Files/ucases/listcases.tex:253: LaTeX Error: Something's wrong--perhaps a mis
+sing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1221,7 +1226,8 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
+./Files/ucases/listcases.tex:276: LaTeX Error: Something's wrong--perhaps a mis
+sing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -1266,10 +1272,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--204
  []
 
 [33]) [34] (./Files/alloy.tex
-! Undefined control sequence.
+./Files/alloy.tex:8: Undefined control sequence.
 \lst@basicstyle ->\normalstyle 
                                \ttfamily 
-l.8 ...utlisting[language=alloy]{Alloy/Model1.als}
+l.8 ...utlisting[language=alloy]{Alloy/Model2.als}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1277,7 +1283,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-(./Alloy/Model1.als
+(./Alloy/Model2.als
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1.
  [35
@@ -1286,12 +1292,20 @@ LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
+Missing character: There is no ﬀ in font [lmmono10-regular]:!
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]))
-[38] (./Files/effort.tex)
+ [37]
+Missing character: There is no ﬀ in font [lmmono10-regular]:!
+Missing character: There is no ﬀ in font [lmmono10-regular]:!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]))
+[39] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
- [39
+ [40
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
@@ -1304,15 +1318,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 23854 strings out of 492970
- 438068 string characters out of 6133938
- 624670 words of memory out of 5000000
- 27566 multiletter control sequences out of 15000+600000
+ 23862 strings out of 492970
+ 438338 string characters out of 6133938
+ 651331 words of memory out of 5000000
+ 27574 multiletter control sequences out of 15000+600000
  539801 words of font info for 72 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,12n,65p,10467b,1825s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,65p,10467b,1827s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (39 pages).
+Output written on main.pdf (40 pages).

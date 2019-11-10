@@ -2,15 +2,15 @@
 This is the Requirement Analysis and Specification Document (RASD) of SafeStreet application. Goals of this document are to completely describe the system in terms of functional and non- functional requirements, analyze the real needs of the customer in order to model the system, show the constraints and the limit of the software and indicate the typical use cases that will occur after the release. This document is addressed to the developers who have to implement the requirements and could be used as a contractual basis.
 
 \subsubsection{Description of the given problem}
-SafeStreets is a crowd-sourced application that intends to provide users with the possibility to notify authorities when traffic violations occur, and in particular parking violations. The application allows users to send pictures of violations, including their date, time, and position, to authorities. Examples of violations are vehicles parked in the middle of bike lanes or in places reserved for people with disabilities, double parking etc.
+SafeStreets is a crowd-sourced application that intends to provide users with the possibility to notify authorities when traffic violations occur, and in particular parking violations. The application allows users to send to authorities  pictures of violations, including their date, time and position. Examples of violations are: vehicles parked in the middle of bike lanes, in places reserved for people with disabilities, on foothpats, double parking etc.
 
 SafeStreets stores the information provided by users, completing it with suitable meta-data every time it recieves a picture.
-In paricular it uses an external service which reads the license plate and stores the decoded string of the plate.
+In paricular it is able to read automatically the license plate of a vehicle and store it without asking the user to type it.
 Also it stores the type of the violation which is input by the user from a provided list.
-Lastly it stores the name of the street where the violation occurred which is retrieved from the geographical position where the user took the picture.
-In addition, the application allows both end users and authorities to mine the information that has been received.
-Two visualizations are offfered: the first is an interactive map where are highlighted with a gradient color the streets  with the highest frequency of violations.
-The second is a list of the vehicles that committed the most violations (available only to authority users)
+Lastly it stores the name of the street where the violation occurred, rereiving it automatically from the geographical position where the user took the picture.
+Then the application allows both end users and authorities to mine the information crowd-souced.
+Two visualizations are offfered: the first is an interactive map where are highlighted with a gradient color the streets with the highest frequency of violations.
+The second is a list of the vehicles that committed the most violations (available only to authority users).
 
 In addition the app offers a service that creates automatically traffic tickets which can be approved and sent to citizens by the local police.  This is done using the data crowd-soucred by the users.
 The application guarantees that every picture used to generate a ticket has't been altered.
@@ -32,10 +32,10 @@ Two kind of statistics are offered: a list of people who received the highest nu
 
 \subsection{Scope}
 
-\subsection{World and shared phenomena}
+\subsubsection{World and shared phenomena}
 
-Here are listed the phenomena related to the "machine" which means the software-to-be with the required working  hardware and the "world" which is the real environment affected by the "machine".
-A phenomena can be shared by both machine and world if it's controlled by the world and observed by the machine or controlled by the machine and observed by the world.
+Here are listed the phenomena related to the "machine", which means the software-to-be with the required working hardware and the "world", which is the real environment affected by the "machine".
+A phenomena can be shared by both machine and world if it's controlled by the world and observed by the machine, or controlled by the machine and observed by the world.
 
 \input{Files/worldmachine.tex}
 
@@ -45,8 +45,8 @@ A phenomena can be shared by both machine and world if it's controlled by the wo
 \subsubsection{Definitions}
 \begin{itemize}
   \item{Heatmap} : A heatmap is a graphical representation of data that uses a system of color-coding to represent different values
-  \item Enduser : a regular citizen whic will use the app
-  \item Authority user : someone who's working for an authority like (police, municipality etc.) recognized
+  \item Enduser : a regular citizen which will use the app
+  \item Authority user : someone who's working for an authority like police, municipality etc.
   \item Geocoding : the process of converting addresses (like a street address) into geographic coordinates (latitude and longitude)
   \item Reverse geocoding:  the process of converting geographic coordinates into a human-readable address
 
