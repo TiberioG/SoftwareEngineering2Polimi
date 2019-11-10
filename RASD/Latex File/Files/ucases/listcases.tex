@@ -18,7 +18,7 @@
 	\end{itemize}
 	\textbf{Exceptions}:
 	\begin{enumerate}
-    		\item{The guest left an empty ﬁeld or typed something wrong an error message is displayed and theuser is asked to ﬁll the form again.}
+    		\item{The guest left an empty ﬁeld or typed something wrong. So an error message is displayed and the user is asked to ﬁll the form again}
  	   \end{enumerate}
 	\rule{\linewidth}{0.4pt}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -32,7 +32,7 @@
 	\textbf{Event flow}:
 	\begin{enumerate}
 		\item{The user reaches the login page containing the relative form}
-		\item{The user types the username and password in the login form and click on ”Login” button}
+		\item{The user types the username and password in the login form and clicks on ”Login” button}
 		\item{The system redirects the user to the application homepage}
 	\end{enumerate}
 	\textbf{Exit conditions}:
@@ -83,13 +83,13 @@
   \begin{enumerate}
     \item{User enters the section "Report a violation"}
     \item{System opens the camera of smartphone and ask user to take a picture of the violation}
-    \item{The system reminds the user: the violation and the licence plate of the veichle which is in violation must be visible }
+    \item{The system reminds the user: the violation and the licence plate of the vehicle which is in violation must be visible }
     \item{The user takes the picture }
     \item{The system shows the picture just taken }
-    \item{The system asks the user: if there are other plates visible in the picture, which are not the one of the veichle to be reported, use the finger to delete them }
-    \item{The system shows "brush tool mode" and the user can cover the other licence plates whith his finger. User can skip this part if threre are no other plates}
-    \item{When done, user press continue button. }
-    \item{The system sends the picture to the ALPR service which returns the string containing the platedecoded. User just waits}
+    \item{The system asks the user: if there are other plates visible in the picture, which are not the one of the vehicle to be reported, use the finger to delete them }
+    \item{The system shows "brush tool mode" and the user can cover the other licence plates whith his finger. User can skip this part if there are no other plates}
+    \item{When done, user press continue button }
+    \item{The system sends the picture to the ALPR service which returns the string containing the plate decoded. User just waits}
     \item{The system shows now on the screen the "Report violation form"}
   \end{enumerate}
   \textbf{Exit conditions}:
@@ -99,7 +99,7 @@
   \textbf{Exceptions}:
   \begin{enumerate}
     \item{If no plate is found, the user has to repeat this use case, starting from taking the picture again}
-    \item{If the ALPR service returns more than one plate, the user is informed that must delete the no trequired plates and the system goes again to the "brush tool mode"}
+    \item{If the ALPR service returns more than one plate, the user is informed that must delete the not required plates and the system goes again to the "brush tool mode"}
     \item{If user doesn't continue to the next use case: e.g. presses exit button, or closes the app for more than 10 minutes, the picture taken is discarded}
   \end{enumerate}
   \rule{\linewidth}{0.4pt}
@@ -162,10 +162,12 @@
     \item{The user chooses to get the map about streets with the highest frequency of violations}
     \item{The system retrieves data from the database of violations, counting for each street the number of occurrencies}
     \item{The system sends to the external maps API the count of violation and the road name/coordinates}
-    \item{The app shows the map with an overlay which higlights the areas with a gradient color according to the number of vioations occurred}
+    \item{The app shows the map with an overlay which higlights the areas with a gradient color according to the number of violations occurred}
 	\end{enumerate}
 	\textbf{Exit conditions}:
-        \item{User wants to go back to "Explore data" area}
+	\begin{\begin{enumerate}
+		  \item{User wants to go back to "Explore data" area}
+	\end{enumerate}}
 	\textbf{Exceptions}:
   \begin{enumerate}
     \item{If there are no records the app will report no data available message}
@@ -183,9 +185,9 @@
 	\begin{enumerate}
 		\item{AuthorityUser enters the section "Explore data"}
 		\item{The system asks which kind of data the AuthorityUser wants to know}
-    \item{The AuthorityUser chooses to get the data about veichles that committed the highest number of violations}
+    \item{The AuthorityUser chooses to get the data about vehicles that committed the highest number of violations}
     \item{The system queries the table where for each licence plate is associated the count of violations }
-    \item{The system will report in a tabular way the plate of the veichle and the count of violations committed}
+    \item{The system will report in a tabular way the plate of the vehicle and the count of violations committed}
     \item{If the AuthorityUser scrolls down, the system will offer the chance to load more rows}
 	\end{enumerate}
 	\textbf{Exit conditions}:
@@ -198,7 +200,7 @@
 	\end{enumerate}
 	\rule{\linewidth}{0.4pt}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item{Advanced function}\\
+\item \textbf{Advanced function}\\
 		\textbf{ID}: \ucas{6} \\
 		\textbf{Name}: Ticket approval  \\
 		\textbf{Actor}: AuthorityUser   \\
@@ -228,7 +230,7 @@
 		\end{enumerate}
 		\rule{\linewidth}{0.4pt}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \textbf{ID}: \ucas{} \\
+    \textbf{ID}: \ucas{7} \\
     \textbf{Name}: Statistics - tickets offenders \\
     \textbf{Actor}: AuthorityUser   \\
     \textbf{Entry conditions}:
@@ -265,11 +267,12 @@
 			\item {AuthorityUser enters the section "ticket statistics"}
 			\item {The system will show the available ticket statisics options available to show}
       \item {AuthorityUser has chosen to see the Statistics - trend option}
-			\item {The system shows the count of the approved tichets of last month}
+			\item {The system shows the count of the approved tickets of last month}
+			\item {The system shows the ratio of tickets approved over the total number of violations reported}
     \end{enumerate}
     \textbf{Exit conditions}:
     \begin{enumerate}
-			\item{the AuthorityUser wants to go back to other sections}
+			\item The AuthorityUser wants to go back to other sections
     \end{enumerate}
     \textbf{Exceptions}:
     \begin{enumerate}
