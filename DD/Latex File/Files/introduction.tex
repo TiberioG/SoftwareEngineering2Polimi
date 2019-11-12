@@ -1,0 +1,97 @@
+\subsection{Purpose}
+This is the Requirement Analysis and Specification Document (RASD) of SafeStreet application. Goals of this document are to completely describe the system in terms of functional and non- functional requirements, analyze the real needs of the customer in order to model the system, show the constraints and the limit of the software and indicate the typical use cases that will occur after the release. This document is addressed to the developers who have to implement the requirements and could be used as a contractual basis.
+
+\subsubsection{Description of the given problem}
+SafeStreets is a crowd-sourced application that intends to provide users with the possibility to notify authorities when traffic violations occur, and in particular parking violations. The application allows users to send to authorities  pictures of violations, including their date, time and position. Examples of violations are: vehicles parked in the middle of bike lanes, in places reserved for people with disabilities, on foothpats, double parking etc.
+
+SafeStreets stores the information provided by users, completing it with suitable meta-data every time it recieves a picture.
+In paricular it is able to read automatically the license plate of a vehicle and store it without asking the user to type it.
+Also it stores the type of the violation which is input by the user from a provided list.
+Lastly it stores the name of the street where the violation occurred, rereiving it automatically from the geographical position where the user took the picture.
+Then the application allows both end users and authorities to mine the information crowd-souced.
+Two visualizations are offfered: the first is an interactive map where are highlighted with a gradient color the streets with the highest frequency of violations.
+The second is a list of the vehicles that committed the most violations (available only to authority users).
+
+In addition the app offers a service that creates automatically traffic tickets which can be approved and sent to citizens by the local police.  This is done using the data crowd-soucred by the users.
+The application guarantees that every picture used to generate a ticket has't been altered.
+In addition, the information about issued tickets is used to build statistics.
+Two kind of statistics are offered: a list of people who received the highest number of tickets and some trends of the issued tickets over time and the ratio of approved tickets over the violations reported.
+
+
+\subsubsection{Goals}
+\begin{enumerate}
+  \goal{1} Allow users to notify authorities about traffic violations
+  \goal{2} Allow users to send pictures with metadata of violations
+  \goal{3} Allow users to mine information recorded
+  \goal{4} Have at least two different  priviledge for mining data
+  \goal{5} Generate traffic tickets
+  \goal{6} Generate statistics about issued tickets
+  \goal{7} Be sure every information uploaded is never altered
+\end{enumerate}
+
+
+\subsection{Scope}
+
+\subsubsection{World and shared phenomena}
+
+Here are listed the phenomena related to the "machine", which means the software-to-be with the required working hardware and the "world", which is the real environment affected by the "machine".
+A phenomena can be shared by both machine and world if it's controlled by the world and observed by the machine, or controlled by the machine and observed by the world.
+
+\input{Files/worldmachine.tex}
+
+
+\subsection{Definitions,  acronyms,  abbreviations}
+
+\subsubsection{Definitions}
+\begin{itemize}
+  \item{Heatmap} : A heatmap is a graphical representation of data that uses a system of color-coding to represent different values
+  \item Enduser : a regular citizen which will use the app
+  \item Authority user : someone who's working for an authority like police, municipality etc.
+  \item Geocoding : the process of converting addresses (like a street address) into geographic coordinates (latitude and longitude)
+  \item Reverse geocoding:  the process of converting geographic coordinates into a human-readable address
+
+\end{itemize}
+
+\subsubsection{Acronyms}
+\begin{itemize}
+  \item ALPR : Automated Licence Plate Recognition
+  \item GUI : Graphical User Interface
+  \item GDPR : EU General Data Protection Regulation
+  \item API : Application Programming Interface
+\end{itemize}
+
+\subsubsection{Abbreviations}
+
+
+\subsection{Revision history}
+This is the first released version 10/11/2019.
+
+\subsection{Reference Documents}
+\begin{thebibliography}{00}
+\bibitem{openalprdoc}OpenALPR Technology Inc. ,
+OpenALPR documentation \url{http://doc.openalpr.com}
+
+\bibitem{codicestrada} Ministero delle infrastrutture e dei Trasporti,
+DECRETO LEGISLATIVO 30 aprile 1992, n. 285 Nuovo codice della strada,
+ \url{https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-04-30;285!vig=}
+
+\bibitem{GMapGeocode} GOOGLE inc,
+ Google Maps Platform Documentation | Geocoding
+ \url{https://developers.google.com/maps/documentation/geocoding/start}
+
+\bibitem{GMapsHeat} GOOGLE inc,
+ Google Maps Platform Documentation | Heatmap
+ \url{https://developers.google.com/maps/documentation/javascript/heatmaplayer}
+
+\end{thebibliography}
+
+\subsection{Document Structure}
+This document is divided in five parts.
+
+\begin{enumerate}
+  \item \textbf{Intrduction} describes the purpose of this document and contains the description of the given prblem we want to solve with our application. We state the goals of SafeStreets and we describe the phenomena related to the "world" where it will be used and the ones related to our system
+  \item \textbf{Overall Description} is about presenting the product perspective, including details on how we abstracted the problem using a class diagram. We describe the main functions of the application using also some state diagrams. We resent the needs of the potential users of the application. Finally we state the domani assunptions and the dependencies.
+  \item \textbf{Specific Requirements} contains the external interface requirements, including: user interfaces, hardware interfaces, software interfaces and communication interfaces. We define the functional requirements and the use cases. We use class diagrams and sequence diagrams to describe better the use cases and the interaction between different parts of the system.  Lastly we include the performace requirements and the software system attributes
+  \item \textbf{Formal Analysis Using Alloy} contains a model written using the Alloy language in order to describe formally the application
+  \item \textbf{Effort spent} contains the tables where we reported for each group member the hour spent working on the project
+\end{enumerate}
