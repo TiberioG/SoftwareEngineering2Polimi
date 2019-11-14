@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  10 NOV 2019 23:57
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  14 NOV 2019 14:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1082,18 +1082,18 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 )
 [1
 
-] (./main.toc
+] (./main.toc)
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2])
-\tf@toc=\write4
-\openout4 = `main.toc'.
-
- [3] (./main.lof)
+[2] (./main.lof)
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
@@ -1101,194 +1101,51 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [4] (./Files/introduction.tex [5
-
-]
-(./Files/worldmachine.tex)
-Overfull \hbox (8.73103pt too wide) in paragraph at lines 51--52
+ [3] (./Files/introduction.tex
+Overfull \hbox (8.73103pt too wide) in paragraph at lines 36--37
 []\TU/FuturaBook(0)/m/sc/10.95 Reverse geocoding: the process of converting geo
 graphic coordinates into a human-readable
  []
 
-[6]) [7] (./Files/overview.tex
-File: Images/Class.png Graphic file (type bmp)
-<Images/Class.png>
- [8
+[4
 
-] [9]
-File: Images/violationstate.png Graphic file (type bmp)
-<Images/violationstate.png>
-File: Images/minestate.png Graphic file (type bmp)
-<Images/minestate.png>
-File: Images/ticketstate.png Graphic file (type bmp)
-<Images/ticketstate.png>
- [10] [11] [12] [13] [14] [15]) [16]
-(./Files/requirements.tex
-File: GUI/login.png Graphic file (type bmp)
-<GUI/login.png>
+]) [5] (./Files/architectural.tex) [6
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [17
+] (./Files/ui.tex) [7
 
 ]
-File: GUI/takepic.png Graphic file (type bmp)
-<GUI/takepic.png>
+(./Files/requirements.tex) [8
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
-File: GUI/picturetaken.png Graphic file (type bmp)
-<GUI/picturetaken.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [19]
-File: GUI/fillform.png Graphic file (type bmp)
-<GUI/fillform.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-File: GUI/offenders.png Graphic file (type bmp)
-<GUI/offenders.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-File: GUI/heatmap.png Graphic file (type bmp)
-<GUI/heatmap.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
-File: GUI/ticketapp.png Graphic file (type bmp)
-<GUI/ticketapp.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [23]
-[24] [25]
-File: Images/BasicServiceUseCase.png Graphic file (type bmp)
-<Images/BasicServiceUseCase.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [26]
-File: Images/AdvancedFUnUseCase.png Graphic file (type bmp)
-<Images/AdvancedFUnUseCase.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
-
- []
-
-[27] (./Files/ucases/listcases.tex [28] [29]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 150--157
-[][]
- []
-
-[30])
-Runaway argument?
-{\begin {enumerate} \item {User wants to go back to "Explore data" ar\ETC.
-./Files/requirements.tex:172: File ended while scanning use of \begin.
-<inserted text> 
-                \par 
-l.172 \input{Files/ucases/listcases.tex}
-                                        
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
-File: Images/SequenceViolation.png Graphic file (type bmp)
-<Images/SequenceViolation.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [31]
-File: Images/SequenceHeatmap.png Graphic file (type bmp)
-<Images/SequenceHeatmap.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-File: Images/SequenceTicket.png Graphic file (type bmp)
-<Images/SequenceTicket.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33]
-(./Files/tracematrix.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [34]
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
-
- []
-
-[35]) [36] (./Files/alloy.tex
-./Files/alloy.tex:7: Undefined control sequence.
-\lst@basicstyle ->\normalstyle 
-                               \ttfamily 
-l.7 ...utlisting[language=alloy]{Alloy/Model3.als}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-(./Alloy/Model3.als
-LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 1.
- [37
+] (./Files/implemintest.tex) [9
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39]
-Missing character: There is no ﬀ in font [lmmono10-regular]:!
-Missing character: There is no ﬀ in font [lmmono10-regular]:!
-Missing character: There is no ﬀ in font [lmmono10-regular]:!
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40])
-[41]
-File: Images/alloy.PNG Graphic file (type bmp)
-<Images/alloy.PNG>
-) [42] (./Files/effort.tex)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
- [43
+(./Files/effort.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
+ [10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 135.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 140.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DD5ED0850C8021F4CC32EB40EF02D4BD.
+(rerunfilecheck)             Checksum: C2C00CDB817777EEA516E48ED616BD69.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23883 strings out of 492970
- 438738 string characters out of 6133938
- 666479 words of memory out of 5000000
- 27593 multiletter control sequences out of 15000+600000
- 539801 words of font info for 72 fonts, out of 8000000 for 9000
+ 23570 strings out of 492970
+ 434095 string characters out of 6133938
+ 551557 words of memory out of 5000000
+ 27317 multiletter control sequences out of 15000+600000
+ 539769 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,12n,65p,10467b,1825s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,65p,10467b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (43 pages).
+Output written on main.pdf (10 pages).
