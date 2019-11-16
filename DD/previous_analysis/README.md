@@ -6,7 +6,9 @@
 
 # Sections 3 and 4
 
- *
+ * The requirements R5 and R8 did not manage well. Imagine that a situation where a third party has to access an individual’s data but the user refuse the request. What happen in this situation?
+* The system should present different privileges for different users in order to access to data. This requirement is missed.
+* Almost all of the requirements especially those related to the main functionalities expressed in RASD is well defined and their relationship with design components is correctly defined.
 
 # Section 5
 
