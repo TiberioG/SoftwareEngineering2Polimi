@@ -13,6 +13,12 @@
 \contentsline {subsection}{\numberline {1.5}Reference Documents}{5}{subsection.1.5}
 \contentsline {subsection}{\numberline {1.6}Document Structure}{5}{subsection.1.6}
 \contentsline {section}{\numberline {2}Architectural Design}{6}{section.2}
+\contentsline {subsection}{\numberline {2.1}Overview}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Component view}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Deployment view}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Runtime view}{6}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Selected Architectural styles and patterns}{6}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Other design decisions}{6}{subsection.2.6}
 \contentsline {section}{\numberline {3}User Interface Design}{7}{section.3}
 \contentsline {section}{\numberline {4}Requirements Traceability}{8}{section.4}
 \contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{9}{section.5}
