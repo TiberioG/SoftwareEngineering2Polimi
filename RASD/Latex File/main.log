@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  19 NOV 2019 12:12
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  19 NOV 2019 12:17
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
@@ -842,7 +843,8 @@ File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 
-! Package hyperref Error: Wrong driver option `pdftex',
+/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty:4383: Packag
+e hyperref Error: Wrong driver option `pdftex',
 (hyperref)                because pdfTeX in PDF mode is not detected.
 
 See the hyperref package documentation for explanation.
@@ -1180,19 +1182,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-[27] [28] [29]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 321--328
+[27] (./Files/ucases/listcases.tex [28] [29]
+Overfull \hbox (17.0pt too wide) in paragraph at lines 150--157
 [][]
  []
 
 [30] [31] [32]
-Overfull \hbox (17.0pt too wide) in paragraph at lines 426--433
+Overfull \hbox (17.0pt too wide) in paragraph at lines 255--262
+[][]
+ []
+
+)
+Overfull \hbox (17.0pt too wide) in paragraph at lines 278--173
 [][]
  []
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 449--450
-[][] 
+Underfull \hbox (badness 10000) in paragraph at lines 278--173
+
  []
 
 File: Images/SequenceViolation.png Graphic file (type bmp)
@@ -1214,17 +1221,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
-Underfull \hbox (badness 10000) in paragraph at lines 485--486
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--498
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 [37]) [38] (./Files/alloy.tex
-! Undefined control sequence.
+./Files/alloy.tex:7: Undefined control sequence.
 \lst@basicstyle ->\normalstyle 
                                \ttfamily 
 l.7 ...utlisting[language=alloy]{Alloy/Model3.als}
@@ -1272,14 +1279,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 23879 strings out of 492970
- 438662 string characters out of 6133938
+ 23883 strings out of 492970
+ 438738 string characters out of 6133938
  666479 words of memory out of 5000000
  27593 multiletter control sequences out of 15000+600000
  539801 words of font info for 72 fonts, out of 8000000 for 9000
