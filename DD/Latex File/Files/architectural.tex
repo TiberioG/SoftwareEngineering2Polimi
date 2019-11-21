@@ -9,6 +9,11 @@ the kind of architecture is distributed logic as explainde in the slides.
 
 \subsection{Component view}
 
+Here are proposed the component view for both part of the system, the mobile application and the application server.
+
+
+\subsubsection{Mobile App}
+
 \begin{sidewaysfigure}
 \centering
 \includegraphics[width=\textwidth]{Images/ComponentDiagram1.png}
@@ -17,13 +22,17 @@ the kind of architecture is distributed logic as explainde in the slides.
 
 
 
-\subsubsection{Mobile App}
-The mobile application is the c
+\subsubsection{Application Server}
 
-\subsection{Report Violation}
-This component is responsible of showing the widget to take the camera.
-\subsection{Form screen}
-This component is needed after the picture has been taken to show the form where the user will select the kind of violation.
+\begin{sidewaysfigure}
+\centering
+\includegraphics[width=\textwidth]{Images/ComponentDiagram2.png}
+\caption{\label{fig:compdiag} Component diagram}
+\end{sidewaysfigure}
+
+
+
+
 
 \subsection{Deployment view}
 
@@ -61,7 +70,7 @@ This application will be developed with the MVP architectural pattern. In genera
 \end{figure}
 
 \subsubsection{Model}
-The model component stores data and its related logic. It represents data that is being transferred between controller components or any other related business logic. It responds to the request from the views and also responds to instructions from the controller to update itself. It is also the lowest level of the pattern which is responsible for maintaining data. In this project we use MongoDB database to store all the useful data. As well as we will use NODE.JS as the application server to build and run the application. 
+The model component stores data and its related logic. It represents data that is being transferred between controller components or any other related business logic. It responds to the request from the views and also responds to instructions from the controller to update itself. It is also the lowest level of the pattern which is responsible for maintaining data. In this project we use MongoDB database to store all the useful data. As well as we will use NODE.JS as the application server to build and run the application.
 
 \subsubsection{View}
 A View is that part of the application that represents the presentation of data.
@@ -73,7 +82,7 @@ Controler is the mediator between View and Model which hold responsibilities of 
 To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over Hypertext Transfer Protocol (HTTP) with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers.
 We have decided this API because it guarantees to achieve important non-functional requirements such as:
 \begin{itemize}
- \item Scalability: every node belonging to our architecture can be multiplied without redesign the whole system. 
+ \item Scalability: every node belonging to our architecture can be multiplied without redesign the whole system.
  \item Portability: Every platform it's able to interact with the server since it's just a matter of HTTP request and JSON response.
  \item Reliability: If suddenly an instance crashes, the load balancer detaches it and will be replaced by a new one automatically.
 \end{itemize}
