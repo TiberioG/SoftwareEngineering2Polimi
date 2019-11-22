@@ -14,7 +14,28 @@ Here are proposed the component view for both part of the system, the mobile app
 
 \subsubsection{Mobile App}
 
-\begin{sidewaysfigure}
+The component view for the mobile app
+
+\paragraph{Entities}
+Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects with methods that don't have any dependency on other part of the system (eg. frameworks).
+Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
+The last
+
+
+\paragraph{Use Cases}
+Use cases are here components that represent our system actions: it’s what is possible to do do with the application. We have one component for every possible use case.The use case doesn’t know who triggered it and how the results are going to be presented, but relies only
+
+We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases and interacts with the entities.
+
+
+\paragraph{Controller}
+
+
+It's the job of the Controller to get fresh data from our Application  API, and the external i when there is an Internet connection (and then to cache it locally), or to get the cached data when the user is offline
+
+\Controller
+
+\begin{sidewaysfigure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/ComponentDiagram1.png}
 \caption{\label{fig:compdiag} Component diagram}
@@ -22,9 +43,10 @@ Here are proposed the component view for both part of the system, the mobile app
 
 
 
+
 \subsubsection{Application Server}
 
-\begin{sidewaysfigure}
+\begin{sidewaysfigure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/ComponentDiagram2.png}
 \caption{\label{fig:compdiag} Component diagram}
@@ -38,7 +60,7 @@ Here are proposed the component view for both part of the system, the mobile app
 
 In Figure \ref{fig:deploy} is shown the Deployment diagram.
 
-The deployment consist of three tiers. The first tier consist is \textbf{Mobile device} the user will use, which can be a smartphone or a tablet using as operating system either iOS or Android.
+The deployment consist of three main devices. The first tier consist is \textbf{Mobile device} the user will use, which can be a smartphone or a tablet using as operating system either iOS or Android.
 The exection environment is the built Flutter app.
 
 
