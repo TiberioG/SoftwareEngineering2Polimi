@@ -1,4 +1,5 @@
 \subsection{Overview}
+
 In order to design our application we need two main parts: one is the
 The general architecture of our system has three tiers.
 We have a mobile app running on mobile devices, smartphones or tablets with ios or Android.
@@ -13,44 +14,97 @@ Here are proposed the component view for both part of the system, the mobile app
 
 
 \subsubsection{Mobile App}
+%fig here of Component of mobile app
+\begin{sidewaysfigure}
+\centering
+\includegraphics[width=\textwidth]{Images/ComponentDiagram1.png}
+\caption{\label{fig:compdiag} Component diagram}
+\end{sidewaysfigure}
 
 The component view for the mobile app
 
 \paragraph{Entities}
 Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects with methods that don't have any dependency on other part of the system (eg. frameworks).
 Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
-The last
 
 
 \paragraph{Use Cases}
-Use cases are here components that represent our system actions: it’s what is possible to do do with the application. We have one component for every possible use case.The use case doesn’t know who triggered it and how the results are going to be presented, but relies only
+Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do do with the application. We have one component for every possible use case.
 
-We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases and interacts with the entities.
+We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depoends on the entites and has communication ports with the Controller and Presenter.
+In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the presenter
+ As an example if there is data coming from the camera, this is acquired by an adapter of the controller (described later) and is passed to the Use case interactor which coordinates entities, Use cases and the data just acquired. After data is processed is passed to the Presenter and
+
+Two sub com
+
+\paragraph{CoreUtils}
+This component encapsulates all the libraries and classes with methods that can be needed by any use case.
+
+Examples of funtions needed by all the system are: input validation, error handling, exceptions, data conversion.
+
 
 
 \paragraph{Controller}
 
+The controller component is an adapter that encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the local filesystem, the device sensors, the camera and lastly our apllication service API which is described in section \ref{API}.
+Each component of the controller in fact implements the interfaces required by each use case.
 
-It's the job of the Controller to get fresh data from our Application  API, and the external i when there is an Internet connection (and then to cache it locally), or to get the cached data when the user is offline
 
-\Controller
-
-\begin{sidewaysfigure}[H]
-\centering
-\includegraphics[width=\textwidth]{Images/ComponentDiagram1.png}
-\caption{\label{fig:compdiag} Component diagram}
-\end{sidewaysfigure}
+\paragraph{Presenter}
+The presenter
 
 
 
 
-\subsubsection{Application Server}
 
-\begin{sidewaysfigure}[H]
+%%%%%%  APPLICATION SERVER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Application Server} \label{API}
+%%fig  application server
+\begin{sidewaysfigure}
 \centering
 \includegraphics[width=\textwidth]{Images/ComponentDiagram2.png}
 \caption{\label{fig:compdiag} Component diagram}
 \end{sidewaysfigure}
+
+The component view for the mobile app
+
+\paragraph{Entities}
+Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects with methods that don't have any dependency on other part of the system (eg. frameworks).
+Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
+
+
+\paragraph{Use Cases}
+Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do do with the application. We have one component for every possible use case.
+
+We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depoends on the entites and has communication ports with the Controller and Presenter.
+In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the presenter
+ As an example if there is data coming from the camera, this is acquired by an adapter of the controller (described later) and is passed to the Use case interactor which coordinates entities, Use cases and the data just acquired. After data is processed is passed to the Presenter and
+
+Two sub com
+
+\paragraph{CoreUtils}
+This component encapsulates all the libraries and classes with methods that can be needed by any use case.
+
+Examples of funtions needed by all the system are: input validation, error handling, exceptions, data conversion.
+
+
+
+\paragraph{Controller}
+
+The controller component is an adapter that encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the local filesystem, the device sensors, the camera and lastly our apllication service API which is described in section \ref{API}.
+Each component of the controller in fact implements the interfaces required by each use case.
+
+
+\paragraph{Presenter}
+The presenter
+
+
+
+
+
+
+
 
 
 
@@ -82,7 +136,20 @@ The third tier is the \textbf{DB Server}. It consists in another server where we
 
 \subsection{Runtime view}
 
+
+api endpoints
+
+\API\login
+\API\violation
+\API\ticket
+
+
+
 \subsection{Selected Architectural styles and patterns}
+
+
+\input{Files/clean}
+
 This application will be developed with the MVP architectural pattern. In general, the MVP pattern allows separating the presentation layer from the logic, and this feature can be useful when we test the app. MVP is a user interface architectural pattern, which eases automated unit testing and it helps with providing clean code. This pattern consists of three parts which are Model, View and Presenter. In this pattern, model does not communicate with the view directly, it is the Presenter’s responsibility to communicate with the Model and update the View. SafeStreet application will be developed with the MVP architectural pattern in place of the MVC (model, view and controller) because of the test advantage mentioned above and compared to MVVM the architecture does not ﬁt to the project design. MVVM does not give us a relation 1-1 between Presentation and View. For that reason, during this project it is recommended to utilize the MVP architectural pattern. There are more architectural patterns that we considered and discarded, like “Client-server pattern” or “Layered pattern”, but as mentioned above the MVP architecture would be the best ﬁt for the SafeStreet Application.
 
 \begin{figure}

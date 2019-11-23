@@ -16,16 +16,26 @@
 \contentsline {subsection}{\numberline {2.1}Overview}{6}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Component view}{6}{subsection.2.2}
 \contentsline {subsubsection}{\numberline {2.2.1}Mobile App}{6}{subsubsection.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2}Application Server}{6}{subsubsection.2.2.2}
-\contentsline {subsection}{\numberline {2.3}Deployment view}{6}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Runtime view}{6}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Selected Architectural styles and patterns}{6}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Model}{10}{subsubsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}View}{10}{subsubsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.3}Controler}{10}{subsubsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.4}Why do we use MVP architectural pattern?}{10}{subsubsection.2.5.4}
-\contentsline {subsection}{\numberline {2.6}Other design decisions}{11}{subsection.2.6}
-\contentsline {section}{\numberline {3}User Interface Design}{12}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{13}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{14}{section.5}
-\contentsline {section}{\numberline {6}Effort Spent}{15}{section.6}
+\contentsline {paragraph}{Entities}{6}{section*.5}
+\contentsline {paragraph}{Use Cases}{6}{section*.6}
+\contentsline {paragraph}{CoreUtils}{6}{section*.7}
+\contentsline {paragraph}{Controller}{6}{section*.8}
+\contentsline {paragraph}{Presenter}{6}{section*.9}
+\contentsline {subsubsection}{\numberline {2.2.2}Application Server}{9}{subsubsection.2.2.2}
+\contentsline {subsection}{\numberline {2.3}Deployment view}{9}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Runtime view}{9}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Selected Architectural styles and patterns}{9}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}}{9}{subsection.2.6}
+\contentsline {subsubsection}{\numberline {2.6.1}Entities}{11}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}Use Cases}{11}{subsubsection.2.6.2}
+\contentsline {subsubsection}{\numberline {2.6.3}Interface Adapters}{11}{subsubsection.2.6.3}
+\contentsline {subsubsection}{\numberline {2.6.4}Adantages of Clean architecture}{11}{subsubsection.2.6.4}
+\contentsline {subsubsection}{\numberline {2.6.5}Model}{13}{subsubsection.2.6.5}
+\contentsline {subsubsection}{\numberline {2.6.6}View}{13}{subsubsection.2.6.6}
+\contentsline {subsubsection}{\numberline {2.6.7}Controler}{13}{subsubsection.2.6.7}
+\contentsline {subsubsection}{\numberline {2.6.8}Why do we use MVP architectural pattern?}{13}{subsubsection.2.6.8}
+\contentsline {subsection}{\numberline {2.7}Other design decisions}{14}{subsection.2.7}
+\contentsline {section}{\numberline {3}User Interface Design}{15}{section.3}
+\contentsline {section}{\numberline {4}Requirements Traceability}{16}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{17}{section.5}
+\contentsline {section}{\numberline {6}Effort Spent}{18}{section.6}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  22 NOV 2019 00:13
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  23 NOV 2019 10:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -914,11 +914,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 147.
 )
-(./main.aux
-
-LaTeX Warning: Label `fig:compdiag' multiply defined.
-
-)
+(./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
@@ -1118,22 +1114,28 @@ File: Images/ComponentDiagram1.png Graphic file (type bmp)
 <Images/ComponentDiagram1.png>
 File: Images/ComponentDiagram2.png Graphic file (type bmp)
 <Images/ComponentDiagram2.png>
-File: Images/DeploymentDiagram1.png Graphic file (type bmp)
-<Images/DeploymentDiagram1.png>
-File: Images/MVC.png Graphic file (type bmp)
-<Images/MVC.png>
  [6
 
-] [7] [8] [9] [10]) [11] (./Files/ui.tex) [12
+] [7] [8]
+File: Images/DeploymentDiagram1.png Graphic file (type bmp)
+<Images/DeploymentDiagram1.png>
+ (./Files/clean.tex
+File: Images/cleanArchi.pdf Graphic file (type pdf)
+<use Images/cleanArchi.pdf>
+ [9] [10])
+File: Images/MVC.png Graphic file (type bmp)
+<Images/MVC.png>
 
-] (./Files/requirements.tex) [13
+[11] [12] [13]) [14] (./Files/ui.tex) [15
 
-] (./Files/implemintest.tex) [14
+] (./Files/requirements.tex) [16
 
 ]
-(./Files/effort.tex)
+(./Files/implemintest.tex) [17
+
+] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
- [15
+ [18
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
@@ -1141,23 +1143,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 140.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2DF6FA2AE1679398C6D8AFB4B6331167.
+(rerunfilecheck)             Checksum: B44FD963F8149D42914C4DC7C8EA8BA7.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23599 strings out of 492970
- 434658 string characters out of 6133938
- 553852 words of memory out of 5000000
- 27342 multiletter control sequences out of 15000+600000
- 539769 words of font info for 68 fonts, out of 8000000 for 9000
+ 23610 strings out of 492970
+ 434889 string characters out of 6133938
+ 552883 words of memory out of 5000000
+ 27348 multiletter control sequences out of 15000+600000
+ 539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,11n,65p,10467b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,65p,10467b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (15 pages).
+Output written on main.pdf (18 pages).
