@@ -1,0 +1,32 @@
+The advantage of using clean architecture is that we have a component for each use case so it's very easy to keep track of the requirement traceability.
+
+\begin{table}[H]
+  \begin {centering}
+\begin{tabular}{|l|p{10cm}|p{5cm}|}
+\hline
+ & \textbf{Requirement} & \textbf{Component} \\ \hline
+[R1] & User must be able to choose the kind of violation from a list  &  Fill form \\ \hline  %%choose kind
+[R2] & User must be able to read detailed information about each kind of violation he can report  &  Violation info    \\ \hline %%read info
+[R3] & Date, time and position should be automatically added to the violation reported  & Report violation \\ \hline  %%date time loc autoadded
+[R4] & We should require the user to send again a picture in case the plate is not visible & Take picture \\ \hline %%plate not visible
+[R5] & The user must be able to select the vehicle to report in case there are other vehicles in picture & Take picture \\ \hline %%brushtool
+[R6] & Application must automatically determine the street name where User is & CoreUtils \\ \hline  %%streetname
+[R7] & Application must be able to count occurrency of violations  & Street Heatmap \\ \hline %% count violations strt
+[R8] & Application must be able to count violation for each vehicle & List vehicles \\ \hline %% count violations off
+[R9] & Application should show all the vehicles ordered with the number of violations & List Veichle \\ \hline
+[R10] & Application should visualize the areas where violation occurred & Street Heatmap\\ \hline %%hetatmap
+[R11] & Application must use a gradient of color to show the occurrencies of violations as an overlay of a interactive map & Street Heatmap \\ \hline %%heatmap gradient
+[R12] & Regular users cannot mine data about plates of the offenders & Mine Information \\ \hline %% endus no
+[R13] & Authority users can know the exact licence plate when mining data about offenders & Mine Information \\ \hline %%authority see plate
+[R14] & Only authority users can access the ticket approval section & Ticket approval \\ \hline %%ticket approval
+[R15] & Application must be able to read every violation stored and automatically generate a ticket & Ticket Creator\\ \hline %%genticket
+[R16] & Application should offer to authorities the possibility to approve tickets or not & Ticket approval \\ \hline %%ticket approval
+[R17] & Application must store all the tickets created & ticket creator \\ \hline %%tick Stats
+[R18] & Application must read all the history of tickets created & Trends \\ \hline %%tick stst again
+[R19] & The application must be able to know if a picture has been altered & Ticket Creator \\ \hline %%picaltered
+[R20] & If a picture has been altered the applcation must automatically flag as not valid the corresponding ticket & Ticket Creator \\ \hline %%picaltered flagging
+\end{tabular}
+\end{centering}
+\caption{Requirements Traceability matrix}
+		\label{Traceabilitymatrix}
+\end{table}

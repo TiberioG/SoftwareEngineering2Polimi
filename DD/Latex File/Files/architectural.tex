@@ -27,11 +27,10 @@ The component view for the mobile app
 Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects with methods that don't have any dependency on other part of the system (eg. frameworks).
 Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
 
-
 \paragraph{Use Cases}
 Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do do with the application. We have one component for every possible use case.
 
-We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depoends on the entites and has communication ports with the Controller and Presenter.
+We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depends on the entites and has communication ports with the Controller and Presenter.
 In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the presenter
  As an example if there is data coming from the camera, this is acquired by an adapter of the controller (described later) and is passed to the Use case interactor which coordinates entities, Use cases and the data just acquired. After data is processed is passed to the Presenter and
 
@@ -39,10 +38,13 @@ Two sub com
 
 \paragraph{CoreUtils}
 This component encapsulates all the libraries and classes with methods that can be needed by any use case.
-
-Examples of funtions needed by all the system are: input validation, error handling, exceptions, data conversion.
-
-
+Here we list some of these functions
+\begin{itemize}
+  \item Input validation: to check if
+  \item Error handling and reporting
+  \item Exceptions
+  \item Data conversion
+\end{itemize}
 
 \paragraph{Controller}
 
@@ -67,26 +69,25 @@ The presenter
 \caption{\label{fig:compdiag} Component diagram}
 \end{sidewaysfigure}
 
-The component view for the mobile app
+The architecture of the Application server looks the same as the Mobile Application,
 
 \paragraph{Entities}
-Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects with methods that don't have any dependency on other part of the system (eg. frameworks).
+Entities for the application server are the same as
 Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
 
 
 \paragraph{Use Cases}
-Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do do with the application. We have one component for every possible use case.
-
-We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depoends on the entites and has communication ports with the Controller and Presenter.
-In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the presenter
- As an example if there is data coming from the camera, this is acquired by an adapter of the controller (described later) and is passed to the Use case interactor which coordinates entities, Use cases and the data just acquired. After data is processed is passed to the Presenter and
-
-Two sub com
+The use cases component for the server-side have the same name as the ones as the application but they have a completly different logic. As an example, on the application side the use case "Take picture" has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server. The use case with the same name, but on server side has to fetch the HTTP requets, parse the content, send the picture to the OpenALPR service to get the decoded plate and then store the picture.
 
 \paragraph{CoreUtils}
-This component encapsulates all the libraries and classes with methods that can be needed by any use case.
-
-Examples of funtions needed by all the system are: input validation, error handling, exceptions, data conversion.
+This component encapsulates all the libraries, classes with methods a middleware that can be needed by any use case.
+\begin{itemize}
+  \item Input validation
+  \item Error handling and reporting
+  \item Exceptions
+  \item Data conversion
+  \item Body parser for HTTP requests
+\end{itemize}
 
 
 

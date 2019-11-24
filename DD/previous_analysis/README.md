@@ -1,8 +1,8 @@
 # Sections  2
 
- * Weakeness: for the use case required I do't see the need to have more servers and to separate application servers from database server. The database can run on the same server as the application
- * Weakeness : we think it's too low level to talk about the router here
- * Weakeness: the MVC pattern is not contextualised, where is used? i think it's not necessary 
+ * Weakeness: for the use case required we don't see the need to separate application servers from web server
+ * Weakeness : The class diagram has a class without any relationship which is strange
+ * Weakeness: the MVC pattern is not well contextualised, where is used ? it's the way each subsystem (mobile app, application server, web server) is developed or it's the general architecture?
 
 # Sections 3 and 4
 
@@ -12,4 +12,5 @@
 
 # Section 5
 
- *
+ * A good addition to the test plan would be releasing the service to a group of beta-testers before the final release
+ * the verbal description of testing of every component is not so effective because it's repetitive. Adding a graph like a "GANTT of the testing" for each component showing the order of testing would be more clear
