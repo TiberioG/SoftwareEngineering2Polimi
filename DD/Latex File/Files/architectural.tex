@@ -31,10 +31,21 @@ Since the core of our system is based on \textbf{Users}, \textbf{Violations} and
 Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do do with the application. We have one component for every possible use case.
 
 We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depends on the entites and has communication ports with the Controller and Presenter.
-In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the presenter
- As an example if there is data coming from the camera, this is acquired by an adapter of the controller (described later) and is passed to the Use case interactor which coordinates entities, Use cases and the data just acquired. After data is processed is passed to the Presenter and
+In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the Presenter. As an example: if there is data coming from the camera, this is acquired by an adapter of the controller (described later) and is passed to the Use case interactor which coordinates the Entities, the Use Cases and the data just acquired. After data is processed is passed to the Presenter and visulalized by the widgets of the UI.
 
-Two sub com
+Here is the list of every Component of the Use case group:
+\begin{itemize}
+  \item \textbf{Sign-Up}: this components coordinates every page shown in the mobile application, and provides the navigation bar
+  \item \textbf{Login } : this is the login page and sig-up
+  \item \textbf{Repor}: this shows what is recorded by the camera, has a button for takong pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
+  \item \textbf{Form Widget}: this shows a list of possible violation the user can select
+  \item \textbf{Map Widget} : this is responsible for showing the street heatmap
+  \item \textbf{List Veicles Widget} : this
+  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not.
+  \item \textbf{Statistics widget}: this can show some data visualization about the tickets
+
+\end{itemize}
+
 
 \paragraph{CoreUtils}
 This component encapsulates all the libraries and classes with methods that can be needed by any use case.
@@ -53,8 +64,19 @@ Each component of the controller in fact implements the interfaces required by e
 
 
 \paragraph{Presenter}
-The presenter
+The presenter is a macro components that includes all the components of the UI.
 
+Here follows the list of every component with the description:
+\begin{itemize}ù
+  \item \textbf{Page Manager}: this components coordinates every page shown in the mobile application, and provides the navigation bar
+  \item \textbf{Login Widget} : this is the login page and sig-up
+  \item \textbf{Camera Widget}: this shows what is recorded by the camera, has a button for takong pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
+  \item \textbf{Form Widget}: this shows a list of possible violation the user can select
+  \item \textbf{Map Widget} : this is responsible for showing the street heatmap
+  \item \textbf{List Veicles Widget} : this
+  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not.
+  \item \textbf{Statistics widget}: this can show some data visualization about the tickets
+\end{itemize}
 
 
 
@@ -138,11 +160,16 @@ The third tier is the \textbf{DB Server}. It consists in another server where we
 \subsection{Runtime view}
 
 
-api endpoints
+A note for the sequence diagrams, we omit that every call to and from a specific use case must pass from the use case interactor to keep it simpler. 
 
-\API\login
-\API\violation
-\API\ticket
+\subsubsection{Reporting Violation}
+
+In the following sequence diagram we show the runtime of the function of reporting a violation.
+First the user taps to open the page related to violation reporting. The \textbf{page manager} so
+
+
+
+
 
 
 
