@@ -1,27 +1,34 @@
 \subsection{Overview}
+The system to be developed has a three tier structure, service oriented.
+\begin{enumerate}
+  \item Mobile application (client)
+  \item Application Server
+  \item Database
+\end{enumerate}
 
-In order to design our application we need two main parts: one is the
-The general architecture of our system has three tiers.
-We have a mobile app running on mobile devices, smartphones or tablets with ios or Android.
-then we have a server
+The first tier consists in a mobile app running on mobile devices, smartphones or tablets with iOs or Android.
+this is the application the users will interact with, since it' a very easy and fast
 
-the kind of architecture is distributed logic as explainde in the slides.
+The second tier consists in an Application Server which provides the service as a RESTful API to the clients and it's connected to the third tier, the Database Server where all data is stored.
 
+There are some advantages of our system architecture: the first one is the modularity of this approach of havinng different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one whithout touching the application server.
+
+Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref} which is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
+One big advantage of this architecture is that we have a separated component for each use case. 
+%%done!
 
 \subsection{Component view}
+Here are proposed the component views for both part of the system, the mobile application and the application server.
 
-Here are proposed the component view for both part of the system, the mobile application and the application server.
-
-
-\subsubsection{Mobile App}
+\subsubsection{Mobile Application}
 %fig here of Component of mobile app
 \begin{sidewaysfigure}
 \centering
 \includegraphics[width=\textwidth]{Images/ComponentDiagram1.png}
-\caption{\label{fig:compdiag} Component diagram}
+\caption{\label{fig:compdiag1} Component diagram for Mobile Application}
 \end{sidewaysfigure}
 
-The component view for the mobile app
+Figure \ref{fig:compdiag1}
 
 \paragraph{Entities}
 Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects with methods that don't have any dependency on other part of the system (eg. frameworks).
@@ -88,7 +95,7 @@ Here follows the list of every component with the description:
 \begin{sidewaysfigure}
 \centering
 \includegraphics[width=\textwidth]{Images/ComponentDiagram2.png}
-\caption{\label{fig:compdiag} Component diagram}
+\caption{\label{fig:compdiag2} Component diagram for Application Server}
 \end{sidewaysfigure}
 
 The architecture of the Application server looks the same as the Mobile Application,
@@ -160,7 +167,7 @@ The third tier is the \textbf{DB Server}. It consists in another server where we
 \subsection{Runtime view}
 
 
-A note for the sequence diagrams, we omit that every call to and from a specific use case must pass from the use case interactor to keep it simpler. 
+A note for the sequence diagrams, we omit that every call to and from a specific use case must pass from the use case interactor to keep it simpler.
 
 \subsubsection{Reporting Violation}
 
@@ -176,7 +183,7 @@ First the user taps to open the page related to violation reporting. The \textbf
 \subsection{Selected Architectural styles and patterns}
 
 
-\input{Files/clean}
+\input{Files/clean} \label{cleanArchiref}
 
 This application will be developed with the MVP architectural pattern. In general, the MVP pattern allows separating the presentation layer from the logic, and this feature can be useful when we test the app. MVP is a user interface architectural pattern, which eases automated unit testing and it helps with providing clean code. This pattern consists of three parts which are Model, View and Presenter. In this pattern, model does not communicate with the view directly, it is the Presenter’s responsibility to communicate with the Model and update the View. SafeStreet application will be developed with the MVP architectural pattern in place of the MVC (model, view and controller) because of the test advantage mentioned above and compared to MVVM the architecture does not ﬁt to the project design. MVVM does not give us a relation 1-1 between Presentation and View. For that reason, during this project it is recommended to utilize the MVP architectural pattern. There are more architectural patterns that we considered and discarded, like “Client-server pattern” or “Layered pattern”, but as mentioned above the MVP architecture would be the best ﬁt for the SafeStreet Application.
 
