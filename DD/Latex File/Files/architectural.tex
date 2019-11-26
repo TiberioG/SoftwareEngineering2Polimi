@@ -14,7 +14,7 @@ The second tier consists in an Application Server which provides the service as 
 There are some advantages of our system architecture: the first one is the modularity of this approach of havinng different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one whithout touching the application server.
 
 Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref} which is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
-One big advantage of this architecture is that we have a separated component for each use case. 
+One big advantage of this architecture is that we have a separated component for each use case.
 %%done!
 
 \subsection{Component view}
@@ -31,64 +31,70 @@ Here are proposed the component views for both part of the system, the mobile ap
 Figure \ref{fig:compdiag1}
 
 \paragraph{Entities}
-Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects with methods that don't have any dependency on other part of the system (eg. frameworks).
+Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects that don't have any dependency on other part of the system (eg. frameworks).
 Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
 
 \paragraph{Use Cases}
 Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do do with the application. We have one component for every possible use case.
 
 We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depends on the entites and has communication ports with the Controller and Presenter.
-In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the Presenter. As an example: if there is data coming from the camera, this is acquired by an adapter of the controller (described later) and is passed to the Use case interactor which coordinates the Entities, the Use Cases and the data just acquired. After data is processed is passed to the Presenter and visulalized by the widgets of the UI.
+In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the Presenter. As an example: if there is data coming from the camera, this is acquired by an adapter of the controller and is passed to the Use case interactor which coordinates the Use Cases and the data just acquired. After data is processed, it goes to the Presenter and visulalized by the widgets of the UI.
 
-Here is the list of every Component of the Use case group:
+Here follows the list of every Component of the Use case group. We have to add a note here: when it's written for example that a component interacts with the Application server, it doesn't mean that this component interacts directly with the Application API. As we have written before, every use case has to interact firstly direcly with the controller which handles then the connections with the external interfaces. The same goes for communicating with the UI, every data transfer happens via the Use-Case/Presenter interface. In order to keep the following descriptions short, we just say what the component does in a higher level.
+
+
 \begin{itemize}
-  \item \textbf{Sign-Up}: this components coordinates every page shown in the mobile application, and provides the navigation bar
-  \item \textbf{Login } : this is the login page and sig-up
-  \item \textbf{Repor}: this shows what is recorded by the camera, has a button for takong pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
-  \item \textbf{Form Widget}: this shows a list of possible violation the user can select
-  \item \textbf{Map Widget} : this is responsible for showing the street heatmap
-  \item \textbf{List Veicles Widget} : this
-  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not.
-  \item \textbf{Statistics widget}: this can show some data visualization about the tickets
+  \item \textbf{Sign-Up}: This component allows to add new users to the system. It has to get the input strings (username, password, user data etc. ) from the sign-up widget, validate them before sending the request to the Application Server. After, it has get the answer from the Server and communicate to the user if the sign-up was successful or not.
+  \item \textbf{Login}: This component allows the login to the App. It has to get the input from the Login widget, communicate the strings to the Application Server and interpret the response if the user is autorized to login or not.
+  \item \textbf{Take Picture}: This component makes possible to take picture of violations. After the picture has been taken, it has to send it to the Application Server and wait for an asnwer. If the answer is that a plate is found, than it calls the next use case "Send form". If no plates are found it asks the user to take a picture again discarding the previous one. If more than one plate is found, it activates a "brush tool mode" (in the Camera Widget) to ask the user to cover the other plates present in the picture. Then it has to manipulate directly the picture changing the color of the pixels selected by the user. Lastly it can send the picture to the Server.
+    \item \textbf{Send form}: This component presents the user the form in which he can choose the type of violation. After the form has been submitted bythe user, it is sent to the Application Server in order to be stored.
 
+  \item \textbf{List Vehicles}:
+  \item \textbf{Street Heatmap}:
+  \item \textbf{Ticket Approval}:
+  \item \textbf{Statistics}:
+  \item \textbf{Ticket Offenders}:
+  \item \textbf{Trends}
 \end{itemize}
+
 
 
 \paragraph{CoreUtils}
 This component encapsulates all the libraries and classes with methods that can be needed by any use case.
-Here we list some of these functions
+Here we list some of these functions:
 \begin{itemize}
-  \item Input validation: to check if
+  \item Input validation
   \item Error handling and reporting
   \item Exceptions
   \item Data conversion
 \end{itemize}
 
 \paragraph{Controller}
-
-The controller component is an adapter that encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the local filesystem, the device sensors, the camera and lastly our apllication service API which is described in section \ref{API}.
-Each component of the controller in fact implements the interfaces required by each use case.
-
+The controller component  encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the local filesystem, the device sensors, the camera and lastly our application service API which is described in section \ref{API}.
+Each component of the controller in fact implements the interfaces required by the use cases.
+Here is the description of each sub-component:
+\begin{itemize}
+  \item \textbf{Location Manager}: this component is responsible of getting the location of the user accessing the libraries of the OS of the device
+  \item \textbf{Camera Manager}: this component is responsible of getting access to the camera of the device
+  \item \textbf{Application server API client}: this component handles all HTTP request to and from our Application server
+\end{itemize}
 
 \paragraph{Presenter}
 The presenter is a macro components that includes all the components of the UI.
-
 Here follows the list of every component with the description:
-\begin{itemize}ù
-  \item \textbf{Page Manager}: this components coordinates every page shown in the mobile application, and provides the navigation bar
+\begin{itemize}
+  \item \textbf{Sign-Up}: this components coordinates every page shown in the mobile application, and provides the navigation bar
   \item \textbf{Login Widget} : this is the login page and sig-up
-  \item \textbf{Camera Widget}: this shows what is recorded by the camera, has a button for takong pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
-  \item \textbf{Form Widget}: this shows a list of possible violation the user can select
+  \item \textbf{Camera Widget}: this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
+  \item \textbf{Form Widget}: this shows a list of possible description of violations the user can select
   \item \textbf{Map Widget} : this is responsible for showing the street heatmap
-  \item \textbf{List Veicles Widget} : this
-  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not.
+  \item \textbf{List Veicles Widget} : this widget shows the list of vehicles that committed the most violations
+  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not. It also shows information about each one
   \item \textbf{Statistics widget}: this can show some data visualization about the tickets
 \end{itemize}
 
 
-
-
-%%%%%%  APPLICATION SERVER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  APPLICATION SERVER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Application Server} \label{API}
 %%fig  application server
@@ -98,7 +104,8 @@ Here follows the list of every component with the description:
 \caption{\label{fig:compdiag2} Component diagram for Application Server}
 \end{sidewaysfigure}
 
-The architecture of the Application server looks the same as the Mobile Application,
+The architecture of the Application server looks the same as the Mobile Application, but has completly different components in the Presenter and Controller.
+
 
 \paragraph{Entities}
 Entities for the application server are the same as
@@ -106,10 +113,13 @@ Since the core of our system is based on \textbf{Users}, \textbf{Violations} and
 
 
 \paragraph{Use Cases}
-The use cases component for the server-side have the same name as the ones as the application but they have a completly different logic. As an example, on the application side the use case "Take picture" has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server. The use case with the same name, but on server side has to fetch the HTTP requets, parse the content, send the picture to the OpenALPR service to get the decoded plate and then store the picture.
+The use cases components for the server-side have almost the same names as the ones as the application, but they have a completly different logic.
+As an example: on the application side we have the use case "Take picture" which has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server, whereas on server side we have the "Get picture" use case, which fetches the HTTP requets, parse the content, send the picture to the OpenALPR service to get the decoded plate and then store the picture.
+
+
 
 \paragraph{CoreUtils}
-This component encapsulates all the libraries, classes with methods a middleware that can be needed by any use case.
+This component encapsulates all the libraries, classes with methods and middleware that can be needed by any use case.
 \begin{itemize}
   \item Input validation
   \item Error handling and reporting
@@ -122,21 +132,9 @@ This component encapsulates all the libraries, classes with methods a middleware
 
 \paragraph{Controller}
 
-The controller component is an adapter that encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the local filesystem, the device sensors, the camera and lastly our apllication service API which is described in section \ref{API}.
-Each component of the controller in fact implements the interfaces required by each use case.
-
 
 \paragraph{Presenter}
-The presenter
-
-
-
-
-
-
-
-
-
+The presenter is the macro components that encapsulates all the frameworks needed to provide an API interface.
 
 
 
