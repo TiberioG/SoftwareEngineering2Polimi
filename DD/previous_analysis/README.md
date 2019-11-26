@@ -14,3 +14,4 @@
 
  * A good addition to the test plan would be releasing the service to a group of beta-testers before the final release
  * the verbal description of testing of every component is not so effective because it's repetitive. Adding a graph like a "GANTT of the testing" for each component showing the order of testing would be more clear
+* As this section is concerned about implementation of the project it should have included used tools as a reference for the project development.
