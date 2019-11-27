@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  26 NOV 2019 19:14
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  27 NOV 2019 14:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1125,17 +1125,16 @@ esenter is the macro components that encapsulates all the frameworks needed
 
 File: Images/DeploymentDiagram1.png Graphic file (type bmp)
 <Images/DeploymentDiagram1.png>
+File: Images/DDSequencePic.png Graphic file (type bmp)
+<Images/DDSequencePic.png>
 [11] (./Files/clean.tex
 File: Images/cleanArchi.pdf Graphic file (type pdf)
 <use Images/cleanArchi.pdf>
- [12]) [13]
+ [12] [13] [14])
 File: Images/MVC.png Graphic file (type bmp)
 <Images/MVC.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14]
-[15]) [16] (./Files/ui.tex) [17
+ [15] [16]) [17] (./Files/ui.tex)
+[18
 
 ] (./Files/requirements.tex
 Overfull \hbox (34.23364pt too wide) in paragraph at lines 5--30
@@ -1147,13 +1146,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--30
 
  []
 
-) [18
+) [19
 
-] (./Files/implemintest.tex) [19
+] (./Files/implemintest.tex) [20
 
 ] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
- [20
+ [21
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
@@ -1172,12 +1171,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23616 strings out of 492970
- 434984 string characters out of 6133938
+ 23621 strings out of 492970
+ 435096 string characters out of 6133938
  553133 words of memory out of 5000000
- 27354 multiletter control sequences out of 15000+600000
+ 27358 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,12n,65p,10467b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,65p,10467b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (20 pages).
+Output written on main.pdf (21 pages).
