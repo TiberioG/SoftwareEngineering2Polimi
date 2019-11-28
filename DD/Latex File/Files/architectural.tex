@@ -47,17 +47,15 @@ Here follows the list of every Component of the Use case group. We have to add a
   \item \textbf{Sign-Up}: This component allows to add new users to the system. It has to get the input strings (username, password, user data etc. ) from the sign-up widget, validate them before sending the request to the Application Server. After, it has get the answer from the Server and communicate to the user if the sign-up was successful or not.
   \item \textbf{Login}: This component allows the login to the App. It has to get the input from the Login widget, communicate the strings to the Application Server and interpret the response if the user is autorized to login or not.
   \item \textbf{Take Picture}: This component makes possible to take picture of violations. After the picture has been taken, it has to send it to the Application Server and wait for an asnwer. If the answer is that a plate is found, than it calls the next use case "Send form". If no plates are found it asks the user to take a picture again discarding the previous one. If more than one plate is found, it activates a "brush tool mode" (in the Camera Widget) to ask the user to cover the other plates present in the picture. Then it has to manipulate directly the picture changing the color of the pixels selected by the user. Lastly it can send the picture to the Server.
-    \item \textbf{Send form}: This component presents the user the form in which he can choose the type of violation. After the form has been submitted bythe user, it is sent to the Application Server in order to be stored.
+  \item \textbf{Send form}: This component presents the user the form in which he can choose the type of volation. After the form has been submitted by the user, it is sent to the Application Server in order to be stored.
+  \item \textbf{List Vehicles}: This component asks the Application Server in order to get the list of vehicles that committed the most violations. Then it opens the widget to show a scrolling list view of paltes with the count of violations.
+  \item \textbf{Street Heatmap}: This component asks the Application Server to provide the heatmap visualization of the areas where the violations happened.
+  \item \textbf{Ticket Approval}: This component is responsible of showing the tickets available for approval. Every time the Authority user opens it or refersh the list it has to call the Applications erver in order to get the data about the ticket to be approved or not.
 
-  \item \textbf{List Vehicles}:
-  \item \textbf{Street Heatmap}:
-  \item \textbf{Ticket Approval}:
-  \item \textbf{Statistics}:
   \item \textbf{Ticket Offenders}:
-  \item \textbf{Trends}
+  \item \textbf{Trends}:
+
 \end{itemize}
-
-
 
 \paragraph{CoreUtils}
 This component encapsulates all the libraries and classes with methods that can be needed by any use case.
@@ -76,7 +74,7 @@ Here is the description of each sub-component:
 \begin{itemize}
   \item \textbf{Location Manager}: this component is responsible of getting the location of the user accessing the libraries of the OS of the device
   \item \textbf{Camera Manager}: this component is responsible of getting access to the camera of the device
-  \item \textbf{Application server API client}: this component handles all HTTP request to and from our Application server
+  \item \textbf{Application server API client}: this component handles all the HTTP requests to and from our Application server
 \end{itemize}
 
 \paragraph{Presenter}
@@ -90,7 +88,7 @@ Here follows the list of every component with the description:
   \item \textbf{Map Widget} : this is responsible for showing the street heatmap
   \item \textbf{List Veicles Widget} : this widget shows the list of vehicles that committed the most violations
   \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not. It also shows information about each one
-  \item \textbf{Statistics widget}: this can show some data visualization about the tickets
+  \item \textbf{Statistics widget}: this can show some data visualization about the tickets issued
 \end{itemize}
 
 
@@ -115,7 +113,21 @@ Since the core of our system is based on \textbf{Users}, \textbf{Violations} and
 \paragraph{Use Cases}
 The use cases components for the server-side have almost the same names as the ones as the application, but they have a completly different logic.
 As an example: on the application side we have the use case "Take picture" which has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server, whereas on server side we have the "Get picture" use case, which fetches the HTTP requets, parse the content, send the picture to the OpenALPR service to get the decoded plate and then store the picture.
+\begin{itemize}
+  \item \textbf{Sign-Up}: This component receives from the APP the username, password and personal information of a new user who is registering to the service. It must be able to check if the username is already in use or not. Then it must encrypt the password. Lastly it stores the new user in the database.
+  \item \textbf{Login}: This component receives from the APP the request of a user tryng to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
+  \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found it sends the app the plate just decoded. This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name of the road and the number.
 
+  \item \textbf{Get form}:
+  \item \textbf{List Vehicles}:
+  \item \textbf{Street Heatmap}:
+
+  \item \textbf{Ticket Approval}:
+  \item \textbf{Ticket Creator}:
+  \item \textbf{Ticket Offenders}:
+  \item \textbf{Trends}:
+
+\end{itemize}
 
 
 \paragraph{CoreUtils}
@@ -139,6 +151,11 @@ The presenter is the macro components that encapsulates all the frameworks neede
 
 
 \subsection{Deployment view}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DeploymentDiagram1.png}
+\caption{\label{fig:deploy} Deployment diagram}
+\end{figure}
 
 In Figure \ref{fig:deploy} is shown the Deployment diagram.
 
@@ -154,11 +171,6 @@ The third tier is the \textbf{DB Server}. It consists in another server where we
 
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{Images/DeploymentDiagram1.png}
-\caption{\label{fig:deploy} Deployment diagram}
-\end{figure}
 
 
 
@@ -168,27 +180,19 @@ A note for the sequence diagrams, we omit that every call to and from a specific
 
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{Images/DDSequencePic.png}
-\caption{\label{fig:deploy} Sequence diagram for Picture upload}
-\end{figure}
-
-
-
-
 
 
 \subsubsection{Reporting Violation}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSequencePic.png}
+\caption{\label{fig:sequencepic} Sequence diagram for picture upload via the Mobile Application}
+\end{figure}
 
-In the following sequence diagram we show the runtime of the function of reporting a violation.
-First the user taps to open the page related to violation reporting. The \textbf{page manager} so
-
-
-
-
-
-
+In figure \ref{fig:sequencepic} is shown the sequence diagram for the use case of taking a picture using the mobile application.
+The user interacts with the \textbf{PageManager} pressing the button to open the "Report Violation section", so the \textbf{TakePicture} use case is loaded because it's the first step needed to start the reporting of a violation. This opens the \textbf{CameraWidget} that is the component of the Presenter responible of showing on screen the camera recording. When the widget is correctly started the user can take the picture pressing the main button. The widget has to tell the \textbf{TakePicture} use case that the button has been pressed so the picture can  actually be taken and stored locally. The camera widget can now show the picture just taken and show the brush tool mode. If there is need the user can cover whith is finger some areas of the picture. The widget communicates to the use case the location of those areas so the image can be manipulated by the \textbf{TakePicture} use case and stored. This can happen until the user presses the "done button". Now the the \textbf{TakePicture} use case asks the the \textbf{LocationManager} to return the GPS coordinates of the device. An Unique identifier is generated which is passed with the picture to the \textbf{Application Server API client} which has to actually make the POST HTTP request to the Application Server.
+When an answer is received there are three options possible: if no plates have been found, the use case has to start again, so it tells the widget to show a message for the user, asking to retake the picture including the plate.
+If more than one plates are found, the use case has to ask the widget to show a message asking the user to use again the brush tool mode to cover the plates not required. If one plate is correctly identified the use case can tell the widget to show a success messae and terminates. %done!
 
 \subsection{Selected Architectural styles and patterns}
 

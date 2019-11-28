@@ -27,26 +27,26 @@
 \contentsline {paragraph}{CoreUtils}{11}{section*.14}
 \contentsline {paragraph}{Controller}{11}{section*.15}
 \contentsline {paragraph}{Presenter}{11}{section*.16}
-\contentsline {subsection}{\numberline {2.3}Deployment view}{11}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Deployment view}{12}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Runtime view}{12}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Reporting Violation}{12}{subsubsection.2.4.1}
-\contentsline {subsection}{\numberline {2.5}Selected Architectural styles and patterns}{12}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.4.1}Reporting Violation}{13}{subsubsection.2.4.1}
+\contentsline {subsection}{\numberline {2.5}Selected Architectural styles and patterns}{14}{subsection.2.5}
 \contentsline {subsubsection}{\numberline {2.5.1}Dependency Rule}{14}{subsubsection.2.5.1}
 \contentsline {subsubsection}{\numberline {2.5.2}Entities}{14}{subsubsection.2.5.2}
-\contentsline {subsubsection}{\numberline {2.5.3}Use Cases}{14}{subsubsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.4}Interface Adapters}{14}{subsubsection.2.5.4}
-\contentsline {subsubsection}{\numberline {2.5.5}Adantages of Clean architecture}{14}{subsubsection.2.5.5}
-\contentsline {subsubsection}{\numberline {2.5.6}REST}{14}{subsubsection.2.5.6}
+\contentsline {subsubsection}{\numberline {2.5.3}Use Cases}{15}{subsubsection.2.5.3}
+\contentsline {subsubsection}{\numberline {2.5.4}Interface Adapters}{15}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Adantages of Clean architecture}{15}{subsubsection.2.5.5}
+\contentsline {subsubsection}{\numberline {2.5.6}REST}{15}{subsubsection.2.5.6}
 \contentsline {subsection}{\numberline {2.6}Other design decisions}{15}{subsection.2.6}
 \contentsline {paragraph}{Flutter}{15}{section*.20}
 \contentsline {paragraph}{Node.js}{15}{section*.21}
-\contentsline {paragraph}{MongoDB}{15}{section*.22}
-\contentsline {subsubsection}{\numberline {2.6.1}Model}{15}{subsubsection.2.6.1}
-\contentsline {subsubsection}{\numberline {2.6.2}View}{15}{subsubsection.2.6.2}
+\contentsline {paragraph}{MongoDB}{16}{section*.22}
+\contentsline {subsubsection}{\numberline {2.6.1}Model}{17}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}View}{17}{subsubsection.2.6.2}
 \contentsline {subsubsection}{\numberline {2.6.3}Controler}{17}{subsubsection.2.6.3}
 \contentsline {subsubsection}{\numberline {2.6.4}Why do we use MVP architectural pattern?}{17}{subsubsection.2.6.4}
-\contentsline {subsection}{\numberline {2.7}Other design decisions}{17}{subsection.2.7}
-\contentsline {section}{\numberline {3}User Interface Design}{18}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{19}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{20}{section.5}
-\contentsline {section}{\numberline {6}Effort Spent}{21}{section.6}
+\contentsline {subsection}{\numberline {2.7}Other design decisions}{18}{subsection.2.7}
+\contentsline {section}{\numberline {3}User Interface Design}{19}{section.3}
+\contentsline {section}{\numberline {4}Requirements Traceability}{20}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{21}{section.5}
+\contentsline {section}{\numberline {6}Effort Spent}{23}{section.6}
