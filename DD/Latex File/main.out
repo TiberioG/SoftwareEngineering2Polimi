@@ -28,12 +28,8 @@
 \BOOKMARK [3][-]{subsubsection.2.5.5}{Adantages\040of\040Clean\040architecture}{subsection.2.5}% 28
 \BOOKMARK [3][-]{subsubsection.2.5.6}{REST}{subsection.2.5}% 29
 \BOOKMARK [2][-]{subsection.2.6}{Other\040design\040decisions}{section.2}% 30
-\BOOKMARK [3][-]{subsubsection.2.6.1}{Model}{subsection.2.6}% 31
-\BOOKMARK [3][-]{subsubsection.2.6.2}{View}{subsection.2.6}% 32
-\BOOKMARK [3][-]{subsubsection.2.6.3}{Controler}{subsection.2.6}% 33
-\BOOKMARK [3][-]{subsubsection.2.6.4}{Why\040do\040we\040use\040MVP\040architectural\040pattern?}{subsection.2.6}% 34
-\BOOKMARK [2][-]{subsection.2.7}{Other\040design\040decisions}{section.2}% 35
-\BOOKMARK [1][-]{section.3}{User\040Interface\040Design}{}% 36
-\BOOKMARK [1][-]{section.4}{Requirements\040Traceability}{}% 37
-\BOOKMARK [1][-]{section.5}{Implementation,\040Integration\040and\040Test\040Plan}{}% 38
-\BOOKMARK [1][-]{section.6}{Effort\040Spent}{}% 39
+\BOOKMARK [1][-]{section.3}{User\040Interface\040Design}{}% 31
+\BOOKMARK [1][-]{section.4}{Requirements\040Traceability}{}% 32
+\BOOKMARK [1][-]{section.5}{Implementation,\040Integration\040and\040Test\040Plan}{}% 33
+\BOOKMARK [2][-]{subsection.5.1}{Sequence\040of\040component\040integration}{section.5}% 34
+\BOOKMARK [1][-]{section.6}{Effort\040Spent}{}% 35

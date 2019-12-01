@@ -31,22 +31,19 @@
 \contentsline {subsection}{\numberline {2.4}Runtime view}{12}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Reporting Violation}{13}{subsubsection.2.4.1}
 \contentsline {subsection}{\numberline {2.5}Selected Architectural styles and patterns}{14}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Dependency Rule}{14}{subsubsection.2.5.1}
-\contentsline {subsubsection}{\numberline {2.5.2}Entities}{14}{subsubsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.1}Dependency Rule}{15}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.2}Entities}{15}{subsubsection.2.5.2}
 \contentsline {subsubsection}{\numberline {2.5.3}Use Cases}{15}{subsubsection.2.5.3}
-\contentsline {subsubsection}{\numberline {2.5.4}Interface Adapters}{15}{subsubsection.2.5.4}
-\contentsline {subsubsection}{\numberline {2.5.5}Adantages of Clean architecture}{15}{subsubsection.2.5.5}
-\contentsline {subsubsection}{\numberline {2.5.6}REST}{15}{subsubsection.2.5.6}
-\contentsline {subsection}{\numberline {2.6}Other design decisions}{15}{subsection.2.6}
-\contentsline {paragraph}{Flutter}{15}{section*.20}
-\contentsline {paragraph}{Node.js}{15}{section*.21}
-\contentsline {paragraph}{MongoDB}{16}{section*.22}
-\contentsline {subsubsection}{\numberline {2.6.1}Model}{17}{subsubsection.2.6.1}
-\contentsline {subsubsection}{\numberline {2.6.2}View}{17}{subsubsection.2.6.2}
-\contentsline {subsubsection}{\numberline {2.6.3}Controler}{17}{subsubsection.2.6.3}
-\contentsline {subsubsection}{\numberline {2.6.4}Why do we use MVP architectural pattern?}{17}{subsubsection.2.6.4}
-\contentsline {subsection}{\numberline {2.7}Other design decisions}{18}{subsection.2.7}
-\contentsline {section}{\numberline {3}User Interface Design}{19}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{20}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{21}{section.5}
-\contentsline {section}{\numberline {6}Effort Spent}{23}{section.6}
+\contentsline {subsubsection}{\numberline {2.5.4}Interface Adapters}{16}{subsubsection.2.5.4}
+\contentsline {subsubsection}{\numberline {2.5.5}Adantages of Clean architecture}{16}{subsubsection.2.5.5}
+\contentsline {subsubsection}{\numberline {2.5.6}REST}{16}{subsubsection.2.5.6}
+\contentsline {subsection}{\numberline {2.6}Other design decisions}{16}{subsection.2.6}
+\contentsline {paragraph}{Flutter}{16}{section*.21}
+\contentsline {paragraph}{Node.js}{16}{section*.22}
+\contentsline {paragraph}{MongoDB}{16}{section*.23}
+\contentsline {section}{\numberline {3}User Interface Design}{17}{section.3}
+\contentsline {section}{\numberline {4}Requirements Traceability}{18}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{19}{section.5}
+\contentsline {subsection}{\numberline {5.1}Sequence of component integration}{19}{subsection.5.1}
+\contentsline {paragraph}{Integration of the all internal components of the application server}{21}{section*.26}
+\contentsline {section}{\numberline {6}Effort Spent}{22}{section.6}

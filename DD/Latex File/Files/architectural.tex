@@ -1,5 +1,5 @@
 \subsection{Overview}
-The system to be developed has a three tier structure, service oriented.
+The system to be developed has a three tier structure and it follows the structure service oriented.
 \begin{enumerate}
   \item Mobile application (client)
   \item Application Server
@@ -7,11 +7,11 @@ The system to be developed has a three tier structure, service oriented.
 \end{enumerate}
 
 The first tier consists in a mobile app running on mobile devices, smartphones or tablets with iOs or Android.
-this is the application the users will interact with, since it' a very easy and fast
+This is the application the users will interact with.
 
-The second tier consists in an Application Server which provides the service as a RESTful API to the clients and it's connected to the third tier, the Database Server where all data is stored.
+The second tier consists in an Application Server which provides the service as a RESTful API to the clients which are the running applications, and it's connected to the third tier, the Database Server where all data is stored.
 
-There are some advantages of our system architecture: the first one is the modularity of this approach of havinng different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one whithout touching the application server.
+There are some advantages of our system architecture: the first one is the modularity of this approach of havinng different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one, whithout touching the application server.
 
 Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref} which is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
 One big advantage of this architecture is that we have a separated component for each use case.
@@ -50,11 +50,9 @@ Here follows the list of every Component of the Use case group. We have to add a
   \item \textbf{Send form}: This component presents the user the form in which he can choose the type of volation. After the form has been submitted by the user, it is sent to the Application Server in order to be stored.
   \item \textbf{List Vehicles}: This component asks the Application Server in order to get the list of vehicles that committed the most violations. Then it opens the widget to show a scrolling list view of paltes with the count of violations.
   \item \textbf{Street Heatmap}: This component asks the Application Server to provide the heatmap visualization of the areas where the violations happened.
-  \item \textbf{Ticket Approval}: This component is responsible of showing the tickets available for approval. Every time the Authority user opens it or refersh the list it has to call the Applications erver in order to get the data about the ticket to be approved or not.
-
-  \item \textbf{Ticket Offenders}:
-  \item \textbf{Trends}:
-
+  \item \textbf{Ticket Approval}: This component is responsible of showing the tickets available for approval. Every time the Authority user opens this or refersh the list, the component has to call the Application Server in order to get the data about the pending ticket. Moreover this component offers the feature of approving or not a pending ticket using two buttons.
+  \item \textbf{Ticket Offenders}: This component is responsible of showing the list of the most egregious offenders by querying the Application Server
+  \item \textbf{Trends}: This component has to show the desired statsistics about the issued tickets, querying the Application Server.
 \end{itemize}
 
 \paragraph{CoreUtils}
@@ -78,12 +76,12 @@ Here is the description of each sub-component:
 \end{itemize}
 
 \paragraph{Presenter}
-The presenter is a macro components that includes all the components of the UI.
+The presenter is a macro component that includes all the components of the UI.
 Here follows the list of every component with the description:
 \begin{itemize}
-  \item \textbf{Sign-Up}: this components coordinates every page shown in the mobile application, and provides the navigation bar
-  \item \textbf{Login Widget} : this is the login page and sig-up
-  \item \textbf{Camera Widget}: this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
+  \item \textbf{Page Manager}: this components coordinates every page shown in the mobile application, and provides the navigation bar
+  \item \textbf{Login Widget} : this is the login page and sig-up page, with the required input fields
+  \item \textbf{Camera Widget} : this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
   \item \textbf{Form Widget}: this shows a list of possible description of violations the user can select
   \item \textbf{Map Widget} : this is responsible for showing the street heatmap
   \item \textbf{List Veicles Widget} : this widget shows the list of vehicles that committed the most violations
@@ -104,19 +102,17 @@ Here follows the list of every component with the description:
 
 The architecture of the Application server looks the same as the Mobile Application, but has completly different components in the Presenter and Controller.
 
-
 \paragraph{Entities}
-Entities for the application server are the same as
-Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
+ Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} are the main Entities of the Systemm, those are the same as the Mobile Application.
 
 
 \paragraph{Use Cases}
 The use cases components for the server-side have almost the same names as the ones as the application, but they have a completly different logic.
-As an example: on the application side we have the use case "Take picture" which has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server, whereas on server side we have the "Get picture" use case, which fetches the HTTP requets, parse the content, send the picture to the OpenALPR service to get the decoded plate and then store the picture.
+As an example: on the application side we have the use case "Take picture" which has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server, whereas on server side we have the "Get picture" use case, which fetches the HTTP requets, parses the content, sends the picture to the OpenALPR service to get the decoded plate and then stores the picture.
 \begin{itemize}
   \item \textbf{Sign-Up}: This component receives from the APP the username, password and personal information of a new user who is registering to the service. It must be able to check if the username is already in use or not. Then it must encrypt the password. Lastly it stores the new user in the database.
-  \item \textbf{Login}: This component receives from the APP the request of a user tryng to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
-  \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found it sends the app the plate just decoded. This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name of the road and the number.
+  \item \textbf{Login}: This component receives from the APP the request of a user trying to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
+  \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found, it sends to the APP the plate just decoded with a success message. This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name of the road and the number.
 
   \item \textbf{Get form}:
   \item \textbf{List Vehicles}:
@@ -141,7 +137,6 @@ This component encapsulates all the libraries, classes with methods and middlewa
 \end{itemize}
 
 
-
 \paragraph{Controller}
 
 
@@ -157,7 +152,7 @@ The presenter is the macro components that encapsulates all the frameworks neede
 \caption{\label{fig:deploy} Deployment diagram}
 \end{figure}
 
-In Figure \ref{fig:deploy} is shown the Deployment diagram.
+In Figure \ref{fig:deploy} is shown the Deployment diagram of all the system.
 
 The deployment consist of three main devices. The first tier consist is \textbf{Mobile device} the user will use, which can be a smartphone or a tablet using as operating system either iOS or Android.
 The exection environment is the built Flutter app.
@@ -177,11 +172,6 @@ The third tier is the \textbf{DB Server}. It consists in another server where we
 \subsection{Runtime view}
 A note for the sequence diagrams, we omit that every call to and from a specific use case must pass from the use case interactor to keep it simpler.
 
-
-
-
-
-
 \subsubsection{Reporting Violation}
 \begin{figure}[H]
 \centering
@@ -190,50 +180,17 @@ A note for the sequence diagrams, we omit that every call to and from a specific
 \end{figure}
 
 In figure \ref{fig:sequencepic} is shown the sequence diagram for the use case of taking a picture using the mobile application.
-The user interacts with the \textbf{PageManager} pressing the button to open the "Report Violation section", so the \textbf{TakePicture} use case is loaded because it's the first step needed to start the reporting of a violation. This opens the \textbf{CameraWidget} that is the component of the Presenter responible of showing on screen the camera recording. When the widget is correctly started the user can take the picture pressing the main button. The widget has to tell the \textbf{TakePicture} use case that the button has been pressed so the picture can  actually be taken and stored locally. The camera widget can now show the picture just taken and show the brush tool mode. If there is need the user can cover whith is finger some areas of the picture. The widget communicates to the use case the location of those areas so the image can be manipulated by the \textbf{TakePicture} use case and stored. This can happen until the user presses the "done button". Now the the \textbf{TakePicture} use case asks the the \textbf{LocationManager} to return the GPS coordinates of the device. An Unique identifier is generated which is passed with the picture to the \textbf{Application Server API client} which has to actually make the POST HTTP request to the Application Server.
+The user interacts with the \textbf{PageManager} pressing the button to open the "Report Violation section", so the \textbf{TakePicture} use case is loaded because it's the first step needed to start the reporting of a violation. This opens the \textbf{CameraWidget} that is the component of the Presenter responible of showing on screen the camera recording. When the widget is correctly started the user can take the picture pressing the main button. The widget has to tell the \textbf{TakePicture} use case that the button has been pressed so the picture can  actually be taken and stored locally. The camera widget can now show the picture just taken and show the brush tool mode. If there is need the user can cover whith is finger some areas of the picture. The widget communicates to the use case the location of those areas so the image can be manipulated by the \textbf{TakePicture} use case and stored. This can happen until the user presses the "done button". Now the the \textbf{TakePicture} use case asks the the \textbf{LocationManager} to return the GPS coordinates of the device. An Unique identifier is generated which is passed with the picture to the \textbf{Application Server API client} which has to actually make the POST HTTP request to the Application Server. What happens in the applcation server is described later in the following Sequence diagram in Figure \ref{fig:sequencepic2}.
 When an answer is received there are three options possible: if no plates have been found, the use case has to start again, so it tells the widget to show a message for the user, asking to retake the picture including the plate.
 If more than one plates are found, the use case has to ask the widget to show a message asking the user to use again the brush tool mode to cover the plates not required. If one plate is correctly identified the use case can tell the widget to show a success messae and terminates. %done!
 
-\subsection{Selected Architectural styles and patterns}
 
-
-\input{Files/clean} \label{cleanArchiref}
-
-This application will be developed with the MVP architectural pattern. In general, the MVP pattern allows separating the presentation layer from the logic, and this feature can be useful when we test the app. MVP is a user interface architectural pattern, which eases automated unit testing and it helps with providing clean code. This pattern consists of three parts which are Model, View and Presenter. In this pattern, model does not communicate with the view directly, it is the Presenter’s responsibility to communicate with the Model and update the View. SafeStreet application will be developed with the MVP architectural pattern in place of the MVC (model, view and controller) because of the test advantage mentioned above and compared to MVVM the architecture does not ﬁt to the project design. MVVM does not give us a relation 1-1 between Presentation and View. For that reason, during this project it is recommended to utilize the MVP architectural pattern. There are more architectural patterns that we considered and discarded, like “Client-server pattern” or “Layered pattern”, but as mentioned above the MVP architecture would be the best ﬁt for the SafeStreet Application.
-
-\begin{figure}
+\begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/MVC.png}
-\caption{\label{fig:MVC} MVC Architectural diagram}
+\includegraphics[width=\textwidth]{Images/DDSequencePic2.png}
+\caption{\label{fig:sequencepic2} Sequence diagram for picture storage by Application Server}
 \end{figure}
+In figure \ref{fig:sequencepic2} is shown the sequence diagram for the Application Server when it re
 
-\subsubsection{Model}
-The model component stores data and its related logic. It represents data that is being transferred between controller components or any other related business logic. It responds to the request from the views and also responds to instructions from the controller to update itself. It is also the lowest level of the pattern which is responsible for maintaining data. In this project we use MongoDB database to store all the useful data. As well as we will use NODE.JS as the application server to build and run the application.
-
-\subsubsection{View}
-A View is that part of the application that represents the presentation of data.
-Views are created by the data collected from the model data. A view requests the model to give information so that it resents the output presentation to the user.
-In order to implement SafeStreet application we are going to use Flutter framework. Flutter helps app developers build cross-platform apps faster by using a single programming language. Although there are some other frameworks to implement cross-platform apps, according to [https://nevercode.io/blog/flutter-vs-react-native-a-developers-perspective/] Flutter is more efficient than others and has entered the cross-platform mobile development race very strongly.
-
-\subsubsection{Controler}
-Controler is the mediator between View and Model which hold responsibilities of everything which has to deal with presentation logic in the application. Presenter does the job of querying the Model, updating the View while responding to the user’s interactions. It monitors Model and talks to View so that they can handle when a particular View needs to be updated and when to not. In this project we will use Representational state transfer (REST) API in order to communicate between View and Model.REST is the software architectural style of the World Wide Web. REST gives a coordinated set of constraints to the design of components in a distributed hypermedia system that can lead to a higher-performing and more maintainable architecture.
-To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over Hypertext Transfer Protocol (HTTP) with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers.
-We have decided this API because it guarantees to achieve important non-functional requirements such as:
-\begin{itemize}
- \item Scalability: every node belonging to our architecture can be multiplied without redesign the whole system.
- \item Portability: Every platform it's able to interact with the server since it's just a matter of HTTP request and JSON response.
- \item Reliability: If suddenly an instance crashes, the load balancer detaches it and will be replaced by a new one automatically.
-\end{itemize}
-
-\subsubsection{Why do we use MVP architectural pattern?}
-
-Following are some reasons which makes MVP a good architectural pattern for our app:
-\begin{itemize}
-\item Makes debugging easier in Applications: MVP enforces three different layers of abstractions which makes it easier to debug your applications. Moreover, since business logic is completely decoupled from View, it is more easier to perform unit testing while developing your application.
-\item Enforces better separation of Concerns: MVP does the great job of separating out the business logic and persistence logic out of the Activity and Fragment classes which in turn better enforce good separation of concerns.
-
-\item Code Re-usability: In MVP, the code can be better reused since we can have multiple presenters controlling our Views. This is more important as we definitely don’t want to rely on a single presenter to control our different Views.
-\end{itemize}
-
-
-\subsection{Other design decisions}
+\subsection{Selected Architectural styles and patterns}
+\input{Files/clean} \label{cleanArchiref}

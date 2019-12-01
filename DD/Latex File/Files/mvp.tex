@@ -1,0 +1,39 @@
+
+This application will be developed with the MVP architectural pattern. In general, the MVP pattern allows separating the presentation layer from the logic, and this feature can be useful when we test the app. MVP is a user interface architectural pattern, which eases automated unit testing and it helps with providing clean code. This pattern consists of three parts which are Model, View and Presenter. In this pattern, model does not communicate with the view directly, it is the Presenter’s responsibility to communicate with the Model and update the View. SafeStreet application will be developed with the MVP architectural pattern in place of the MVC (model, view and controller) because of the test advantage mentioned above and compared to MVVM the architecture does not ﬁt to the project design. MVVM does not give us a relation 1-1 between Presentation and View. For that reason, during this project it is recommended to utilize the MVP architectural pattern. There are more architectural patterns that we considered and discarded, like “Client-server pattern” or “Layered pattern”, but as mentioned above the MVP architecture would be the best ﬁt for the SafeStreet Application.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth]{Images/MVC.png}
+\caption{\label{fig:MVC} MVC Architectural diagram}
+\end{figure}
+
+\subsubsection{Model}
+The model component stores data and its related logic. It represents data that is being transferred between controller components or any other related business logic. It responds to the request from the views and also responds to instructions from the controller to update itself. It is also the lowest level of the pattern which is responsible for maintaining data. In this project we use MongoDB database to store all the useful data. As well as we will use NODE.JS as the application server to build and run the application.
+
+\subsubsection{View}
+A View is that part of the application that represents the presentation of data.
+Views are created by the data collected from the model data. A view requests the model to give information so that it resents the output presentation to the user.
+In order to implement SafeStreet application we are going to use Flutter framework. Flutter helps app developers build cross-platform apps faster by using a single programming language. Although there are some other frameworks to implement cross-platform apps, according to [https://nevercode.io/blog/flutter-vs-react-native-a-developers-perspective/] Flutter is more efficient than others and has entered the cross-platform mobile development race very strongly.
+
+\subsubsection{Controler}
+Controler is the mediator between View and Model which hold responsibilities of everything which has to deal with presentation logic in the application. Presenter does the job of querying the Model, updating the View while responding to the user’s interactions. It monitors Model and talks to View so that they can handle when a particular View needs to be updated and when to not. In this project we will use Representational state transfer (REST) API in order to communicate between View and Model.REST is the software architectural style of the World Wide Web. REST gives a coordinated set of constraints to the design of components in a distributed hypermedia system that can lead to a higher-performing and more maintainable architecture.
+To the extent that systems conform to the constraints of REST they can be called RESTful. RESTful systems typically, but not always, communicate over Hypertext Transfer Protocol (HTTP) with the same HTTP verbs (GET, POST, PUT, DELETE, etc.) which web browsers use to retrieve web pages and to send data to remote servers.
+We have decided this API because it guarantees to achieve important non-functional requirements such as:
+\begin{itemize}
+ \item Scalability: every node belonging to our architecture can be multiplied without redesign the whole system.
+ \item Portability: Every platform it's able to interact with the server since it's just a matter of HTTP request and JSON response.
+ \item Reliability: If suddenly an instance crashes, the load balancer detaches it and will be replaced by a new one automatically.
+\end{itemize}
+
+\subsubsection{Why do we use MVP architectural pattern?}
+
+Following are some reasons which makes MVP a good architectural pattern for our app:
+\begin{itemize}
+\item Makes debugging easier in Applications: MVP enforces three different layers of abstractions which makes it easier to debug your applications. Moreover, since business logic is completely decoupled from View, it is more easier to perform unit testing while developing your application.
+\item Enforces better separation of Concerns: MVP does the great job of separating out the business logic and persistence logic out of the Activity and Fragment classes which in turn better enforce good separation of concerns.
+
+\item Code Re-usability: In MVP, the code can be better reused since we can have multiple presenters controlling our Views. This is more important as we definitely don’t want to rely on a single presenter to control our different Views.
+\end{itemize}
+
+
+\subsection{Other design decisions}
