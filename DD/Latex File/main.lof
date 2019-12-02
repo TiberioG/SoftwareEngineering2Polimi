@@ -3,7 +3,12 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces Deployment diagram\relax }}{12}{figure.caption.17}
 \contentsline {figure}{\numberline {4}{\ignorespaces Sequence diagram for picture upload via the Mobile Application\relax }}{13}{figure.caption.18}
 \contentsline {figure}{\numberline {5}{\ignorespaces Sequence diagram for picture storage by Application Server\relax }}{14}{figure.caption.19}
-\contentsline {figure}{\numberline {6}{\ignorespaces Clean Architecture \cite {clean} p. 203\relax }}{15}{figure.caption.20}
-\contentsline {figure}{\numberline {7}{\ignorespaces A general overview of the service implementation\relax }}{20}{figure.caption.25}
-\contentsline {figure}{\numberline {8}{\ignorespaces report violation integration\relax }}{21}{figure.caption.27}
-\contentsline {figure}{\numberline {9}{\ignorespaces Mine Information integration\relax }}{21}{figure.caption.28}
+\contentsline {figure}{\numberline {6}{\ignorespaces Sequence diagram for filling form on Mobile App\relax }}{15}{figure.caption.20}
+\contentsline {figure}{\numberline {7}{\ignorespaces Sequence diagram for getting the form by Application Server\relax }}{15}{figure.caption.21}
+\contentsline {figure}{\numberline {8}{\ignorespaces Clean Architecture \cite {clean} p. 203\relax }}{16}{figure.caption.22}
+\contentsline {figure}{\numberline {9}{\ignorespaces A general overview of the service implementation\relax }}{21}{figure.caption.27}
+\contentsline {figure}{\numberline {10}{\ignorespaces report violation integration\relax }}{21}{figure.caption.29}
+\contentsline {figure}{\numberline {11}{\ignorespaces Mine Information integration\relax }}{22}{figure.caption.30}
+\contentsline {figure}{\numberline {12}{\ignorespaces Issuing Ticket integration\relax }}{22}{figure.caption.31}
+\contentsline {figure}{\numberline {13}{\ignorespaces Show Statistics integration\relax }}{23}{figure.caption.32}
+\contentsline {figure}{\numberline {14}{\ignorespaces Mobile App integration\relax }}{23}{figure.caption.34}

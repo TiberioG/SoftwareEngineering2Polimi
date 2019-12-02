@@ -66,7 +66,7 @@ Here we list some of these functions:
 \end{itemize}
 
 \paragraph{Controller}
-The controller component  encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the local filesystem, the device sensors, the camera and lastly our application service API which is described in section \ref{API}.
+The controller component encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the local filesystem, the device sensors, the camera and lastly our application service API which is described in section \ref{API}.
 Each component of the controller in fact implements the interfaces required by the use cases.
 Here is the description of each sub-component:
 \begin{itemize}
@@ -114,9 +114,12 @@ As an example: on the application side we have the use case "Take picture" which
   \item \textbf{Login}: This component receives from the APP the request of a user trying to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
   \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found, it sends to the APP the plate just decoded with a success message. This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name of the road and the number.
 
-  \item \textbf{Get form}:
-  \item \textbf{List Vehicles}:
-  \item \textbf{Street Heatmap}:
+  \item \textbf{Get form}: This component receives the PUT request from the APP containing the content of the form assocciated to the picture of the violation. This request is PUT type because it must update the existing violation docment in database adding the kind of violation.
+
+  \item \textbf{List Vehicles}: This component is used to query the database of violations in order to get the list of veichels with the associated count of violations occurred.
+
+
+  \item \textbf{Street Heatmap}: this component periodically
 
   \item \textbf{Ticket Approval}:
   \item \textbf{Ticket Creator}:
@@ -175,22 +178,37 @@ A note for the sequence diagrams, we omit that every call to and from a specific
 \subsubsection{Reporting Violation}
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/DDSequencePic.png}
-\caption{\label{fig:sequencepic} Sequence diagram for picture upload via the Mobile Application}
+\includegraphics[width=\textwidth]{Images/DDSeqAppPic.png}
+\caption{\label{fig:DDSeqAppPic} Sequence diagram for picture upload via the Mobile Application}
 \end{figure}
 
-In figure \ref{fig:sequencepic} is shown the sequence diagram for the use case of taking a picture using the mobile application.
-The user interacts with the \textbf{PageManager} pressing the button to open the "Report Violation section", so the \textbf{TakePicture} use case is loaded because it's the first step needed to start the reporting of a violation. This opens the \textbf{CameraWidget} that is the component of the Presenter responible of showing on screen the camera recording. When the widget is correctly started the user can take the picture pressing the main button. The widget has to tell the \textbf{TakePicture} use case that the button has been pressed so the picture can  actually be taken and stored locally. The camera widget can now show the picture just taken and show the brush tool mode. If there is need the user can cover whith is finger some areas of the picture. The widget communicates to the use case the location of those areas so the image can be manipulated by the \textbf{TakePicture} use case and stored. This can happen until the user presses the "done button". Now the the \textbf{TakePicture} use case asks the the \textbf{LocationManager} to return the GPS coordinates of the device. An Unique identifier is generated which is passed with the picture to the \textbf{Application Server API client} which has to actually make the POST HTTP request to the Application Server. What happens in the applcation server is described later in the following Sequence diagram in Figure \ref{fig:sequencepic2}.
+In figure \ref{fig:DDSeqAppPic} is shown the sequence diagram for the use case of taking a picture using the mobile application.
+The user interacts with the \textbf{PageManager} pressing the button to open the "Report Violation section", so the \textbf{TakePicture} use case is loaded because it's the first step needed to start the reporting of a violation. This opens the \textbf{CameraWidget} that is the component of the Presenter responible of showing on screen the camera recording. When the widget is correctly started the user can take the picture pressing the main button. The widget has to tell the \textbf{TakePicture} use case that the button has been pressed so the picture can  actually be taken and stored locally. The camera widget can now show the picture just taken and show the brush tool mode. If there is need the user can cover whith is finger some areas of the picture. The widget communicates to the use case the location of those areas so the image can be manipulated by the \textbf{TakePicture} use case and stored. This can happen until the user presses the "done button". Now the the \textbf{TakePicture} use case asks the the \textbf{LocationManager} to return the GPS coordinates of the device. An Unique identifier is generated which is passed with the picture to the \textbf{Application Server API client} which has to actually make the POST HTTP request to the Application Server. What happens in the applcation server is described later in the following Sequence diagram in Figure \ref{fig:DDSeqSeverPic}.
 When an answer is received there are three options possible: if no plates have been found, the use case has to start again, so it tells the widget to show a message for the user, asking to retake the picture including the plate.
 If more than one plates are found, the use case has to ask the widget to show a message asking the user to use again the brush tool mode to cover the plates not required. If one plate is correctly identified the use case can tell the widget to show a success messae and terminates. %done!
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSeqSeverPic.png}
+\caption{\label{fig:DDSeqSeverPic} Sequence diagram for picture storage by Application Server}
+\end{figure}
+In figure \ref{fig:DDSeqSeverPic} is shown the sequence diagram for the Application Server when it receives a POST request of a new picture.
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/DDSequencePic2.png}
-\caption{\label{fig:sequencepic2} Sequence diagram for picture storage by Application Server}
+\includegraphics[width=\textwidth]{Images/DDSeqAppForm.png}
+\caption{\label{fig:DDSeqAppForm} Sequence diagram for filling form on Mobile App}
 \end{figure}
-In figure \ref{fig:sequencepic2} is shown the sequence diagram for the Application Server when it re
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSeqSeverForm.png}
+\caption{\label{fig:DDSeqSeverForm} Sequence diagram for getting the form by Application Server}
+\end{figure}
+
+
+
 
 \subsection{Selected Architectural styles and patterns}
 \input{Files/clean} \label{cleanArchiref}

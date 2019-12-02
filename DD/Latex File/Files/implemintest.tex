@@ -5,7 +5,7 @@ This section will discuss the implementation, integration and testing of the Saf
     \item \textbf{External components:} contains all the external components, such as the ALPR, to extract the license plate from a photo, and so on.
 \end{itemize}
  It should be noted that the external systems’ components need not to be implemented and tested just because they are external and they can be considered reliable.
-Going back to our project, we will divide the Mobile App component to three main entities, corresponding to USer, Violation and Ticket.
+Going back to our project, we will divide the Mobile App component to three main entities, corresponding to User, Violation and Ticket.
 The services that have to be created for each entity are:
 \begin{itemize}
 \item{} \textit{User}: Sign-UP, Login
@@ -13,13 +13,13 @@ The services that have to be created for each entity are:
 \item{} \textit{Ticket}: Ticket Approval, Statistics, Ticket offenders, Trends.
 \end{itemize}
 
-\begin{sidewaysfigure}
+\begin{figure}
 \centering
 \includegraphics[width=\textwidth]{Images/ImplemetationandTest.png}
 \caption{\label{fig:Test} A general overview of the service implementation}
-\end{sidewaysfigure}
+\end{figure}
 
-In ﬁgure \ref{fig:Test}, the overall process structure of the implementation has been shown. First, the blue part, will be implemented and tested. After the blue part works eﬃciently, the orange part, services related to report a violation, will be implemented and tested. Finally, if the blue and orange part will work eﬃciently, the ﬁnal green part, Ticket, will be implemented and tested. During the implementation and testing process, we will make the component integration once we have ﬁnished each tier and tested each isolated component, meaning we will mix the diﬀerent phases and try to detect possible defaults in our design.
+In ﬁgure \ref{fig:Test}, the overall process structure of the implementation has been shown. First, the blue part, will be implemented and tested. After the blue part works eﬃciently, the orange part, services related to report a violation, will be implemented and tested. Finally, if the blue and orange part will work eﬃciently, the ﬁnal green part, Ticket, will be implemented and tested. During the implementation and testing process, we will make the component integration once we have ﬁnished each tier and tested each isolated component, meaning we will mix the different phases and try to detect possible defaults in our design.
 
 As mentioned in \ref{fig:Test}, we will start with developing the User component. The Sign-Up and Login components are clearly an entry condition for the right functioning of the system, but they are not the main features and they are not very compicated. These two components can be implemented and tested at any order. After Implemeting and testing User component, we will continue with the next part of the implementation of the software which is Violation component. We will integrate all the services and test whether the whole Violation component will work as it is expected. If the result is positive, we will continue with the next last of the implementation of the software. If the result is negative, we should study if something is wrong in our code or if we should make any changes in the project development.
 
@@ -68,4 +68,3 @@ The subsystems to be integrated are 1:
 
 \paragraph{Integration of all subsystems}
 Once the front-end has been integrated with the Back-end, the system will be fully tested, with the respect of all the components shown in the Component Diagram.
-
