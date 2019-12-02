@@ -113,18 +113,16 @@ As an example: on the application side we have the use case "Take picture" which
   \item \textbf{Sign-Up}: This component receives from the APP the username, password and personal information of a new user who is registering to the service. It must be able to check if the username is already in use or not. Then it must encrypt the password. Lastly it stores the new user in the database.
   \item \textbf{Login}: This component receives from the APP the request of a user trying to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
   \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found, it sends to the APP the plate just decoded with a success message. This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name of the road and the number.
-
   \item \textbf{Get form}: This component receives the PUT request from the APP containing the content of the form assocciated to the picture of the violation. This request is PUT type because it must update the existing violation docment in database adding the kind of violation.
-
   \item \textbf{List Vehicles}: This component is used to query the database of violations in order to get the list of veichels with the associated count of violations occurred.
+  \item \textbf{Street Heatmap}: This component is responsible of getting the map from
+  \item \textbf{Ticket Approval}: This component is used to provide the mobile APP the list of ticket available for approval and then et the
+  \item \textbf{Ticket Creator}: This component is used to automatically create a new ticket, based on the data present in the violation database.
 
 
-  \item \textbf{Street Heatmap}: this component periodically
+  \item \textbf{Ticket Offenders}: This component does the query of the ticket database in order to return to the mobile APP the list of people who received the highest number of tickets.
 
-  \item \textbf{Ticket Approval}:
-  \item \textbf{Ticket Creator}:
-  \item \textbf{Ticket Offenders}:
-  \item \textbf{Trends}:
+  \item \textbf{Trends}: This component contains the logic in order to provide some aggregated data about the emitted tickets.
 
 \end{itemize}
 
@@ -208,7 +206,12 @@ In figure \ref{fig:DDSeqSeverPic} is shown the sequence diagram for the Applicat
 \end{figure}
 
 
+\subsection{Component interfaces}
 
+
+%add diagramm for methods one for server and one for mobile
+
+%verbal description why we have only two internal interfaces (IN and OUT), with all the possible methods
 
 \subsection{Selected Architectural styles and patterns}
 \input{Files/clean} \label{cleanArchiref}
