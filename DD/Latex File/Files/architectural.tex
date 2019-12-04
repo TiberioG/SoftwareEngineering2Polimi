@@ -171,7 +171,7 @@ The third tier is the \textbf{DB Server}. It consists in another server where we
 
 
 \subsection{Runtime view}
-A note for the sequence diagrams, we omit that every call to and from a specific use case must pass from the use case interactor to keep it simpler.
+A note for the sequence diagrams, to keep the diarams more readable, we omit that every call to and from a specific use case must pass from the use case interactor which manaes the component interfaces.
 
 \subsubsection{Reporting Violation}
 \begin{figure}[H]
@@ -204,6 +204,39 @@ In figure \ref{fig:DDSeqSeverPic} is shown the sequence diagram for the Applicat
 \includegraphics[width=\textwidth]{Images/DDSeqSeverForm.png}
 \caption{\label{fig:DDSeqSeverForm} Sequence diagram for getting the form by Application Server}
 \end{figure}
+
+
+\subsubsection{Streets Heatmap}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSeqAppMap.png}
+\caption{\label{fig:DDSeqSeverForm} Sequence diagram for }
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSeqSeverMap.png}
+\caption{\label{fig:DDSeqSeverForm} Sequence diagram for }
+\end{figure}
+
+
+\subsubsection{Vehicle list by violations}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSeqAppList.png}
+\caption{\label{fig:DDSeqAppList} Sequence diagram for }
+\end{figure}
+
+In figure \ref{fig:DDSeqAppList} is shown the sequence diagram for the use case of showing the list of plates ordered by number of violations .
+The user interacts with the \textbf{PageManager} asking to open the section with the list of violators, with the resukt that the use case \textbf{List Vehicles} is loaded. This use case has to interact with the API in order to retrieve the list of vehicles associated with the count of violation. So the use case calls the \textbf{Application server API client}  which performs the actual call to the REST API. Once a JSON file containin the data required is returned by the API, the use case can open the \textbf{List vehicles widget} responsible of showing on the app the list.
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSeqSeverList.png}
+\caption{\label{fig:DDSeqSeverForm} Sequence diagram for }
+\end{figure}
+
 
 
 \subsection{Component interfaces}
