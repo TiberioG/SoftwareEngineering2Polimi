@@ -5,14 +5,14 @@
 \contentsline {figure}{\numberline {5}{\ignorespaces Sequence diagram for picture storage by Application Server\relax }}{14}{figure.caption.19}
 \contentsline {figure}{\numberline {6}{\ignorespaces Sequence diagram for filling form on Mobile App\relax }}{15}{figure.caption.20}
 \contentsline {figure}{\numberline {7}{\ignorespaces Sequence diagram for getting the form by Application Server\relax }}{15}{figure.caption.21}
-\contentsline {figure}{\numberline {8}{\ignorespaces Sequence diagram for \relax }}{16}{figure.caption.22}
-\contentsline {figure}{\numberline {9}{\ignorespaces Sequence diagram for \relax }}{16}{figure.caption.23}
-\contentsline {figure}{\numberline {10}{\ignorespaces Sequence diagram for \relax }}{17}{figure.caption.24}
-\contentsline {figure}{\numberline {11}{\ignorespaces Sequence diagram for \relax }}{17}{figure.caption.25}
-\contentsline {figure}{\numberline {12}{\ignorespaces Clean Architecture \cite {clean} p. 203\relax }}{18}{figure.caption.26}
-\contentsline {figure}{\numberline {13}{\ignorespaces A general overview of the service implementation\relax }}{23}{figure.caption.31}
-\contentsline {figure}{\numberline {14}{\ignorespaces report violation integration\relax }}{23}{figure.caption.33}
-\contentsline {figure}{\numberline {15}{\ignorespaces Mine Information integration\relax }}{24}{figure.caption.34}
-\contentsline {figure}{\numberline {16}{\ignorespaces Issuing Ticket integration\relax }}{24}{figure.caption.35}
-\contentsline {figure}{\numberline {17}{\ignorespaces Show Statistics integration\relax }}{25}{figure.caption.36}
-\contentsline {figure}{\numberline {18}{\ignorespaces Mobile App integration\relax }}{25}{figure.caption.38}
+\contentsline {figure}{\numberline {8}{\ignorespaces Sequence diagram for showing Heatmap on Mobile App\relax }}{16}{figure.caption.22}
+\contentsline {figure}{\numberline {9}{\ignorespaces Sequence diagram for creating Heatmap on Application Server\relax }}{16}{figure.caption.23}
+\contentsline {figure}{\numberline {10}{\ignorespaces Sequence diagram for showing list of vehicles ordered by violations in Mobile App \relax }}{17}{figure.caption.24}
+\contentsline {figure}{\numberline {11}{\ignorespaces Sequence diagram for getting list of vehicles ordered by violations in Application Server \relax }}{18}{figure.caption.25}
+\contentsline {figure}{\numberline {12}{\ignorespaces Clean Architecture \cite {clean} p. 203\relax }}{19}{figure.caption.26}
+\contentsline {figure}{\numberline {13}{\ignorespaces A general overview of the service implementation\relax }}{24}{figure.caption.36}
+\contentsline {figure}{\numberline {14}{\ignorespaces report violation integration\relax }}{24}{figure.caption.38}
+\contentsline {figure}{\numberline {15}{\ignorespaces Mine Information integration\relax }}{25}{figure.caption.39}
+\contentsline {figure}{\numberline {16}{\ignorespaces Issuing Ticket integration\relax }}{25}{figure.caption.40}
+\contentsline {figure}{\numberline {17}{\ignorespaces Show Statistics integration\relax }}{26}{figure.caption.41}
+\contentsline {figure}{\numberline {18}{\ignorespaces Mobile App integration\relax }}{26}{figure.caption.43}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  4 DEC 2019 10:21
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  4 DEC 2019 14:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1102,7 +1102,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \openout6 = `main.lot'.
 
  [3] (./Files/introduction.tex
-Overfull \hbox (8.73103pt too wide) in paragraph at lines 33--34
+Overfull \hbox (8.73103pt too wide) in paragraph at lines 32--33
 []\TU/FuturaBook(0)/m/sc/10.95 Reverse geocoding: the process of converting geo
 graphic coordinates into a human-readable
  []
@@ -1150,22 +1150,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [15]
 File: Images/DDSeqSeverMap.png Graphic file (type bmp)
 <Images/DDSeqSeverMap.png>
+
+[16]
 File: Images/DDSeqAppList.png Graphic file (type bmp)
 <Images/DDSeqAppList.png>
+File: Images/DDSeqSeverList.png Graphic file (type bmp)
+<Images/DDSeqSeverList.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-File: Images/DDSeqSeverList.png Graphic file (type bmp)
-<Images/DDSeqSeverList.png>
+ [17]
+./Files/architectural.tex:259: Misplaced alignment tab character &.
+l.259 ...iolations/plates.json?countby=violations&
+                                                  sort=desc
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
 (./Files/clean.tex
 File: Images/cleanArchi.pdf Graphic file (type pdf)
 <use Images/cleanArchi.pdf>
- [17] [18])) [19] (./Files/ui.tex) [20
 
-]
-(./Files/requirements.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+[19])) [20] (./Files/ui.tex) [21
+
+] (./Files/requirements.tex
 Overfull \hbox (34.23364pt too wide) in paragraph at lines 5--30
 [][]
  []
@@ -1175,7 +1189,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--30
 
  []
 
-) [21
+) [22
 
 ] (./Files/implemintest.tex
 Overfull \hbox (10.06334pt too wide) in paragraph at lines 12--13
@@ -1188,7 +1202,7 @@ File: Images/ImplemetationandTest.png Graphic file (type bmp)
 <Images/ImplemetationandTest.png>
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
-[22
+[23
 
 ]
 File: Images/reportviolationintegration.png Graphic file (type bmp)
@@ -1198,7 +1212,7 @@ File: Images/MineInfoIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]
+ [24]
 File: Images/TicketIntegration.png Graphic file (type bmp)
 <Images/TicketIntegration.png>
 File: Images/StatisticsIntegration.png Graphic file (type bmp)
@@ -1206,43 +1220,34 @@ File: Images/StatisticsIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
+ [25]
 File: Images/BackEndIntegration.png Graphic file (type bmp)
 <Images/BackEndIntegration.png>
 )
-[25] [26] (./Files/effort.tex)
+[26] [27] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
- [27
+ [28
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 140.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 8C985D40663AAED8110CA76EBB8BB3BC.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: FF80BA1D165F8E9F6B695F40D0D22E5B
-(rerunfilecheck)             After:  62416030BD0C91A452A6456F4B315BFA.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23678 strings out of 492970
- 436718 string characters out of 6133938
- 553777 words of memory out of 5000000
- 27403 multiletter control sequences out of 15000+600000
+ 23682 strings out of 492970
+ 436792 string characters out of 6133938
+ 555194 words of memory out of 5000000
+ 27407 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,11n,65p,10467b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,65p,10467b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (27 pages).
+Output written on main.pdf (28 pages).

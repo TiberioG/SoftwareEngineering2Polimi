@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {1.2}Scope}{4}{subsection.1.2}
 \contentsline {subsection}{\numberline {1.3}Definitions, acronyms, abbreviations}{4}{subsection.1.3}
 \contentsline {subsubsection}{\numberline {1.3.1}Definitions}{4}{subsubsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.2}Acronyms}{5}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2}Acronyms}{4}{subsubsection.1.3.2}
 \contentsline {subsubsection}{\numberline {1.3.3}Abbreviations}{5}{subsubsection.1.3.3}
 \contentsline {subsection}{\numberline {1.4}Revision history}{5}{subsection.1.4}
 \contentsline {subsection}{\numberline {1.5}Reference Documents}{5}{subsection.1.5}
@@ -31,25 +31,26 @@
 \contentsline {subsection}{\numberline {2.4}Runtime view}{12}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Reporting Violation}{13}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Streets Heatmap}{16}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Vehihcle list by violations}{17}{subsubsection.2.4.3}
-\contentsline {subsection}{\numberline {2.5}Component interfaces}{17}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}API interfaces}{17}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Selected Architectural styles and patterns}{17}{subsection.2.7}
-\contentsline {subsubsection}{\numberline {2.7.1}Dependency Rule}{18}{subsubsection.2.7.1}
-\contentsline {subsubsection}{\numberline {2.7.2}Entities}{18}{subsubsection.2.7.2}
-\contentsline {subsubsection}{\numberline {2.7.3}Use Cases}{18}{subsubsection.2.7.3}
-\contentsline {subsubsection}{\numberline {2.7.4}Interface Adapters}{19}{subsubsection.2.7.4}
-\contentsline {subsubsection}{\numberline {2.7.5}Adantages of Clean architecture}{19}{subsubsection.2.7.5}
-\contentsline {subsubsection}{\numberline {2.7.6}REST}{19}{subsubsection.2.7.6}
-\contentsline {subsection}{\numberline {2.8}Other design decisions}{19}{subsection.2.8}
-\contentsline {paragraph}{Flutter}{19}{section*.27}
-\contentsline {paragraph}{Node.js}{19}{section*.28}
-\contentsline {paragraph}{MongoDB}{19}{section*.29}
-\contentsline {section}{\numberline {3}User Interface Design}{20}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{21}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{22}{section.5}
-\contentsline {subsection}{\numberline {5.1}Sequence of component integration}{22}{subsection.5.1}
-\contentsline {paragraph}{Integration of the all internal components of the application server}{23}{section*.32}
-\contentsline {paragraph}{Integration of the frontend with backend}{25}{section*.37}
-\contentsline {paragraph}{Integration of all subsystems}{26}{section*.39}
-\contentsline {section}{\numberline {6}Effort Spent}{27}{section.6}
+\contentsline {subsubsection}{\numberline {2.4.3}Vehicle list by violations}{17}{subsubsection.2.4.3}
+\contentsline {subsection}{\numberline {2.5}Component interfaces}{18}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}API interfaces}{18}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Selected Architectural styles and patterns}{18}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}Clean Architecture}{18}{subsubsection.2.7.1}
+\contentsline {paragraph}{Dependency Rule}{19}{section*.27}
+\contentsline {paragraph}{Entities}{19}{section*.28}
+\contentsline {paragraph}{Use Cases}{19}{section*.29}
+\contentsline {paragraph}{Interface Adapters}{19}{section*.30}
+\contentsline {paragraph}{Adantages of Clean architecture}{20}{section*.31}
+\contentsline {subsubsection}{\numberline {2.7.2}REST}{20}{subsubsection.2.7.2}
+\contentsline {subsection}{\numberline {2.8}Other design decisions}{20}{subsection.2.8}
+\contentsline {paragraph}{Flutter}{20}{section*.32}
+\contentsline {paragraph}{Node.js}{20}{section*.33}
+\contentsline {paragraph}{MongoDB}{20}{section*.34}
+\contentsline {section}{\numberline {3}User Interface Design}{21}{section.3}
+\contentsline {section}{\numberline {4}Requirements Traceability}{22}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{23}{section.5}
+\contentsline {subsection}{\numberline {5.1}Sequence of component integration}{23}{subsection.5.1}
+\contentsline {paragraph}{Integration of the all internal components of the application server}{24}{section*.37}
+\contentsline {paragraph}{Integration of the frontend with backend}{26}{section*.42}
+\contentsline {paragraph}{Integration of all subsystems}{27}{section*.44}
+\contentsline {section}{\numberline {6}Effort Spent}{28}{section.6}

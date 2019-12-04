@@ -181,7 +181,7 @@ A note for the sequence diagrams, to keep the diarams more readable, we omit tha
 \end{figure}
 
 In figure \ref{fig:DDSeqAppPic} is shown the sequence diagram for the use case of taking a picture using the mobile application.
-The user interacts with the \textbf{PageManager} pressing the button to open the "Report Violation section", so the \textbf{TakePicture} use case is loaded because it's the first step needed to start the reporting of a violation. This opens the \textbf{CameraWidget} that is the component of the Presenter responible of showing on screen the camera recording. When the widget is correctly started the user can take the picture pressing the main button. The widget has to tell the \textbf{TakePicture} use case that the button has been pressed so the picture can  actually be taken and stored locally. The camera widget can now show the picture just taken and show the brush tool mode. If there is need the user can cover whith is finger some areas of the picture. The widget communicates to the use case the location of those areas so the image can be manipulated by the \textbf{TakePicture} use case and stored. This can happen until the user presses the "done button". Now the the \textbf{TakePicture} use case asks the the \textbf{LocationManager} to return the GPS coordinates of the device. An Unique identifier is generated which is passed with the picture to the \textbf{Application Server API client} which has to actually make the POST HTTP request to the Application Server. What happens in the applcation server is described later in the following Sequence diagram in Figure \ref{fig:DDSeqSeverPic}.
+The user interacts with the \textbf{PageManager} pressing the button to open the "Report Violation section", so the \textbf{TakePicture} use case is loaded because it's the first step needed to start the reporting of a violation. This opens the \textbf{CameraWidget} that is the component of the Presenter responible of showing on screen the camera recording. When the widget is correctly started the user can take the picture pressing the main button. The widget has to tell the \textbf{TakePicture} use case that the button has been pressed so the picture can  actually be taken and stored locally. The camera widget can now show the picture just taken and show the brush tool mode. If there is need the user can cover whith is finger some areas of the picture. The widget communicates to the use case the location of those areas so the image can be manipulated by the \textbf{TakePicture} use case and stored. This can happen until the user presses the "done button". Now the the \textbf{TakePicture} use case asks the the \textbf{LocationManager} to return the GPS coordinates of the device. An Unique identifier is generated which is passed with the picture to the \textbf{Application Server API client} which has to actually make the POST HTTP request to the Application Server (endpoint \url{/API/v1/violations/id} ). What happens in the applcation server is described later in the following Sequence diagram in Figure \ref{fig:DDSeqSeverPic}.
 When an answer is received there are three options possible: if no plates have been found, the use case has to start again, so it tells the widget to show a message for the user, asking to retake the picture including the plate.
 If more than one plates are found, the use case has to ask the widget to show a message asking the user to use again the brush tool mode to cover the plates not required. If one plate is correctly identified the use case can tell the widget to show a success messae and terminates. %done!
 
@@ -210,39 +210,54 @@ In figure \ref{fig:DDSeqSeverPic} is shown the sequence diagram for the Applicat
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/DDSeqAppMap.png}
-\caption{\label{fig:DDSeqSeverForm} Sequence diagram for }
+\caption{\label{fig:DDSeqAppMap} Sequence diagram for showing Heatmap on Mobile App}
 \end{figure}
+
+In Figure \ref{fig:DDSeqAppMap} is shown the sequence diagram for the use case of showing the Heatmap of violations.
+The user interacts with the \textbf{PageManager} asking to open the section with the Heatmap, with the result that the use case \textbf{Street Heatmap} is loaded. This use case first has to use the internal component interface with the controller in order to know the location of the user. This is done by calling the \textbf{Location Manager}. Then it has to interact with the API in order to retrieve the actual map with the following request: \url{GET} \url{/API/v1/heatmap/lat=xxx&long=xxx}.
+Once the map is returned the \textbf{Map Widget} can be opened.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/DDSeqSeverMap.png}
-\caption{\label{fig:DDSeqSeverForm} Sequence diagram for }
+\caption{\label{fig:DDSeqSeverMap} Sequence diagram for creating Heatmap on Application Server}
 \end{figure}
+
+In figure \ref{fig:DDSeqSeverMap} is shown the sequence diagram for the use case of creating the Heatmap on the Application Server.
+Once the server receives a GET request from the endpoint devoted offer the Heatmap (example: \url{/API/v1/heatmap/lat=xxx&long=xxx}) the first thing that it does is querying the database containing all the violations, getting the coordiantes of each violation reported. The Heatmap Layer is part of the \textcolor{poliblue}{google.maps.visualization} library, which must be loaded. Using the data from violations it's now possible to create a \textcolor{poliblue}{HeatmapLayer} object containing the latitude and longitude of every violation that must be visualized \cite{GMapsHeat}. After instantiating the \textcolor{poliblue}{HeatmapLayer} object it has to be added to the map by calling the \textcolor{poliblue}{setMap()} method of the Google Maps API.
+
+
+
+
 
 
 \subsubsection{Vehicle list by violations}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/DDSeqAppList.png}
-\caption{\label{fig:DDSeqAppList} Sequence diagram for }
+\caption{\label{fig:DDSeqAppList} Sequence diagram for showing list of vehicles ordered by violations in Mobile App }
 \end{figure}
 
-In figure \ref{fig:DDSeqAppList} is shown the sequence diagram for the use case of showing the list of plates ordered by number of violations .
-The user interacts with the \textbf{PageManager} asking to open the section with the list of violators, with the resukt that the use case \textbf{List Vehicles} is loaded. This use case has to interact with the API in order to retrieve the list of vehicles associated with the count of violation. So the use case calls the \textbf{Application server API client}  which performs the actual call to the REST API. Once a JSON file containin the data required is returned by the API, the use case can open the \textbf{List vehicles widget} responsible of showing on the app the list.
+In Figure \ref{fig:DDSeqAppList} is shown the sequence diagram for the use case of showing the list of plates ordered by number of violations.
+The user interacts with the \textbf{PageManager} asking to open the section with the list of violators, with the result that the use case \textbf{List Vehicles} is loaded. This use case has to interact with the API in order to retrieve the list of vehicles associated with the count of violations. This is dove with a GET request that must also specify the number of records than needed to be retreived. As for example: \url{GET} \url{/API/v1/violations/plates.json?countby=violations&sort=desc&depth=x}   So the use case calls the \textbf{Application server API client}  which performs the actual call to the REST API. Once a JSON file containing the data required is returned by the API, the use case can open the \textbf{List vehicles widget} responsible of showing on the app the list.
 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/DDSeqSeverList.png}
-\caption{\label{fig:DDSeqSeverForm} Sequence diagram for }
+\caption{\label{fig:DDSeqSeverList} Sequence diagram for getting list of vehicles ordered by violations in Application Server  }
 \end{figure}
-
-
+In figure \ref{fig:DDSeqSeverList} is shown the sequence diagram for the use case of getting from database the list of vehicles that committed the most violations, ordering and then offering the API endpoint.
+Once the server receives a GET request from the endpoint devoted to the list of violations (example: \url{/API/v1/violations/plates.json?countby=violations&sort=desc&depth=x}) it has to query the database of violations and count the number of violation for each unique plate. Then it must sort them in descending order and creating a JSON file that must be returned to who called the API. The numner of record returned was specified in the GET request.
 
 \subsection{Component interfaces}
 
 
 \subsection{API interfaces}
+
+
+/API/v1/violations/plates.json?countby=violations&sort=desc
+
 
 
 %add diagramm for methods one for server and one for mobile
