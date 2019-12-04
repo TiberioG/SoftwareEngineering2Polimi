@@ -1,15 +1,15 @@
 This section will discuss the implementation, integration and testing of the SafeStreet application. The section aims to prevent any setbacks entailing changes on the project once started its development and do multiple tasks twice. First of all, it is important to divide the project into smaller components in order to have more concrete goals that help keep the developers’ motivation high and make a straightforward development of the project. Therefore, we will divide the project in dfferent components, starting from the ones that are responsible of the basic features and going on until the end, where we will develop the most speciﬁc ones. It is not a new method, because it has been studied during this course and it is referred to as ‘bottom-up’ strategy. This method will help providing a better integration of the project tier-by-tier and make different tests of the behaviour of the application before it ends. The System can be divided into three main parts as following:
 \begin{itemize}
-    \item \textbf{Frontend components:} contains the Mobile App.
-    \item \textbf{Backend components:} contains the application server with all its components and the DBMS.
-    \item \textbf{External components:} contains all the external components, such as the ALPR, to extract the license plate from a photo, and so on.
+    \item \textbf{Mobile Application}
+    \item \textbf{Application Server}
+    \item \textbf{External components} 
 \end{itemize}
- It should be noted that the external systems’ components need not to be implemented and tested just because they are external and they can be considered reliable.
-Going back to our project, we will divide the Mobile App component to three main entities, corresponding to User, Violation and Ticket.
+ External components contains all the external components, such as the ALPR, to extract the license plate from a photo, , Map API and  so on. It should be noted that the external systems’ components need not to be implemented and tested just because they are external and they can be considered reliable.
+Going back to our project, we will divide the Mobile App component and Application Server component to three main entities, corresponding to User, Violation and Ticket.
 The services that have to be created for each entity are:
 \begin{itemize}
 \item{} \textit{User}: Sign-UP, Login
-\item{} \textit{Violation}: Report Violation, Take Picture, Fill Form, Violation Info, List Vehicles, Street Heatmap, Mine information.
+\item{} \textit{Violation}: Take Picture, Fill Form, Violation Info, List Vehicles, Street Heatmap, Mine information.
 \item{} \textit{Ticket}: Ticket Approval, Statistics, Ticket offenders, Trends.
 \end{itemize}
 
@@ -26,45 +26,75 @@ As mentioned in \ref{fig:Test}, we will start with developing the User component
 \subsection{Sequence of component integration}
 The diagrams below describe the sequence of the component implementation, integration and testing of the system. The arrows starts from the component which uses the other one.
 
-\paragraph{Integration of the all internal components of the application server}
-Firstly all the components will be implemented and tested with unit tests. Then the integration process will proceed in the following order and the integration is tested as well.
+\paragraph{Integration of the all components of the Mobile Application}
+Firstly all the Mobile Application components will be implemented and tested with unit tests. Then the integration process will proceed and the integration is tested as well. All the Use Case Interactor should be integraterd with their corresponding Presenter and Contoroler. In the following integration between main components are shown.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/reportviolationintegration.png}
-\caption{\label{fig:reportviolationintegration} report violation integration}
+\includegraphics[width=\textwidth]{Images/LoginIntegration.png}
+\caption{\label{fig:LoginIntegration}Mobile application login integration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/MineInfoIntegration.png}
-\caption{\label{fig:MineInfoIntegration} Mine Information integration}
+\includegraphics[width=\textwidth]{Images/TakePicIntegration.png}
+\caption{\label{fig:TakePicIntegration}Take picture integration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/TicketIntegration.png}
-\caption{\label{fig:TicketIntegrationn} Issuing Ticket integration}
+\includegraphics[width=\textwidth]{Images/SendForm.png}
+\caption{\label{fig:SendFormIntegrationn} Send form integration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/StatisticsIntegration.png}
-\caption{\label{fig:StatisticsIntegration} Show Statistics integration}
+\includegraphics[width=\textwidth]{Images/SignUpIntegration.png}
+\caption{\label{fig:SignUpIntegration}Mobile application sign up integration}
 \end{figure}
+
+\paragraph{Integration of the all components of the Server Application}
+When all the Mobile Application components implemented, tested and integrated, we should do the the same for Server Application components. In this part all the Use Case Interactor should be integraterd with their corresponding Presenter and Contoroler. In the following integration between main components are shown.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/ServerLoginIntegration.png}
+\caption{\label{fig:ServerLoginIntegration}Server login integration}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/ServerSignUPIntegration.png}
+\caption{\label{fig:ServerSignUPIntegration}Server sign uP integration}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/ServerGetPicIntegration.png}
+\caption{\label{fig:ServerGetPicIntegration} Server get picture integration}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/TicketCreatorIntegration.png}
+\caption{\label{fig:TicketCreatorIntegration} Ticket Creator integration}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/StreetHeatmapIntegration.png}
+\caption{\label{fig:StreetHeatmapIntegration}Street Heat map Integration}
+\end{figure}
+
 
 \paragraph{Integration of the frontend with backend}
-Once all the components are implemented and tested among each others, the frontend will be integrated and tested within the backend. \\
-The subsystems to be integrated are 1:
-\begin{itemize}
-       \item The Mobile app Client, that interacts with the Use Case Interactor
-\end{itemize}
+Once all the components are implemented and tested among each others, the Mobile Application will be integrated and tested within the Server Application. \\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\textwidth]{Images/BackEndIntegration.png}
-\caption{\label{fig:BackEndIntegration} Mobile App integration}
+\includegraphics[width=\textwidth]{Images/MobileServerIntegration.png}
+\caption{\label{fig:MobileServerIntegration} Integration of Mobile Application and Server }
 \end{figure}
 
 \paragraph{Integration of all subsystems}
-Once the front-end has been integrated with the Back-end, the system will be fully tested, with the respect of all the components shown in the Component Diagram.
+Once theMobile Application has been integrated with theServer side, the system will be fully tested, with the respect of all the components shown in the Component Diagram.
