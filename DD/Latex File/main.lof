@@ -11,8 +11,13 @@
 \contentsline {figure}{\numberline {11}{\ignorespaces Sequence diagram for getting list of vehicles ordered by violations in Application Server \relax }}{18}{figure.caption.25}
 \contentsline {figure}{\numberline {12}{\ignorespaces Clean Architecture \cite {clean} p. 203\relax }}{19}{figure.caption.26}
 \contentsline {figure}{\numberline {13}{\ignorespaces A general overview of the service implementation\relax }}{24}{figure.caption.36}
-\contentsline {figure}{\numberline {14}{\ignorespaces report violation integration\relax }}{24}{figure.caption.38}
-\contentsline {figure}{\numberline {15}{\ignorespaces Mine Information integration\relax }}{25}{figure.caption.39}
-\contentsline {figure}{\numberline {16}{\ignorespaces Issuing Ticket integration\relax }}{25}{figure.caption.40}
-\contentsline {figure}{\numberline {17}{\ignorespaces Show Statistics integration\relax }}{26}{figure.caption.41}
-\contentsline {figure}{\numberline {18}{\ignorespaces Mobile App integration\relax }}{26}{figure.caption.43}
+\contentsline {figure}{\numberline {14}{\ignorespaces Mobile application login integration\relax }}{24}{figure.caption.38}
+\contentsline {figure}{\numberline {15}{\ignorespaces Take picture integration\relax }}{25}{figure.caption.39}
+\contentsline {figure}{\numberline {16}{\ignorespaces Send form integration\relax }}{25}{figure.caption.40}
+\contentsline {figure}{\numberline {17}{\ignorespaces Mobile application sign up integration\relax }}{26}{figure.caption.41}
+\contentsline {figure}{\numberline {18}{\ignorespaces Server login integration\relax }}{26}{figure.caption.43}
+\contentsline {figure}{\numberline {19}{\ignorespaces Server sign uP integration\relax }}{27}{figure.caption.44}
+\contentsline {figure}{\numberline {20}{\ignorespaces Server get picture integration\relax }}{27}{figure.caption.45}
+\contentsline {figure}{\numberline {21}{\ignorespaces Ticket Creator integration\relax }}{28}{figure.caption.46}
+\contentsline {figure}{\numberline {22}{\ignorespaces Street Heat map Integration\relax }}{28}{figure.caption.47}
+\contentsline {figure}{\numberline {23}{\ignorespaces Integration of Mobile Application and Server \relax }}{29}{figure.caption.49}

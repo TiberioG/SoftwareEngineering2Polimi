@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  4 DEC 2019 14:44
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  5 DEC 2019 08:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1160,8 +1160,8 @@ File: Images/DDSeqSeverList.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
-./Files/architectural.tex:259: Misplaced alignment tab character &.
-l.259 ...iolations/plates.json?countby=violations&
+./Files/architectural.tex:255: Misplaced alignment tab character &.
+l.255 ...iolations/plates.json?countby=violations&
                                                   sort=desc
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1192,41 +1192,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--30
 ) [22
 
 ] (./Files/implemintest.tex
-Overfull \hbox (10.06334pt too wide) in paragraph at lines 12--13
-[]\TU/FuturaBook(0)/m/it/10.95 Violation\TU/FuturaBook(0)/m/sc/10.95 : Report V
-iolation, Take Picture, Fill Form, Violation Info, List Vehicles, Street Heatma
-p,
- []
-
 File: Images/ImplemetationandTest.png Graphic file (type bmp)
 <Images/ImplemetationandTest.png>
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
-[23
+ [23
 
 ]
-File: Images/reportviolationintegration.png Graphic file (type bmp)
-<Images/reportviolationintegration.png>
-File: Images/MineInfoIntegration.png Graphic file (type bmp)
-<Images/MineInfoIntegration.png>
+File: Images/LoginIntegration.png Graphic file (type bmp)
+<Images/LoginIntegration.png>
+File: Images/TakePicIntegration.png Graphic file (type bmp)
+<Images/TakePicIntegration.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-File: Images/TicketIntegration.png Graphic file (type bmp)
-<Images/TicketIntegration.png>
-File: Images/StatisticsIntegration.png Graphic file (type bmp)
-<Images/StatisticsIntegration.png>
+File: Images/SendForm.png Graphic file (type bmp)
+<Images/SendForm.png>
+File: Images/SignUpIntegration.png Graphic file (type bmp)
+<Images/SignUpIntegration.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
-File: Images/BackEndIntegration.png Graphic file (type bmp)
-<Images/BackEndIntegration.png>
-)
-[26] [27] (./Files/effort.tex)
+File: Images/ServerLoginIntegration.png Graphic file (type bmp)
+<Images/ServerLoginIntegration.png>
+File: Images/ServerSignUPIntegration.png Graphic file (type bmp)
+<Images/ServerSignUPIntegration.png>
+
+Underfull \vbox (badness 5431) has occurred while \output is active []
+
+ [26]
+File: Images/ServerGetPicIntegration.png Graphic file (type bmp)
+<Images/ServerGetPicIntegration.png>
+File: Images/TicketCreatorIntegration.png Graphic file (type bmp)
+<Images/TicketCreatorIntegration.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
+File: Images/StreetHeatmapIntegration.png Graphic file (type bmp)
+<Images/StreetHeatmapIntegration.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+File: Images/MobileServerIntegration.png Graphic file (type bmp)
+<Images/MobileServerIntegration.png>
+
+Underfull \vbox (badness 4013) has occurred while \output is active []
+
+ [28])
+[29] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
- [28
+ [30
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
@@ -1239,15 +1259,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23682 strings out of 492970
- 436792 string characters out of 6133938
+ 23712 strings out of 492970
+ 437700 string characters out of 6133938
  555194 words of memory out of 5000000
- 27407 multiletter control sequences out of 15000+600000
+ 27432 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  43i,12n,65p,10467b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (28 pages).
+Output written on main.pdf (30 pages).

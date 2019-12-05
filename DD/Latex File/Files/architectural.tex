@@ -1,17 +1,20 @@
 \subsection{Overview}
-The system to be developed has a three tier structure and it follows the structure service oriented.
+The system to be developed has a three tier structure and it follows the service oriented structure.
+Here we list the three main tiers:
 \begin{enumerate}
   \item Mobile application (client)
   \item Application Server
   \item Database
 \end{enumerate}
 
-The first tier consists in a mobile app running on mobile devices, smartphones or tablets with iOs or Android.
+The first tier consists in a mobile app running on mobile devices: smartphones or tablets with iOs or Android.
 This is the application the users will interact with.
 
 The second tier consists in an Application Server which provides the service as a RESTful API to the clients which are the running applications, and it's connected to the third tier, the Database Server where all data is stored.
 
-There are some advantages of our system architecture: the first one is the modularity of this approach of havinng different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one, whithout touching the application server.
+The third tier is the Database.
+
+There are some advantages of our system architecture: the first one is the modularity of this approach of havinng different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one, whithout modifying the application server.
 
 Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref} which is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
 One big advantage of this architecture is that we have a separated component for each use case.
@@ -28,7 +31,7 @@ Here are proposed the component views for both part of the system, the mobile ap
 \caption{\label{fig:compdiag1} Component diagram for Mobile Application}
 \end{sidewaysfigure}
 
-Figure \ref{fig:compdiag1}
+Figure \ref{fig:compdiag1} shows the component diagrams for the Mobile Application. In the following paragraph we describe all the components of each cluster.
 
 \paragraph{Entities}
 Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects that don't have any dependency on other part of the system (eg. frameworks).
