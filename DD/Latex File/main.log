@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  5 DEC 2019 08:34
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  5 DEC 2019 11:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1110,28 +1110,30 @@ graphic coordinates into a human-readable
 [4
 
 ]) [5] (./Files/architectural.tex
+
+LaTeX Warning: Reference `cleanArchiref' on page 6 undefined on input line 19.
+
 File: Images/ComponentDiagram1.png Graphic file (type bmp)
 <Images/ComponentDiagram1.png>
- [6
+[6
 
 ] [7] [8]
 File: Images/ComponentDiagram2.png Graphic file (type bmp)
 <Images/ComponentDiagram2.png>
  [9] [10] [11]
-Overfull \hbox (3.75063pt too wide) in paragraph at lines 145--146
- []\TU/FuturaBook(0)/bx/n/10.95 Presenter[] \TU/FuturaBook(0)/m/sc/10.95 The pr
-esenter is the macro components that encapsulates all the frameworks needed
- []
-
 File: Images/DeploymentDiagram1.png Graphic file (type bmp)
 <Images/DeploymentDiagram1.png>
+
+Underfull \vbox (badness 1675) has occurred while \output is active []
+
+ [12]
 File: Images/DDSeqAppPic.png Graphic file (type bmp)
 <Images/DDSeqAppPic.png>
 
-Underfull \vbox (badness 7667) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-[13]
+ [13]
+[14]
 File: Images/DDSeqSeverPic.png Graphic file (type bmp)
 <Images/DDSeqSeverPic.png>
 File: Images/DDSeqAppForm.png Graphic file (type bmp)
@@ -1139,7 +1141,7 @@ File: Images/DDSeqAppForm.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
+ [15]
 File: Images/DDSeqSeverForm.png Graphic file (type bmp)
 <Images/DDSeqSeverForm.png>
 File: Images/DDSeqAppMap.png Graphic file (type bmp)
@@ -1147,11 +1149,11 @@ File: Images/DDSeqAppMap.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
+ [16]
 File: Images/DDSeqSeverMap.png Graphic file (type bmp)
 <Images/DDSeqSeverMap.png>
 
-[16]
+[17]
 File: Images/DDSeqAppList.png Graphic file (type bmp)
 <Images/DDSeqAppList.png>
 File: Images/DDSeqSeverList.png Graphic file (type bmp)
@@ -1159,9 +1161,19 @@ File: Images/DDSeqSeverList.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-./Files/architectural.tex:255: Misplaced alignment tab character &.
-l.255 ...iolations/plates.json?countby=violations&
+ [18]
+
+LaTeX Warning: Reference `fig:DDSeqSeverList' on page 19 undefined on input lin
+e 246.
+
+File: Images/DDSeqSeverTickCreat.png Graphic file (type bmp)
+<Images/DDSeqSeverTickCreat.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+./Files/architectural.tex:270: Misplaced alignment tab character &.
+l.270 ...iolations/plates.json?countby=violations&
                                                   sort=desc
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1170,14 +1182,15 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-(./Files/clean.tex
+[20] (./Files/clean.tex
 File: Images/cleanArchi.pdf Graphic file (type pdf)
 <use Images/cleanArchi.pdf>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19])) [20] (./Files/ui.tex) [21
+LaTeX Warning: Reference `fig:cleanArchi' on page 21 undefined on input line 11
+.
+
+[21])) [22] (./Files/ui.tex) [23
 
 ] (./Files/requirements.tex
 Overfull \hbox (34.23364pt too wide) in paragraph at lines 5--30
@@ -1189,14 +1202,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--30
 
  []
 
-) [22
+) [24
 
 ] (./Files/implemintest.tex
 File: Images/ImplemetationandTest.png Graphic file (type bmp)
 <Images/ImplemetationandTest.png>
+
+
+LaTeX Warning: Reference `fig:Test' on page 25 undefined on input line 22.
+
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
- [23
+
+LaTeX Warning: Reference `fig:Test' on page 25 undefined on input line 24.
+
+[25
 
 ]
 File: Images/LoginIntegration.png Graphic file (type bmp)
@@ -1206,7 +1226,7 @@ File: Images/TakePicIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
+ [26]
 File: Images/SendForm.png Graphic file (type bmp)
 <Images/SendForm.png>
 File: Images/SignUpIntegration.png Graphic file (type bmp)
@@ -1214,7 +1234,7 @@ File: Images/SignUpIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [27]
 File: Images/ServerLoginIntegration.png Graphic file (type bmp)
 <Images/ServerLoginIntegration.png>
 File: Images/ServerSignUPIntegration.png Graphic file (type bmp)
@@ -1222,7 +1242,7 @@ File: Images/ServerSignUPIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 5431) has occurred while \output is active []
 
- [26]
+ [28]
 File: Images/ServerGetPicIntegration.png Graphic file (type bmp)
 <Images/ServerGetPicIntegration.png>
 File: Images/TicketCreatorIntegration.png Graphic file (type bmp)
@@ -1230,7 +1250,7 @@ File: Images/TicketCreatorIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
+ [29]
 File: Images/StreetHeatmapIntegration.png Graphic file (type bmp)
 <Images/StreetHeatmapIntegration.png>
 
@@ -1243,21 +1263,30 @@ File: Images/MobileServerIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 4013) has occurred while \output is active []
 
- [28])
-[29] (./Files/effort.tex)
+ [30])
+[31] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
- [30
+ [32
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 140.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8C985D40663AAED8110CA76EBB8BB3BC.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 4F7822F03379F8C0B2210C63015976FB
+(rerunfilecheck)             After:  D9A571A3CBD2E931CEC2AF5BB33C7D4D.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1265,12 +1294,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23712 strings out of 492970
- 437700 string characters out of 6133938
- 555194 words of memory out of 5000000
- 27432 multiletter control sequences out of 15000+600000
+ 23710 strings out of 492970
+ 437692 string characters out of 6133938
+ 554366 words of memory out of 5000000
+ 27429 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 43i,12n,65p,10467b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,12n,65p,10467b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (30 pages).
+Output written on main.pdf (32 pages).

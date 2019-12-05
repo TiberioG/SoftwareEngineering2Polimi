@@ -24,14 +24,14 @@ One big advantage of this architecture is that we have a separated component for
 Here are proposed the component views for both part of the system, the mobile application and the application server.
 
 \subsubsection{Mobile Application}
+Figure \ref{fig:compdiag1} shows the component diagrams for the Mobile Application. In the following paragraph we describe all the components of each cluster.
+
 %fig here of Component of mobile app
 \begin{sidewaysfigure}
 \centering
 \includegraphics[width=\textwidth]{Images/ComponentDiagram1.png}
 \caption{\label{fig:compdiag1} Component diagram for Mobile Application}
 \end{sidewaysfigure}
-
-Figure \ref{fig:compdiag1} shows the component diagrams for the Mobile Application. In the following paragraph we describe all the components of each cluster.
 
 \paragraph{Entities}
 Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects that don't have any dependency on other part of the system (eg. frameworks).
@@ -43,18 +43,17 @@ Use cases are components that represent our system actions, they are pure busine
 We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depends on the entites and has communication ports with the Controller and Presenter.
 In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the Presenter. As an example: if there is data coming from the camera, this is acquired by an adapter of the controller and is passed to the Use case interactor which coordinates the Use Cases and the data just acquired. After data is processed, it goes to the Presenter and visulalized by the widgets of the UI.
 
-Here follows the list of every Component of the Use case group. We have to add a note here: when it's written for example that a component interacts with the Application server, it doesn't mean that this component interacts directly with the Application API. As we have written before, every use case has to interact firstly direcly with the controller which handles then the connections with the external interfaces. The same goes for communicating with the UI, every data transfer happens via the Use-Case/Presenter interface. In order to keep the following descriptions short, we just say what the component does in a higher level.
-
+Here follows the list of every Component of the Use case group. We have to add a note here: when it's written for example that a component interacts with the Application Server, it doesn't mean that this component interacts directly with the Application API. As we have written before, every use case has to interact firstly with the controller, which handles then the connections with the external interfaces. The same goes for communicating with the UI, every data transfer happens via the Use-Case/Presenter interface. In order to keep the following descriptions short, we just say what the component does in a higher level.
 
 \begin{itemize}
   \item \textbf{Sign-Up}: This component allows to add new users to the system. It has to get the input strings (username, password, user data etc. ) from the sign-up widget, validate them before sending the request to the Application Server. After, it has get the answer from the Server and communicate to the user if the sign-up was successful or not.
-  \item \textbf{Login}: This component allows the login to the App. It has to get the input from the Login widget, communicate the strings to the Application Server and interpret the response if the user is autorized to login or not.
+  \item \textbf{Login}: This component allows the login to the App. It has to get the input from the Login widget, communicate the strings to the Application Server and interpret the response if the user is autorized to login or not. It must also manage the API key, received by the Application Server, which is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
   \item \textbf{Take Picture}: This component makes possible to take picture of violations. After the picture has been taken, it has to send it to the Application Server and wait for an asnwer. If the answer is that a plate is found, than it calls the next use case "Send form". If no plates are found it asks the user to take a picture again discarding the previous one. If more than one plate is found, it activates a "brush tool mode" (in the Camera Widget) to ask the user to cover the other plates present in the picture. Then it has to manipulate directly the picture changing the color of the pixels selected by the user. Lastly it can send the picture to the Server.
-  \item \textbf{Send form}: This component presents the user the form in which he can choose the type of volation. After the form has been submitted by the user, it is sent to the Application Server in order to be stored.
-  \item \textbf{List Vehicles}: This component asks the Application Server in order to get the list of vehicles that committed the most violations. Then it opens the widget to show a scrolling list view of paltes with the count of violations.
+  \item \textbf{Send form}: This component presents the user the form in which he can choose the type of volation referred to the picture just taken in the previous use case. After the form has been submitted by the user, it is sent to the Application Server in order to be stored.
+  \item \textbf{List Vehicles}: This component calls the Application Server in order to get the list of vehicles that committed the most violations. Then it opens the widget to show a scrolling list view of plates with the count of violations.
   \item \textbf{Street Heatmap}: This component asks the Application Server to provide the heatmap visualization of the areas where the violations happened.
-  \item \textbf{Ticket Approval}: This component is responsible of showing the tickets available for approval. Every time the Authority user opens this or refersh the list, the component has to call the Application Server in order to get the data about the pending ticket. Moreover this component offers the feature of approving or not a pending ticket using two buttons.
-  \item \textbf{Ticket Offenders}: This component is responsible of showing the list of the most egregious offenders by querying the Application Server
+  \item \textbf{Ticket Approval}: This component is responsible of showing the tickets available for approval. Every time the Authority user opens this or refersh the list, the component has to call the Application Server in order to get the data about the pending tickets. Moreover this component offers the feature of approving or discarding a pending ticket using two buttons.
+  \item \textbf{Ticket Offenders}: This component is responsible of showing the list of the most egregious offenders by querying the Application Server.
   \item \textbf{Trends}: This component has to show the desired statsistics about the issued tickets, querying the Application Server.
 \end{itemize}
 
@@ -73,29 +72,32 @@ The controller component encapsulates all the specific adapters which are devote
 Each component of the controller in fact implements the interfaces required by the use cases.
 Here is the description of each sub-component:
 \begin{itemize}
-  \item \textbf{Location Manager}: this component is responsible of getting the location of the user accessing the libraries of the OS of the device
+  \item \textbf{Location Manager}: this component is responsible of getting the location of the user, accessing the libraries of the OS of the device
   \item \textbf{Camera Manager}: this component is responsible of getting access to the camera of the device
-  \item \textbf{Application server API client}: this component handles all the HTTP requests to and from our Application server
+  \item \textbf{Application Server API client}: this component handles all the HTTP requests to and from our Application server
 \end{itemize}
 
 \paragraph{Presenter}
-The presenter is a macro component that includes all the components of the UI.
+The presenter is a macro component that communicates with all the components of the UI.
 Here follows the list of every component with the description:
 \begin{itemize}
-  \item \textbf{Page Manager}: this components coordinates every page shown in the mobile application, and provides the navigation bar
-  \item \textbf{Login Widget} : this is the login page and sig-up page, with the required input fields
-  \item \textbf{Camera Widget} : this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode"
+  \item \textbf{Page Manager}: this component coordinates every page shown in the mobile application, and provides the navigation bar
+  \item \textbf{Login Widget} : this is the login page and sign-up page, with the required input fields
+  \item \textbf{Camera Widget} : this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode". This is the graphic interface used to cover some parts of th epicture like with a black brush
   \item \textbf{Form Widget}: this shows a list of possible description of violations the user can select
   \item \textbf{Map Widget} : this is responsible for showing the street heatmap
-  \item \textbf{List Vehicles Widget} : this widget shows the list of vehicles that committed the most violations
-  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not. It also shows information about each one
-  \item \textbf{Statistics widget}: this can show some data visualization about the tickets issued
+  \item \textbf{List Vehicles Widget} : this widget shows the vehicles that committed the most violations as a scrolling list, showing the plate string and the count of violations per plate
+  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not. It also shows information about each one after the user clicks on it. It has also two buttons to approve or discard the selected ticket
+  \item \textbf{Statistics widget}: this can show some data visualization about the issued tickets
 \end{itemize}
 
 
 %%%%%%  APPLICATION SERVER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Application Server} \label{API}
+Figure \ref{fig:compdiag2} shows the component diagrams for the Mobile Application. In the following paragraph we describe all the components of each cluster.
+The architecture of the Application server looks the same as the Mobile Application, but has completly different components in the Presenter and Controller.
+
 %%fig  application server
 \begin{sidewaysfigure}
 \centering
@@ -103,11 +105,9 @@ Here follows the list of every component with the description:
 \caption{\label{fig:compdiag2} Component diagram for Application Server}
 \end{sidewaysfigure}
 
-The architecture of the Application server looks the same as the Mobile Application, but has completly different components in the Presenter and Controller.
 
 \paragraph{Entities}
- Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} are the main Entities of the Systemm, those are the same as the Mobile Application.
-
+ Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} which are the main Entities of the Systemm, those are the same as the Mobile Application.
 
 \paragraph{Use Cases}
 The use cases components for the server-side have almost the same names as the ones as the application, but they have a completly different logic.
@@ -115,20 +115,17 @@ As an example: on the application side we have the use case "Take picture" which
 \begin{itemize}
   \item \textbf{Sign-Up}: This component receives from the APP the username, password and personal information of a new user who is registering to the service. It must be able to check if the username is already in use or not. Then it must encrypt the password. Lastly it stores the new user in the database.
   \item \textbf{Login}: This component receives from the APP the request of a user trying to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
-  \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found, it sends to the APP the plate just decoded with a success message. This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name of the road and the number.
-  \item \textbf{Get form}: This component receives the PUT request from the APP containing the content of the form assocciated to the picture of the violation. This request is PUT type because it must update the existing violation docment in database adding the kind of violation.
+  \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found, it sends to the APP the plate just decoded with a success message.
+
+  This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name and the number of the road.
+  \item \textbf{Get form}: This component receives the PUT request from the APP containing the content of the form assocciated to the picture of the violation. This request is PUT type because it must update the existing violation docment in database adding the kind of violation. Once the request is received it parses the content and updates the database.
   \item \textbf{List Vehicles}: This component is used to query the database of violations in order to get the list of vehicles with the associated count of violations occurred.
-  \item \textbf{Street Heatmap}: This component is responsible of getting the map from
-  \item \textbf{Ticket Approval}: This component is used to provide the mobile APP the list of ticket available for approval and then et the
+  \item \textbf{Street Heatmap}: This component is responsible of getting the map from the external Maps API and then forward it to the Mobile Application. It receives as input the coordinates where the map should be centered via a GET request from the Mobile Application. It must also query the database in order to create a map layer containing the coordinates of every violation.
+  \item \textbf{Ticket Approval}: This component is used to provide the mobile APP the list of ticket available for approval.
   \item \textbf{Ticket Creator}: This component is used to automatically create a new ticket, based on the data present in the violation database.
-
-
   \item \textbf{Ticket Offenders}: This component does the query of the ticket database in order to return to the mobile APP the list of people who received the highest number of tickets.
-
   \item \textbf{Trends}: This component contains the logic in order to provide some aggregated data about the emitted tickets.
-
 \end{itemize}
-
 
 \paragraph{CoreUtils}
 This component encapsulates all the libraries, classes with methods and middleware that can be needed by any use case.
@@ -140,13 +137,19 @@ This component encapsulates all the libraries, classes with methods and middlewa
   \item Body parser for HTTP requests
 \end{itemize}
 
-
 \paragraph{Controller}
+The controller component encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the exteral APIs and the Database \ref{API}.
+\begin{itemize}
+  \item \textbf{MongoDB driver} This is the component responsible of managing every interaction with the database
+  \item \textbf{OpenALPR manager} This is the component responsible of managing every API call to the external service OpenALPR, used to decode the plates of a given picture
+  \item \textbf{Maps manager} This is the component responsible of managing every API call to the external Maps Service
+  \item \textbf{Validity checker} This is the component responsible of managing every API call to the external service used to check if a picture has been modified or not
+  \item \textbf{Authority DB manager} This is the component responsible of managing every API call to the external database of authorities.
+\end{itemize}
 
 
 \paragraph{Presenter}
-The presenter is the macro components that encapsulates all the frameworks needed to provide an API interface.
-
+The presenter is the macro component that encapsulates all the frameworks needed to provide an API interface.
 
 
 \subsection{Deployment view}
@@ -158,25 +161,19 @@ The presenter is the macro components that encapsulates all the frameworks neede
 
 In Figure \ref{fig:deploy} is shown the Deployment diagram of all the system.
 
-The deployment consist of three main devices. The first tier consist is \textbf{Mobile device} the user will use, which can be a smartphone or a tablet using as operating system either iOS or Android.
-The exection environment is the built Flutter app.
+The deployment consist of three main devices. The first tier consist in the \textbf{Mobile device} the user will use, which can be a smartphone or a tablet using as operating system either iOS or Android.
+The exection environment is the built SafeStreet app.
 
 
 The second tier is the \textbf{Application Server}. It is supposed to be a dedicated server running a linux distribution specific for server use. As an example of OS we choose Centos 7. Other distros can be used like Red Hat Enterprise Linux, Debian, OpenSUSE.
 As execution enviorment we install Node.js which is an open-source JavaScript runtime environment that executes JavaScript code outside of a browser. Inside Node.js we use the web application framework Express.js which is designed for building web applications and APIs.
 
-
 The third tier is the \textbf{DB Server}. It consists in another server where we run the DB system MongoDB. We choose to run the database in a separate server and not in the same as the ApplicationServer in order to increase scalability. MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.
 
-
-
-
-
-
 \subsection{Runtime view}
-A note for the sequence diagrams, to keep the diarams more readable, we omit that every call to and from a specific use case must pass from the use case interactor which manaes the component interfaces.
+A note for the sequence diagrams, to keep the diagrams more readable, we omit that every call to and from a specific use case must pass from the use case interactor which manaes the component interfaces.
 
-\subsubsection{Reporting Violation}
+\subsubsection{Reporting Violation}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/DDSeqAppPic.png}
@@ -209,7 +206,7 @@ In figure \ref{fig:DDSeqSeverPic} is shown the sequence diagram for the Applicat
 \end{figure}
 
 
-\subsubsection{Streets Heatmap}
+\subsubsection{Streets Heatmap}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/DDSeqAppMap.png}
@@ -227,10 +224,10 @@ Once the map is returned the \textbf{Map Widget} can be opened.
 \end{figure}
 
 In figure \ref{fig:DDSeqSeverMap} is shown the sequence diagram for the use case of creating the Heatmap on the Application Server.
-Once the server receives a GET request from the endpoint devoted offer the Heatmap (example: \url{/API/v1/heatmap/lat=xxx&long=xxx}) the first thing that it does is querying the database containing all the violations, getting the coordiantes of each violation reported. The Heatmap Layer is part of the \textcolor{poliblue}{google.maps.visualization} library, which must be loaded. Using the data from violations it's now possible to create a \textcolor{poliblue}{HeatmapLayer} object containing the latitude and longitude of every violation that must be visualized \cite{GMapsHeat}. After instantiating the \textcolor{poliblue}{HeatmapLayer} object it has to be added to the map by calling the \textcolor{poliblue}{setMap()} method of the Google Maps API. All the data of the map must be than forwarded to who made the GET request.
+Once the server receives a GET request from the endpoint devoted offer the Heatmap (example: \url{/API/v1/heatmap/lat=xxx&long=xxx}) the first thing that it does is querying the database containing all the violations, getting the coordiantes of each violation reported. The Heatmap Layer is part of the \textcolor{poliblue}{google.maps.visualization} library, which must be loaded. Using the data from violations it's now possible to create a \textcolor{poliblue}{HeatmapLayer} object containing the latitude and longitude of every violation that must be visualized \cite{GMapsHeat}. After instantiating the \textcolor{poliblue}{HeatmapLayer} object it has to be added to the map by calling the \textcolor{poliblue}{setMap()} method of the Google Maps API \cite{GMapsHeat}. All the data of the map must be than forwarded to who made the GET request.
 Using this logic we are in fact "mirroring" the Google Maps API on our Application Server. This approach has the following advantage: the mobile APP has only to interact with our Application Server which manages all the map creation (using the external service). So on the mobile app there is no nead to add a dedicated controller for the Maps service.
 
-\subsubsection{Vehicle list by violations}
+\subsubsection{Vehicle list by violations}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/DDSeqAppList.png}
@@ -248,6 +245,21 @@ The user interacts with the \textbf{PageManager} asking to open the section with
 \end{figure}
 In figure \ref{fig:DDSeqSeverList} is shown the sequence diagram for the use case of getting from database the list of vehicles that committed the most violations, ordering and then offering the API endpoint.
 Once the server receives a GET request from the endpoint devoted to the list of violations (example: \url{/API/v1/violations/plates.json?countby=violations&sort=desc&depth=x}) it has to query the database of violations and count the number of violation for each unique plate. Then it must sort them in descending order and creating a JSON file that must be returned to who called the API. The numner of record returned was specified in the GET request.
+
+
+\subsubsection{Ticket Creation}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/DDSeqSeverTickCreat.png}
+\caption{\label{fig:DDSeqSeverTickCreat}} Sequence diagram for %%%%%%%%%%%
+\end{figure}
+
+When a new violation has been successfully inserted, the use case \textbf{Get Form}, sends a message to the use case \textbf{Ticket Creator} informing that a new violation is available in the database so it's possible to start creating the corresponding ticket. Now the \textbf{Ticket Creator} knows the ID of the new inserted violation so it can query the Database for that specific violation. Then it uses the queried data of the violation to create a new Ticket Object. To check if the picture of the violation hasn't been altered it passes to the component \textbf{Validity checker} the path of the picture so it can be sent to the external service. Once the answer is received, we have to alternetives. If the picture is considered fake, the ticket attribute \textcolor{poliblue}{valid} is set to FALSE and the ticket is stored in the database for debu purposes or for cheater identification which can be later implemented.
+If the picture was authentic the ticket attribute \textcolor{poliblue}{valid} is set to TRUE. Then there is need to complete some attributes of the ticket quering the external Authority database. This is done by calling the component \textbf{Authority DB manager}. These attributes are: the name, surname and address of the owner of the violator, the amount of money to be paid and the deadline of payment for that kid of violation. After the new attributes are added to the Ticket object, it is stored in the database. Lastly a message to the use case \textbf{Ticket Approval} is sent, telling the ID of the new isnerted ticket.
+
+
+
+
 
 \subsection{Component interfaces}
 

@@ -18,40 +18,41 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Mobile Application}{6}{subsubsection.2.2.1}
 \contentsline {paragraph}{Entities}{6}{section*.6}
 \contentsline {paragraph}{Use Cases}{6}{section*.7}
-\contentsline {paragraph}{CoreUtils}{8}{section*.8}
+\contentsline {paragraph}{CoreUtils}{9}{section*.8}
 \contentsline {paragraph}{Controller}{9}{section*.9}
 \contentsline {paragraph}{Presenter}{9}{section*.10}
 \contentsline {subsubsection}{\numberline {2.2.2}Application Server}{9}{subsubsection.2.2.2}
-\contentsline {paragraph}{Entities}{9}{section*.12}
-\contentsline {paragraph}{Use Cases}{9}{section*.13}
-\contentsline {paragraph}{CoreUtils}{11}{section*.14}
+\contentsline {paragraph}{Entities}{11}{section*.12}
+\contentsline {paragraph}{Use Cases}{11}{section*.13}
+\contentsline {paragraph}{CoreUtils}{12}{section*.14}
 \contentsline {paragraph}{Controller}{12}{section*.15}
 \contentsline {paragraph}{Presenter}{12}{section*.16}
-\contentsline {subsection}{\numberline {2.3}Deployment view}{12}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Runtime view}{12}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Reporting Violation}{13}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Streets Heatmap}{16}{subsubsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.3}Vehicle list by violations}{17}{subsubsection.2.4.3}
-\contentsline {subsection}{\numberline {2.5}Component interfaces}{18}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}API interfaces}{18}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Selected Architectural styles and patterns}{18}{subsection.2.7}
-\contentsline {subsubsection}{\numberline {2.7.1}Clean Architecture}{18}{subsubsection.2.7.1}
-\contentsline {paragraph}{Dependency Rule}{19}{section*.27}
-\contentsline {paragraph}{Entities}{19}{section*.28}
-\contentsline {paragraph}{Use Cases}{19}{section*.29}
-\contentsline {paragraph}{Interface Adapters}{19}{section*.30}
-\contentsline {paragraph}{Adantages of Clean architecture}{20}{section*.31}
-\contentsline {subsubsection}{\numberline {2.7.2}REST}{20}{subsubsection.2.7.2}
-\contentsline {subsection}{\numberline {2.8}Other design decisions}{20}{subsection.2.8}
-\contentsline {paragraph}{Flutter}{20}{section*.32}
-\contentsline {paragraph}{Node.js}{20}{section*.33}
-\contentsline {paragraph}{MongoDB}{20}{section*.34}
-\contentsline {section}{\numberline {3}User Interface Design}{21}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{22}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{23}{section.5}
-\contentsline {subsection}{\numberline {5.1}Sequence of component integration}{23}{subsection.5.1}
-\contentsline {paragraph}{Integration of the all components of the Mobile Application}{24}{section*.37}
-\contentsline {paragraph}{Integration of the all components of the Server Application}{26}{section*.42}
-\contentsline {paragraph}{Integration of the frontend with backend}{28}{section*.48}
-\contentsline {paragraph}{Integration of all subsystems}{29}{section*.50}
-\contentsline {section}{\numberline {6}Effort Spent}{30}{section.6}
+\contentsline {subsection}{\numberline {2.3}Deployment view}{13}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Runtime view}{13}{subsection.2.4}
+\contentsline {subsubsection}{\numberline {2.4.1}Reporting Violation}{14}{subsubsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.2}Streets Heatmap}{17}{subsubsection.2.4.2}
+\contentsline {subsubsection}{\numberline {2.4.3}Vehicle list by violations}{18}{subsubsection.2.4.3}
+\contentsline {subsubsection}{\numberline {2.4.4}Ticket Creation}{20}{subsubsection.2.4.4}
+\contentsline {subsection}{\numberline {2.5}Component interfaces}{21}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}API interfaces}{21}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Selected Architectural styles and patterns}{21}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}Clean Architecture}{21}{subsubsection.2.7.1}
+\contentsline {paragraph}{Dependency Rule}{21}{section*.28}
+\contentsline {paragraph}{Entities}{21}{section*.29}
+\contentsline {paragraph}{Use Cases}{21}{section*.30}
+\contentsline {paragraph}{Interface Adapters}{22}{section*.31}
+\contentsline {paragraph}{Adantages of Clean architecture}{22}{section*.32}
+\contentsline {subsubsection}{\numberline {2.7.2}REST}{22}{subsubsection.2.7.2}
+\contentsline {subsection}{\numberline {2.8}Other design decisions}{22}{subsection.2.8}
+\contentsline {paragraph}{Flutter}{22}{section*.33}
+\contentsline {paragraph}{Node.js}{22}{section*.34}
+\contentsline {paragraph}{MongoDB}{22}{section*.35}
+\contentsline {section}{\numberline {3}User Interface Design}{23}{section.3}
+\contentsline {section}{\numberline {4}Requirements Traceability}{24}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{25}{section.5}
+\contentsline {subsection}{\numberline {5.1}Sequence of component integration}{25}{subsection.5.1}
+\contentsline {paragraph}{Integration of the all components of the Mobile Application}{26}{section*.38}
+\contentsline {paragraph}{Integration of the all components of the Server Application}{28}{section*.43}
+\contentsline {paragraph}{Integration of the frontend with backend}{30}{section*.49}
+\contentsline {paragraph}{Integration of all subsystems}{31}{section*.51}
+\contentsline {section}{\numberline {6}Effort Spent}{32}{section.6}
