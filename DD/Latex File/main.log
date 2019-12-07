@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  5 DEC 2019 12:17
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 DEC 2019 14:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1133,12 +1133,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [14]
 File: Images/DDSeqSeverPic.png Graphic file (type bmp)
 <Images/DDSeqSeverPic.png>
+ [15]
 File: Images/DDSeqAppForm.png Graphic file (type bmp)
 <Images/DDSeqAppForm.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15]
 File: Images/DDSeqSeverForm.png Graphic file (type bmp)
 <Images/DDSeqSeverForm.png>
 File: Images/DDSeqAppMap.png Graphic file (type bmp)
@@ -1165,8 +1162,17 @@ File: Images/DDSeqSeverTickCreat.png Graphic file (type bmp)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
-./Files/architectural.tex:270: Misplaced alignment tab character &.
-l.270 ...iolations/plates.json?countby=violations&
+[20]
+File: Images/DDSeqAppTick.png Graphic file (type bmp)
+<Images/DDSeqAppTick.png>
+
+
+LaTeX Warning: Reference `fig:DDSeqAppTick' on page 21 undefined on input line 
+278.
+
+[21]
+./Files/architectural.tex:291: Misplaced alignment tab character &.
+l.291 ...iolations/plates.json?countby=violations&
                                                   sort=desc
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1175,10 +1181,10 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[20] (./Files/clean.tex
+(./Files/clean.tex
 File: Images/cleanArchi.pdf Graphic file (type pdf)
 <use Images/cleanArchi.pdf>
- [21])) [22] (./Files/ui.tex) [23
+ [22])) [23] [24] (./Files/ui.tex) [25
 
 ]
 (./Files/requirements.tex
@@ -1191,14 +1197,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--30
 
  []
 
-) [24
+) [26
 
 ] (./Files/implemintest.tex
 File: Images/ImplemetationandTest.png Graphic file (type bmp)
 <Images/ImplemetationandTest.png>
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
 Missing character: There is no ﬃ in font Futura Book/OT:mapping=tex-text;!
- [25
+ [27
 
 ]
 File: Images/LoginIntegration.png Graphic file (type bmp)
@@ -1208,7 +1214,7 @@ File: Images/TakePicIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
+ [28]
 File: Images/SendForm.png Graphic file (type bmp)
 <Images/SendForm.png>
 File: Images/SignUpIntegration.png Graphic file (type bmp)
@@ -1216,7 +1222,7 @@ File: Images/SignUpIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27]
+ [29]
 File: Images/ServerLoginIntegration.png Graphic file (type bmp)
 <Images/ServerLoginIntegration.png>
 File: Images/ServerSignUPIntegration.png Graphic file (type bmp)
@@ -1224,7 +1230,7 @@ File: Images/ServerSignUPIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 5431) has occurred while \output is active []
 
- [28]
+ [30]
 File: Images/ServerGetPicIntegration.png Graphic file (type bmp)
 <Images/ServerGetPicIntegration.png>
 File: Images/TicketCreatorIntegration.png Graphic file (type bmp)
@@ -1232,7 +1238,7 @@ File: Images/TicketCreatorIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [31]
 File: Images/StreetHeatmapIntegration.png Graphic file (type bmp)
 <Images/StreetHeatmapIntegration.png>
 
@@ -1245,31 +1251,43 @@ File: Images/MobileServerIntegration.png Graphic file (type bmp)
 
 Underfull \vbox (badness 4013) has occurred while \output is active []
 
- [30])
-[31] (./Files/effort.tex)
+ [32])
+[33] (./Files/effort.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 140.
- [32
+ [34
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
  (./main.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 140.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D9A571A3CBD2E931CEC2AF5BB33C7D4D.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D9A571A3CBD2E931CEC2AF5BB33C7D4D
+(rerunfilecheck)             After:  B054283CEE2B8F4EF129BE45A6C7E828.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23712 strings out of 492970
- 437671 string characters out of 6133938
+ 23717 strings out of 492970
+ 437787 string characters out of 6133938
  554564 words of memory out of 5000000
- 27431 multiletter control sequences out of 15000+600000
+ 27435 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  43i,12n,65p,10467b,428s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (32 pages).
+Output written on main.pdf (34 pages).
