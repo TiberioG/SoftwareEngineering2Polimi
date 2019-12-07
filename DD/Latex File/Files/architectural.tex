@@ -151,7 +151,6 @@ The controller component encapsulates all the specific adapters which are devote
 \paragraph{Presenter}
 The presenter is the macro component that encapsulates all the frameworks needed to provide an API interface.
 
-
 \subsection{Deployment view} \label{deploysect}
 \begin{figure}[H]
 \centering
@@ -196,7 +195,8 @@ If no plates are found, the usecase \textbf{Get Picture} has to ask the \textbf{
 
 If multiple plates have been found, the usecase \textbf{Get Picture} has to ask the \textbf{API server} to answer to the mobile app, informing that more than one plate were present in the picture. One possible HTTP answer for this error is \textcolor{poliblue}{402 unprocessable entity}.
 
-If one plate is correctly found, then there is need to get the street name and number from the coordinates received from the POST request. this
+If one plate is correctly found, then there is need to get the street name and number from the coordinates received from the POST request. This is done by sending the coordiantes to the external \textbf{Reverse Geocoding} API which returns the name and the road number.
+We don't store the pictures in the database, rather the use case moves the picture of the violation on a specific directory of the filesystem and then creates the document that is stored in the database. 
 
 
 \begin{figure}[H]
@@ -277,18 +277,27 @@ If the picture was authentic the ticket attribute \textcolor{poliblue}{valid} is
 \end{figure}
 In Figure \ref{fig:DDSeqAppTick} is shown the sequence diagram for the use case of approving a ticket on the mobile Application.
 The user interacts with the \textbf{PageManager} asking to open the section of ticket approval, with the result that the use case \textbf{Ticket Approval} is loaded. The \textbf{PageManager} only offers this function to the authority users, as stated in the RASD, this is a function only for policemen. This use case has to interact with the API in order to retrieve the list of pending tickets. This is dove with a GET request. As for example: \url{GET} \url{/API/v1/tickets/pending.json}. So the use case calls the \textbf{Application server API client} which performs the actual call to the REST API. Once a JSON file containing the data required is returned by the API, the use case can open the \textbf{Ticket widget} responsible of showing on the app the list.
-If the user selects a ticket, the widget sends a message to the use case with the ID of the ticket and receives back the information relative to that one. So the deatil of the ticket is shown on screen with a button for approval or discarding. When one of those buttons is pressed, the \textbf{Ticket widget} communicates to the use case which selection has been made by the user. This selection then is communicated to the Application Server with a PUT request in order to update the document containing the ticket with an attribute to determine if has been approved or not. The approved or not information is sent in the body of the following request: \url{PUT} \url{/API/v1/tickets/ticketid}
+If the user selects a ticket, the widget sends a message to the use case with the ID of the ticket and receives back the information relative to that one. So the deatil of the ticket is shown on screen with a button for approval or discarding. When one of those buttons is pressed, the \textbf{Ticket widget} communicates to the use case which selection has been made by the user. This selection then is communicated to the Application Server with a PUT request in order to update the document containing the ticket with an attribute to determine if has been approved or not. The choice made is sent in the body of the following request: \url{PUT} \url{/API/v1/tickets/ticketid}
 
 
 \subsection{Component interfaces}
+In our architecture we have two main interfaces.
+
+
+\subsubsection{Mobile App}
+In the mobile App we have two main in
+
 
 
 \subsection{API interfaces}
+The Application Server has to provide a RESTful API so it me
 
-The Application Server has to provide a RESTful API
+Here we list the URI of the endpoints the Server must offer:
+\begin{itemize}
+  \item /API/v1/violations/
+\end{itemize}
 
-
-/API/v1/violations/plates.json?countby=violations&sort=desc
+plates.json?countby=violations&sort=desc
 
 
 

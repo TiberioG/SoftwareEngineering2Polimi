@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 DEC 2019 14:26
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  7 DEC 2019 21:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1165,12 +1165,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [20]
 File: Images/DDSeqAppTick.png Graphic file (type bmp)
 <Images/DDSeqAppTick.png>
-
-
-LaTeX Warning: Reference `fig:DDSeqAppTick' on page 21 undefined on input line 
-278.
-
-[21]
+ [21]
 ./Files/architectural.tex:291: Misplaced alignment tab character &.
 l.291 ...iolations/plates.json?countby=violations&
                                                   sort=desc
@@ -1182,12 +1177,14 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 (./Files/clean.tex
+
+LaTeX Warning: Reference `deploysect' on page 22 undefined on input line 3.
+
 File: Images/cleanArchi.pdf Graphic file (type pdf)
 <use Images/cleanArchi.pdf>
- [22])) [23] [24] (./Files/ui.tex) [25
+[22] [23])) [24] (./Files/ui.tex) [25
 
-]
-(./Files/requirements.tex
+] (./Files/requirements.tex
 Overfull \hbox (34.23364pt too wide) in paragraph at lines 5--30
 [][]
  []
@@ -1268,8 +1265,8 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D9A571A3CBD2E931CEC2AF5BB33C7D4D
-(rerunfilecheck)             After:  B054283CEE2B8F4EF129BE45A6C7E828.
+(rerunfilecheck)             Before: B054283CEE2B8F4EF129BE45A6C7E828
+(rerunfilecheck)             After:  7BCA2CF853B867816C18204E3C69F294.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1282,10 +1279,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
- 23717 strings out of 492970
- 437787 string characters out of 6133938
- 554564 words of memory out of 5000000
- 27435 multiletter control sequences out of 15000+600000
+ 23718 strings out of 492970
+ 437799 string characters out of 6133938
+ 554598 words of memory out of 5000000
+ 27436 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  43i,12n,65p,10467b,428s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -37,16 +37,17 @@
 \contentsline {subsection}{\numberline {2.5}Component interfaces}{22}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}API interfaces}{22}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Selected Architectural styles and patterns}{22}{subsection.2.7}
-\contentsline {subsubsection}{\numberline {2.7.1}Clean Architecture}{22}{subsubsection.2.7.1}
-\contentsline {paragraph}{Dependency Rule}{22}{section*.29}
-\contentsline {paragraph}{Entities}{22}{section*.30}
+\contentsline {subsubsection}{\numberline {2.7.1}Three-tier client/server architecture}{22}{subsubsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.2}Clean Architecture}{22}{subsubsection.2.7.2}
+\contentsline {paragraph}{Dependency Rule}{23}{section*.29}
+\contentsline {paragraph}{Entities}{23}{section*.30}
 \contentsline {paragraph}{Use Cases}{23}{section*.31}
 \contentsline {paragraph}{Interface Adapters}{23}{section*.32}
 \contentsline {paragraph}{Adantages of Clean architecture}{23}{section*.33}
-\contentsline {subsubsection}{\numberline {2.7.2}REST}{23}{subsubsection.2.7.2}
-\contentsline {subsection}{\numberline {2.8}Other design decisions}{23}{subsection.2.8}
-\contentsline {paragraph}{Flutter}{23}{section*.34}
-\contentsline {paragraph}{Node.js}{23}{section*.35}
+\contentsline {subsubsection}{\numberline {2.7.3}REST}{24}{subsubsection.2.7.3}
+\contentsline {subsection}{\numberline {2.8}Other design decisions}{24}{subsection.2.8}
+\contentsline {paragraph}{Flutter}{24}{section*.34}
+\contentsline {paragraph}{Node.js}{24}{section*.35}
 \contentsline {paragraph}{MongoDB}{24}{section*.36}
 \contentsline {section}{\numberline {3}User Interface Design}{25}{section.3}
 \contentsline {section}{\numberline {4}Requirements Traceability}{26}{section.4}
