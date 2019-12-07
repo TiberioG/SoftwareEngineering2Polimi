@@ -1,5 +1,12 @@
+\subsubsection{Three-tier client/server architecture}
+Our system is based on a client/server architecture with three layers.
+Presentation, application and data access are physically separated repectively in Mobile App, Application Server and Database server, as shown in the Deployment View \ref{deploysect}.
+
+We choose this kind of architecture in order to have a modular system, whick keeps the client application very light and all the heavy computation is done on the server side. Moreover we separated physically the database from the application server, to increase scalability and security, and it's also possible to use a distribuited database.
+
+
 \subsubsection{Clean Architecture}
-As already introduced, each part of our system will use the Clean Architecture, proposed by Robert C. Martin. We apply this architecture both on the mobile application and in the Application Server.
+As already introduced, each part of our system will use the Clean Architecture, proposed by Robert C. Martin. We apply this architecture both on the Client (Mobile application) and in the Application Server.
 
 \begin{figure}[H]
 \centering
@@ -26,26 +33,33 @@ We do, however, expect that changes to the operation of the application will aff
 the web. The presenters, views, and controllers all belong in the interface adapters layer. The models are likely just data structures that are passed from the controllers to the use cases, and then back from the use cases to the presenters and views." \cite{clean}
 
 \paragraph{Adantages of Clean architecture}
-Following are some reasons wh a good architectural pattern for our system:
+Here we present some reasons why we choose the Clean Architecture
 \begin{itemize}
-  \item All business logic is in a use case, so it’s easy to find and not duplicated anywhere else
-  \item Good monolith with clear use cases that you can split in microservices later on
-
+  \item Very clear dependencies between components
+  \item Modularity of having clear use cases as components.
+  \item Separation of presentation layer from logic. The use cases don't depend on the UI, so it' possible to change the presentation layer without touching the core of the system
+  \item Separation of interfaces from use cases. We have a dedicated layer with the code that acts as a bridge between the outside world and the use cases and entities. So it's possible to change the external services without touching the core of the systems. The same goes for the database: it's possible to change the DBMS just changing the relative adapter, without touching the use cases.
+  \item Easier testing, due to the modularity of the system
 \end{itemize}
 
-
 \subsubsection{REST}
-The communication between the mobile application and the Server will be done via HTTP requests following REST principles. REST (Representation State Transfer) is an architectural style for communication based on strict use of HTTP request types. One of the most important REST principles is that the interaction between the client and server is stateless between requests. Each request from the client to the server must contain all of the information necessary to understand the request. The client wouldn’t notice if the server were to be restarted at any point between the requests.
+The communication between the Mobile application and the Server will be done via HTTP requests following REST principles. REST (Representation State Transfer) is an architectural style for communication based on strict use of HTTP request types.
+
 
 
 \subsection{Other design decisions}
 Here we describe the frameworks and languages hat should be used to produca a state-of-art application.
 
 \paragraph{Flutter}
+Flutter is a free, open-source mobile SDK that can be used to create native-looking Android and iOS apps from the same code base. Flutter helps app developers build cross-platform apps faster by using a single programming language, Dart, an object-oriented, class defined programming language.
+We chose to use this Framework in order to have a mobile app that works both with iOs and Adroid, with performances similar to the native development for each platform but having to write only once the code.
+In Flutter, every piece of the user interface is a widget like text, buttons, check boxes, images. There are also Container widgets thac contain other widgets. Widets can be stateless, which are immutable or stateful, which have a mutable state and are used when we are describing a part of the user interface that can change dynamically.
+
+Lastly we want to remember that Flutter is not the only framework that can be used to buld cross-platform mobile apps, another oprions can be React Native, based on JavaScript.
 
 
 \paragraph{Node.js}
-To build a
+
 
 \paragraph{MongoDB}
-MongoDB is a noSQL database. It represents the data as a collection of documents rather than tables related by foreign keys. Those documents are collected in collections and can have different schemas. We choose to use MongoDB because it's so well intergrated with Node.js, because there are very useful libraries such as Mongoose whick make easier to communicate with the DB. Document-based data storage is the main aim of using a non-structured database like NoSQL. MongoDB is a distributed database which allows ad-hoc queries, real-time integration, and indexing efficient.
+MongoDB is a noSQL distributed database which allows ad-hoc queries, real-time integration, and it's indexing efficient. It represents the data as a collection of documents rather than tables related by foreign keys. Those documents are collected in collections and can have different schemas. We choose to use MongoDB because it's so well intergrated with Node.js, because there are very useful libraries such as Mongoose whick make easier to communicate with the DB.
