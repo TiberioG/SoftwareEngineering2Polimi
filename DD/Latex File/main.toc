@@ -46,7 +46,7 @@
 \contentsline {paragraph}{Interface Adapters}{26}{section*.34}
 \contentsline {paragraph}{Adantages of Clean architecture}{26}{section*.35}
 \contentsline {subsubsection}{\numberline {2.7.3}REST}{26}{subsubsection.2.7.3}
-\contentsline {subsection}{\numberline {2.8}Other design decisions}{27}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.8}Other design decisions}{26}{subsection.2.8}
 \contentsline {paragraph}{Flutter}{27}{section*.36}
 \contentsline {paragraph}{Node.js}{27}{section*.37}
 \contentsline {paragraph}{MongoDB}{27}{section*.38}

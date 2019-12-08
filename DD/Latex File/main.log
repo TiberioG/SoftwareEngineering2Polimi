@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  8 DEC 2019 18:04
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  8 DEC 2019 18:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1170,12 +1170,11 @@ File: Images/DDSeqAppTick.png Graphic file (type bmp)
 ) [22]
 File: Images/AppInterfaces.png Graphic file (type bmp)
 <Images/AppInterfaces.png>
- [23]
 File: Images/ServerInterfaces.png Graphic file (type bmp)
 <Images/ServerInterfaces.png>
-
-./Files/architectural.tex:204: Misplaced alignment tab character &.
-l.204   \item /API/v1/heatmap/lat=xxx&
+ [23]
+./Files/architectural.tex:202: Misplaced alignment tab character &.
+l.202   \item /API/v1/heatmap/lat=xxx&
                                       long=xxx
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1184,8 +1183,8 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Files/architectural.tex:207: Misplaced alignment tab character &.
-l.207 ...iolations/plates.json?countby=violations&
+./Files/architectural.tex:205: Misplaced alignment tab character &.
+l.205 ...iolations/plates.json?countby=violations&
                                                   sort=desc&depth=x
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1194,19 +1193,9 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-./Files/architectural.tex:207: Misplaced alignment tab character &.
-l.207 ...plates.json?countby=violations&sort=desc&
+./Files/architectural.tex:205: Misplaced alignment tab character &.
+l.205 ...plates.json?countby=violations&sort=desc&
                                                   depth=x
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./Files/architectural.tex:213: Misplaced alignment tab character &.
-l.213 plates.json?countby=violations&
-                                     sort=desc
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1304,15 +1293,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
  23732 strings out of 492970
  438120 string characters out of 6133938
- 555841 words of memory out of 5000000
+ 554841 words of memory out of 5000000
  27445 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

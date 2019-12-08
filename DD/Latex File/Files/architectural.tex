@@ -10,14 +10,14 @@ Here we list the three main tiers:
 There are some advantages of our system architecture: the first one is the modularity of this approach of having different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one, whithout modifying the application server.
 
 Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref}. This pattern is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
-One big advantage of this architecture is that we have a separated component for each use case.
+One big advantage of this architecture is that we have a unique component for each use case.
 %%done!
 
 \subsection{Component view}
 Here are proposed the component views for both part of the system, the mobile application and the application server.
 
 \subsubsection{Mobile Application}
-Figure \ref{fig:compdiag1} shows the component diagrams for the Mobile Application. In the following paragraph we describe all the components of each cluster.
+Figure \ref{fig:compdiag1} shows the component diagrams for the Mobile Application. In the following paragraphs we describe all the components of each cluster.
 
 %fig here of Component of mobile app
 \begin{sidewaysfigure}
@@ -27,7 +27,7 @@ Figure \ref{fig:compdiag1} shows the component diagrams for the Mobile Applicati
 \end{sidewaysfigure}
 
 \paragraph{Entities}
-Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects that don't have any dependency on other part of the system (eg. frameworks).
+Entities are the domain of the system, they represent the business objects of the application. In our case entities are plain objects that don't have any dependency on other parts of the system (eg. frameworks).
 Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
 
 \paragraph{Use Cases}
@@ -76,11 +76,11 @@ Here follows the list of every component with the description:
 \begin{itemize}
   \item \textbf{Page Manager}: this component coordinates every page shown in the mobile application, and provides the navigation bar
   \item \textbf{Login Widget} : this is the login page and sign-up page, with the required input fields
-  \item \textbf{Camera Widget} : this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode". This is the graphic interface used to cover some parts of th epicture like with a black brush
+  \item \textbf{Camera Widget} : this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode". This is the graphic interface used to cover some parts of the picture with a black brush
   \item \textbf{Form Widget}: this shows a list of possible description of violations the user can select
   \item \textbf{Map Widget} : this is responsible for showing the street heatmap
   \item \textbf{List Vehicles Widget} : this widget shows the vehicles that committed the most violations as a scrolling list, showing the plate string and the count of violations per plate
-  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not. It also shows information about each one after the user clicks on it. It has also two buttons to approve or discard the selected ticket
+  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not. It also shows information about each item after the user clicks on it. It has also two buttons to approve or discard the selected ticket
   \item \textbf{Statistics widget}: this can show some data visualization about the issued tickets
 \end{itemize}
 
@@ -88,7 +88,7 @@ Here follows the list of every component with the description:
 %%%%%%  APPLICATION SERVER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsubsection{Application Server} \label{API}
-Figure \ref{fig:compdiag2} shows the component diagrams for the Mobile Application. In the following paragraph we describe all the components of each cluster.
+Figure \ref{fig:compdiag2} shows the component diagrams for the Application Server. In the following paragraph we describe all the components of each cluster.
 The architecture of the Application server looks the same as the Mobile Application, but has completly different components in the Presenter and Controller.
 
 %%fig  application server
@@ -100,11 +100,11 @@ The architecture of the Application server looks the same as the Mobile Applicat
 
 
 \paragraph{Entities}
- Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} which are the main Entities of the Systemm, those are the same as the Mobile Application.
+ Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} which are the main Entities of the System, those are the same as the Mobile Application.
 
 \paragraph{Use Cases}
 The use cases components for the server-side have almost the same names as the ones as the application, but they have a completly different logic.
-As an example: on the application side we have the use case "Take picture" which has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server, whereas on server side we have the "Get picture" use case, which fetches the HTTP requets, parses the content, sends the picture to the OpenALPR service to get the decoded plate and then stores the picture.
+As an example: on the application side we have the use case "Take picture" which has to interact with the device physical camera in order to take the picture and then send it as POST HTTP request to the server, whereas on server side we have the "Get picture" use case, which fetches the HTTP request, parses the content, sends the picture to the OpenALPR service to get the decoded plate and then stores the picture.
 \begin{itemize}
   \item \textbf{Sign-Up}: This component receives from the APP the username, password and personal information of a new user who is registering to the service. It must be able to check if the username is already in use or not. Then it must encrypt the password. Lastly it stores the new user in the database.
   \item \textbf{Login}: This component receives from the APP the request of a user trying to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
