@@ -44,8 +44,20 @@ Here we present some reasons why we choose the Clean Architecture
 
 \subsubsection{REST}
 The communication between the Mobile application and the Server will be done via HTTP requests following REST principles. REST (Representation State Transfer) is an architectural style for communication based on strict use of HTTP request types.
+Here we list the main REST principles:
+\begin{itemize}
+  \item \textbf{Client/Server}: There is separation of concerns between client and server. The server stores and manipulates information and makes it available to the client. The client takes that information and displays it to the user. This separation of concerns allows both the client and the server to evolve independently.
+  \item \textbf{Stateless}: That means the communication between the client and the server always contains all the information needed to perform the request. There is no session state in the server. this means for example thatthe client needs to authenticate itself with every request in case the access to a resource is restricted and requires authentication.
+  \item \textbf{Cacheable}:  The client, the server and any intermediary components can all cache resources in order to improve performance.
+  \item \textbf{Uniform interface}: This simplifies the architecture, as all components follow the same rules to speak to one another.
+  \item \textbf{Layered system}: Individual components cannot see beyond the immediate layer with which they are interacting. This allows components to be independent and thus easily replaceable or extendable.
+\end{itemie}
 
 
+There are a few types of HTTP methods that we need to know before building a REST API
+\begin{itemize}
+  \item \textbf{}
+\end{itemize}
 
 \subsection{Other design decisions}
 Here we describe the frameworks and languages hat should be used to produca a state-of-art application.
@@ -59,7 +71,9 @@ Lastly we want to remember that Flutter is not the only framework that can be us
 We decided to use Flutter because of it's advantages in comparision with React Native and other UI software development kit, which are better performances and increasing popularity due to it's simplicity of develop.
 
 \paragraph{Node.js}
-Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. It is the most used server side runtime environment and with the Express framework it's possible to build APIs .
+Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. It is the most used server side runtime environment.
+We use Node.js with Express, which is a web application server framework, designed for building single-page, multi-page, and hybrid web applications. It is the de facto standard server framework for Node.js which simplifies development and makes it easier to write secure, modular and fast applications and APIs.
+
 
 
 \paragraph{MongoDB}
