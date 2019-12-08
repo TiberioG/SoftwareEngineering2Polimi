@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  8 DEC 2019 18:14
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  8 DEC 2019 19:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1120,8 +1120,11 @@ File: Images/COMP-SERVER.png Graphic file (type bmp)
  [9] [10] [11]
 File: Images/DeploymentDiagram1.png Graphic file (type bmp)
 <Images/DeploymentDiagram1.png>
- [12]
-(./Files/sequences.tex
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12] (./Files/sequences.tex
 File: Images/DDSeqAppPic.png Graphic file (type bmp)
 <Images/DDSeqAppPic.png>
 
@@ -1292,6 +1295,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 

@@ -131,13 +131,13 @@ This component encapsulates all the libraries, classes with methods and middlewa
 \end{itemize}
 
 \paragraph{Controller}
-The controller component encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the exteral APIs and the Database \ref{API}.
+The controller component encapsulates all the specific adapters which are devoted to retrieve and store data from different sources such as the exteral APIs and the Database.
 \begin{itemize}
   \item \textbf{MongoDB driver} This is the component responsible of managing every interaction with the database
   \item \textbf{OpenALPR manager} This is the component responsible of managing every API call to the external service OpenALPR, used to decode the plates of a given picture
   \item \textbf{Maps manager} This is the component responsible of managing every API call to the external Maps Service
   \item \textbf{Validity checker} This is the component responsible of managing every API call to the external service used to check if a picture has been modified or not
-  \item \textbf{Authority DB manager} This is the component responsible of managing every API call to the external database of authorities.
+  \item \textbf{Authority DB manager} This is the component responsible of managing every API call to the external database of authorities
 \end{itemize}
 
 
@@ -145,7 +145,7 @@ The controller component encapsulates all the specific adapters which are devote
 The presenter is the macro component that encapsulates all the frameworks needed to provide an API interface.
 
 \subsection{Deployment view} \label{deploysect}
-\begin{figure}[H]
+\begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth]{Images/DeploymentDiagram1.png}
 \caption{\label{fig:deploy} Deployment diagram}
@@ -163,7 +163,7 @@ As execution enviorment we install Node.js which is an open-source JavaScript ru
 The third tier is the \textbf{DB Server}. It consists in another server where we run the DB system MongoDB. We choose to run the database in a separate server and not in the same as the ApplicationServer in order to increase scalability. MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.
 
 \subsection{Runtime view}
-A note for the sequence diagrams, to keep the diagrams more readable, we omit that every call to and from a specific use case must pass from the use case interactor which manaes the component interfaces.
+A note for the sequence diagrams, to keep the diagrams more readable, we omit that every call to and from a specific use case must pass from the use case interactor which manages the component interfaces.
 \input{Files/sequences} \label{sequencespart}
 
 \subsection{Component interfaces}
