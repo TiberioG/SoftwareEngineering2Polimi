@@ -1,11 +1,12 @@
-This section will discuss the implementation, integration and testing of the SafeStreet application. The section aims to prevent any setbacks entailing changes on the project once started its development and do multiple tasks twice. First of all, it is important to divide the project into smaller components in order to have more concrete goals that help keep the developers’ motivation high and make a straightforward development of the project. Therefore, we will divide the project in dfferent components, starting from the ones that are responsible of the basic features and going on until the end, where we will develop the most speciﬁc ones. It is not a new method, because it has been studied during this course and it is referred to as ‘bottom-up’ strategy. This method will help providing a better integration of the project tier-by-tier and make different tests of the behaviour of the application before it ends. The System can be divided into three main parts as following:
+This section will discuss the implementation, integration and testing of the SafeStreet application. The section aims to prevent any setbacks entailing changes on the project once started its development and do multiple tasks twice. First of all, it is important to divide the project into smaller components in order to have more concrete goals that help keep the developers’ motivation high and make a straightforward development of the project. Therefore, we will divide the project in dfferent components, starting from the ones that are responsible of the basic features and going on until the end, where we will develop the most speciﬁc ones. It is not a new method, because it has been studied during this course and it is referred to as ‘bottom-up’ strategy. This method will help providing a better integration of the project tier-by-tier and make different tests of the behaviour of the application before it ends. The System can be divided into three main parts as following:\\
+
 \begin{itemize}
     \item \textbf{Mobile Application}
     \item \textbf{Application Server}
-    \item \textbf{External components} 
+    \item \textbf{External components}
 \end{itemize}
-External components contains services such as the ALPR, to extract the license plate from a photo, Map API and  so on. It should be noted that the external systems’ components need not to be implemented and tested just because they are external and they can be considered reliable.
-Going back to our project, we will divide the Mobile App component and Application Server component to three main entities, corresponding to User, Violation and Ticket.
+External components contains services such as the ALPR, to extract the license plate from a photo, Map API and so on. It should be noted that the external systems’ components need not to be implemented and tested just because they are external and they can be considered reliable.
+Going back to our project, we will divide the Mobile App components and Application Server components to three main entities, corresponding to User, Violation and Ticket.
 The services that have to be created for each entity are:
 \begin{itemize}
 \item{} \textit{User}: Sign-UP, Login
@@ -50,7 +51,7 @@ Firstly all the Mobile Application components will be implemented and tested wit
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/SignUpIntegration.png}
-\caption{\label{fig:SignUpIntegration}Mobile application sign up integration}
+\caption{\label{fig:SignUpIntegration} Mobile application sign up integration}
 \end{figure}
 
 \paragraph{Integration of the all components of the Server Application}

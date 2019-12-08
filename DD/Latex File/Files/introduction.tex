@@ -1,25 +1,8 @@
 \subsection{Purpose}
 This is the Design Document (DD) of SafeStreet application. The purpose of this document is to discuss more technical aspects regarding architectural and design choices that must be made, so as to follow well-oriented implementation and testing processes.
-\subsubsection{Description of the given problem}
-SafeStreets is a crowd-sourced application that intends to provide users with the possibility to notify authorities when traffic violations occur, and in particular parking violations. The application allows users to send to authorities  pictures of violations, including their date, time and position. Examples of violations are: vehicles parked in the middle of bike lanes, in places reserved for people with disabilities, on foothpats, double parking etc.
-
-SafeStreets stores the information provided by users, completing it with suitable meta-data every time it recieves a picture.
-In paricular it is able to read automatically the license plate of a vehicle and store it without asking the user to type it.
-Also it stores the type of the violation which is input by the user from a provided list.
-Lastly it stores the name of the street where the violation occurred, rereiving it automatically from the geographical position where the user took the picture.
-Then the application allows both end users and authorities to mine the information crowd-souced.
-Two visualizations are offfered: the first is an interactive map where are highlighted with a gradient color the streets with the highest frequency of violations.
-The second is a list of the vehicles that committed the most violations (available only to authority users).
-
-In addition the app offers a service that creates automatically traffic tickets which can be approved and sent to citizens by the local police.  This is done using the data crowd-soucred by the users.
-The application guarantees that every picture used to generate a ticket has't been altered.
-In addition, the information about issued tickets is used to build statistics.
-Two kind of statistics are offered: a list of people who received the highest number of tickets and some trends of the issued tickets over time and the ratio of approved tickets over the violations reported.
 
 \subsection{Scope}
-
-
-
+The scope of the SafeStreet application can be found in the RASD.
 
 \subsection{Definitions,  acronyms,  abbreviations}
 
@@ -37,8 +20,12 @@ Two kind of statistics are offered: a list of people who received the highest nu
 \begin{itemize}
   \item ALPR : Automated Licence Plate Recognition
   \item GUI : Graphical User Interface
+  \item UI : User Interface
   \item GDPR : EU General Data Protection Regulation
   \item API : Application Programming Interface
+  \item REST : REpresentational State Transfer
+  \item JSON : JavaScript Object Notation
+  \item RASD : Requirements Analysis and Specifications Document
 \end{itemize}
 
 \subsubsection{Abbreviations}
@@ -51,6 +38,7 @@ This is the first released version 10/11/2019.
 
 \subsection{Reference Documents}
 \begin{thebibliography}{00}
+
 
 \bibitem{clean} Robert C. Martin,
 Clean Architecture: A Craftsman’s Guide to Software Structure and Design,

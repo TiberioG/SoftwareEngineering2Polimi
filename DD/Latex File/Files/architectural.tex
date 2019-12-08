@@ -2,21 +2,14 @@
 The system to be developed has a three tier client/server structure.
 Here we list the three main tiers:
 \begin{enumerate}
-  \item Mobile application (client)
-  \item Application Server
-  \item Database
+  \item The first tier consists in a mobile app running on mobile devices: smartphones or tablets with iOs or Android. This is the application the users will interact with
+  \item The second tier consists in an Application Server which provides the service as a RESTful API to the clients which are the running applications, and it's connected to the third tier, the Database Server where all data is stored
+  \item The third tier is the Database where data is stored
 \end{enumerate}
 
-The first tier consists in a mobile app running on mobile devices: smartphones or tablets with iOs or Android.
-This is the application the users will interact with.
+There are some advantages of our system architecture: the first one is the modularity of this approach of having different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one, whithout modifying the application server.
 
-The second tier consists in an Application Server which provides the service as a RESTful API to the clients which are the running applications, and it's connected to the third tier, the Database Server where all data is stored.
-
-The third tier is the Database.
-
-There are some advantages of our system architecture: the first one is the modularity of this approach of havinng different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one, whithout modifying the application server.
-
-Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref} which is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
+Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref}. This pattern is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
 One big advantage of this architecture is that we have a separated component for each use case.
 %%done!
 
@@ -174,23 +167,46 @@ A note for the sequence diagrams, to keep the diagrams more readable, we omit th
 \input{Files/sequences} \label{sequencespart}
 
 \subsection{Component interfaces}
-In our architecture we have two main interfaces.
-
+In our architecture we have two main interfaces between the Use Cases and the other components: one is the \textbf{Use Cases Output interface} devoted to interface the use cases with the Presenter and the \textbf{Use Cases Input interface} devoted to interface the use cases with the Controller.
+We choose to keep the methods of those interfaces very generic, so thay can be used by different Use cases, actually the methods describe in most cases only the kind of data tha needs to be exchanged so can be adapted for different purposes. We use heavily JSON documents so the structure of the data is very flexible.
 
 \subsubsection{Mobile App}
-In the mobile App we have two main in
+In the Mobile App the \textbf{Use Cases Output interface} is used to communicate with the UI.
+So we have listed some methods used to interact with the widgets of the UI which are needed to load, close, and display strings and other kind of data to the widgets. Even though the name is "Output interface" it's still possible to use this interface to get data input by the user in the UI tha needs to be passed to the use cases.
+The \textbf{Use Cases Input interface} is used to communicate with the adapters of the controller, to perform the calls to the Server API and to interact with the device physical sensors.
+In Figure \ref{fig:AppInterfaces} are listed some possible methods of the interfaces of the Mobile App. More can be added during implementation whithaut affecting the one already existing and the Use cases.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/AppInterfaces.png}
+\caption{\label{fig:AppInterfaces} Mobile Application Component interfaces}
+\end{figure}
+
+\subsubsection{Application Server}
+In the Application Server the \textbf{Use Cases Output interface} is used by the use cases to provide the required API.
+The \textbf{Use Cases Input interface} is used to communicate with the adapters of the controller, to perform the calls to the externals API and to interact with the database.
+
+In Figure \ref{fig:ServerInterfaces} are listed some possible methods of the interfaces of the Application Server. More can be added during implementation whithaut affecting the one already existing and the Use cases.
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Images/ServerInterfaces.png}
+\caption{\label{fig:ServerInterfaces} Application Server Component interfaces}
+\end{figure}
 
 
 \subsection{API interfaces}
-The Application Server has to provide a RESTful API so it meant that we have some
-
+The Application Server has to provide a RESTful API.
 Here we list the URI of the endpoints the Server must offer:
 \begin{itemize}
   \item /API/v1/violations/
+  \item /API/v1/heatmap/lat=xxx&long=xxx
+  \item /API/v1/violations/upload/id=xxx
+  \item /API/v1/violations/upload/form/id=xxx
+  \item /API/v1/violations/plates.json?countby=violations&sort=desc&depth=x
+  \item /API/v1/tickets/pending.json
+  \item /API/v1/tickets/ticketid
 \end{itemize}
-
-plates.json?countby=violations&sort=desc
+The description of those is given in the Runtime View section.
 
 \subsection{Selected Architectural styles and patterns}
 \input{Files/clean} \label{cleanArchiref}
