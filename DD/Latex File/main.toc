@@ -31,31 +31,31 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Reporting Violation}{14}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Streets Heatmap}{17}{subsubsection.2.4.2}
 \contentsline {subsubsection}{\numberline {2.4.3}Vehicle list by violations}{19}{subsubsection.2.4.3}
-\contentsline {subsubsection}{\numberline {2.4.4}Ticket Creation}{21}{subsubsection.2.4.4}
-\contentsline {subsubsection}{\numberline {2.4.5}Ticket Approval}{22}{subsubsection.2.4.5}
-\contentsline {subsection}{\numberline {2.5}Component interfaces}{23}{subsection.2.5}
-\contentsline {subsubsection}{\numberline {2.5.1}Mobile App}{23}{subsubsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.4.4}Ticket Creation}{20}{subsubsection.2.4.4}
+\contentsline {subsubsection}{\numberline {2.4.5}Ticket Approval}{21}{subsubsection.2.4.5}
+\contentsline {subsection}{\numberline {2.5}Component interfaces}{22}{subsection.2.5}
+\contentsline {subsubsection}{\numberline {2.5.1}Mobile App}{22}{subsubsection.2.5.1}
 \contentsline {subsubsection}{\numberline {2.5.2}Application Server}{23}{subsubsection.2.5.2}
-\contentsline {subsection}{\numberline {2.6}API interfaces}{24}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.6}API interfaces}{23}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Selected Architectural styles and patterns}{24}{subsection.2.7}
 \contentsline {subsubsection}{\numberline {2.7.1}Three-tier client/server architecture}{24}{subsubsection.2.7.1}
-\contentsline {subsubsection}{\numberline {2.7.2}Clean Architecture}{25}{subsubsection.2.7.2}
-\contentsline {paragraph}{Dependency Rule}{25}{section*.31}
+\contentsline {subsubsection}{\numberline {2.7.2}Clean Architecture}{24}{subsubsection.2.7.2}
+\contentsline {paragraph}{Dependency Rule}{24}{section*.31}
 \contentsline {paragraph}{Entities}{25}{section*.32}
 \contentsline {paragraph}{Use Cases}{25}{section*.33}
-\contentsline {paragraph}{Interface Adapters}{26}{section*.34}
-\contentsline {paragraph}{Adantages of Clean architecture}{26}{section*.35}
-\contentsline {subsubsection}{\numberline {2.7.3}REST}{26}{subsubsection.2.7.3}
+\contentsline {paragraph}{Interface Adapters}{25}{section*.34}
+\contentsline {paragraph}{Adantages of Clean architecture}{25}{section*.35}
+\contentsline {subsubsection}{\numberline {2.7.3}REST}{25}{subsubsection.2.7.3}
 \contentsline {subsection}{\numberline {2.8}Other design decisions}{26}{subsection.2.8}
-\contentsline {paragraph}{Flutter}{27}{section*.36}
-\contentsline {paragraph}{Node.js}{27}{section*.37}
-\contentsline {paragraph}{MongoDB}{27}{section*.38}
+\contentsline {paragraph}{Flutter}{26}{section*.36}
+\contentsline {paragraph}{Node.js}{26}{section*.37}
+\contentsline {paragraph}{MongoDB}{26}{section*.38}
 \contentsline {section}{\numberline {3}User Interface Design}{28}{section.3}
-\contentsline {section}{\numberline {4}Requirements Traceability}{29}{section.4}
-\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{30}{section.5}
-\contentsline {subsection}{\numberline {5.1}Sequence of component integration}{30}{subsection.5.1}
-\contentsline {paragraph}{Integration of the all components of the Mobile Application}{31}{section*.41}
-\contentsline {paragraph}{Integration of the all components of the Server Application}{33}{section*.46}
-\contentsline {paragraph}{Integration of the frontend with backend}{35}{section*.52}
-\contentsline {paragraph}{Integration of all subsystems}{36}{section*.54}
-\contentsline {section}{\numberline {6}Effort Spent}{37}{section.6}
+\contentsline {section}{\numberline {4}Requirements Traceability}{39}{section.4}
+\contentsline {section}{\numberline {5}Implementation, Integration and Test Plan}{40}{section.5}
+\contentsline {subsection}{\numberline {5.1}Sequence of component integration}{40}{subsection.5.1}
+\contentsline {paragraph}{Integration of the all components of the Mobile Application}{41}{section*.51}
+\contentsline {paragraph}{Integration of the all components of the Server Application}{43}{section*.56}
+\contentsline {paragraph}{Integration of the frontend with backend}{45}{section*.62}
+\contentsline {paragraph}{Integration of all subsystems}{46}{section*.64}
+\contentsline {section}{\numberline {6}Effort Spent}{47}{section.6}
