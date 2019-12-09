@@ -1,4 +1,4 @@
-This section will discuss the implementation, integration and testing of the SafeStreet application. The section aims to prevent any setbacks entailing changes on the project once started its development and do multiple tasks twice. First of all, it is important to divide the project into smaller components in order to have more concrete goals that help keep the developers’ motivation high and make a straightforward development of the project. Therefore, we will divide the project in dfferent components, starting from the ones that are responsible of the basic features and going on until the end, where we will develop the most speciﬁc ones. It is not a new method, because it has been studied during this course and it is referred to as ‘bottom-up’ strategy. This method will help providing a better integration of the project tier-by-tier and make different tests of the behaviour of the application before it ends. The System can be divided into three main parts as following:\\
+This section will discuss the implementation, integration and testing of the SafeStreet application. The section aims to prevent any setbacks entailing changes on the project once started its development and do multiple tasks twice. First of all, it is important to divide the project into smaller components in order to have more concrete goals that help keep the developers’ motivation high and make a straightforward development of the project. Therefore, we will divide the project in different components, starting from the ones that are responsible of the basic features and going on until the end, where we will develop the most speciﬁc ones. It is not a new method, because it has been studied during this course and it is referred to as ‘bottom-up’ strategy. This method will help providing a better integration of the project tier-by-tier and make different tests of the behaviour of the application before it ends. The System can be divided into three main parts as following:\\
 
 \begin{itemize}
     \item \textbf{Mobile Application}
@@ -20,26 +20,26 @@ The services that have to be created for each entity are:
 \caption{\label{fig:Test} A general overview of the service implementation}
 \end{figure}
 
-In ﬁgure \ref{fig:Test}, the overall process structure of the implementation has been shown. First, the blue part, will be implemented and tested. After the blue part works eﬃciently, the orange part, services related to report a violation, will be implemented and tested. Finally, if the blue and orange part will work eﬃciently, the ﬁnal green part, Ticket, will be implemented and tested. During the implementation and testing process, we will make the component integration once we have ﬁnished each tier and tested each isolated component, meaning we will mix the different phases and try to detect possible defaults in our design.
+In ﬁgure \ref{fig:Test}, the overall process structure of the implementation has been shown. First, the blue part, will be implemented and tested. After the blue part works efficiently, the orange part, services related to report a violation, will be implemented and tested. Finally, if the blue and orange part will work efficiently, the ﬁnal green part, Ticket, will be implemented and tested. During the implementation and testing process, we will make the component integration once we have ﬁnished each tier and tested each isolated component, meaning we will mix the different phases and try to detect possible defaults in our design.
 
-As mentioned in \ref{fig:Test}, we will start with developing the User component. The Sign-Up and Login components are clearly an entry condition for the right functioning of the system, but they are not the main features and they are not very compicated. These two components can be implemented and tested at any order. After Implemeting and testing User component, we will continue with the next part of the implementation of the software which is Violation component. We will integrate all the services and test whether the whole Violation component will work as it is expected. If the result is positive, we will continue with the next last of the implementation of the software. If the result is negative, we should study if something is wrong in our code or if we should make any changes in the project development.
+As mentioned in \ref{fig:Test}, we will start with developing the User component. The Sign-Up and Login components are clearly an entry condition for the right functioning of the system, but they are not the main features and they are not very complicated. These two components can be implemented and tested at any order. After Implemeting and testing User component, we will continue with the next part of the implementation of the software which is the Violation component. We will integrate all the services and test whether the whole Violation component will work as it is expected. If the result is positive, we will continue with the next last of the implementation of the software. If the result is negative, we should study if something is wrong in our code or if we should make any changes in the project development.
 
 \subsection{Sequence of component integration}
 The diagrams below describe the sequence of the component implementation, integration and testing of the system. The arrows starts from the component which uses the other one.
 
 \paragraph{Integration of the all components of the Mobile Application}
-Firstly all the Mobile Application components will be implemented and tested with unit tests. Then the integration process will proceed and the integration is tested as well. All the Use Case Interactor should be integraterd with their corresponding Presenter and Contoroler. In the following integration between main components are shown.
+Firstly all the Mobile Application components will be implemented and tested with unit tests. Then the integration process will proceed and the integration is tested as well. All the Use Case Interactor should be integraterd with their corresponding Presenter and Contoroller. In the following integration between main components are shown.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/LoginIntegration.png}
-\caption{\label{fig:LoginIntegration}Mobile application login integration}
+\caption{\label{fig:LoginIntegration} Mobile application login integration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/TakePicIntegration.png}
-\caption{\label{fig:TakePicIntegration}Take picture integration}
+\caption{\label{fig:TakePicIntegration} Take picture integration}
 \end{figure}
 
 \begin{figure}[H]
@@ -55,18 +55,18 @@ Firstly all the Mobile Application components will be implemented and tested wit
 \end{figure}
 
 \paragraph{Integration of the all components of the Server Application}
-When all the Mobile Application components implemented, tested and integrated, we should do the the same for Server Application components. In this part all the Use Case Interactor should be integraterd with their corresponding Presenter and Contoroler. In the following integration between main components are shown.
+When all the Mobile Application components implemented, tested and integrated, we should do the the same for Server Application components. In this part all the Use Case Interactor should be integraterd with their corresponding Presenter and Contoroller. In the following integration between main components are shown.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/ServerLoginIntegration.png}
-\caption{\label{fig:ServerLoginIntegration}Server login integration}
+\caption{\label{fig:ServerLoginIntegration} Server login integration}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/ServerSignUPIntegration.png}
-\caption{\label{fig:ServerSignUPIntegration}Server sign uP integration}
+\caption{\label{fig:ServerSignUPIntegration}Server sign up integration}
 \end{figure}
 
 \begin{figure}[H]
