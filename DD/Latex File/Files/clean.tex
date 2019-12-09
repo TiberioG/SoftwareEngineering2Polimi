@@ -33,12 +33,12 @@ We do, however, expect that changes to the operation of the application will aff
 the web. The presenters, views, and controllers all belong in the interface adapters layer. The models are likely just data structures that are passed from the controllers to the use cases, and then back from the use cases to the presenters and views." \cite{clean}
 
 \paragraph{Adantages of Clean architecture}
-Here we present some reasons why we choose the Clean Architecture
+Here we present some reasons why we choose the Clean Architecture:
 \begin{itemize}
   \item Very clear dependencies between components
-  \item Modularity of having clear use cases as components.
+  \item Modularity of having clear use cases as components
   \item Separation of presentation layer from logic. The use cases don't depend on the UI, so it' possible to change the presentation layer without touching the core of the system
-  \item Separation of interfaces from use cases. We have a dedicated layer with the code that acts as a bridge between the outside world and the use cases and entities. So it's possible to change the external services without touching the core of the systems. The same goes for the database: it's possible to change the DBMS just changing the relative adapter, without touching the use cases.
+  \item Separation of interfaces from use cases. We have a dedicated layer with the code that acts as a bridge between the outside world and the use cases and entities. So it's possible to change the external services without touching the core of the systems. The same goes for the database: it's possible to change the DBMS just changing the relative adapter, without touching the use cases
   \item Easier testing, due to the modularity of the system
 \end{itemize}
 
@@ -47,22 +47,22 @@ The communication between the Mobile application and the Server will be done via
 Here we list the main REST principles:
 \begin{itemize}
   \item \textbf{Client/Server}: There is separation of concerns between client and server. The server stores and manipulates information and makes it available to the client. The client takes that information and displays it to the user. This separation of concerns allows both the client and the server to evolve independently.
-  \item \textbf{Stateless}: That means the communication between the client and the server always contains all the information needed to perform the request. There is no session state in the server. this means for example thatthe client needs to authenticate itself with every request in case the access to a resource is restricted and requires authentication.
+  \item \textbf{Stateless}: That means the communication between the client and the server always contains all the information needed to perform the request. There is no session state in the server. This means for example that, in case the access to a resource is restricted and requires authentication, the client needs to authenticate itself with every request.
   \item \textbf{Cacheable}:  The client, the server and any intermediary components can all cache resources in order to improve performance.
-  \item \textbf{Uniform interface}: This simplifies the architecture, as all components follow the same rules to speak to one another.
+  \item \textbf{Uniform interface}: All components must follow the same rules to speak to one another.
   \item \textbf{Layered system}: Individual components cannot see beyond the immediate layer with which they are interacting. This allows components to be independent and thus easily replaceable or extendable.
 \end{itemize}
 
 \subsection{Other design decisions}
-Here we describe the frameworks and languages hat should be used to produca a state-of-art application.
+Here we describe the frameworks and languages that should be used to produce a state-of-art application.
 
 \paragraph{Flutter}
 Flutter is a free, open-source mobile SDK that can be used to create native-looking Android and iOS apps from the same code base. Flutter helps app developers build cross-platform apps faster by using a single programming language, Dart, an object-oriented, class defined programming language.
-We chose to use this Framework in order to have a mobile app that works both with iOs and Adroid, with performances similar to the native development for each platform but having to write only once the code.
-In Flutter, every piece of the user interface is a widget like text, buttons, check boxes, images. There are also Container widgets thac contain other widgets. Widets can be stateless, which are immutable, or stateful, which have a mutable state and are used when we are describing a part of the user interface that can change dynamically.
+We chose to use this Framework in order to have a mobile app that works both with iOs and Android, with performances similar to the native development for each platform, but only having to write the code once.
+In Flutter, every piece of the user interface is a widget: like text, buttons, check boxes, images. There are also "container widgets" that contain other widgets. Widets can be stateless, which are immutable, or stateful, which have a mutable state and are used when we are describing a part of the user interface that can change dynamically.
 
-Lastly we want to remember that Flutter is not the only framework that can be used to buld cross-platform mobile apps, another oprions can be React Native, based on JavaScript.
-We decided to use Flutter because of it's advantages in comparision with React Native and other UI software development kit, which are better performances and increasing popularity due to it's simplicity of develop.
+Lastly we want to remember that Flutter is not the only framework that can be used to build cross-platform mobile apps, another option can be React Native, based on JavaScript.
+We decided to use Flutter because of it's advantages in comparision with React Native and other UI software development kit, which are: better performances and increasing popularity due to it's simplicity of develop.
 
 \paragraph{Node.js}
 Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser. It is the most used server side runtime environment.

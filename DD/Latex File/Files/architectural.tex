@@ -168,13 +168,13 @@ A note for the sequence diagrams, to keep the diagrams more readable, we omit th
 
 \subsection{Component interfaces}
 In our architecture we have two main interfaces between the Use Cases and the other components: one is the \textbf{Use Cases Output interface} devoted to interface the use cases with the Presenter and the \textbf{Use Cases Input interface} devoted to interface the use cases with the Controller.
-We choose to keep the methods of those interfaces very generic, so thay can be used by different Use cases, actually the methods describe in most cases only the kind of data tha needs to be exchanged so can be adapted for different purposes. We use heavily JSON documents so the structure of the data is very flexible.
+We choose to keep the methods of those interfaces very generic, so thay can be used by different Use cases, actually the methods describe in most cases only the kind of data tha needs to be exchanged, so those can be adapted for different purposes. We use mainly JSON documents so the structure of the data is very flexible.
 
 \subsubsection{Mobile App}
 In the Mobile App the \textbf{Use Cases Output interface} is used to communicate with the UI.
-So we have listed some methods used to interact with the widgets of the UI which are needed to load, close, and display strings and other kind of data to the widgets. Even though the name is "Output interface" it's still possible to use this interface to get data input by the user in the UI tha needs to be passed to the use cases.
+So we have listed some methods used to interact with the widgets of the UI which are needed to load, close, and display strings and other kind of data to the widgets. Even though the name is "Output interface" it's still possible to use this interface to get data input by the user in the UI forms that needs to be passed to the use cases.
 The \textbf{Use Cases Input interface} is used to communicate with the adapters of the controller, to perform the calls to the Server API and to interact with the device physical sensors.
-In Figure \ref{fig:AppInterfaces} are listed some possible methods of the interfaces of the Mobile App. More can be added during implementation whithaut affecting the one already existing and the Use cases.
+In Figure \ref{fig:AppInterfaces} are listed some possible methods of the interfaces of the Mobile App. More can be added during implementation without affecting the ones already existing and the Use cases.
 
 \begin{figure}[H]
 \centering
@@ -183,10 +183,10 @@ In Figure \ref{fig:AppInterfaces} are listed some possible methods of the interf
 \end{figure}
 
 \subsubsection{Application Server}
-In the Application Server the \textbf{Use Cases Output interface} is used by the use cases to provide the required API.
-The \textbf{Use Cases Input interface} is used to communicate with the adapters of the controller, to perform the calls to the externals API and to interact with the database.
+In the Application Server the \textbf{Use Cases Output interface} is used by the use cases to communicate with the component that offers the API server.
+The \textbf{Use Cases Input interface} is used to communicate with the adapters of the Controller, to perform the calls to the externals API and to interact with the database.
 
-In Figure \ref{fig:ServerInterfaces} are listed some possible methods of the interfaces of the Application Server. More can be added during implementation whithaut affecting the one already existing and the Use cases.
+In Figure \ref{fig:ServerInterfaces} are listed some possible methods of the interfaces of the Application Server. More can be added during implementation without affecting the ones already existing and the Use cases.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Images/ServerInterfaces.png}
