@@ -2,12 +2,12 @@
 The system to be developed has a three tier client/server structure.
 Here we list the three main tiers:
 \begin{enumerate}
-  \item The first tier consists in a mobile app running on mobile devices: smartphones or tablets with iOs or Android. This is the application the users will interact with
-  \item The second tier consists in an Application Server which provides the service as a RESTful API to the clients which are the running applications, and it's connected to the third tier, the Database Server where all data is stored
-  \item The third tier is the Database where data is stored
+  \item The first tier consists in a mobile app running on mobile devices: smartphones or tablets with iOs or Android. This is the application the users will interact with.
+  \item The second tier consists in an Application Server which provides the service as a RESTful API to the clients which are the running applications, and it's connected to the third tier, the Database Server where all data is stored.
+  \item The third tier is the Database where data is stored.
 \end{enumerate}
 
-There are some advantages of our system architecture: the first one is the modularity of this approach of having different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage for example an increase of the data stored, just updating the database with a bigger one, whithout modifying the application server.
+There are some advantages of our system architecture: the first one is the modularity of this approach of having different subsystems. The second is scalability,  which is the ability of the system to manage changes in the scale of demand. Since we have separated the client, the server and the database, it's easy to manage. for example an increase of the data stored, just updating the database with a bigger one, whithout modifying the application server.
 
 Moreover the sofware that runs on clients and on the server will be developed with a layered Clean architecture, as described in detail in Section \ref{cleanArchiref}. This pattern is organized through abstraction levels, starting from Entities to Use Cases and finally to Controllers and Presenters.
 One big advantage of this architecture is that we have a unique component for each use case.
@@ -31,21 +31,21 @@ Entities are the domain of the system, they represent the business objects of th
 Since the core of our system is based on \textbf{Users}, \textbf{Violations} and \textbf{Tickets} we have included those entities.
 
 \paragraph{Use Cases}
-Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do do with the application. We have one component for every possible use case.
+Use cases are components that represent our system actions, they are pure business logic which describe what is possible to do with the application. We have one component for every possible use case.
 
-We encapsulate all use case in a \textbf{Use Case interactor} which manages all possible use cases, it depends on the entites and has communication ports with the Controller and Presenter.
-In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the Presenter. As an example: if there is data coming from the camera, this is acquired by an adapter of the controller and is passed to the Use case interactor which coordinates the Use Cases and the data just acquired. After data is processed, it goes to the Presenter and visulalized by the widgets of the UI.
+We encapsulate all use cases in a \textbf{Use Case interactor} which manages all possible use cases, it depends on the entites and has communication ports with the Controller and Presenter.
+In fact the use case interactor has two ports: an input, which interfaces with the Controller and an output port connected with the Presenter. As an example, if there is data coming from the camera, this is acquired by an adapter of the controller and is passed to the Use case interactor which coordinates the Use Cases and the data just acquired. After data is processed, it goes to the Presenter and visulalized by the widgets of the UI.
 
 Here follows the list of every Component of the Use case group. We have to add a note here: when it's written for example that a component interacts with the Application Server, it doesn't mean that this component interacts directly with the Application API. As we have written before, every use case has to interact firstly with the controller, which handles then the connections with the external interfaces. The same goes for communicating with the UI, every data transfer happens via the Use-Case/Presenter interface. In order to keep the following descriptions short, we just say what the component does in a higher level.
 
 \begin{itemize}
   \item \textbf{Sign-Up}: This component allows to add new users to the system. It has to get the input strings (username, password, user data etc. ) from the sign-up widget, validate them before sending the request to the Application Server. After, it has get the answer from the Server and communicate to the user if the sign-up was successful or not.
   \item \textbf{Login}: This component allows the login to the App. It has to get the input from the Login widget, communicate the strings to the Application Server and interpret the response if the user is autorized to login or not. It must also manage the API key, received by the Application Server, which is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
-  \item \textbf{Take Picture}: This component makes possible to take picture of violations. After the picture has been taken, it has to send it to the Application Server and wait for an asnwer. If the answer is that a plate is found, than it calls the next use case "Send form". If no plates are found it asks the user to take a picture again discarding the previous one. If more than one plate is found, it activates a "brush tool mode" (in the Camera Widget) to ask the user to cover the other plates present in the picture. Then it has to manipulate directly the picture changing the color of the pixels selected by the user. Lastly it can send the picture to the Server.
-  \item \textbf{Send form}: This component presents the user the form in which he can choose the type of volation referred to the picture just taken in the previous use case. After the form has been submitted by the user, it is sent to the Application Server in order to be stored.
+  \item \textbf{Take Picture}: This component makes possible to take picture of violations. After the picture has been taken, it has to send it to the Application Server and wait for an asnwer. If the answer is that a plate is found, then it calls the next use case "Send form". If no plates are found it asks the user to take a picture again discarding the previous one. If more than one plate is found, it activates a "brush tool mode" (in the Camera Widget) to ask the user to cover the other plates present in the picture. Then it has to manipulate directly the picture changing the color of the pixels selected by the user. Lastly it can send the picture to the Server.
+  \item \textbf{Send form}: This component presents the user a form in which he can choose the type of volation referred to the picture just taken in the previous use case. After the form has been submitted by the user, it is sent to the Application Server in order to be stored.
   \item \textbf{List Vehicles}: This component calls the Application Server in order to get the list of vehicles that committed the most violations. Then it opens the widget to show a scrolling list view of plates with the count of violations.
   \item \textbf{Street Heatmap}: This component asks the Application Server to provide the heatmap visualization of the areas where the violations happened.
-  \item \textbf{Ticket Approval}: This component is responsible of showing the tickets available for approval. Every time the Authority user opens this or refersh the list, the component has to call the Application Server in order to get the data about the pending tickets. Moreover this component offers the feature of approving or discarding a pending ticket using two buttons.
+  \item \textbf{Ticket Approval}: This component is responsible of showing the tickets available for approval. Every time the Authority user opens this or refresh the list, the component has to call the Application Server in order to get the data about the pending tickets. Moreover this component offers the feature of approving or discarding a pending ticket using two buttons.
   \item \textbf{Ticket Offenders}: This component is responsible of showing the list of the most egregious offenders by querying the Application Server.
   \item \textbf{Trends}: This component has to show the desired statsistics about the issued tickets, querying the Application Server.
 \end{itemize}
@@ -65,23 +65,23 @@ The controller component encapsulates all the specific adapters which are devote
 Each component of the controller in fact implements the interfaces required by the use cases.
 Here is the description of each sub-component:
 \begin{itemize}
-  \item \textbf{Location Manager}: this component is responsible of getting the location of the user, accessing the libraries of the OS of the device
-  \item \textbf{Camera Manager}: this component is responsible of getting access to the camera of the device
-  \item \textbf{Application Server API client}: this component handles all the HTTP requests to and from our Application server
+  \item \textbf{Location Manager}: this component is responsible of getting the location of the user, accessing the libraries of the OS of the device.
+  \item \textbf{Camera Manager}: this component is responsible of getting access to the camera of the device.
+  \item \textbf{Application Server API client}: this component handles all the HTTP requests to and from our Application server.
 \end{itemize}
 
 \paragraph{Presenter}
 The presenter is a macro component that communicates with all the components of the UI.
 Here follows the list of every component with the description:
 \begin{itemize}
-  \item \textbf{Page Manager}: this component coordinates every page shown in the mobile application, and provides the navigation bar
-  \item \textbf{Login Widget} : this is the login page and sign-up page, with the required input fields
-  \item \textbf{Camera Widget} : this shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode". This is the graphic interface used to cover some parts of the picture with a black brush
-  \item \textbf{Form Widget}: this shows a list of possible description of violations the user can select
-  \item \textbf{Map Widget} : this is responsible for showing the street heatmap
-  \item \textbf{List Vehicles Widget} : this widget shows the vehicles that committed the most violations as a scrolling list, showing the plate string and the count of violations per plate
-  \item \textbf{Ticket Widget}: this shows the list of tickets the authority user can approve or not. It also shows information about each item after the user clicks on it. It has also two buttons to approve or discard the selected ticket
-  \item \textbf{Statistics widget}: this can show some data visualization about the issued tickets
+  \item \textbf{Page Manager}: This component coordinates every page shown in the mobile application, and provides the navigation bar
+  \item \textbf{Login Widget} : This is the login page and sign-up page, with the required input fields
+  \item \textbf{Camera Widget} : This shows what is recorded by the camera, has a button for taking pictures, activate zoom and other camera functionalities. It also shows the picture once taken and implements the "brush tool mode". This is the graphic interface used to cover some parts of the picture with a black brush
+  \item \textbf{Form Widget}: This shows a list of possible description of violations the user can select
+  \item \textbf{Map Widget} : This is responsible for showing the street heatmap
+  \item \textbf{List Vehicles Widget} : This widget shows the vehicles that committed the most violations as a scrolling list, showing the plate string and the count of violations per plate
+  \item \textbf{Ticket Widget}: This shows the list of tickets the authority user can approve or not. It also shows information about each item after the user clicks on it. It has also two buttons to approve or discard the selected ticket
+  \item \textbf{Statistics widget}: This can show some data visualization about the issued tickets
 \end{itemize}
 
 
@@ -108,7 +108,7 @@ As an example: on the application side we have the use case "Take picture" which
 \begin{itemize}
   \item \textbf{Sign-Up}: This component receives from the APP the username, password and personal information of a new user who is registering to the service. It must be able to check if the username is already in use or not. Then it must encrypt the password. Lastly it stores the new user in the database.
   \item \textbf{Login}: This component receives from the APP the request of a user trying to login to the service. It has to send back a successful login answer if the user exists and the password is correct. It has also to communicate an API key to the mobile app that will be used for every successive API call. This API key is needed to ensure identification of each user and to provide a restricted access to users to some funcionalities.
-  \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the app can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found, it sends to the APP the plate just decoded with a success message.
+  \item \textbf{Get Picture}: This component receives the POST request from the APP containing the picture of the violation and the coordinates of the location of the user. The picture is stored temporarily in the filesystem and then is sent to the external OpenALPR API which has to decode the plate. If no plates are returned by the OpenALPR service, it has to send to the APP a message of error asking to take a picture again. If more than one plates are detected it has to send to the APP a message of error so the App can ask the user to use the "brush tool" to cover the other plates. If one plate is correctly found, it sends to the APP the plate just decoded with a success message.
 
   This component has also to send the coordinates to the reverse geocoding service of the Maps API in order to get the street name and number. Then it moves the picture in a specific directory and saves in the database a new record containing the path where the picture is stored, the received decoded plate as string, the raw coordinates, the string containing the name and the number of the road.
   \item \textbf{Get form}: This component receives the PUT request from the APP containing the content of the form assocciated to the picture of the violation. This request is PUT type because it must update the existing violation docment in database adding the kind of violation. Once the request is received it parses the content and updates the database.
@@ -157,7 +157,7 @@ The deployment consist of three main devices. The first tier consist in the \tex
 The exection environment is the built SafeStreet app.
 
 
-The second tier is the \textbf{Application Server}. It is supposed to be a dedicated server running a linux distribution specific for server use. As an example of OS we choose Centos 7. Other distros can be used like Red Hat Enterprise Linux, Debian, OpenSUSE.
+The second tier is the \textbf{Application Server}. It is supposed to be a dedicated server running a linux distribution specific for server use. As an example of OS we choose Centos 7. Other distributions can be used like Red Hat Enterprise Linux, Debian, OpenSUSE.
 As execution enviorment we install Node.js which is an open-source JavaScript runtime environment that executes JavaScript code outside of a browser. Inside Node.js we use the web application framework Express.js which is designed for building web applications and APIs.
 
 The third tier is the \textbf{DB Server}. It consists in another server where we run the DB system MongoDB. We choose to run the database in a separate server and not in the same as the ApplicationServer in order to increase scalability. MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema.
