@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 DEC 2019 13:29
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 DEC 2019 13:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1101,15 +1101,10 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 \tf@lot=\write6
 \openout6 = `main.lot'.
 
- [3] (./Files/introduction.tex
-Overfull \hbox (8.73103pt too wide) in paragraph at lines 15--16
-[]\TU/FuturaBook(0)/m/sc/10.95 Reverse geocoding: the process of converting geo
-graphic coordinates into a human-readable
- []
+ [3] (./Files/introduction.tex [4
 
-[4
-
-]) [5] (./Files/architectural.tex
+]) [5]
+(./Files/architectural.tex
 File: Images/COMP-MOBILE.png Graphic file (type bmp)
 <Images/COMP-MOBILE.png>
  [6
@@ -1341,15 +1336,12 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
 Here is how much of TeX's memory you used:
  23785 strings out of 492970
  439181 string characters out of 6133938
- 556623 words of memory out of 5000000
+ 556652 words of memory out of 5000000
  27486 multiletter control sequences out of 15000+600000
  539777 words of font info for 69 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
