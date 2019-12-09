@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  8 DEC 2019 22:52
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018) (preloaded format=xelatex 2018.9.14)  9 DEC 2019 11:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1212,66 +1212,58 @@ File: Images/cleanArchi.pdf Graphic file (type pdf)
 File: GUI/UserLogin.png Graphic file (type bmp)
 <GUI/UserLogin.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-]
 File: GUI/MainMenuEndUser.png Graphic file (type bmp)
 <GUI/MainMenuEndUser.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [29]
 File: GUI/MainMenuAuthority.png Graphic file (type bmp)
 <GUI/MainMenuAuthority.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [30]
 File: GUI/TakePicture.png Graphic file (type bmp)
 <GUI/TakePicture.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [31]
 File: GUI/pictaken.png Graphic file (type bmp)
 <GUI/pictaken.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [32]
 File: GUI/FillReport.png Graphic file (type bmp)
 <GUI/FillReport.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [33]
 File: GUI/ShowStatistic.png Graphic file (type bmp)
 <GUI/ShowStatistic.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [34]
 File: GUI/MinedOffender.png Graphic file (type bmp)
 <GUI/MinedOffender.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [35]
 File: GUI/MinedStreet.png Graphic file (type bmp)
 <GUI/MinedStreet.png>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- [36]
 File: GUI/Ticket.png Graphic file (type bmp)
 <GUI/Ticket.png>
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
-[38] (./Files/requirements.tex
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [28
+
+] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38]
+(./Files/requirements.tex
 Overfull \hbox (34.23364pt too wide) in paragraph at lines 5--30
 [][]
  []
@@ -1354,9 +1346,6 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 140.
  ) 
