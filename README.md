@@ -4,5 +4,5 @@ This is the repository for the mandatory project for the course  "Software Engin
 
 
 # Authors
-* [Tiberio Galbiati] (https://github.com/TiberioG)
+* [Tiberio Galbiati](https://github.com/TiberioG)
 * [Saeid Rezaei](https://github.com/SaeidRezaei90)
